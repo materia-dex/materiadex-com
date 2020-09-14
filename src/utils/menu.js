@@ -1,0 +1,48 @@
+const menu = [
+  {
+    name: 'Services',
+    sublinks: [
+      {
+        name: 'Dex',
+        link: '/soon',
+      },
+      {
+        name: 'Stake',
+        link: '/soon',
+      },
+      {
+        name: 'Exchange',
+        link: '/soon',
+      },
+      {
+        name: 'Analytics',
+        link: '/soon',
+      }
+    ]
+  },
+  {
+    name: 'Community',
+    sublinks: [
+      { name: 'Twitter', link: 'https://twitter.com/dexmateria' },
+      { name: 'Discord', link: 'https://discord.gg/jdYMZrv' },
+      { name: 'Reddit', link: 'https://www.reddit.com/r/materiadex' },
+      { name: 'Github', link: 'https://github.com/materia-dex' },
+    ]
+  },
+  {
+    name: 'Info',
+    sublinks: [
+      { name: 'Strategy & Manifesto', link: '/strategy' },
+      { name: 'Incentives Strategy', link: '/incentives' },
+      { name: 'About', link: '/about' },
+    ]
+  },
+  {
+    name: 'DFO Hub',
+    sublinks: [
+      { name: 'About', link: 'https://www.dfohub.com/' },
+    ]
+  }
+]
+
+module.exports = menu

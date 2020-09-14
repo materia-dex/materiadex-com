@@ -1,0 +1,18 @@
+{
+  "index_name": "materia_v2_docs",
+  "start_urls": [],
+  "stop_urls": [],
+  "selectors": {
+    "lvl0": "h1",
+    "lvl1": "h2",
+    "lvl2": "h3",
+    "lvl3": "h4",
+    "lvl4": "h5",
+    "lvl5": "h6",
+    "text": "p, div, li, span"
+  },
+  "custom_settings": {
+    "attributesForFaceting": ["version"]
+  },
+  "js_render": true
+}
