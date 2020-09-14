@@ -102,3 +102,7 @@ const NewPill = styled.p`
   margin: 0;
   transform: rotateZ(-20deg);
 `
+
+const Blog = blog => {}
+
+export default Blog
