@@ -103,6 +103,16 @@ const NewPill = styled.p`
   transform: rotateZ(-20deg);
 `
 
-const Blog = blog => {}
+
+const Blog = props => {
+
+  return (
+    <Layout path={props.location.pathname}>
+      <BG />
+      <SEO title="Materia Blog" path={props.location.pathname} />
+
+    </Layout>
+  )
+}
 
 export default Blog

@@ -106,60 +106,60 @@ module.exports = {
         icon: `src/images/gil.png` // This path is relative to the root of the site.
       }
     },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
-                return {
-                  description: edge.node.frontmatter.previewText,
-                  title: edge.node.frontmatter.title,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug
-                }
-              })
-            },
-            query: `
-            {
-              allMdx(filter: {fileAbsolutePath: {regex: "/blog/"}}, sort: {order: DESC, fields: frontmatter___date}) {
-                edges {
-                  node {
-                    id
-                    frontmatter {
-                      date
-                      title
-                      previewText
-                    }
-                    fields {
-                      slug
-                    }
-                    rawBody
-                  }
-                }
-              }
-            }
-            `,
-            output: '/rss.xml',
-            title: 'Materia Blog RSS Feed'
-          }
-        ]
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-feed`,
+    //   options: {
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             title
+    //             description
+    //             siteUrl
+    //             site_url: siteUrl
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     feeds: [
+    //       {
+    //         serialize: ({ query: { site, allMdx } }) => {
+    //           return allMdx.edges.map(edge => {
+    //             return {
+    //               description: edge.node.frontmatter.previewText,
+    //               title: edge.node.frontmatter.title,
+    //               date: edge.node.frontmatter.date,
+    //               url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+    //               guid: site.siteMetadata.siteUrl + edge.node.fields.slug
+    //             }
+    //           })
+    //         },
+    //         query: `
+    //         {
+    //           allMdx(filter: {fileAbsolutePath: {regex: "/blog/"}}, sort: {order: DESC, fields: frontmatter___date}) {
+    //             edges {
+    //               node {
+    //                 id
+    //                 frontmatter {
+    //                   date
+    //                   title
+    //                   previewText
+    //                 }
+    //                 fields {
+    //                   slug
+    //                 }
+    //                 rawBody
+    //               }
+    //             }
+    //           }
+    //         }
+    //         `,
+    //         output: '/rss.xml',
+    //         title: 'Materia Blog RSS Feed'
+    //       }
+    //     ]
+    //   }
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
