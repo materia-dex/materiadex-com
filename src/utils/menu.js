@@ -34,6 +34,7 @@ const menu = [
     sublinks: [
       { name: 'Strategy & Manifesto', link: '/strategy' },
       { name: 'Incentives Strategy', link: '/incentives' },
+      { name: 'Roadmap', link: '/roadmap' },
       { name: 'About', link: '/about' },
     ]
   },

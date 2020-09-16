@@ -178,7 +178,7 @@ const Footer = () => {
             </a>
           </StyledButton> 
           </div>
-          <p>© 2020 Materia</p>
+          <p>Materia is an open source R&amp;D project made with ❤️ for the Community standing against evil corporations.</p>
 
         </StyledFooterSection>
       </StyledSection>

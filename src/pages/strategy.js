@@ -220,7 +220,7 @@ const About = props => {
               </thead>
               <tbody>
                 <tr>
-                  <td>&nbsp;&nbsp;&nbsp;<br />715%&nbsp;&nbsp;&nbsp;</td>
+                  <td>&nbsp;&nbsp;&nbsp;<br />7,15%&nbsp;&nbsp;&nbsp;</td>
                   <td>&nbsp;&nbsp;&nbsp;<br />3.048.760,00&nbsp;&nbsp;&nbsp;</td>
                   <td>&nbsp;&nbsp;&nbsp;<br />Liquidity Pool&nbsp;&nbsp;&nbsp;</td>
                   <td>&nbsp;&nbsp;&nbsp;<br />Available for trading. Token will&nbsp;&nbsp;&nbsp;be listed&nbsp;&nbsp;&nbsp;on uniswap&nbsp;&nbsp;&nbsp;DEX and then&nbsp;&nbsp;&nbsp;on the Materia&nbsp;&nbsp;&nbsp;DEX&nbsp;&nbsp;&nbsp;</td>
