@@ -210,19 +210,15 @@ const SummarySection = props => {
 
       <StyledImgSection>
         <h1>
-          <b>Materia</b> is the world&#39;s first completely decentralized exchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
+          <b>Materia</b> is the world's first completely decentralized exchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
         </h1>
-
         <p>
-          Materia’s token <b>$gil</b> is the backbone of the entire initiative. <br />
-        Token holders have <b>full ownership of the project</b> and its future, without any kind of external control.
+          Materia’s token <b>GIL</b> is the backbone of the entire initiative.<br />
+          Token holders have <b>full ownership of the project</b> and its future, without any kind of external control.
         </p>
-
         <p>
-          Materia Dapp is the first DEX completely governed through its token $gil. 
-          Community can evolve it as needed, proposing new features and <b>voting</b> for their implementation.
+          Materia Dapp is the first DEX completely governed through its token GIL. Community can evolve it as needed, proposing new features and <b>voting</b> for their implementation.
         </p>
-
         <Button as={Link} outlined to="/incentives">
           Incentives
         </Button>
@@ -243,7 +239,7 @@ const ProductsSection = props => {
       <StyledSectionFlex style={{ paddingBottom: '0px' }}>
         <StyledGoal style={{ width: '100%', maxWidth: '450px' }}>
           <h1>Services</h1>
-          <p>Our aim is to create a full ecosystem around the voting token $gil, check out our services!</p>
+          <p>Our aim is to create a full ecosystem around the voting token GIL, check out our services!</p>
         </StyledGoal>
       </StyledSectionFlex>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>

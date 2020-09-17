@@ -336,7 +336,7 @@ const About = props => {
       name: 'percentage'
     },
     {
-      label: '$gil',
+      label: 'GIL',
       name: 'gil'
     },
     {
@@ -362,7 +362,7 @@ const About = props => {
       percentage: '26,35%',
       gil: '10.660.000,00',
       usage: 'Governance and funding',
-      description: 'Owned by Materia DFO, regulated by $gil owners.',
+      description: 'Owned by Materia DFO, regulated by GIL owners.',
     },
     {
       id: 2,
@@ -511,7 +511,7 @@ const About = props => {
             <Title style={{ width: '100%' }}>GIL Distribution</Title>
             <StyleSectionLeft>
               <p>
-                According with our strategy, we will generate 42.640.000 $gil. All the supply will be distributed as follow:
+                According with our strategy, we will generate 42.640.000 GIL. All the supply will be distributed as follow:
               </p>
               <StyledTableContainer>
                 <MUIDataTable
