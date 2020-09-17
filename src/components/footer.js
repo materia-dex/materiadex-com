@@ -178,7 +178,7 @@ const Footer = () => {
             </a>
           </StyledButton> 
           </div>
-          <p>Materia is an open source R&amp;D project made with ❤️ for the Community standing against evil corporations.</p>
+          <p>Materia is an open source R&amp;D project for the Ethereum Community</p>
 
         </StyledFooterSection>
       </StyledSection>
