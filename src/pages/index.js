@@ -56,6 +56,8 @@ const StyledBodyTitle = styled.h1`
     max-width: 600px;
   }
   @media (max-width: 375px) {
+    font-size: 2rem;
+    padding: 2rem;
     width: 100%;
     margin: 2rem 0 2rem 0;
     font-weight: 400;
@@ -217,7 +219,7 @@ const SummarySection = props => {
         </p>
 
         <p>
-          Materia dApp is the first DEX completely governed through its token $gil. <br />
+          Materia Dapp is the first DEX completely governed through its token $gil. 
           Community can evolve it as needed, proposing new features and <b>voting</b> for their implementation.
         </p>
 
@@ -247,36 +249,36 @@ const ProductsSection = props => {
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
           href="/soon"
-          title={'Materia Farming'}
-          desc={'Stake and farm $gil.'}
+          title={'Swap'}
+          desc={'Swap between any two supported tokens by paying a 0.3% swap fee'}
           backgroundColor={'#f33a33'}
           color={'white'}
         />
         <MiniCard
           href="/soon"
-          title={'Materia Dex'}
-          desc={'Trade tokens, add liquidity and create new pools.'}
+          title={'Pool'}
+          desc={'Reserve two ERC-20 tokens and receive swap fee paid by users who swap through liquidity pools'}
           backgroundColor={'#10a54d'}
           color={'white'}
         />
         <MiniCard
           href="/soon"
-          title={'Materia Exchange'}
-          desc={'Experimental derivative marketplace.'}
+          title={'Derivative & NFT DEX'}
+          desc={'Use our experimental derivative and NFT marketplace'}
           backgroundColor={'#3977ed'}
           color={'white'}
         />
         <MiniCard
           href="/soon"
-          title={'Materia Analytics'}
-          desc={'Discover all the best insights.'}
+          title={'Farming'}
+          desc={'Stake and farm GIL or LPs receiving uGIL as derivative collateral'}
           backgroundColor={'#fcb42c'}
           color={'white'}
         />
         <MiniCard
-          href="/about"
-          title={'About'}
-          desc={'Discover all about us.'}
+          href="/soon"
+          title={'Analytics'}
+          desc={'Discover all the best insights'}
           backgroundColor={'#b911b3'}
           color={'white'}
         />

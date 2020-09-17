@@ -1,17 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { useStaticQuery, graphql } from 'gatsby'
-
+import Img from 'gatsby-image'
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import BG from '../components/bg'
 import scrollTo from 'gatsby-plugin-smoothscroll'
-
 import MiniCard from '../components/minicard'
-// import Discord from '../images/discord.inline.svg'
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import CodeIcon from '@material-ui/icons/Code';
 
-import GilDistribution from '../images/gil_distribution.png'
+const StyledQuote = styled.p`
+  border: solid;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: ${({ theme }) => theme.invertedTextColor};
+  border-color: ${({ theme }) => theme.colors.link};
+  background-color: ${({ theme }) => theme.colors.link};;
+`
+
+const StyledChartContainer = styled.div`
+  display: flex;
+  canvas {
+    height: 100% !important;
+  }
+`
+
+const StyledTableContainer = styled.div`
+  th:first-child, td:first-child {
+    padding: 16px;
+  }
+  div.MuiPaper-root {
+    max-width: fit-content;
+  }
+`
 
 const StyledAbout = styled.div`
   display: grid;
@@ -52,12 +75,12 @@ const StyledSidebar = styled.div`
 `
 
 const StyledSectionFlex = styled.div`
-  padding: 0 0 4rem 0;
+  padding: 0 0 1rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 960px;
+  max-width: 1200px;
   @media (max-width: 1024px) {
     padding: 1rem;
     margin-top: 0rem;
@@ -67,16 +90,12 @@ const StyledSectionFlex = styled.div`
     padding: 1rem;
     margin-top: 0rem;
     width: 100%;
-    /* max-width: 450px; */
-    /* flex-direction: column; */
   }
   h1,
   h2 {
-    /* margin-bottom: 0.5rem; */
     max-width: 650px;
   }
   p {
-    /* margin-bottom: 0.5rem; */
     max-width: 650px;
   }
 `
@@ -84,8 +103,8 @@ const StyledSectionFlex = styled.div`
 const Title = styled.h1`
   /* font-size: 3rem; */
   margin-bottom: 1rem;
-  font-size: 72px;
-
+  font-size: 3.5rem;
+  color: ${({ theme }) => theme.colors.link};
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
@@ -104,6 +123,163 @@ const StyledHeadingLink = styled.a`
 
   :hover {
     text-decoration: underline;
+  }
+`
+
+const StyledImgSectionLeft = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 0rem 0rem;
+  @media (max-width: 960px) {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    p {
+      max-width: 300px;
+    }
+    h1 {
+      max-width: 450px;
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 2.5rem;
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: 300px;
+  }
+  h1 {
+    max-width: 450px;
+    line-height: 1.3;
+  }
+  h2 {
+    max-width: 450px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+`
+
+const StyleSectionRight = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 1rem;
+  @media (max-width: 1024px) {
+    margin: 0;
+    width: 100%;
+    p, h1, h2 {
+      max-width: unset !important;
+    }
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+  h1 {
+    max-width: 450px;
+    line-height: 1.3;
+  }
+  h2 {
+    max-width: 450px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+`
+
+const StyledImgSectionRight = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 0rem 0rem;
+  @media (max-width: 960px) {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    p {
+      max-width: 300px;
+    }
+    h1 {
+      max-width: 450px;
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 2.5rem;
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: 300px;
+  }
+  h1 {
+    max-width: 450px;
+    line-height: 1.3;
+  }
+  h2 {
+    max-width: 450px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+`
+
+const StyleSectionLeft = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 1rem 0rem;
+  @media (max-width: 1024px) {
+    margin: 0;
+    width: 100%;
+    p, h1, h2 {
+      max-width: unset !important;
+    }
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+  h1 {
+    max-width: 450px;
+    line-height: 1.3;
+  }
+  h2 {
+    max-width: 450px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+`
+
+const StyleSectionFull = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 2.5rem 0rem;
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin: 0;
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: unset;
+  }
+  h1 {
+    line-height: 1.3;
+    max-width: unset;
+  }
+  h2 {
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    max-width: unset;
+  }
+`
+
+const StyledImage = styled(Img)`
+  width: 100%;
+  height: 100%;
+  min-width: 450px;
+  background-color: none;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: ${({ theme }) => theme.shadows.huge};
+  @media (max-width: 960px) {
+    min-width: unset;
   }
 `
 
@@ -134,15 +310,9 @@ const About = props => {
     }
   `)
 
-  const StyledImage = styled.img`
-    margin: 0;
-    width: fit-content;
-  `
-
   return (
     <Layout path={props.location.pathname}>
       <BG />
-
       <SEO title="Roadmap" path={props.location.pathname} />
       <StyledAbout>
         <StyledSidebar>
@@ -150,33 +320,24 @@ const About = props => {
             onClick={() => {
               scrollTo('#Roadmap')
               window.history.pushState({}, '', '#Roadmap')
-            }}
-          >
+            }}>
             Roadmap
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#community')
-              window.history.pushState({}, '', '#community')
-            }}
-          >
+              scrollTo('#Community')
+              window.history.pushState({}, '', '#Community')
+            }}>
             Community
           </StyledHeadingLink>
         </StyledSidebar>
         <span>
-          <StyledSectionFlex id="Roadmap" style={{ flexDirection: 'column' }}>
-            <Title style={{ width: '100%' }}>Strategy</Title>
-            <p>
-              This page is still under development from our best engineering team.
-            </p>
-            <p>We are committed to open source software and building on the decentralized web giving the community the true power to chose.</p>
-            <p>
-              You can contribute to Materia too! Check out our social profiles to get started!
-            </p>
+          <StyledSectionFlex id="Roadmap">
+            <Title style={{ width: '100%' }}>Roadmap</Title>
           </StyledSectionFlex>
 
-          <StyledSectionFlex id="community" style={{ paddingTop: '2rem' }}>
-            <h1 style={{ width: '100%' }}>Community</h1>
+          <StyledSectionFlex id="Community" style={{ "paddingTop": '2.5rem' }}>
+            <Title style={{ width: '100%' }}>Community</Title>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
               <MiniCard
                 href="https://discord.gg/jdYMZrv"
@@ -204,7 +365,6 @@ const About = props => {
               />
             </div>
           </StyledSectionFlex>
-
         </span>
       </StyledAbout>
     </Layout>

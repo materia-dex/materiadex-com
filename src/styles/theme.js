@@ -91,6 +91,10 @@ export const theme = darkMode => ({
       ' 0px 0px 1px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.02), 0px 16px 24px rgba(0, 0, 0, 0.02), 0px 24px 32px rgba(0, 0, 0, 0.02)'
   },
 
+  table: {
+    mode: darkMode ? 'dark' : 'light'
+  },
+
   // media queries
   mediaWidth: mediaWidthTemplates,
   // css snippets

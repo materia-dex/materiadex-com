@@ -3,15 +3,19 @@ const menu = [
     name: 'Services',
     sublinks: [
       {
-        name: 'Dex',
+        name: 'Swap',
         link: '/soon',
       },
       {
-        name: 'Stake',
+        name: 'Pool',
         link: '/soon',
       },
       {
-        name: 'Exchange',
+        name: 'Derivative & NFT DEX',
+        link: '/soon',
+      },
+      {
+        name: 'Farming',
         link: '/soon',
       },
       {

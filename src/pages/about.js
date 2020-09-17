@@ -1,15 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import { useStaticQuery, graphql, Link } from 'gatsby'
-
+import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import BG from '../components/bg'
 import scrollTo from 'gatsby-plugin-smoothscroll'
-
 import MiniCard from '../components/minicard'
-// import Discord from '../images/discord.inline.svg'
 
 const StyledAbout = styled.div`
   display: grid;
@@ -50,12 +46,12 @@ const StyledSidebar = styled.div`
 `
 
 const StyledSectionFlex = styled.div`
-  padding: 0 0 4rem 0;
+  padding: 0 0 1rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 960px;
+  max-width: 1200px;
   @media (max-width: 1024px) {
     padding: 1rem;
     margin-top: 0rem;
@@ -65,16 +61,12 @@ const StyledSectionFlex = styled.div`
     padding: 1rem;
     margin-top: 0rem;
     width: 100%;
-    /* max-width: 450px; */
-    /* flex-direction: column; */
   }
   h1,
   h2 {
-    /* margin-bottom: 0.5rem; */
     max-width: 650px;
   }
   p {
-    /* margin-bottom: 0.5rem; */
     max-width: 650px;
   }
 `
@@ -82,8 +74,8 @@ const StyledSectionFlex = styled.div`
 const Title = styled.h1`
   /* font-size: 3rem; */
   margin-bottom: 1rem;
-  font-size: 72px;
-
+  font-size: 3.5rem;
+  color: ${({ theme }) => theme.colors.link};
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
@@ -102,6 +94,30 @@ const StyledHeadingLink = styled.a`
 
   :hover {
     text-decoration: underline;
+  }
+`
+
+const StyleSectionFull = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 2.5rem 0rem;
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin: 0;
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: unset;
+  }
+  h1 {
+    line-height: 1.3;
+    max-width: unset;
+  }
+  h2 {
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    max-width: unset;
   }
 `
 
@@ -135,55 +151,56 @@ const About = props => {
   return (
     <Layout path={props.location.pathname}>
       <BG />
-
       <SEO title="About" path={props.location.pathname} />
       <StyledAbout>
         <StyledSidebar>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#about')
-              window.history.pushState({}, '', '#about')
-            }}
-          >
+              scrollTo('#About')
+              window.history.pushState({}, '', '#About')
+            }}>
             About
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#contact')
-              window.history.pushState({}, '', '#contact')
-            }}
-          >
+              scrollTo('#Contact')
+              window.history.pushState({}, '', '#Contact')
+            }}>
             Contact
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#community')
-              window.history.pushState({}, '', '#community')
-            }}
-          >
+              scrollTo('#Community')
+              window.history.pushState({}, '', '#Community')
+            }}>
             Community
           </StyledHeadingLink>
         </StyledSidebar>
         <span>
-          <StyledSectionFlex id="about" style={{ flexDirection: 'column' }}>
+          <StyledSectionFlex id="About">
             <Title style={{ width: '100%' }}>About</Title>
-            <p>
-              <b>Materia</b> is the world&#39;s first completely decentralized exchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
-            </p>
-            <p>We are committed to open source software and building on the decentralized web.</p>
-            <p>
-              You can read about Enterprise-Free Organization and DFOHub here: <a href="https://www.dfohub.com/">dfohub.com</a> 
-            </p>
+            <StyleSectionFull style={{ margin: '1rem 0rem 0rem 0rem' }}>
+              <p>
+                <b>Materia</b> is the world&#39;s first completely decentralized exchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.<br />
+                We are committed to open source software and building on the decentralized web.<br />
+              </p>
+              <p>
+                You can read about Enterprise-Free Organization and DFOHub here: <a href="https://www.dfohub.com/">dfohub.com</a>
+              </p>
+            </StyleSectionFull>
           </StyledSectionFlex>
 
-          <StyledSectionFlex id="contact" style={{ flexDirection: 'column' }}>
-            <h1 style={{ width: '100%' }}>Contact</h1>
-            <p>
-              To get in touch, please email <a href="mailto:contact@materiadex.com">materiadex@gmail.com</a>
-            </p>
+          <StyledSectionFlex id="Contact">
+            <Title style={{ width: '100%', 'maxWidth': 'unset' }}>Contact</Title>
+            <StyleSectionFull style={{ margin: '1rem 0rem 0rem 0rem' }}>
+              <p>
+                To get in touch, please email <a href="mailto:contact@materiadex.com">materiadex@gmail.com</a>
+              </p>
+            </StyleSectionFull>
           </StyledSectionFlex>
-          <StyledSectionFlex id="community" style={{ paddingTop: '2rem' }}>
-            <h1 style={{ width: '100%' }}>Community</h1>
+
+          <StyledSectionFlex id="Community">
+            <Title style={{ width: '100%' }}>Community</Title>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
               <MiniCard
                 href="https://discord.gg/jdYMZrv"

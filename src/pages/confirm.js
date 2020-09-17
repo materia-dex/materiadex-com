@@ -23,6 +23,7 @@ const StyledSectionFlex = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  color: ${({ theme }) => theme.colors.link};
   @media (max-width: 1024px) {
     padding: 1rem;
     margin-top: 0rem;

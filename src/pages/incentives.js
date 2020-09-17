@@ -1,17 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { useStaticQuery, graphql } from 'gatsby'
-
+import Img from 'gatsby-image'
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import BG from '../components/bg'
 import scrollTo from 'gatsby-plugin-smoothscroll'
-
 import MiniCard from '../components/minicard'
-// import Discord from '../images/discord.inline.svg'
+import MUIDataTable from "mui-datatables";
+import { Pie } from 'react-chartjs-2';
 
-import LiquidityFarming from '../images/liquidity_farming.png'
+const StyledQuote = styled.p`
+  border: solid;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: ${({ theme }) => theme.invertedTextColor};
+  border-color: ${({ theme }) => theme.colors.link};
+  background-color: ${({ theme }) => theme.colors.link};;
+`
+
+const StyledChartContainer = styled.div`
+  display: flex;
+  canvas {
+    height: 100% !important;
+  }
+`
+
+const StyledTableContainer = styled.div`
+  th:first-child, td:first-child {
+    padding: 16px;
+  }
+  div.MuiPaper-root {
+    max-width: fit-content;
+  }
+`
 
 const StyledAbout = styled.div`
   display: grid;
@@ -52,12 +74,12 @@ const StyledSidebar = styled.div`
 `
 
 const StyledSectionFlex = styled.div`
-  padding: 0 0 4rem 0;
+  padding: 0 0 1rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 960px;
+  max-width: 1200px;
   @media (max-width: 1024px) {
     padding: 1rem;
     margin-top: 0rem;
@@ -67,16 +89,12 @@ const StyledSectionFlex = styled.div`
     padding: 1rem;
     margin-top: 0rem;
     width: 100%;
-    /* max-width: 450px; */
-    /* flex-direction: column; */
   }
   h1,
   h2 {
-    /* margin-bottom: 0.5rem; */
     max-width: 650px;
   }
   p {
-    /* margin-bottom: 0.5rem; */
     max-width: 650px;
   }
 `
@@ -84,8 +102,8 @@ const StyledSectionFlex = styled.div`
 const Title = styled.h1`
   /* font-size: 3rem; */
   margin-bottom: 1rem;
-  font-size: 72px;
-
+  font-size: 3.5rem;
+  color: ${({ theme }) => theme.colors.link};
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
@@ -104,6 +122,163 @@ const StyledHeadingLink = styled.a`
 
   :hover {
     text-decoration: underline;
+  }
+`
+
+const StyledImgSectionLeft = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 0rem 0rem;
+  @media (max-width: 960px) {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    p {
+      max-width: 300px;
+    }
+    h1 {
+      max-width: 450px;
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 2.5rem;
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: 300px;
+  }
+  h1 {
+    max-width: 450px;
+    line-height: 1.3;
+  }
+  h2 {
+    max-width: 450px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+`
+
+const StyleSectionRight = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 1rem;
+  @media (max-width: 1024px) {
+    margin: 0;
+    width: 100%;
+    p, h1, h2 {
+      max-width: unset !important;
+    }
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+  h1 {
+    max-width: 450px;
+    line-height: 1.3;
+  }
+  h2 {
+    max-width: 450px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+`
+
+const StyledImgSectionRight = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 0rem 0rem;
+  @media (max-width: 960px) {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    p {
+      max-width: 300px;
+    }
+    h1 {
+      max-width: 450px;
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 2.5rem;
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: 300px;
+  }
+  h1 {
+    max-width: 450px;
+    line-height: 1.3;
+  }
+  h2 {
+    max-width: 450px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+`
+
+const StyleSectionLeft = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 1rem 0rem;
+  @media (max-width: 1024px) {
+    margin: 0;
+    width: 100%;
+    p, h1, h2 {
+      max-width: unset !important;
+    }
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+  h1 {
+    max-width: 450px;
+    line-height: 1.3;
+  }
+  h2 {
+    max-width: 450px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+`
+
+const StyleSectionFull = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  position: relative;
+  margin: 2.5rem 0rem;
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin: 0;
+  }
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
+    max-width: unset;
+  }
+  h1 {
+    line-height: 1.3;
+    max-width: unset;
+  }
+  h2 {
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    max-width: unset;
+  }
+`
+
+const StyledImage = styled(Img)`
+  width: 100%;
+  height: 100%;
+  min-width: 450px;
+  background-color: none;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: ${({ theme }) => theme.shadows.huge};
+  @media (max-width: 960px) {
+    min-width: unset;
   }
 `
 
@@ -131,133 +306,107 @@ const About = props => {
           }
         }
       }
-      liquidity: file(relativePath: { eq: "liquidity.png" }) {
+      farmingImage: file(relativePath: { eq: "farming.png" }) {
         childImageSharp {
-          fluid(maxWidth: 960) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      stakingImage: file(relativePath: { eq: "staking.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
     }
   `)
 
-  const StyledImage = styled.img`
-    margin: 0;
-  `
-
   return (
     <Layout path={props.location.pathname}>
       <BG />
-
-      <SEO title="Incentives Strategy" path={props.location.pathname} />
+      <SEO title="Incentive Strategy" path={props.location.pathname} />
       <StyledAbout>
         <StyledSidebar>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#farming')
-              window.history.pushState({}, '', '#farming')
-            }}
-          >
-            Liquidity Farming
-          </StyledHeadingLink>
-          <StyledHeadingLink
-            onClick={() => {
-              scrollTo('#management')
-              window.history.pushState({}, '', '#management')
-            }}
-          >
+              scrollTo('#Management')
+              window.history.pushState({}, '', '#Management')
+            }}>
             Liquidity Management
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#lottery')
-              window.history.pushState({}, '', '#lottery')
-            }}
-          >
-            Short Term Lottery
+              scrollTo('#Farming')
+              window.history.pushState({}, '', '#Farming')
+            }}>
+            Liquidity Farming
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#exchange')
-              window.history.pushState({}, '', '#exchange')
-            }}
-          >
-            Exchange
-          </StyledHeadingLink>
-          <StyledHeadingLink
-            onClick={() => {
-              scrollTo('#ugil')
-              window.history.pushState({}, '', '#ugil')
-            }}
-          >
+              scrollTo('#UGil')
+              window.history.pushState({}, '', '#UGil')
+            }}>
             uGIL
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#community')
-              window.history.pushState({}, '', '#community')
-            }}
-          >
+              scrollTo('#Staking')
+              window.history.pushState({}, '', '#Staking')
+            }}>
+            Staking and uGIL Mint
+          </StyledHeadingLink>
+          <StyledHeadingLink
+            onClick={() => {
+              scrollTo('#Community')
+              window.history.pushState({}, '', '#Community')
+            }}>
             Community
           </StyledHeadingLink>
         </StyledSidebar>
         <span>
-          <StyledSectionFlex id="farming" style={{ flexDirection: 'column' }}>
+          <StyledSectionFlex id="Management">
+            <Title style={{ width: '100%' }}>Farming and Liquidity Management</Title>
+            <StyleSectionFull style={{ margin: "0" }}>
+              <p>
+                Some pair of GIL, (GIL &lt;-&gt; USDC and GIL &lt;-&gt; WETH) will be created on UniSwap v2, in order to provide the initial liquidity. 
+                People interested in joining our project, will be able to swap the GIL and deposit them on our Dapp. We won't be minting further GIL, we will use the amount available from Materia DFO wallet, accordingly with the community votes. The aim is to attract stable and long-term investors.
+              </p>
+              <p>
+                As an incentive, each investor will receive a lottery ticket, a Non-Fungible Token, containing also an amazing unique character. Every day, an extraction among all the investors and stakers will take place. The winner will be rewarded with a coffer of extra GIL.
+                Every staker will be able to exchange or sell its own lottery ticket. After seven days of staking, It will also be possible to buy more tickets through the NFT trading section of our DEX. <br />
+                The NFTs will be persistant and it will be possible to collect them. Collectionists will have the opportunity to exibihit their collection in a monthly contest. GIL owner will have the opportunity to vote the best collection and collect further incentives.
+              </p>
+            </StyleSectionFull>
+          </StyledSectionFlex>
+
+          <StyledSectionFlex id="Farming">
             <Title style={{ width: '100%' }}>Liquidity Farming</Title>
-            <br />
-            <StyledImage src={LiquidityFarming} />
-            <br />
-            <p>
-              For each investor will be provided a redeemable $guni token $gil rewards will be provided on daily base. Long term $guni owners will have an accelerated voting power.
-            </p>
+            <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
+            <StyleSectionFull style={{ margin: "1.5rem auto" }}>
+              <p>
+                For each investor will be provided redeemable uGIL tokens. GIL rewards will be provided on daily base. Long term uGIL owners will have an accelerated voting power.
+              </p>
+            </StyleSectionFull>
           </StyledSectionFlex>
-          <StyledSectionFlex id="management" style={{ flexDirection: 'column' }}>
-            <Title style={{ width: '100%' }}>Liquidity Management</Title>
-            <p>
-              Some pair of $gil, ($gil &lt;-&gt; USDC and $gil &lt;-&gt; WETH) will be created on UniSwap v2, in order to provide the initial liquidity.
-            </p>
-            <p>
-              People interested in joining our project, will be able to swap the $gil and deposit them on our dApp.
-            </p>
-            <p>
-              We won&apos;t be minting further $gil, we will use the amount available from Materia DFO wallet, accordingly with the community votes. The aim is to attract stable and long-term investors.
-            </p>
-            <p>
-              As an incentive, each investor will receive a lottery ticket, a Non-Fungible Token, containing also an amazing unique character. Every day, an extraction among all the investors and stakers will take place. The winner will be rewarded with a coffer of extra $gil.
-            </p>
-            <p>
-              Every staker will be able to exchange or sell its own lottery ticket. After seven days of staking, It will also be possible to buy more tickets through the NFT trading section of our DEX.
-            </p>
-            <p>
-              The NFTs will be persistant and it will be possible to collect them. Collectionists will have the opportunity to exibihit their collection in a monthly contest. $gil owner will have the opportunity to vote the best collection and collect further incentives.
-            </p>
-          </StyledSectionFlex>
-          <StyledSectionFlex id="lottery" style={{ flexDirection: 'column' }}>
-            <Title style={{ width: '100%' }}>Short Term Lottery</Title>
-            <p>
-              Coming soon!
-            </p>
-          </StyledSectionFlex>
-          <StyledSectionFlex id="exchange" style={{ flexDirection: 'column' }}>
-            <Title style={{ width: '100%' }}>Exchange</Title>
-            <p>
-              Coming soon!
-            </p>
-          </StyledSectionFlex>
-          <StyledSectionFlex id="ugil" style={{ flexDirection: 'column' }}>
+
+          <StyledSectionFlex id="UGil">
             <Title style={{ width: '100%' }}>uGIL</Title>
-            <p>
-              uGIL is a representation of LPs token (representing the liquidity added to the pool through the input pairs) and the incremental interest they&apos;ve earned. They are interest-accumulating tokens that continuously go up in value as you hold them.
-            </p>
-            <p>
-              uGIL is minted during the liquidity staking and will be burned after having redeemed it. The value of uGIL continually increases from the accreditation of interests, paid after every block, for the lasts of the investment.
-            </p>
-            <p>
-              Owners can divest of their position in two ways: burning the token by sending it to the contract or selling them on Materia exchange, to exit the position. They can also be used as collaterals wherever applicable.
-            </p>
+            <StyleSectionFull style={{ margin: "0" }}>
+              <p>
+                uGIL is a representation of LPs token (representing the liquidity added to the pool through the input pairs) and the incremental interest they've earned. They are interest-accumulating tokens that continuously go up in value as you hold them. uGIL is minted during the liquidity staking and will be burned after having redeemed it. The value of uGIL continually increases from the accreditation of interests, paid after every block, for the lasts of the investment. Owners can divest of their position in two ways: burning the token by sending it to the contract or selling them on Materia exchange, to exit the position. They can also be used as collaterals wherever applicable.
+              </p>
+            </StyleSectionFull>
           </StyledSectionFlex>
-          <StyledSectionFlex id="community" style={{ paddingTop: '2rem' }}>
-            <h1 style={{ width: '100%' }}>Community</h1>
+
+          <StyledSectionFlex id="Staking">
+            <Title style={{ width: '100%' }}>Pairs Staking and uGIL Mint</Title>
+            <StyledImage fadeIn={false} fluid={props.data.stakingImage.childImageSharp.fluid} />
+          </StyledSectionFlex>
+
+          <StyledSectionFlex id="Community" style={{ "paddingTop": '2.5rem' }}>
+            <Title style={{ width: '100%' }}>Community</Title>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
               <MiniCard
                 href="https://discord.gg/jdYMZrv"
@@ -285,7 +434,6 @@ const About = props => {
               />
             </div>
           </StyledSectionFlex>
-
         </span>
       </StyledAbout>
     </Layout>
