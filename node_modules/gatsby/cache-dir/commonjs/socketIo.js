@@ -7,16 +7,18 @@ exports.default = socketIo;
 exports.getPageData = getPageData;
 exports.registerPath = registerPath;
 exports.unregisterPath = unregisterPath;
-exports.getIsInitialized = exports.getPageQueryData = exports.getStaticQueryData = void 0;
+exports.getPageQueryData = exports.getStaticQueryData = void 0;
+
+var _socket = _interopRequireDefault(require("socket.io-client"));
 
 var _errorOverlayHandler = require("./error-overlay-handler");
 
 var _normalizePagePath = _interopRequireDefault(require("./normalize-page-path"));
 
 let socket = null;
+const inFlightGetPageDataPromiseCache = {};
 let staticQueryData = {};
 let pageQueryData = {};
-let isInitialized = false;
 
 const getStaticQueryData = () => staticQueryData;
 
@@ -26,23 +28,32 @@ const getPageQueryData = () => pageQueryData;
 
 exports.getPageQueryData = getPageQueryData;
 
-const getIsInitialized = () => isInitialized;
-
-exports.getIsInitialized = getIsInitialized;
-
 function socketIo() {
   if (process.env.NODE_ENV !== `production`) {
     if (!socket) {
       // Try to initialize web socket if we didn't do it already
       try {
-        // eslint-disable-next-line no-undef
-        socket = io();
+        // force websocket as transport
+        socket = (0, _socket.default)({
+          transports: [`websocket`]
+        }); // when websocket fails, we'll try polling
+
+        socket.on(`reconnect_attempt`, () => {
+          socket.io.opts.transports = [`polling`, `websocket`];
+        });
 
         const didDataChange = (msg, queryData) => {
           const id = msg.type === `staticQueryResult` ? msg.payload.id : (0, _normalizePagePath.default)(msg.payload.id);
           return !(id in queryData) || JSON.stringify(msg.payload.result) !== JSON.stringify(queryData[id]);
         };
 
+        socket.on(`connect`, () => {
+          // we might have disconnected so we loop over the page-data requests in flight
+          // so we can get the data again
+          Object.keys(inFlightGetPageDataPromiseCache).forEach(pathname => {
+            socket.emit(`getDataForPath`, pathname);
+          });
+        });
         socket.on(`message`, msg => {
           if (msg.type === `staticQueryResult`) {
             if (didDataChange(msg, staticQueryData)) {
@@ -67,6 +78,12 @@ function socketIo() {
           if (msg.type && msg.payload) {
             ___emitter.emit(msg.type, msg.payload);
           }
+        }); // Prevents certain browsers spamming XHR 'ERR_CONNECTION_REFUSED'
+        // errors within the console, such as when exiting the develop process.
+
+        socket.on(`disconnect`, () => {
+          console.warn(`[socket.io] Disconnected from dev server.`);
+          socket.close();
         });
       } catch (err) {
         console.error(`Could not connect to socket.io on dev server.`);
@@ -78,8 +95,6 @@ function socketIo() {
     return null;
   }
 }
-
-const inFlightGetPageDataPromiseCache = {};
 
 function getPageData(pathname) {
   pathname = (0, _normalizePagePath.default)(pathname);

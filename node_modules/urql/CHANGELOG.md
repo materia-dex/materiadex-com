@@ -1,5 +1,31 @@
 # urql
 
+## 1.10.1
+
+### Patch Changes
+
+- ⚠️ Fix React Fast Refresh beng broken due to an invalid effect, by [@JoviDeCroock](https://github.com/JoviDeCroock) (See [#969](https://github.com/FormidableLabs/urql/pull/969))
+
+## 1.10.0
+
+### Minor Changes
+
+- Add the operation to the query, mutation and subscription result, by [@JoviDeCroock](https://github.com/JoviDeCroock) (See [#924](https://github.com/FormidableLabs/urql/pull/924))
+
+### Patch Changes
+
+- Update hooks to be exported functions rather than exported block-scoped variables to provide TypeScript consumers with better access to their signature, by [@dotansimha](https://github.com/dotansimha) (See [#904](https://github.com/FormidableLabs/urql/pull/904))
+- Updated dependencies (See [#911](https://github.com/FormidableLabs/urql/pull/911) and [#908](https://github.com/FormidableLabs/urql/pull/908))
+  - @urql/core@1.12.3
+
+## 1.9.8
+
+### Patch Changes
+
+- Upgrade to a minimum version of wonka@^4.0.14 to work around issues with React Native's minification builds, which use uglify-es and could lead to broken bundles, by [@kitten](https://github.com/kitten) (See [#842](https://github.com/FormidableLabs/urql/pull/842))
+- Updated dependencies (See [#838](https://github.com/FormidableLabs/urql/pull/838) and [#842](https://github.com/FormidableLabs/urql/pull/842))
+  - @urql/core@1.12.0
+
 ## 1.9.7
 
 ### Patch Changes
@@ -99,7 +125,7 @@ This release doesn't change any major feature aspects, but comes with bugfixes
 to our suspense and concurrent-mode handling. Due to an upgrade to `wonka@^4.0.0`
 this is a minor version though.
 
-In [v1.6.0](https://github.com/FormidableLabs/urql/blob/master/CHANGELOG.md#160) we believed to
+In [v1.6.0](https://github.com/FormidableLabs/urql/blob/main/CHANGELOG.md#160) we believed to
 have solved all issues related to suspense and concurrent mode. However there were
 still some remaining cases where concurrent mode behaved incorrectly. With the new
 `useOperator` hook in [`react-wonka@2.0.0`](https://github.com/kitten/react-wonka) we believe
@@ -273,7 +299,7 @@ indefinitely in some cases.
 
 ## 1.1.1
 
-This release comes with two small patches. One being a crticial fix,
+This release comes with two small patches. One being a critical fix,
 where cancelled requests would be erroneously deduped, which meant
 a previously cancelled query would never be fetched.
 

@@ -1,5 +1,55 @@
 # @urql/core
 
+## 1.13.0
+
+Please note that this release changes the data structure of the `ssrExchange`'s
+output. We don't treat this as a breaking change, since this data is considered
+a private structure, but if your tests or other code relies on this, please check
+the type changes and update it.
+
+### Minor Changes
+
+- Adds an error exchange to urql-core. This allows tapping into all graphql errors within the urql client. Useful for logging, debugging, handling authentication errors etc, by [@kadikraman](https://github.com/kadikraman) (See [#947](https://github.com/FormidableLabs/urql/pull/947))
+
+### Patch Changes
+
+- ⚠️ Fix condition where mutated result data would be picked up by the `ssrExchange`, for instance as a result of mutations by Graphcache. Instead the `ssrExchange` now serializes data early, by [@kitten](https://github.com/kitten) (See [#962](https://github.com/FormidableLabs/urql/pull/962))
+- Omit the `Content-Type: application/json` HTTP header when using GET in the `fetchExchange`, `persistedFetchExchange`, or `multipartFetchExchange`, by [@JoviDeCroock](https://github.com/JoviDeCroock) (See [#957](https://github.com/FormidableLabs/urql/pull/957))
+
+## 1.12.3
+
+### Patch Changes
+
+- Remove whitespace and comments from string-queries, by [@JoviDeCroock](https://github.com/JoviDeCroock) (See [#911](https://github.com/FormidableLabs/urql/pull/911))
+- Remove redundant whitespaces when using GET for graphql queries, by [@JoviDeCroock](https://github.com/JoviDeCroock) (See [#908](https://github.com/FormidableLabs/urql/pull/908))
+
+## 1.12.2
+
+### Patch Changes
+
+- ⚠️ Fix `formatDocument` mutating parts of the `DocumentNode` which may be shared by other documents and queries. Also ensure that a formatted document will always generate the same key in `createRequest` as the original document, by [@kitten](https://github.com/kitten) (See [#880](https://github.com/FormidableLabs/urql/pull/880))
+- ⚠️ Fix `ssrExchange` invalidating results on the client-side too eagerly, by delaying invalidation by a tick, by [@kitten](https://github.com/kitten) (See [#885](https://github.com/FormidableLabs/urql/pull/885))
+
+## 1.12.1
+
+### Patch Changes
+
+- ⚠️ Fix timing for out-of-band `client.reexecuteOperation` calls. This would surface in asynchronous caching scenarios, where no result would be delivered by the cache synchronously, while it still calls `client.reexecuteOperation` for e.g. a `network-only` request, which happens for `cache-and-network`. This issue becomes especially obvious in highly synchronous frameworks like Svelte, by [@kitten](https://github.com/kitten) (See [#860](https://github.com/FormidableLabs/urql/pull/860))
+- Replace unnecessary `scheduleTask` polyfill with inline `Promise.resolve().then(fn)` calls, by [@kitten](https://github.com/kitten) (See [#861](https://github.com/FormidableLabs/urql/pull/861))
+
+## 1.12.0
+
+As always, please ensure that you deduplicate `@urql/core` when upgrading. Additionally
+deduplicating the versions of `wonka` that you have installed may also reduce your bundlesize.
+
+### Minor Changes
+
+- Expose a `client.subscription` shortcut method, similar to `client.query` and `client.mutation`, by [@FredyC](https://github.com/FredyC) (See [#838](https://github.com/FormidableLabs/urql/pull/838))
+
+### Patch Changes
+
+- Upgrade to a minimum version of wonka@^4.0.14 to work around issues with React Native's minification builds, which use uglify-es and could lead to broken bundles, by [@kitten](https://github.com/kitten) (See [#842](https://github.com/FormidableLabs/urql/pull/842))
+
 ## 1.11.8
 
 ### Patch Changes

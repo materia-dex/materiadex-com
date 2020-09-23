@@ -135,7 +135,7 @@ const IndexPage = props => {
         <StyledTitle>
           <StyledBodyTitle>World First completely decentralized exchange governed by On-Chain, Enterprise-Free Organization.</StyledBodyTitle>
           <span>
-            <Button href="/soon">Launch Dapp</Button>
+            <Button href="https://materiadex.com/">Launch Dapp</Button>
             <Button to="/strategy" as={Link} outlined>
               Discover
             </Button>
