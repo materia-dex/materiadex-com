@@ -7,9 +7,10 @@ import SEO from '../components/seo'
 import BG from '../components/bg'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import MiniCard from '../components/minicard'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import CodeIcon from '@material-ui/icons/Code';
+import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
 const StyledQuote = styled.p`
   border: solid;
@@ -283,9 +284,40 @@ const StyledImage = styled(Img)`
   }
 `
 
+
+const StyledP = styled.p`
+  color: ${({ theme }) => theme.colors.link};
+`
+
+const StyledH3 = styled.h3`
+  color: ${({ theme }) => theme.colors.link};
+`
+
+
+const StyledRoadMapImage = styled(Img)`
+  width: 100%;
+  height: 100%;
+  min-width: 150px;
+  max-width: 250px;
+  margin: 0 auto;
+`
+
+
+const StyledDivCenter = styled.div`
+  width: 100%;
+`
+
+
 const About = props => {
   const data = useStaticQuery(graphql`
     {
+      roadmapImage: file(relativePath: { eq: "roadmap.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
       twitter: file(relativePath: { eq: "twitter.png" }) {
         childImageSharp {
           fluid(maxWidth: 960) {
@@ -333,7 +365,103 @@ const About = props => {
         </StyledSidebar>
         <span>
           <StyledSectionFlex id="Roadmap">
-            <Title style={{ width: '100%' }}>Roadmap</Title>
+            <Title style={{ width: '100%' }}>Midterm Roadmap</Title>
+
+            <Timeline lineColor={'#ddd'}>
+              <TimelineItem
+                key="001"
+                dateText="Q4 2020"
+                dateInnerStyle={{ background: '#f33a33', color: '#fff' }}
+                style={{ color: '#f33a33' }}
+              >
+                <StyledH3>Materia Beta 0.1</StyledH3>
+                <StyledP>
+                  - Front end Web Site <br />
+                  - Manifesto &amp; Strategy <br />
+                  - Medium Post + Presentation <br />
+                  - Deploy Onchain: DFO + Dapp <br />
+                </StyledP>
+              </TimelineItem>
+              <TimelineItem
+                key="002"
+                dateText="Q4 2020"
+                dateInnerStyle={{ background: '#10a54d', color: '#fff' }}
+                style={{ color: '#10a54d' }}
+              >
+                <StyledH3>Materia Beta 0.2</StyledH3>
+                <StyledP>
+                  - Liquidity Mining Mechanism <br />
+                  - Staking Manager <br />
+                  - Smart Contract for investors <br />
+                </StyledP>
+              </TimelineItem>
+              <TimelineItem
+                key="003"
+                dateText="Q4 2020"
+                dateInnerStyle={{ background: '#3977ed', color: '#fff' }}
+                style={{ color: '#3977ed' }}
+              >
+                <StyledH3>Materia Beta 0.3</StyledH3>
+                <StyledP>
+                  - DefiPulse Listing <br />
+                  - ILO Release <br />
+                  - Inflation Rules <br />
+                </StyledP>
+              </TimelineItem>
+              <TimelineItem
+                key="004"
+                dateText="Q4 2020"
+                dateInnerStyle={{ background: '#fcb42c', color: '#fff' }}
+                style={{ color: '#fcb42c' }}
+              >
+                <StyledH3>Materia Beta 0.4</StyledH3>
+                <StyledP>
+                  - Derivative as collateral <br />
+                  - Derivatives Marketplace <br />
+                </StyledP>
+              </TimelineItem>
+              <TimelineItem
+                key="005"
+                dateText="Q4 2020"
+                dateInnerStyle={{ background: '#b911b3', color: '#fff' }}
+                style={{ color: '#b911b3' }}
+              >
+                <StyledH3>Materia Beta 0.5</StyledH3>
+                <StyledP>
+                  - Progressive Annual Percentage Yield <br />
+                  - Native Migrator <br />
+                </StyledP>
+              </TimelineItem>
+              <TimelineItem
+                key="006"
+                dateText="Q1 2021"
+                dateInnerStyle={{ background: '#f33a33', color: '#fff' }}
+                style={{ color: '#f33a33' }}
+              >
+                <StyledH3>Materia Beta 0.6</StyledH3>
+                <StyledP>
+                  - DEX on DFO <br />
+                  - Gamification: Lottery <br />
+                </StyledP>
+              </TimelineItem>
+              <TimelineItem
+                key="007"
+                dateText="Q2 2021"
+                dateInnerStyle={{ background: '#10a54d', color: '#fff' }}
+                style={{ color: '#10a54d' }}
+              >
+                <StyledH3>Materia Beta 0.7</StyledH3>
+                <StyledP>
+                  - NFT Exchange <br />
+                </StyledP>
+              </TimelineItem>
+            </Timeline>
+
+            {/* <StyledDivCenter>
+              <StyledRoadMapImage fadeIn={false} fluid={data.roadmapImage.childImageSharp.fluid} />
+            </StyledDivCenter> */}
+
+
           </StyledSectionFlex>
 
           <StyledSectionFlex id="Community" style={{ "paddingTop": '2.5rem' }}>

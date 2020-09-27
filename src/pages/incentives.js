@@ -338,10 +338,24 @@ const About = props => {
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#Farming')
-              window.history.pushState({}, '', '#Farming')
+              scrollTo('#Offering')
+              window.history.pushState({}, '', '#Offering')
             }}>
-            Liquidity Farming
+            Incentives Strategy: Liquidity Offering
+          </StyledHeadingLink>
+          <StyledHeadingLink
+            onClick={() => {
+              scrollTo('#Exping')
+              window.history.pushState({}, '', '#Exping')
+            }}>
+            Incentives Strategy: Exping
+          </StyledHeadingLink>
+          <StyledHeadingLink
+            onClick={() => {
+              scrollTo('#Quests')
+              window.history.pushState({}, '', '#Quests')
+            }}>
+            Incentives Strategy: Quests
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
@@ -370,25 +384,47 @@ const About = props => {
             <Title style={{ width: '100%' }}>Farming and Liquidity Management</Title>
             <StyleSectionFull style={{ margin: "0" }}>
               <p>
-                Some pair of GIL, (GIL &lt;-&gt; USDC and GIL &lt;-&gt; WETH) will be created on UniSwap v2, in order to provide the initial liquidity. 
-                People interested in joining our project, will be able to swap the GIL and deposit them on our Dapp. We won't be minting further GIL, we will use the amount available from Materia DFO wallet, accordingly with the community votes. The aim is to attract stable and long-term investors.
+                Some pair of GIL,  (GIL &lt;-&gt; USDC and GIL &lt;-&gt; WETH) will be created on UniSwap v2, in order to provide the initial liquidity. People interested in joining our project, will be able to swap the GIL. We will also provide a gamification-based farming tool to incentivize liquidity provisioning and accelerate the migration to Materia.exchange dApp.
+                We won't be minting further GIL, we will use the amount available from Materia DFO wallet, accordingly with the community votes. The aim is to attract stable and long-term investors.
               </p>
               <p>
                 As an incentive, each investor will receive a lottery ticket, a Non-Fungible Token, containing also an amazing unique character. Every day, an extraction among all the investors and stakers will take place. The winner will be rewarded with a coffer of extra GIL.
-                Every staker will be able to exchange or sell its own lottery ticket. After seven days of staking, It will also be possible to buy more tickets through the NFT trading section of our DEX. <br />
+                Every staker will be able to exchange or sell its own lottery ticket. After seven days of staking, It will also be possible to buy more tickets through the NFT trading section of our DEX.
                 The NFTs will be persistant and it will be possible to collect them. Collectionists will have the opportunity to exibihit their collection in a monthly contest. GIL owner will have the opportunity to vote the best collection and collect further incentives.
               </p>
             </StyleSectionFull>
           </StyledSectionFlex>
 
-          <StyledSectionFlex id="Farming">
-            <Title style={{ width: '100%' }}>Liquidity Farming</Title>
-            <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
+          <StyledSectionFlex id="Offering">
+            <Title style={{ width: '100%' }}>Incentives Strategy: Liquidity Offering</Title>
+            {/* <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
+            <StyleSectionFull style={{ margin: "1.5rem auto" }}>
+              <p>
+              GIL rewards will be provided per block on a daily base.
+              </p>
+            </StyleSectionFull> */}
+          </StyledSectionFlex>
+
+
+          <StyledSectionFlex id="Exping">
+            <Title style={{ width: '100%' }}>Incentives Strategy: Exping</Title>
+            {/* <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
                 For each investor will be provided redeemable uGIL tokens. GIL rewards will be provided on daily base. Long term uGIL owners will have an accelerated voting power.
               </p>
-            </StyleSectionFull>
+            </StyleSectionFull> */}
+          </StyledSectionFlex>
+
+
+          <StyledSectionFlex id="Quests">
+            <Title style={{ width: '100%' }}>Incentives Strategy: Quests</Title>
+            {/* <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
+            <StyleSectionFull style={{ margin: "1.5rem auto" }}>
+              <p>
+                For each investor will be provided redeemable uGIL tokens. GIL rewards will be provided on daily base. Long term uGIL owners will have an accelerated voting power.
+              </p>
+            </StyleSectionFull> */}
           </StyledSectionFlex>
 
           <StyledSectionFlex id="UGil">

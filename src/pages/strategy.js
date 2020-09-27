@@ -352,38 +352,38 @@ const About = props => {
   const tableData = [
     {
       id: 0,
-      percentage: '7,15%',
-      gil: '3.048.760,00',
+      percentage: '3,5%',
+      gil: '3.500.000,00',
       usage: 'Liquidity Pool',
-      description: 'Available for trading. Token will be listed on uniswap DEX and then on the Materia.',
+      description: 'Available for trading. Token will be listed on uniswap DEX and then on Materia.',
     },
     {
       id: 1,
-      percentage: '26,35%',
-      gil: '10.660.000,00',
+      percentage: '30%',
+      gil: '30.000.000,00',
       usage: 'Governance and funding',
-      description: 'Owned by Materia DFO, regulated by GIL owners.',
+      description: 'Owned by Materia DFO, regulated by $gil owners.',
     },
     {
       id: 2,
       percentage: '25%',
-      gil: '11.235.640,00',
+      gil: '25.000.000,00',
       usage: 'Investors governance',
       description: 'Available for investments rounds. First under development team control, this asset will be lost after investment stages.',
     },
     {
       id: 3,
       percentage: '40%',
-      gil: '17.056.000,00',
+      gil: '40.000.000,00',
       usage: 'Founders',
       description: 'Stored in the Founders Vault. These funds are locked for at the long run.',
     },
     {
       id: 4,
       percentage: '1,5%',
-      gil: '639.600,00',
+      gil: '1.500.000,00',
       usage: 'DFOHub',
-      description: 'Platform fee, lost during DFO creation.',
+      description: 'Platform fee, locked during DFO creation.',
     }
   ];
 
@@ -408,7 +408,7 @@ const About = props => {
       'DFOHub',
     ],
     datasets: [{
-      data: [7.15, 26.35, 25, 40, 1.5],
+      data: [3.5, 30, 25, 40, 1.5],
       backgroundColor: [
         '#f33a33',
         '#10a54d',
@@ -476,15 +476,15 @@ const About = props => {
             </StyledImgSectionLeft>
             <StyleSectionRight>
               <p>
-                The decentralized finance industry requires decentralized liquidity. We expect the DeFi space to keep growing in leaps and bounds in the future. Fuelling that growth will require more efficiencies, scalability and innovative incentives.
+                The decentralized finance industry requires decentralized liquidity. We expect the DeFi space to keep growing in leaps and bounds in the future. Fueling that growth will require more efficiencies, scalability, and innovative incentives. Moreover, protocols, dApp, and user-interactions must be evolved to become more intuitive and user friendly.
               </p>
               <p>
-                Our aim is to explore complex liquidity provision interactions like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support. We are doing it extending the several protocols (UniSwap, Crypto Swap, 1inch etc.) that are our starting point for the R&amp;D activities.
+                Our aim is to explore complex liquidity provision interactions like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support, keeping always in mind that we need to aim inclusion in order to be resilient and to keep evolving. We are doing it extending the several protocols (UniSwap, SushiSwap, 1inch, etc.) that are our starting point for the R&amp;D activities.
               </p>
             </StyleSectionRight>
             <StyleSectionFull>
               <p>
-                We will experiment gamification strategies for gathering liquidity and engage people. Furthermore, on a daily base, shares of GIL will be assigned to users and investors of Materia.exchange. The distribution of GIL is a method of both fairly issuing governance tokens and incentivize liquidity. Materia follows a constant product formula, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool.
+                We will experiment with gamification strategies for gathering liquidity and engage people. Furthermore, on a daily base, shares of GIL will be assigned to users and investors of Materia.exchange. The distribution of GIL is a method of both fairly issuing governance tokens and incentivize liquidity. In the early stages, Materia will keep following a constant product formula, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool. In the second stage, we will start experimenting with innovative strategies to allow a real-time distributed value actualization.
               </p>
             </StyleSectionFull>
           </StyledSectionFlex>
@@ -493,10 +493,10 @@ const About = props => {
             <Title style={{ width: '100%' }}>Manifesto</Title>
             <StyleSectionLeft>
               <p>
-                We want to prove the true potential of on-Chain decentralized organization by implementing the first, enterprise-free, DEX, completely managed and developed by the community for the community.
+                We want to prove the true potential of on-Chain decentralized organization by implementing the first, enterprise-free, DEX, completely managed and developed, since the beginning, by the community for the community.
               </p>
               <p>
-                By starting from the state of the art of several protocols (UniSwap, Crypto Swap, 1inch etc.), we want to contribute to the DEX evolution by exploring the frontiers of liquidity provisioning, implementing strategies, and protocol to involve and engage a wide community of dreamers.
+                By starting from the state of the art of several protocols (UniSwap, SushiSwap, 1inch etc.), we want to contribute to the DEX evolution from both a technological and UX perspective, by exploring the frontiers of liquidity provisioning, implementing strategies, and protocol to involve and engage a wide community of dreamers.
               </p>
               <p>
                 We believe in openness. Our work will be committed on github and we encourage people to join the project and contribute to its evolution and success.
@@ -511,7 +511,7 @@ const About = props => {
             <Title style={{ width: '100%' }}>GIL Distribution</Title>
             <StyleSectionLeft>
               <p>
-                According with our strategy, we will generate 42.640.000 GIL. All the supply will be distributed as follow:
+                According with our strategy, we will generate 100.000.000 $gil. All the supply will be distributed as follow:
               </p>
               <StyledTableContainer>
                 <MUIDataTable
@@ -535,7 +535,7 @@ const About = props => {
             <Title style={{ width: '100%' }}>Security</Title>
             <StyleSectionFull style={{ margin: "0" }}>
               <p style={{ "marginBottom": "1rem" }}>
-                Materia is a fork of Uniswap V2, Crypto.com DeFi Swap and other DeFi projects with innovative yeld incentive for liquidity providers, powered by GIL.
+                Materia is a fork of Uniswap V2, SushiSwap, and other DeFi projects with innovative yeld incentive for liquidity providers, powered by GIL.
               </p>
             </StyleSectionFull>
             <StyledImgSectionLeft>
@@ -544,7 +544,7 @@ const About = props => {
             <StyleSectionRight>
               <p>
                 Materia smart contracts and DeFi operating model were audited by our security team. <br />
-                We also implemented several more features, leveraging DFO CAPABILITIES in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire Dapp.
+              We also have implemented several more features, leveraging DFO CAPABILITIES in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire dApp.
               </p>
             </StyleSectionRight>
           </StyledSectionFlex>
