@@ -28,16 +28,16 @@ const StyledTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   will-change: transform;
-  margin: 3rem 0 4rem 0;
+  margin: 1rem 0 2rem 0;
   @media (max-width: 960px) {
-    margin: 3rem 0 1rem 0;
+    margin: 1rem 0 0rem 0;
   }
 `
 
 const StyledBodyTitle = styled.h1`
   color: ${({ theme }) => theme.colors.link};
   font-size: 54px;
-  margin: 4rem 0 3rem 0;
+  margin: 2rem 0 2rem 0;
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
@@ -45,7 +45,7 @@ const StyledBodyTitle = styled.h1`
   text-align: center;
   font-family: 'TitilliumWeb', sans-serif;
   @media (max-width: 1024px) {
-    margin: 2rem 0 3rem 0;
+    margin: 0 0 0 0;
   }
 
   @media (max-width: 960px) {
@@ -57,9 +57,8 @@ const StyledBodyTitle = styled.h1`
   }
   @media (max-width: 375px) {
     font-size: 2rem;
-    padding: 2rem;
     width: 100%;
-    margin: 2rem 0 2rem 0;
+    margin: 0rem 0 0rem 0;
     font-weight: 400;
   }
 `
