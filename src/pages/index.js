@@ -129,11 +129,11 @@ const IndexPage = props => {
       <SEO
         title="Home"
         path={props.location.pathname}
-        description={'World First completely decentralized exchange governed by On-Chain, Enterprise-Free Organization based on a fully decentralized protocol for automated liquidity provision on Ethereum'}
+        description={'World first, User-Centric DEX, governed by On-Chain, Enterprise-Free Organization'}
       />
       <StyledBody>
         <StyledTitle>
-          <StyledBodyTitle>World First completely decentralized exchange governed by On-Chain, Enterprise-Free Organization.</StyledBodyTitle>
+          <StyledBodyTitle>World first, User-Centric DEX, governed by On-Chain, Enterprise-Free Organization.</StyledBodyTitle>
           <span>
             <Button href="https://app.materiadex.com/">Launch Dapp</Button>
             <Button to="/strategy" as={Link} outlined>
