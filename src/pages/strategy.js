@@ -481,10 +481,13 @@ const About = props => {
               <p>
                 Our aim is to explore complex liquidity provision interactions like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support, keeping always in mind that we need to aim inclusion in order to be resilient and to keep evolving. We are doing it extending the several protocols (UniSwap, SushiSwap, 1inch, etc.) that are our starting point for the R&amp;D activities.
               </p>
+              <p>
+                  Materia will provide tools and technologies to allow both Distributed Flexible Organization (DFO) and Decentralized Autonomous Organization (DAO) to get started and to implement their strategies, leveraging services for Initial Liquidity Offering, staking, pooling and time-locked funds release.
+              </p>
             </StyleSectionRight>
             <StyleSectionFull>
               <p>
-                We will experiment with gamification strategies for gathering liquidity and engage people. Furthermore, on a daily base, shares of GIL will be assigned to users and investors of Materia.exchange. The distribution of GIL is a method of both fairly issuing governance tokens and incentivize liquidity. In the early stages, Materia will keep following a constant product formula, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool. In the second stage, we will start experimenting with innovative strategies to allow a real-time distributed value actualization.
+                The R&amp;D activities will also focus on gamification strategies for better engaging people and gathering liquidity. Furthermore, for the first 60 days and on a daily base, shares of GIL will be assigned to users and investors of Materia.exchange. The distribution of GIL is a method of both fairly issuing governance tokens and incentivize liquidity. In the early stages, Materia will keep following a constant product formula, forked by UniSwap, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool. In the second stage, we will start experimenting with innovative strategies to allow a real-time distributed value actualization.
               </p>
             </StyleSectionFull>
           </StyledSectionFlex>
