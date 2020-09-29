@@ -482,7 +482,10 @@ const About = props => {
                 Our aim is to explore complex liquidity provision interactions like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support, keeping always in mind that we need to aim inclusion in order to be resilient and to keep evolving. We are doing it extending the several protocols (UniSwap, SushiSwap, 1inch, etc.) that are our starting point for the R&amp;D activities.
               </p>
               <p>
-                  Materia will provide tools and technologies to allow both Distributed Flexible Organization (DFO) and Decentralized Autonomous Organization (DAO) to get started and to implement their strategies, leveraging services for Initial Liquidity Offering, staking, pooling and time-locked funds release.
+                Materia will provide tools and technologies to allow both Distributed Flexible Organization (DFO) and Decentralized Autonomous Organization (DAO) to get started and to implement their strategies, leveraging services for Initial Liquidity Offering, staking, pooling and time-locked funds release.
+              </p>
+              <p>
+                The Initial Liquidity Offering will take place after the official launch of Materia and will last two weeks, providing huge rewards and incentives to participants.
               </p>
             </StyleSectionRight>
             <StyleSectionFull>
@@ -496,10 +499,10 @@ const About = props => {
             <Title style={{ width: '100%' }}>Manifesto</Title>
             <StyleSectionLeft>
               <p>
-                We want to prove the true potential of on-Chain decentralized organization by implementing the first, enterprise-free, DEX, completely managed and developed, since the beginning, by the community for the community.
+                We want to prove the true potential of on-Chain decentralized organization by implementing the first, enterprise-free DEX, completely managed and developed, since the beginning, by the community for the community.
               </p>
               <p>
-                By starting from the state of the art of several protocols (UniSwap, SushiSwap, 1inch etc.), we want to contribute to the DEX evolution from both a technological and UX perspective, by exploring the frontiers of liquidity provisioning, implementing strategies, and protocol to involve and engage a wide community of dreamers.
+                By starting from the state of the art of several protocols, we want to contribute to the DEX evolution from both a technological and UX perspective, by exploring the frontiers of liquidity provisioning, implementing strategies, and protocol to involve and engage a wide community of dreamers.
               </p>
               <p>
                 We believe in openness. Our work will be committed on github and we encourage people to join the project and contribute to its evolution and success.
@@ -538,7 +541,7 @@ const About = props => {
             <Title style={{ width: '100%' }}>Security</Title>
             <StyleSectionFull style={{ margin: "0" }}>
               <p style={{ "marginBottom": "1rem" }}>
-                Materia is a fork of Uniswap V2, SushiSwap, and other DeFi projects with innovative yeld incentive for liquidity providers, powered by GIL.
+                Materia starts from a Uniswap V2, and other DeFi projects fork with innovative yield incentive for liquidity providers, powered by GIL.
               </p>
             </StyleSectionFull>
             <StyledImgSectionLeft>
@@ -547,7 +550,8 @@ const About = props => {
             <StyleSectionRight>
               <p>
                 Materia smart contracts and DeFi operating model were audited by our security team. <br />
-              We also have implemented several more features, leveraging DFO CAPABILITIES in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire dApp.
+                We have also implemented several more features, leveraging DFO capabilities in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire dApp.<br />
+                We invite the entire community and professionals to audit our contracts. We will a reward to community members that will help us to improve and keep secure our contracts which are available at <a href="https://github.com/materia-dex/ and are ready for any audit">Materia github repository</a>.
               </p>
             </StyleSectionRight>
           </StyledSectionFlex>
