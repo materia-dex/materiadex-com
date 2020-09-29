@@ -128,11 +128,11 @@ const IndexPage = props => {
       <SEO
         title="Home"
         path={props.location.pathname}
-        description={'World first, User-Centric DEX, governed by On-Chain, Enterprise-Free Organization'}
+        description={'World first, User-Centric DEX governed by On-Chain, Enterprise-Free Organization'}
       />
       <StyledBody>
         <StyledTitle>
-          <StyledBodyTitle>World first, User-Centric DEX, governed by On-Chain, Enterprise-Free Organization.</StyledBodyTitle>
+          <StyledBodyTitle>World first, User-Centric DEX governed by On-Chain, Enterprise-Free Organization.</StyledBodyTitle>
           <span>
             <Button href="https://app.materiadex.com/">Launch Dapp</Button>
             <Button to="/strategy" as={Link} outlined>
@@ -209,7 +209,7 @@ const SummarySection = props => {
 
       <StyledImgSection>
         <h1>
-          <b>Materia</b>  is the world-first, User-centric, Decentralized EXchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
+          <b>Materia</b>  is the world-first, User-centric Decentralized EXchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
       </h1>
         <p>
           Materia’s token <b>GIL</b> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
@@ -258,21 +258,21 @@ const ProductsSection = props => {
         <MiniCard
           href="/soon"
           title={'Derivative & NFT DEX'}
-          desc={'Use our experimental derivative and NFT marketplace'}
+          desc={'Buy and sell any NFT token leveraging our marketplace capabilities'}
           backgroundColor={'#3977ed'}
           color={'white'}
         />
         <MiniCard
           href="/soon"
           title={'Farming'}
-          desc={'Stake and farm GIL or LPs receiving uGIL as derivative collateral'}
+          desc={'Stake and farm GIL or any UniSwap compatible LP token receiving GIL and uGIL'}
           backgroundColor={'#fcb42c'}
           color={'white'}
         />
         <MiniCard
           href="/soon"
           title={'Analytics'}
-          desc={'Discover all the best insights'}
+          desc={'Keep controll over your investments and price fluctuations'}
           backgroundColor={'#b911b3'}
           color={'white'}
         />
