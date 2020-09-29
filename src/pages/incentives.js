@@ -381,11 +381,11 @@ const About = props => {
         </StyledSidebar>
         <span>
           <StyledSectionFlex id="Management">
-            <Title style={{ width: '100%' }}>Farming and Liquidity Management</Title>
+            <Title style={{ width: '100%' }}>Liquidity Management</Title>
             <StyleSectionFull style={{ margin: "0" }}>
               <p>
-                Some pair of GIL,  (GIL &lt;-&gt; USDC | GIL &lt;-&gt; WETH) will be created on UniSwap v2, in order to provide the initial liquidity. People interested in joining our project, will be able to swap the GIL. We will also provide a gamification-based farming tool to incentivize liquidity provisioning and accelerate the migration to Materia.exchange dApp.
-                We won't be minting further GIL, we will use the amount available from Materia DFO wallet, accordingly with the community votes. The aim is to attract stable and long-term investors.
+                Some pair of GIL,  (GIL &lt;-&gt; USDC | GIL &lt;-&gt; ETH etc.) will be created on UniSwap v2, in order to provide the initial liquidity. People interested in joining our project, will be able to swap the GIL. We will also provide a gamification-based farming tool to incentivize liquidity provisioning and accelerate the migration to Materia.exchange dApp.
+                We won't be minting further GIL, we will use the amount available from Investors' wallet, accordingly with the community votes. The aim is to attract stable and long-term investors.
               </p>
               <p>
                 As an incentive, each investor will receive a Non-Fungible Token, containing its redeemable achievements and also an amazing, fun unique character. 
