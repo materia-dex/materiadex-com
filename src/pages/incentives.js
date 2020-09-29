@@ -384,25 +384,31 @@ const About = props => {
             <Title style={{ width: '100%' }}>Farming and Liquidity Management</Title>
             <StyleSectionFull style={{ margin: "0" }}>
               <p>
-                Some pair of GIL,  (GIL &lt;-&gt; USDC and GIL &lt;-&gt; WETH) will be created on UniSwap v2, in order to provide the initial liquidity. People interested in joining our project, will be able to swap the GIL. We will also provide a gamification-based farming tool to incentivize liquidity provisioning and accelerate the migration to Materia.exchange dApp.
+                Some pair of GIL,  (GIL &lt;-&gt; USDC | GIL &lt;-&gt; WETH) will be created on UniSwap v2, in order to provide the initial liquidity. People interested in joining our project, will be able to swap the GIL. We will also provide a gamification-based farming tool to incentivize liquidity provisioning and accelerate the migration to Materia.exchange dApp.
                 We won't be minting further GIL, we will use the amount available from Materia DFO wallet, accordingly with the community votes. The aim is to attract stable and long-term investors.
               </p>
               <p>
-                As an incentive, each investor will receive a lottery ticket, a Non-Fungible Token, containing also an amazing unique character. Every day, an extraction among all the investors and stakers will take place. The winner will be rewarded with a coffer of extra GIL.
-                Every staker will be able to exchange or sell its own lottery ticket. After seven days of staking, It will also be possible to buy more tickets through the NFT trading section of our DEX.
-                The NFTs will be persistant and it will be possible to collect them. Collectionists will have the opportunity to exibihit their collection in a monthly contest. GIL owner will have the opportunity to vote the best collection and collect further incentives.
+                As an incentive, each investor will receive a Non-Fungible Token, containing its redeemable achievements and also an amazing, fun unique character. 
+                Every staker will be able to exchange or sell its own NFT. After a staking period, It will also be possible to buy more NFT on the Marketplace section of our DEX. 
+                The NFTs will be persistant and it will be possible to collect them. Collectionists will have the opportunity to exibihit their collections in a monthly contest. GIL owner will be able to vote the best collection and collect further incentives.
               </p>
             </StyleSectionFull>
           </StyledSectionFlex>
 
           <StyledSectionFlex id="Offering">
-            <Title style={{ width: '100%' }}>Incentives Strategy: Liquidity Offering</Title>
-            {/* <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
+            <Title style={{ width: '100%' }}>Incentives Strategy: Initial Liquidity Offering</Title>
+            <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
-              GIL rewards will be provided per block on a daily base.
+                Initial Liquidity Offerings are a way for DFO, DAO and Ethereum-based initiatives to secure long-term funding by providing programmable liquidity. As already explained, we will provide &dollar;gil, with a fixed and fair inflection, executed on a daily base without dumping on new and long-term olders.
               </p>
-            </StyleSectionFull> */}
+              <p>
+                During our ILO, we will release the 3.5&#37; of the total amount of &dollar;gil (i.e. 3.5M). To avoid Sniper Bots, we will deposit an initial pair of 500k &dollar;gil on UniSwap and then, during the first two weeks, we will invite investors to get GIL, pairing them with ETH and other stable-coins, and to deposit them on high-rate, staking pools where we will release the remaing 3M &dollar;gil as reward.
+              </p>
+              <p>
+                After the two weeks ILO, we will open to the market our Exping function. The aim is to attract long term investors, bringing liquidity to Materia. Exping investors will receive &dollar;gil, as reward, from the “Investors Governance” wallet. The aim is to attract funds, providing liquidity for the DEX, and to compensate both early and long-term investors by receiving a more significant portion of the liquidity.
+              </p>
+            </StyleSectionFull>
           </StyledSectionFlex>
 
 
