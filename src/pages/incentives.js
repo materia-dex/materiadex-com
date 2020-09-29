@@ -400,13 +400,13 @@ const About = props => {
             <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
-                Initial Liquidity Offerings are a way for DFO, DAO and Ethereum-based initiatives to secure long-term funding by providing programmable liquidity. As already explained, we will provide &dollar;gil, with a fixed and fair inflection, executed on a daily base without dumping on new and long-term olders.
+                Initial Liquidity Offerings are a way for DFO, DAO and Ethereum-based initiatives to secure long-term funding by providing programmable liquidity. As already explained, we will provide &#36;gil, with a fixed and fair inflection, executed on a daily base without dumping on new and long-term olders.
               </p>
               <p>
-                During our ILO, we will release the 3.5&#37; of the total amount of &dollar;gil (i.e. 3.5M). To avoid Sniper Bots, we will deposit an initial pair of 500k &dollar;gil on UniSwap and then, during the first two weeks, we will invite investors to get GIL, pairing them with ETH and other stable-coins, and to deposit them on high-rate, staking pools where we will release the remaing 3M &dollar;gil as reward.
+                During our ILO, we will release the 3.5&#37; of the total amount of &dollar;gil (i.e. 3.5M). To avoid Sniper Bots, we will deposit an initial pair of 500k &#36;gil on UniSwap and then, during the first two weeks, we will invite investors to get &#36;gil, pairing them with ETH and other stable-coins, and to deposit them on high-rate, staking pools where we will release the remaing 3M &#36;gil as reward.
               </p>
               <p>
-                After the two weeks ILO, we will open to the market our Exping function. The aim is to attract long term investors, bringing liquidity to Materia. Exping investors will receive &dollar;gil, as reward, from the “Investors Governance” wallet. The aim is to attract funds, providing liquidity for the DEX, and to compensate both early and long-term investors by receiving a more significant portion of the liquidity.
+                After the two weeks ILO, we will open to the market our Exping function. The aim is to attract long term investors, bringing liquidity to Materia. Exping investors will receive &#36;gil, as reward, from the “Investors Governance” wallet. The aim is to attract funds, providing liquidity for the DEX, and to compensate both early and long-term investors by receiving a more significant portion of the liquidity.
               </p>
             </StyleSectionFull>
           </StyledSectionFlex>
