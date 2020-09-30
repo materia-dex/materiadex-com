@@ -390,8 +390,8 @@ const About = props => {
               >
                 <StyledH3>Materia Beta 0.2</StyledH3>
                 <StyledP>
-                  - Liquidity Mining Mechanism <br />
-                  - Staking Manager <br />
+                  - Liquidity Mining Mechanisms <br />
+                  - ILO<br />
                   - Smart Contract for investors <br />
                 </StyledP>
               </TimelineItem>
@@ -404,7 +404,7 @@ const About = props => {
                 <StyledH3>Materia Beta 0.3</StyledH3>
                 <StyledP>
                   - DefiPulse Listing <br />
-                  - ILO Release <br />
+                  - StartUp Tools <br />
                   - Inflation Rules <br />
                 </StyledP>
               </TimelineItem>
@@ -416,8 +416,8 @@ const About = props => {
               >
                 <StyledH3>Materia Beta 0.4</StyledH3>
                 <StyledP>
-                  - Derivative as collateral <br />
-                  - Derivatives Marketplace <br />
+                  - Exping &amp; Quests <br />
+                  - NFT Incentives <br />
                 </StyledP>
               </TimelineItem>
               <TimelineItem
@@ -440,8 +440,8 @@ const About = props => {
               >
                 <StyledH3>Materia Beta 0.6</StyledH3>
                 <StyledP>
-                  - DEX on DFO <br />
-                  - Gamification: Lottery <br />
+                  - DEX-Evolution on DFO <br />
+                  - Gamification contests <br />
                 </StyledP>
               </TimelineItem>
               <TimelineItem
@@ -452,7 +452,7 @@ const About = props => {
               >
                 <StyledH3>Materia Beta 0.7</StyledH3>
                 <StyledP>
-                  - NFT Exchange <br />
+                  - NFT Marketplace <br />
                 </StyledP>
               </TimelineItem>
             </Timeline>
