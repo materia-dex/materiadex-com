@@ -400,7 +400,7 @@ const About = props => {
             <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
-                Initial Liquidity Offerings are a way for DFO, DAO and Ethereum-based initiatives to secure long-term funding by providing programmable liquidity. As already explained, we will provide &#36;gil, with a fixed and fair inflection, executed on a daily base without dumping on new and long-term olders.
+                Initial Liquidity Offerings are a way for DFO, DAO and Ethereum-based initiatives to secure long-term funding by providing programmable liquidity. As already explained, we will provide &#36;gil, with a fixed and fair inflation, executed on a daily base without dumping on new and long-term olders. These funds will guarantee resources for developing the project, according to the roadmap.
               </p>
               <p>
                 During our ILO, we will release the 3.5&#37; of the total amount of &dollar;gil (i.e. 3.5M). To avoid Sniper Bots, we will deposit an initial pair of 500k &#36;gil on UniSwap and then, during the first two weeks, we will invite investors to get &#36;gil, pairing them with ETH and other stable-coins, and to deposit them on high-rate, staking pools where we will release the remaing 3M &#36;gil as reward.
