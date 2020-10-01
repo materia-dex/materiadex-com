@@ -414,18 +414,21 @@ const About = props => {
 
           <StyledSectionFlex id="Exping">
             <Title style={{ width: '100%' }}>Incentives Strategy: Exping</Title>
-            {/* <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
+            <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
-                For each investor will be provided redeemable uGIL tokens. GIL rewards will be provided on daily base. Long term uGIL owners will have an accelerated voting power.
+                The concept is very simple: you can win a level by increasing staked pairs. During each level, it is possible to challenge quests, once a quest has overcame, you will earn uGil Cards that allows you to gain benefits in terms of percentage of GIL rewarded.
               </p>
-            </StyleSectionFull> */}
+              <p>
+                The more you deposit, the more quests and levels you win, the more rewards you accumulate by Exping!
+              </p>
+            </StyleSectionFull>
           </StyledSectionFlex>
 
 
-          <StyledSectionFlex id="Quests">
+          {/*<StyledSectionFlex id="Quests">
             <Title style={{ width: '100%' }}>Incentives Strategy: Quests</Title>
-            {/* <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
+             <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
                 For each investor will be provided redeemable uGIL tokens. GIL rewards will be provided on daily base. Long term uGIL owners will have an accelerated voting power.
@@ -433,7 +436,7 @@ const About = props => {
             </StyleSectionFull> */}
           </StyledSectionFlex>
 
-          <StyledSectionFlex id="UGil">
+          {/*<StyledSectionFlex id="UGil">
             <Title style={{ width: '100%' }}>uGIL</Title>
             <StyleSectionFull style={{ margin: "0" }}>
               <p>
@@ -445,7 +448,7 @@ const About = props => {
           <StyledSectionFlex id="Staking">
             <Title style={{ width: '100%' }}>Pairs Staking and uGIL Mint</Title>
             <StyledImage fadeIn={false} fluid={props.data.stakingImage.childImageSharp.fluid} />
-          </StyledSectionFlex>
+          </StyledSectionFlex>*/}
 
           <StyledSectionFlex id="Community" style={{ "paddingTop": '2.5rem' }}>
             <Title style={{ width: '100%' }}>Community</Title>
