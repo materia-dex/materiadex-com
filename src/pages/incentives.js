@@ -433,10 +433,10 @@ const About = props => {
               <p>
                 For each investor will be provided redeemable uGIL tokens. GIL rewards will be provided on daily base. Long term uGIL owners will have an accelerated voting power.
               </p>
-            </StyleSectionFull> */}
+            </StyleSectionFull>
           </StyledSectionFlex>
 
-          {/*<StyledSectionFlex id="UGil">
+          <StyledSectionFlex id="UGil">
             <Title style={{ width: '100%' }}>uGIL</Title>
             <StyleSectionFull style={{ margin: "0" }}>
               <p>
