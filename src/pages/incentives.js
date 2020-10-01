@@ -417,7 +417,7 @@ const About = props => {
             <StyledImage fadeIn={false} fluid={props.data.farmingImage.childImageSharp.fluid} />
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
-                The concept is very simple: you can win a level by increasing staked pairs. During each level, it is possible to challenge quests, once a quest has overcame, you will earn uGil Cards that allows you to gain benefits in terms of percentage of GIL rewarded.
+                The concept is very simple: you can win a level by increasing staked pairs. During each level, it is possible to challenge quests, once a quest has overcome, you will earn uGil Cards that allows you to gain benefits in terms of percentage of GIL rewarded.
               </p>
               <p>
                 The more you deposit, the more quests and levels you win, the more rewards you accumulate by Exping!
