@@ -416,7 +416,7 @@ const InfoSection = props => {
             NAUF (Not another Uniswap Fork)
           </StyledTitleAfter>
           <p>
-            By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens (link).
+            By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens <a href="https://medium.com/dfohub/a-black-hole-in-uniswap-v2s-front-end-router-is-draining-the-value-of-tokens-26f5a459b5d7">(link)</a>.
        </p>
           <p>
             We started to work on this issue, challenging ourselves in a R&D mission to overcome this limits and to simplify the swap process of the AMM.
