@@ -78,9 +78,10 @@ const StyledNavTitle = styled(Link)`
 const StyledTradeLink = styled.a`
   padding: 0.25rem 0.75rem;
   background-color: ${({ theme }) => theme.colors.link};
+  background-color: #377e9a;
   text-decoration: none;
   color: ${({ theme }) => theme.invertedTextColor};
-  border-radius: 12px;
+  border-radius: 0px;
   margin-left: 1.5rem;
   display: inline-block;
   transform: scale(0.98);
@@ -276,7 +277,7 @@ const Header = props => {
         <StyledButton type="button" onClick={toggleDarkMode}>
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </StyledButton>
-        {props.path !== undefined && <StyledTradeLink href="https://app.materiadex.com/">Launch Dapp</StyledTradeLink>}
+        {props.path !== undefined && <StyledTradeLink href="#">Coming Soon</StyledTradeLink>}
       </StyledNav>
     </StyledHeader>
   )

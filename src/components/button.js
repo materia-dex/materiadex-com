@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 const ButtonStyles = css`
   padding: 0.25rem 0.75rem;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 0px;
   margin-right: 0.75rem;
   display: inline-block;
   transform: scale(0.98);
@@ -22,6 +22,7 @@ const ButtonStyles = css`
     transform: scale(1);
   }
   background-color: ${({ outlined, theme }) => (outlined ? 'none' : theme.colors.link)};
+  background-color: #377e9a;
   color: ${({ outlined, theme }) => (outlined ? theme.colors.link : theme.invertedTextColor)};
   border: ${({ outlined, theme }) => (outlined ? `1px solid ${theme.colors.link}` : 'initial')};
 `

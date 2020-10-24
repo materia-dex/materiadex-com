@@ -21,12 +21,12 @@ const black = '#000000'
 export const theme = darkMode => ({
   white,
   black,
-  textColor: darkMode ? white : '#666666',
-  invertedTextColor: darkMode ? '#f5f5f5' : white,
+  textColor: darkMode ? white : white,
+  invertedTextColor: darkMode ? '#1a1c1f' : white,
   greyText: darkMode ? white : '#6C7284',
 
   // for setting css on <html>
-  backgroundColor: darkMode ? '#191B1F' : '#FFF',
+  backgroundColor: darkMode ? '#02192c' : '#02192c',
 
   modalBackground: darkMode ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0.5)',
   cardBG: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.02)',
@@ -71,7 +71,7 @@ export const theme = darkMode => ({
     green1: '#E6F3EC',
     green2: '#27AE60',
 
-    pink1: darkMode ? '#ABABAB' : '#143161',
+    pink1: darkMode ? '#eaeaea' : '#eaeaea',
     pink2: '#425A80',
     pink3: '#7283A0',
 
@@ -80,8 +80,8 @@ export const theme = darkMode => ({
 
     red1: '#FF6871',
 
-    link: darkMode ? '#ABABAB' : '#143161',
-    invertedLink: darkMode ? '#ABABAB' : '#143161'
+    link: darkMode ? '#eaeaea' : '#eaeaea',
+    invertedLink: darkMode ? '#eaeaea' : '#eaeaea'
   },
 
   shadows: {

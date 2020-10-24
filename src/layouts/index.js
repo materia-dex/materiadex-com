@@ -47,6 +47,9 @@ const Layout = ({ path, children, nofooter, isDocs }) => {
 
   return (
     <StyledThemeProvider>
+      <div className='sky'>
+        <div className='stars'></div>
+      </div>
       {isDocs ? (
         <MiniHeader path={path} siteTitle={data.site.siteMetadata.title} />
       ) : (

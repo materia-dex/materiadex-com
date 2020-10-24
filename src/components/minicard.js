@@ -15,7 +15,8 @@ const StyledMiniCards = styled.a`
   margin: 0.5rem;
   box-shadow: ${({ theme, outlined }) => (!outlined ? theme.shadows.huge : 'none')};
   border: 1px solid ${({ outlined }) => (!outlined ? 'rgba(0, 0)' : 'rgba(255, 0, 122, 0.4)')};
-  border-radius: 20px;
+  border: 4px solid #95d7f8;
+  border-radius: 0px;
   overflow: hidden;
   position: relative;
   display: flex;
