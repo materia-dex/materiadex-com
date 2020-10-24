@@ -24,9 +24,6 @@ import '../styles/fonts.css'
 const initReactGA = () => {
   ReactGA.initialize('UA-178238225-1');
   ReactGA.pageview('/');
-  ReactGA.pageview('/strategy');
-  ReactGA.pageview('/incentives');
-  ReactGA.pageview('/roadmap');
   ReactGA.pageview('/about');
   ReactGA.pageview('/soon');
 }
