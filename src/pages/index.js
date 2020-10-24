@@ -75,7 +75,7 @@ const StyledBodyTitle = styled.h1`
     max-width: 600px;
   }
   @media (max-width: 375px) {
-    font-size: 3rem;
+    font-size: 2rem;
     width: 100%;
     margin: 0rem 0 0rem 0;
     font-weight: 400;
