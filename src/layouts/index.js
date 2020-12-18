@@ -21,7 +21,7 @@ import '../styles/layout.css'
 import '../styles/prism-github.css'
 import '../styles/fonts.css'
 
-import backgroundVideo from '../images/galaxy-video-background.webm';
+import backgroundVideo from '../images/space.mp4';
 
 const initReactGA = () => {
   ReactGA.initialize('UA-178238225-1');
