@@ -21,6 +21,8 @@ import '../styles/layout.css'
 import '../styles/prism-github.css'
 import '../styles/fonts.css'
 
+import backgroundVideo from '../images/galaxy-video-background.webm';
+
 const initReactGA = () => {
   ReactGA.initialize('UA-178238225-1');
   ReactGA.pageview('/');
@@ -45,7 +47,12 @@ const Layout = ({ path, children, nofooter, isDocs }) => {
   return (
     <StyledThemeProvider>
       <div className='sky'>
-        <div className='stars'></div>
+        <div className='stars'>
+          <video autoPlay="true" muted loop id='myVideo'>
+            <source src={backgroundVideo} type='video/webm'/>
+          </video>
+          <div className='videoOverlay'></div>
+        </div>
       </div>
       {isDocs ? (
         <MiniHeader path={path} siteTitle={data.site.siteMetadata.title} />

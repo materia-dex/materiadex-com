@@ -135,7 +135,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: "TitilliumWeb", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Cera Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.55;
     max-width: 1440px;
     width: 100vw;
@@ -160,7 +160,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-family: "TitilliumWeb", sans-serif;
+    font-family: "Cera Pro", sans-serif;
     margin-top: 1rem ;
     font-size: 1.875rem;
     font-weight: 500;
@@ -169,12 +169,12 @@ export const GlobalStyle = createGlobalStyle`
   h2 {
     font-size: 1.5rem;
     font-weight: 400;
-    font-family: "TitilliumWeb", sans-serif;
+    font-family: "Cera Pro", sans-serif;
   }
 
   h3 {
     font-weight: 400;
-    font-family: "TitilliumWeb", sans-serif;
+    font-family: "Cera Pro", sans-serif;
   }
 
 

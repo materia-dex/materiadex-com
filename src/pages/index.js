@@ -14,9 +14,32 @@ const StyledBody = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 4rem;
-  margin-bottom: 4rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.grey2};
+  margin-bottom: 2rem;
+  &:after {
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 40px;
+    bottom: 24px;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
+    @media (max-width: 375px) {
+      height: 50px;
+    }
+  }  
+  &:before {    
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 2px;
+    bottom: -50px;
+    background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
+    margin-bottom: 4rem;
+  }
   @media (max-width: 375px) {
     margin-bottom: 2rem;
   }
@@ -62,7 +85,7 @@ const StyledBodyTitle = styled.h1`
   overflow-wrap: normal;
   max-width: 900px;
   text-align: center;
-  font-family: 'TitilliumWeb', sans-serif;
+  font-family: 'Cera Pro', sans-serif;
   @media (max-width: 1024px) {
     margin: 0 0 0 0;
   }
@@ -160,10 +183,12 @@ const StyledTitleAfter = styled.div`
 const StyledBoxFade = styled.div`
 font-size: 1em;
 max-width: 800px;
-background: linear-gradient(90deg,#05254e 0,rgba(5,37,78,0));
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#05254e",endColorstr="#0005254e",GradientType=1);
+background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
 padding: 20px;
-border-left: 2px solid #1e9de3;
+border: 1px solid #1e9de3;
+border-radius: 20px;
+box-shadow: 0px 0px 10px 0px #b0deff;
 transition: transform .33s ease-in-out .66s,opacity .33s ease-in-out .66s,-webkit-transform .33s ease-in-out .66s;
 position: relative;
 `
@@ -412,35 +437,29 @@ const InfoSection = props => {
           {/* </MiniNewInfo> */}
         </StyledImgSection>
         <StyledImgSection>
-          <StyledTitleAfter>
-            NAUF (Not another Uniswap Fork)
-          </StyledTitleAfter>
-          <p>
-            By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens <a href="https://medium.com/dfohub/a-black-hole-in-uniswap-v2s-front-end-router-is-draining-the-value-of-tokens-26f5a459b5d7">(link)</a>.
-       </p>
-          <p>
-            We started to work on this issue, challenging ourselves in a R&D mission to overcome these limits and to simplify the swap process of the AMM.
-       </p>
-          <p>
-            We believe that a safe restart should begin from the single ERC20 routing of UniSwap v1 in order to ensure stability and optimized gas consumptions.
-        </p>
-          <p>
-            We will take advantage of DFOHub microservices architecture and its next evolution to v0.5 to allow the community to self-determine the future and success of their investments in Materia.
-        </p>
-
-          <StyledTitleAfter>
-            uSD Routing
-          </StyledTitleAfter>
-          <p>
-            uSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experiment a reduced slippage compared to ETH.
+          <StyledBoxFade>
+            <StyledTitleAfter>NAUF (Not another Uniswap Fork)</StyledTitleAfter>
+            <p>
+              By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens <a href="https://medium.com/dfohub/a-black-hole-in-uniswap-v2s-front-end-router-is-draining-the-value-of-tokens-26f5a459b5d7">(link)</a>.
             </p>
-
-          <StyledTitleAfter>
-            Lego Swap via ETHItems
-          </StyledTitleAfter>
-          <p>
-            Materia is designed to leverage the power of ETHItem standard, taking advantage of its underneath support for both ERC20 and ERC1155 standards. This choice will allow a native support even for NFT tokens and the possibility to take advantage of  **batch transfer** function, efficiently creating complex LEGO Swaps, saving gas costs.
-          </p>
+            <p>
+              We started to work on this issue, challenging ourselves in a R&D mission to overcome these limits and to simplify the swap process of the AMM.
+            </p>
+            <p>
+              We believe that a safe restart should begin from the single ERC20 routing of UniSwap v1 in order to ensure stability and optimized gas consumptions.
+            </p>
+            <p>
+              We will take advantage of DFOHub microservices architecture and its next evolution to v0.5 to allow the community to self-determine the future and success of their investments in Materia.
+            </p>
+            <StyledTitleAfter>uSD Routing</StyledTitleAfter>
+            <p>
+              uSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experiment a reduced slippage compared to ETH.
+            </p>
+            <StyledTitleAfter>Lego Swap via ETHItems</StyledTitleAfter>
+            <p>
+              Materia is designed to leverage the power of ETHItem standard, taking advantage of its underneath support for both ERC20 and ERC1155 standards. This choice will allow a native support even for NFT tokens and the possibility to take advantage of  **batch transfer** function, efficiently creating complex LEGO Swaps, saving gas costs.
+            </p>
+          </StyledBoxFade>
         </StyledImgSection>
       </StyledSectionFlex>
     </>

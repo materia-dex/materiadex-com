@@ -663,7 +663,7 @@ pre tt:after {
 }
 
 .stars {
-  position:absolute;
+  /*position:absolute;
   top:0;
   left:0;
   right:0;
@@ -672,5 +672,21 @@ pre tt:after {
   height:100%;
   display:block;
   background:url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:0;
+  z-index:0;*/
+}
+
+.stars video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.stars .videoOverlay {
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgba(29,29,29,0.8);
+  min-width: 100%;
+  min-height: 100%;
 }

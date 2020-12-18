@@ -63,6 +63,9 @@ const StyledFooterSection = styled.section`
     padding-left: 0rem;
     margin-bottom: 0rem;
   }
+  div.social { float:left; }
+  p.credits { float: right; }
+  div.clear { clear: both; }
 `
 
 const StyledFooterSectionNav = styled.section`
@@ -108,21 +111,15 @@ const StyledButton = styled.button`
   border: none;
   background-color: rgba(0, 0, 0, 0);
   color: ${({ theme }) => theme.colors.link};
-  :focus {
-    outline: none;
-  }
+  :focus { outline: none; }
   align-items: center;
   justify-content: center;
-  :hover {
-    cursor: pointer;
-  }
-  a {
-    height: 24px;
-  }
-  svg path {
-    fill: ${({ theme, fill }) => fill && theme.colors.link};
-    stroke: ${({ theme }) => theme.colors.link};
-  }
+  :hover { cursor: pointer; }
+  :hover > svg { transform: scale(1.5); }
+  a { height: 24px; }
+  svg > path, svg path.cls-1, svg circle { fill: #b0deff; }
+  a > svg { transform: scale(1); transition: transform 0.25s ease; }
+  a.discordIcon { padding-top: 4px; }  
 `
 
 
@@ -150,48 +147,33 @@ const Footer = () => {
 
   // const themeContext = useContext(ThemeManagerContext)
 
-  return (
+  return (    
     <StyledFooter>
-      <StyledSection>
-        <StyledFooterSection>
-          <div>
+      <div>
           <StyledButton fill>
-            <a href="https://discord.gg/jdYMZrv">
-              <Discord  width={20} height={20} />
+            <a class="discordIcon" href="https://discord.gg/jdYMZrv" target="_blank" title="Join us on Discord">
+              <Discord width={20}/>
             </a>
           </StyledButton>
-          
           <StyledButton fill>
-            <a href="https://www.reddit.com/r/materiadex">
+            <a href="https://www.reddit.com/r/materiadex" target="_blank" title="Follow us on Reddit">
               <Reddit width={20} height={20}/>
             </a>
           </StyledButton>
           <StyledButton fill>
-            <a href="https://twitter.com/dexmateria">
+            <a href="https://twitter.com/dexmateria" target="_blank" title="Follow us on Twitter">
               <Twitter width={20} />
             </a>
           </StyledButton>
-
           <StyledButton fill>
-            <a href="https://github.com/materia-dex">
+            <a href="https://github.com/materia-dex" target="_blank" title="Join us on Github">
               <Github width={20} />
             </a>
           </StyledButton> 
-          </div>
-          <p>Materia is an open source R&amp;D project for the Ethereum Community</p>
-
-        </StyledFooterSection>
-      </StyledSection>
-      <StyledSection>
-        {data.site.siteMetadata.menulinks.map(item => {
-          return (
-            <StyledFooterSectionNav key={item.name}>
-              <h4 style={{ fontWeight: 400, marginBottom: '1rem' }}>{item.name}</h4>
-              <Dropdown links={item.sublinks} />
-            </StyledFooterSectionNav>
-          )
-        })}
-      </StyledSection>
+      </div>
+      <div>
+        <p>Materia is an open source R&amp;D project for the Ethereum Community</p>
+      </div>
     </StyledFooter>
   )
 }

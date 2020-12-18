@@ -24,7 +24,7 @@ const StyledMenu = styled.button`
   border: none;
   text-align: left;
   list-style: none;
-  padding-right: 2rem;
+  /*padding-right: 2rem;*/
   background: none;
   @media (max-width: 960px) {
     font-size: 1.5rem;
@@ -88,20 +88,34 @@ const MenuFlyout = styled.span`
 const StyledMenuTitle = styled.span`
   text-decoration: none;
   margin: 0px;
-  border-radius: 0.5rem;
   font-weight: 400;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.link};
+  
+  padding: 0.25rem 1.5rem;
+  text-shadow: 0px 0px 6px 0px #b0deff;
+  background-color: transparent;
+  display:inline-block;
+  transform: scale(0.98);
+  transition: transform 0.25s ease;
+  font-weight: 400;
   @media (max-width: 960px) {
     margin-bottom: 1rem;
     user-select: none;
+  }
+  :hover {
+    transform: scale(1);
+    text-shadow: 0px 0px 10px 0px #b0deff;
+    color: #b0deff;
+  }
+  :hover a {
+    color: #b0deff;
   }
 `
 
 const StyledMenuItem = styled.span`
   text-decoration: none;
   margin: 0px;
-  border-radius: 0.5rem;
   :hover {
     border-radius: 8px;
     color: ${({ theme }) => theme.colors.link};
@@ -162,9 +176,10 @@ const StyledDropdownArrow = styled(DropdownArrow)`
 `
 
 export default function Menu(props) {
-  const matches = useMediaQuery('only screen and (max-width: 960px)')
-  const node = useRef()
-  const [isOpen, updateIsOpen] = useState(matches)
+  const matches = useMediaQuery('only screen and (max-width: 960px)');
+  const node = useRef();
+  const [isOpen, updateIsOpen] = useState(matches);
+  const childrenCount = (props.data.sublinks != null ? props.data.sublinks.length : 0);
 
   useEffect(() => {
     const handleClickOutside = e => {
@@ -202,15 +217,17 @@ export default function Menu(props) {
   return (
     <StyledMenu ref={node} tabIndex={0}>
       <StyledMenuTitle
-        onMouseOver={() => updateIsOpen(true)}
+        onMouseOver={() => (childrenCount > 0 ? updateIsOpen(true) : null) }
         onFocus={() => {
-          updateIsOpen(true)
+          (childrenCount > 0 ? updateIsOpen(true) : null)
         }}
-        isOpen={isOpen}
+        isOpen={() => {
+          (childrenCount > 0 ? isOpen : false)
+        }}
       >
-        <span style={{ marginRight: '0.25rem' }}>{props.data.name} </span>
-        {!matches && <StyledDropdownArrow />}
-        {isOpen ? (
+        { (childrenCount > 0 ? <span style={{ marginRight: '0.25rem' }}>{props.data.name} </span> : <a href={props.data.link} target={(props.data.isExternal ? '_blank' : '_self')}>{props.data.name}</a>) }
+        {!matches && (childrenCount > 0 ? <StyledDropdownArrow /> : null)}
+        {childrenCount > 0 && isOpen ? (
           <MenuFlyout>
             {props.data.sublinks.map((item, index) => {
               return (

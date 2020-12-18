@@ -10,8 +10,10 @@ const menu = [
   },
   {
     name: 'DFO Hub',
+    link: 'https://www.dfohub.com/',
+    isExternal: true,
     sublinks: [
-      { name: 'About', link: 'https://www.dfohub.com/' },
+      //{ name: 'About', link: 'https://www.dfohub.com/' },
     ]
   }
 ]

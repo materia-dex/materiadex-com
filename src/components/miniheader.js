@@ -88,7 +88,7 @@ const StyledNavTitleWrapper = styled.nav`
 `
 
 const StyledNavTitle = styled(Link)`
-  font-family: 'TitilliumWeb', sans-serif;
+  font-family: 'Cera Pro', sans-serif;
   color: ${({ theme }) => theme.colors.link};
   margin-left: 0.35rem;
   z-index: 999;

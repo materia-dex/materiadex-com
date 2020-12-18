@@ -59,7 +59,7 @@ const StyledMiniCardHeader = styled.p`
   margin-top: 0px;
   font-weight: 600;
   font-size: 1rem;
-  font-family: 'TitilliumWeb', sans-serif;
+  font-family: 'Cera Pro', sans-serif;
 `
 
 const StyledMiniCardDesc = styled.p`

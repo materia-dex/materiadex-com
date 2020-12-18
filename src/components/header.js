@@ -60,7 +60,7 @@ const StyledNavTitleWrapper = styled.nav`
 `
 
 const StyledNavTitle = styled(Link)`
-  font-family: 'TitilliumWeb', sans-serif;
+  font-family: 'Cera Pro', sans-serif;
   color: ${({ theme }) => theme.colors.link};
   margin-left: 0.35rem;
   margin-top: 12px;
@@ -76,20 +76,21 @@ const StyledNavTitle = styled(Link)`
 `
 
 const StyledTradeLink = styled.a`
-  padding: 0.25rem 0.75rem;
-  background-color: ${({ theme }) => theme.colors.link};
-  background-color: #377e9a;
+  padding: 0.25rem 1.5rem;
+  background-color: transparent;
+  box-shadow: 0px 0px 6px 0px #b0deff;
   text-decoration: none;
   color: ${({ theme }) => theme.invertedTextColor};
-  border-radius: 0px;
+  border-radius: 20px;
   margin-left: 1.5rem;
   display: inline-block;
   transform: scale(0.98);
   transition: transform 0.25s ease;
   font-weight: 400;
-
   :hover {
     transform: scale(1);
+    box-shadow: 0px 0px 10px 0px #b0deff;
+    color:#b0deff;
   }
   @media (max-width: 960px) {
     display: none;
@@ -103,7 +104,7 @@ const StyledButton = styled.button`
   :focus {
     outline: none;
   }
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   :hover {
@@ -177,7 +178,7 @@ const StyledMateria = styled.p`
   font-size: 30px;
   margin: 0;
   width: 110px;
-  font-family: 'TitilliumWeb', sans-serif;
+  font-family: 'Cera Pro', sans-serif;
 `
 
 const StyledCloseIcon = styled(CloseIcon)`
@@ -205,6 +206,8 @@ const Header = props => {
         siteMetadata {
           menulinks {
             name
+            link
+            isExternal
             sublinks {
               name
               link
@@ -254,7 +257,7 @@ const Header = props => {
         >
           {/* <StyledUni /> */}
           {/* <StyledWordmark /> */}
-          {darkMode ? <StyledGil src={LogoDark}/> : <StyledGil src={LogoLight}/>}
+          {darkMode ? <StyledGil src={LogoDark} /> : <StyledGil src={LogoLight} />}
           {/* <StyledMateria>Materia</StyledMateria> */}
         </StyledHomeLink>
         {props.path && props.path !== '/' && props.path !== '' && (

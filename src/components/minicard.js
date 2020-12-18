@@ -4,19 +4,20 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const StyledMiniCards = styled.a`
-  padding-top: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 0rem;
-    padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0rem;
+  padding-left: 1rem;
   color: ${({ theme, outlined }) => (outlined ? theme.colors.link : theme.textColor)};
   width: 250px;
   height: ${({ small }) => (small ? '80px' : '160px')};
   max-width: 450px;
-  margin: 0.5rem;
-  box-shadow: ${({ theme, outlined }) => (!outlined ? theme.shadows.huge : 'none')};
-  border: 1px solid ${({ outlined }) => (!outlined ? 'rgba(0, 0)' : 'rgba(255, 0, 122, 0.4)')};
-  border: 4px solid #95d7f8;
-  border-radius: 0px;
+  margin: 1rem;
+  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+  border: 1px solid #1e9de3;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px #b0deff;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -52,7 +53,7 @@ const StyledMiniCardHeader = styled.p`
   margin-top: 0px;
   font-weight: 500;
   font-size: 1.25rem;
-  font-family: 'TitilliumWeb', sans-serif;
+  font-family: 'Cera Pro', sans-serif;
 `
 
 const StyledMiniCardDesc = styled.p`
@@ -72,7 +73,6 @@ const MiniCard = props => {
   return (
     <StyledMiniCards
       {...props}
-      style={{ backgroundColor: props.backgroundColor, color: props.color }}
       href={props.href}
     >
       {props.image && <StyledCardBG fluid={props.image} />}
