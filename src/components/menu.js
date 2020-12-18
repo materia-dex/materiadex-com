@@ -60,9 +60,8 @@ const MenuFlyout = styled.span`
   padding: 0.5rem 1rem;
   border-radius: 20px;
   border-top: none;
-  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
-  
+  background: linear-gradient(90deg, rgba(23,23,23, 0.9), rgba(40,43,48, 0.9)); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);  
   transform: scale(0.98);
   transition: transform 0.25s ease;
   z-index: 4;
@@ -77,7 +76,10 @@ const MenuFlyout = styled.span`
     top: unset;
     left: unset;
     padding: 0;
-    margin-top: 1rem;    
+    margin-top: 1rem;  
+    background:none;
+    filter:none; 
+    transform: scale(1); 
   }
 `
 
