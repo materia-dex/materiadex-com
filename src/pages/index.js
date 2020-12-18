@@ -127,11 +127,21 @@ const StyledCardImage = styled(Img)`
 `
 
 const StyledNormalImage = styled(Img)`
-  max-width: 92px;
-  min-width: 92px;
+  max-width: 60px;
+  min-width: 60px;
   background-color: none;
   border-radius: 0px;
-  margin: 1rem auto;  
+  margin: 1rem 0px 1rem 170px;  
+  float:left;
+`
+
+const StyledNormalImage2 = styled(Img)`
+  max-width: 400px;
+  min-width: 320px;
+  background-color: none;
+  border-radius: 0px;
+  margin: 1.1rem 25px 1.1rem;   
+  float:left; 
 `
 
 const StyledCornerImage = styled(Img)`
@@ -293,6 +303,13 @@ const IndexPage = props => {
       }
       dfoHUbImage: file(relativePath: { eq: "dfo-hub-logo.png" }) {
         childImageSharp {
+          fluid(maxWidth: 92) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      materiaIconsImage: file(relativePath: { eq: "materia-icons.png" }) {
+        childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid_noBase64
           }
@@ -423,6 +440,7 @@ const SummarySection = props => {
           <div class="divider"></div>
           <div class="homeSloganContainer">
               <StyledNormalImage fadeIn={false} fluid={props.data.dfoHUbImage.childImageSharp.fluid} />
+              <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
               <p>
                 <span>Materia + DFO Protocol</span>
                 <span>REAL DECENTRALIZED EXCHANGE</span>

@@ -760,5 +760,5 @@ pre tt:after {
 }
 
 .homeSloganContainer { text-align: center; padding-bottom: 20px }
-.homeSloganContainer p { font-size: 20px; }
+.homeSloganContainer p { font-size: 20px; clear:both; }
 .homeSloganContainer p span { display: block;}
