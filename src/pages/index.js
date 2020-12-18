@@ -118,6 +118,22 @@ const StyledImage = styled(Img)`
   }
 `
 
+const StyledCardImage = styled(Img)`
+  max-width: 250px;
+  min-width: 100px;
+  background-color: none;
+  margin-top: 0rem;
+  border-radius: 0px;  
+`
+
+const StyledNormalImage = styled(Img)`
+  max-width: 92px;
+  min-width: 92px;
+  background-color: none;
+  border-radius: 0px;
+  margin: 1rem auto;  
+`
+
 const StyledCornerImage = styled(Img)`
   position:absolute;
   display:block;
@@ -275,16 +291,30 @@ const IndexPage = props => {
           siteUrl
         }
       }
-      homeImage: file(relativePath: { eq: "img-home.png" }) {
+      dfoHUbImage: file(relativePath: { eq: "dfo-hub-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
-      posterImage: file(relativePath: { eq: "poster.png" }) {
+      naufImage: file(relativePath: { eq: "nauf-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 240) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      usdImage: file(relativePath: { eq: "usd-token.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 240) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      ethItemImage: file(relativePath: { eq: "ethitem-logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 240) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -354,7 +384,6 @@ const StyledImgSection = styled.div`
     margin-bottom: 1rem;
   }
 `
-
 const MiniNewInfo = styled(Link)`
   transform: rotate(-4deg) scale(0.98);
   color: ${({ theme }) => theme.textColor};
@@ -378,32 +407,28 @@ const MiniNewInfo = styled(Link)`
     margin: 4rem 0;
   }
 `
-
 const SummarySection = props => {
   return (
     <StyledSectionFlex>
-
-      <StyledImgSection>
         <StyledBoxFade>
           <h1>
-            <b>Materia</b>  is the world-first, User-centric Decentralized EXchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
-      </h1>
+            <b>Materia</b> is the world-first, User-centric Decentralized EXchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
+          </h1>
           <p>
             Materia’s token <b>GIL</b> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
-        </p>
+          </p>
           <p>
             Through GIL, the entire community can actively partecipate to its evolution, proposing new features and voting for their implementation.
-        </p>
-        </StyledBoxFade>
-      </StyledImgSection>
-
-      <StyledImgSection>
-        {/* <MiniNewInfo to="/about"> */}
-        <StyledBox>
-          <CornerBox data={props.data} />
-          <StyledImage fadeIn={false} fluid={props.data.homeImage.childImageSharp.fluid} />
-        </StyledBox>
-      </StyledImgSection>
+          </p>
+          <div class="divider"></div>
+          <div class="homeSloganContainer">
+              <StyledNormalImage fadeIn={false} fluid={props.data.dfoHUbImage.childImageSharp.fluid} />
+              <p>
+                <span>Materia + DFO Protocol</span>
+                <span>REAL DECENTRALIZED EXCHANGE</span>
+              </p>
+          </div>
+        </StyledBoxFade>      
     </StyledSectionFlex>
   )
 }
@@ -432,9 +457,34 @@ const InfoSection = props => {
     <>
       <StyledSectionFlex>
         <StyledImgSection>
-          {/* <MiniNewInfo to="/about"> */}
-            <StyledImage fadeIn={false} fluid={props.data.posterImage.childImageSharp.fluid} />
-          {/* </MiniNewInfo> */}
+          <div class="homeImagesCardContainer">
+            <div class="homeImageContainer">
+                <StyledCardImage fadeIn={false} fluid={props.data.naufImage.childImageSharp.fluid} />
+              </div>
+              <p class="homeImageCaption">
+                <strong>NAUF</strong><br/>
+                Materia is NOT Another Uniswap Fork
+              </p>
+          </div>
+          <div class="homeImagesCardContainer">
+            <div class="homeImageContainer">
+              <StyledCardImage fadeIn={false} fluid={props.data.usdImage.childImageSharp.fluid} />
+            </div>
+            <p class="homeImageCaption">
+              <strong>Unified Stable Dollar</strong><br/>
+              uSD is a Stable Coin based on Uniswap Liquidity Pools
+            </p>
+          </div>
+          <div class="homeImagesCardContainer">
+            <div class="homeImageContainer">
+            <StyledCardImage fadeIn={false} fluid={props.data.ethItemImage.childImageSharp.fluid} />
+            </div>
+            <p class="homeImageCaption">
+              <strong>EthItem</strong><br/>
+              ethItem is a synthesis of the ERC1155 &amp; ERC20 standards, enabling their total interoperability.<br/>
+              Each unique NFT ID can now become a source of an ERC20
+            </p>
+          </div>
         </StyledImgSection>
         <StyledImgSection>
           <StyledBoxFade>
@@ -515,7 +565,6 @@ const ProductsSection = props => {
     </>
   )
 }
-
 
 const StyledGoal = styled.div`
   color: ${({ theme }) => theme.colors.link};
