@@ -10,31 +10,6 @@ import MiniCard from '../components/minicard'
 import MUIDataTable from "mui-datatables";
 import { Pie } from 'react-chartjs-2';
 
-const StyledQuote = styled.p`
-  border: solid;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  color: ${({ theme }) => theme.invertedTextColor};
-  border-color: ${({ theme }) => theme.colors.link};
-  background-color: ${({ theme }) => theme.colors.link};;
-`
-
-const StyledChartContainer = styled.div`
-  display: flex;
-  canvas {
-    height: 100% !important;
-  }
-`
-
-const StyledTableContainer = styled.div`
-  th:first-child, td:first-child {
-    padding: 16px;
-  }
-  div.MuiPaper-root {
-    max-width: fit-content;
-  }
-`
-
 const StyledAbout = styled.div`
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -74,7 +49,6 @@ const StyledAbout = styled.div`
     margin-top: 0rem;
   }
 `
-
 const StyledSidebar = styled.div`
   display: flex;
   flex-direction: column;
@@ -83,11 +57,10 @@ const StyledSidebar = styled.div`
   top: 6rem;
   align-self: flex-start;
   padding-right: 1rem;
-  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
-  box-shadow: 0px 0px 6px 0px #b0deff;
   transform: scale(0.98);
   transition: transform 0.25s ease;
+  margin-right: 30px;
+  padding: 0.5rem 1rem 2rem 1rem;
   @media (max-width: 960px) {
     top: 0px;
     position: relative;
@@ -96,9 +69,8 @@ const StyledSidebar = styled.div`
     margin-bottom: 1rem;
     display: none;
   }
-  :hover { transform: scale(1); box-shadow: 0px 0px 10px 0px #b0deff; color:#b0deff; }
+  :hover { transform: scale(1); color:#b0deff; }
 `
-
 const StyledSectionFlex = styled.div`
   padding: 0 0 1rem 0;
   display: flex;
@@ -116,17 +88,43 @@ const StyledSectionFlex = styled.div`
     margin-top: 0rem;
     width: 100%;
   }
-  h1,
-  h2 {
-    max-width: 650px;
-  }
-  p {
-    max-width: 650px;
-  }
+  h1, h2 { max-width: 650px; }
 `
-
 const Title = styled.h1`
-  /* font-size: 3rem; */
+  font-size: 2em;
+  width: auto;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  overflow: hidden;
+  z-index: 0;
+  font-weight: 300;
+  text-shadow: 2px 2px 4px #000;
+  position:relative;
+  padding-bottom: 1rem;
+  &:after {
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 4px;
+    bottom: 0px;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
+    @media (max-width: 375px) { height: 50px; }
+  }
+  &:before {    
+      content: "";
+      width: 100%;
+      display: block;
+      left: 0;
+      position: absolute;
+      height: 2px;
+      bottom: 0px;
+      background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
+  }
+  
   margin-bottom: 1rem;
   font-size: 3.5rem;
   color: ${({ theme }) => theme.colors.link};
@@ -139,17 +137,82 @@ const Title = styled.h1`
     font-size: 3rem;
   }
 `
-
 const StyledHeadingLink = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.pink1};
-  cursor: pointer;
-  font-size: 1.25rem;
-
-  :hover {
-    text-decoration: underline;
+  color: ${({ theme }) => theme.colors.pink1};  
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  transition: padding-left .3s linear;  
+  position: relative;
+  text-shadow: 2px 2px 4px #000;
+  :hover { cursor: pointer; color: #b0deff; padding-left: 1rem; }
+`
+const StyleSectionFull = styled.div`
+  padding: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  @media (max-width: 1024px) {
+    padding: 1rem;
+    margin-top: 0rem;
+    flex-direction: ${({ wrapSmall }) => (!wrapSmall ? 'row' : 'column')};
+  }
+  @media (max-width: 960px) {
+    padding: 1rem;
+    margin-top: 0rem;
+    width: 100%;
+  }
+  h1, h2 { max-width: 650px; }
+  p { padding-top: 40px; }
+`
+const StyledQuote = styled.p`  
+  border-radius: 20px;
+  padding: 1rem;
+  /*border: solid;
+  color: ${({ theme }) => theme.invertedTextColor};
+  border-color: ${({ theme }) => theme.colors.link};
+  background-color: ${({ theme }) => theme.colors.link};*/
+  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+  box-shadow: 0px 0px 6px 0px #b0deff;
+  color:#eaeaea;
+`
+const StyledChartContainer = styled.div`
+  display: flex;
+  canvas {
+    height: 100% !important;
   }
 `
+const StyledTableContainer = styled.div`
+  th:first-child, td:first-child {
+    padding: 16px;
+  }
+  div.MuiPaper-root {
+    max-width: fit-content;
+  }
+`
+
+
+
+
+
+
+
+// const Title = styled.h1`
+//   /* font-size: 3rem; */
+//   margin-bottom: 1rem;
+//   font-size: 3.5rem;
+//   color: ${({ theme }) => theme.colors.link};
+//   pointer-events: none;
+//   white-space: wrap;
+//   overflow-wrap: normal;
+//   max-width: 900px;
+//   /* text-align: center; */
+//   @media (max-width: 960px) {
+//     font-size: 3rem;
+//   }
+// 
 
 const StyledImgSectionLeft = styled.div`
   color: ${({ theme }) => theme.colors.link};
@@ -183,7 +246,6 @@ const StyledImgSectionLeft = styled.div`
     margin-bottom: 1rem;
   }
 `
-
 const StyleSectionRight = styled.div`
   color: ${({ theme }) => theme.colors.link};
   position: relative;
@@ -210,7 +272,6 @@ const StyleSectionRight = styled.div`
     margin-bottom: 1rem;
   }
 `
-
 const StyledImgSectionRight = styled.div`
   color: ${({ theme }) => theme.colors.link};
   position: relative;
@@ -243,7 +304,6 @@ const StyledImgSectionRight = styled.div`
     margin-bottom: 1rem;
   }
 `
-
 const StyleSectionLeft = styled.div`
   color: ${({ theme }) => theme.colors.link};
   position: relative;
@@ -270,42 +330,16 @@ const StyleSectionLeft = styled.div`
     margin-bottom: 1rem;
   }
 `
-
-const StyleSectionFull = styled.div`
-  color: ${({ theme }) => theme.colors.link};
-  position: relative;
-  margin: 2.5rem 0rem;
-  @media (max-width: 1024px) {
-    width: 100%;
-    margin: 0;
-  }
-  p {
-    line-height: 155%;
-    margin-bottom: 2rem;
-    max-width: unset;
-  }
-  h1 {
-    line-height: 1.3;
-    max-width: unset;
-  }
-  h2 {
-    line-height: 1.3;
-    margin-bottom: 1rem;
-    max-width: unset;
-  }
-`
-
 const StyledImage = styled(Img)`
   width: 100%;
   height: 100%;
   min-width: 450px;
   background-color: none;
-  margin-top: 1rem;
-  border-radius: 12px;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
   box-shadow: ${({ theme }) => theme.shadows.huge};
-  @media (max-width: 960px) {
-    min-width: unset;
-  }
+  @media (max-width: 960px) { min-width: unset; }
 `
 
 const About = props => {
@@ -546,19 +580,14 @@ const About = props => {
                 According with our strategy, we will generate 100.000.000 $gil. All the supply will be distributed as follow:
               </p>
               <StyledTableContainer>
-                <MUIDataTable
-                  data={tableData}
-                  columns={tableColumns}
-                  options={tableOptions}
-                />
+                <div class="dataTableContainer">
+                  <MUIDataTable data={tableData} columns={tableColumns} options={tableOptions}/>
+                </div>
               </StyledTableContainer>
             </StyleSectionLeft>
             <StyledImgSectionRight style={{ "display": "flex", "margin": "0 auto", "justifyContent": "center" }}>
               <StyledChartContainer>
-                <Pie
-                  data={chartData}
-                  options={{ maintainAspectRatio: false }}
-                />
+                <Pie data={chartData} options={{ maintainAspectRatio: false, height: 10 }} />
               </StyledChartContainer>
             </StyledImgSectionRight>
           </StyledSectionFlex>

@@ -690,3 +690,23 @@ pre tt:after {
   min-width: 100%;
   min-height: 100%;
 }
+
+.dataTableContainer .MuiPaper-root, .dataTableContainer .MUIDataTableHeadCell-fixedHeader-32 { 
+  background-color: transparent !important;
+}
+
+.dataTableContainer {
+  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+  box-shadow: 0px 0px 6px 0px #b0deff;
+  border-radius: 20px;
+  color:#eaeaea;
+  padding: 0.5rem;
+}
+
+.dataTableContainer .MuiTableCell-head,
+.dataTableContainer .MuiTableCell-body { 
+  color:#eaeaea;
+}
+.dataTableContainer .MuiTableRow-root:last-child .MuiTableCell-root { border:none; }
+.dataTableContainer th.MuiTableCell-root { font-weight: 600; }

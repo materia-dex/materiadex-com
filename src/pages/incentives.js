@@ -10,31 +10,6 @@ import MiniCard from '../components/minicard'
 import MUIDataTable from "mui-datatables";
 import { Pie } from 'react-chartjs-2';
 
-const StyledQuote = styled.p`
-  border: solid;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  color: ${({ theme }) => theme.invertedTextColor};
-  border-color: ${({ theme }) => theme.colors.link};
-  background-color: ${({ theme }) => theme.colors.link};;
-`
-
-const StyledChartContainer = styled.div`
-  display: flex;
-  canvas {
-    height: 100% !important;
-  }
-`
-
-const StyledTableContainer = styled.div`
-  th:first-child, td:first-child {
-    padding: 16px;
-  }
-  div.MuiPaper-root {
-    max-width: fit-content;
-  }
-`
-
 const StyledAbout = styled.div`
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -42,7 +17,8 @@ const StyledAbout = styled.div`
   padding: 0 2rem;
   padding-bottom: 4rem;
   margin-bottom: 4rem;
-  padding-top: 2rem;position:relative;
+  padding-top: 2rem;
+  position:relative;
   &:after {
     content: "";
     width: 100%;
@@ -73,7 +49,6 @@ const StyledAbout = styled.div`
     margin-top: 0rem;
   }
 `
-
 const StyledSidebar = styled.div`
   display: flex;
   flex-direction: column;
@@ -82,11 +57,10 @@ const StyledSidebar = styled.div`
   top: 6rem;
   align-self: flex-start;
   padding-right: 1rem;
-  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
-  box-shadow: 0px 0px 6px 0px #b0deff;
   transform: scale(0.98);
   transition: transform 0.25s ease;
+  margin-right: 30px;
+  padding: 0.5rem 1rem 2rem 1rem;
   @media (max-width: 960px) {
     top: 0px;
     position: relative;
@@ -95,9 +69,8 @@ const StyledSidebar = styled.div`
     margin-bottom: 1rem;
     display: none;
   }
-  :hover { transform: scale(1); box-shadow: 0px 0px 10px 0px #b0deff; color:#b0deff; }
+  :hover { transform: scale(1); color:#b0deff; }
 `
-
 const StyledSectionFlex = styled.div`
   padding: 0 0 1rem 0;
   display: flex;
@@ -123,9 +96,41 @@ const StyledSectionFlex = styled.div`
     max-width: 650px;
   }
 `
-
 const Title = styled.h1`
-  /* font-size: 3rem; */
+  font-size: 2em;
+  width: auto;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  overflow: hidden;
+  z-index: 0;
+  font-weight: 300;
+  text-shadow: 2px 2px 4px #000;
+  position:relative;
+  padding-bottom: 1rem;
+  &:after {
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 4px;
+    bottom: 0px;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
+    @media (max-width: 375px) { height: 50px; }
+  }
+  &:before {    
+      content: "";
+      width: 100%;
+      display: block;
+      left: 0;
+      position: absolute;
+      height: 2px;
+      bottom: 0px;
+      background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
+  }
+  
   margin-bottom: 1rem;
   font-size: 3.5rem;
   color: ${({ theme }) => theme.colors.link};
@@ -138,51 +143,38 @@ const Title = styled.h1`
     font-size: 3rem;
   }
 `
-
 const StyledHeadingLink = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.pink1};
-  cursor: pointer;
-  font-size: 1.25rem;
-
-  :hover {
-    text-decoration: underline;
-  }
+  color: ${({ theme }) => theme.colors.pink1};  
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  transition: padding-left .3s linear;  
+  position: relative;
+  text-shadow: 2px 2px 4px #000;
+  :hover { cursor: pointer; color: #b0deff; padding-left: 1rem; }
 `
-
-const StyledImgSectionLeft = styled.div`
+const StyleSectionFull = styled.div`
   color: ${({ theme }) => theme.colors.link};
   position: relative;
-  margin: 0rem 0rem;
-  @media (max-width: 960px) {
-    width: 100%;
-    margin-bottom: 2.5rem;
-    p {
-      max-width: 300px;
-    }
-    h1 {
-      max-width: 450px;
-    }
-  }
+  margin: 2.5rem 0rem;
   @media (max-width: 1024px) {
-    margin-bottom: 2.5rem;
+    width: 100%;
+    margin: 0;
   }
   p {
     line-height: 155%;
     margin-bottom: 2rem;
-    max-width: 300px;
+    max-width: unset;
   }
   h1 {
-    max-width: 450px;
     line-height: 1.3;
+    max-width: unset;
   }
   h2 {
-    max-width: 450px;
     line-height: 1.3;
     margin-bottom: 1rem;
+    max-width: unset;
   }
 `
-
 const StyleSectionRight = styled.div`
   color: ${({ theme }) => theme.colors.link};
   position: relative;
@@ -209,7 +201,6 @@ const StyleSectionRight = styled.div`
     margin-bottom: 1rem;
   }
 `
-
 const StyledImgSectionRight = styled.div`
   color: ${({ theme }) => theme.colors.link};
   position: relative;
@@ -242,7 +233,6 @@ const StyledImgSectionRight = styled.div`
     margin-bottom: 1rem;
   }
 `
-
 const StyleSectionLeft = styled.div`
   color: ${({ theme }) => theme.colors.link};
   position: relative;
@@ -269,28 +259,28 @@ const StyleSectionLeft = styled.div`
     margin-bottom: 1rem;
   }
 `
+const StyledQuote = styled.p`
+  border: solid;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: ${({ theme }) => theme.invertedTextColor};
+  border-color: ${({ theme }) => theme.colors.link};
+  background-color: ${({ theme }) => theme.colors.link};;
+`
 
-const StyleSectionFull = styled.div`
-  color: ${({ theme }) => theme.colors.link};
-  position: relative;
-  margin: 2.5rem 0rem;
-  @media (max-width: 1024px) {
-    width: 100%;
-    margin: 0;
+const StyledChartContainer = styled.div`
+  display: flex;
+  canvas {
+    height: 100% !important;
   }
-  p {
-    line-height: 155%;
-    margin-bottom: 2rem;
-    max-width: unset;
+`
+
+const StyledTableContainer = styled.div`
+  th:first-child, td:first-child {
+    padding: 16px;
   }
-  h1 {
-    line-height: 1.3;
-    max-width: unset;
-  }
-  h2 {
-    line-height: 1.3;
-    margin-bottom: 1rem;
-    max-width: unset;
+  div.MuiPaper-root {
+    max-width: fit-content;
   }
 `
 
@@ -299,8 +289,8 @@ const StyledImage = styled(Img)`
   height: 100%;
   min-width: 450px;
   background-color: none;
-  margin-top: 1rem;
-  border-radius: 12px;
+  margin-top: 0rem;
+  border-radius: 0px;
   box-shadow: ${({ theme }) => theme.shadows.huge};
   @media (max-width: 960px) {
     min-width: unset;
@@ -422,7 +412,7 @@ const About = props => {
 
           <StyledSectionFlex id="Offering">
             <Title style={{ width: '100%' }}>Incentives Strategy: Initial Liquidity Offering</Title>
-            <StyledImage fadeIn={false} fluid={(data.farmingImage != null ? data.farmingImage.childImageSharp.fluid : null)} />
+            { data.farmingImage && (<StyledImage fadeIn={false} fluid={data.farmingImage.childImageSharp.fluid} />)}
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
                 Initial Liquidity Offerings are a way for DFO, DAO and Ethereum-based initiatives to secure long-term funding by providing programmable liquidity. As already explained, we will provide &#36;gil, with a fixed and fair inflation, executed on a daily base without dumping on new and long-term olders. These funds will guarantee resources for developing the project, according to the roadmap.
@@ -439,7 +429,7 @@ const About = props => {
 
           <StyledSectionFlex id="Exping">
             <Title style={{ width: '100%' }}>Incentives Strategy: Exping</Title>
-            <StyledImage fadeIn={false} fluid={(data.farmingImage != null ? data.farmingImage.childImageSharp.fluid : null)} />
+            { data.farmingImage && (<StyledImage fadeIn={false} fluid={data.farmingImage.childImageSharp.fluid} />)}
             <StyleSectionFull style={{ margin: "1.5rem auto" }}>
               <p>
                 The concept is very simple: you can win a level by increasing staked pairs. During each level, it is possible to challenge quests, once a quest has overcome, you will earn uGil Cards that allows you to gain benefits in terms of percentage of GIL rewarded.
