@@ -37,6 +37,7 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   transition: right 0.25s ease;
+  z-index: 1;
   @media (max-width: 960px) {
     position: fixed;
     top: 0px;
@@ -249,22 +250,12 @@ const Header = props => {
   return (
     <StyledHeader open={isMenuOpen}>
       <StyledNavTitleWrapper>
-        <StyledHomeLink
-          to="/"
-          style={{
-            textDecoration: `none`
-          }}
-        >
+        <StyledHomeLink to="/" style={{ textDecoration: `none` }} >
           {/* <StyledUni /> */}
           {/* <StyledWordmark /> */}
           {darkMode ? <StyledGil src={LogoDark} /> : <StyledGil src={LogoLight} />}
           {/* <StyledMateria>Materia</StyledMateria> */}
-        </StyledHomeLink>
-        {props.path && props.path !== '/' && props.path !== '' && (
-          <>
-            <StyledNavTitle to={'/' + props.path.split('/')[1]}>/ {props.path.split('/')[1]}</StyledNavTitle>
-          </>
-        )}
+        </StyledHomeLink>        
       </StyledNavTitleWrapper>
       <MenuToggle ref={button} open={isMenuOpen} onClick={() => updateIsMenuOpen(!isMenuOpen)}>
         {isMenuOpen ? <StyledCloseIcon /> : <StyledMenuIcon />}

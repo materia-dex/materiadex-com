@@ -27,6 +27,7 @@ const StyledMiniCards = styled.a`
   will-change: transform;
   :hover {
     transform: scale(1.03);
+    color:#b0deff;
   }
 
   @media (max-width: 960px) {
@@ -76,7 +77,7 @@ const MiniCard = props => {
       href={props.href}
     >
       {props.image && <StyledCardBG fluid={props.image} />}
-      <StyledMiniCardHeader style={{ color: props.color }}>{props.title}</StyledMiniCardHeader>
+      <StyledMiniCardHeader>{props.title}</StyledMiniCardHeader>
       <StyledMiniCardDesc>{props.desc}</StyledMiniCardDesc>
       {/* <StyledArrow>{'->'}</StyledArrow> */}
     </StyledMiniCards>

@@ -15,10 +15,31 @@ const StyledAbout = styled.div`
   padding-bottom: 4rem;
   margin-bottom: 4rem;
   padding-top: 2rem;
-
-  border-bottom: 1px solid ${({ theme }) => theme.colors.grey2};
-  border-top: 1px solid ${({ theme }) => theme.colors.grey2};
-
+  position:relative;
+  &:after {
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 8px;
+    bottom: 0px;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
+    @media (max-width: 375px) {
+      height: 50px;
+    }
+  }
+  &:before {    
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 2px;
+    bottom: 0px;
+    background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
+}
   @media (max-width: 960px) {
     flex-direction: column;
     grid-template-columns: 1fr;
@@ -34,7 +55,10 @@ const StyledSidebar = styled.div`
   top: 6rem;
   align-self: flex-start;
   padding-right: 1rem;
-  color: ${({ theme }) => theme.colors.link};
+  transform: scale(0.98);
+  transition: transform 0.25s ease;
+  margin-right: 30px;
+  padding: 0.5rem 1rem 2rem 1rem;
   @media (max-width: 960px) {
     top: 0px;
     position: relative;
@@ -43,6 +67,7 @@ const StyledSidebar = styled.div`
     margin-bottom: 1rem;
     display: none;
   }
+  :hover { transform: scale(1); color:#b0deff; }
 `
 
 const StyledSectionFlex = styled.div`
@@ -72,7 +97,40 @@ const StyledSectionFlex = styled.div`
 `
 
 const Title = styled.h1`
-  /* font-size: 3rem; */
+  font-size: 2em;
+  width: auto;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  overflow: hidden;
+  z-index: 0;
+  font-weight: 300;
+  text-shadow: 2px 2px 4px #000;
+  position:relative;
+  padding-bottom: 1rem;
+  &:after {
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 4px;
+    bottom: 0px;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
+    @media (max-width: 375px) { height: 50px; }
+  }
+  &:before {    
+      content: "";
+      width: 100%;
+      display: block;
+      left: 0;
+      position: absolute;
+      height: 2px;
+      bottom: 0px;
+      background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
+  }
+  
   margin-bottom: 1rem;
   font-size: 3.5rem;
   color: ${({ theme }) => theme.colors.link};
@@ -88,13 +146,12 @@ const Title = styled.h1`
 
 const StyledHeadingLink = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.pink1};
-  cursor: pointer;
-  font-size: 1.25rem;
-
-  :hover {
-    text-decoration: underline;
-  }
+  color: ${({ theme }) => theme.colors.pink1};  
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  transition: padding-left .3s linear;  
+  position: relative;
+  text-shadow: 2px 2px 4px #000;
+  :hover { cursor: pointer; color: #b0deff; padding-left: 1rem; }
 `
 
 const StyleSectionFull = styled.div`
@@ -154,8 +211,7 @@ const About = props => {
       <SEO title="Coming Soon" path={props.location.pathname} />
       <StyledAbout>
         <StyledSidebar>
-          <StyledHeadingLink
-            onClick={() => {
+          <StyledHeadingLink onClick={() => {
               scrollTo('#Soon')
               window.history.pushState({}, '', '#Soon')
             }}>
@@ -171,7 +227,7 @@ const About = props => {
         </StyledSidebar>
         <span>
           <StyledSectionFlex id="Soon">
-            <Title style={{ width: '100%' }}>Coming Soon</Title>
+            <Title>Coming Soon</Title>
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
               <p>
                 This feature is still under development from our best engineering team.<br />

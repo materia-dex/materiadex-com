@@ -68,7 +68,7 @@ const InlineCard = props => {
   return (
     <StyledBoxLink {...props} style={{ backgroundColor: props.backgroundColor, color: props.color }} to={props.to}>
       {props.image && <StyledCardBG src={props.image} />}
-      <StyledMiniCardHeader style={{ color: props.color }}>{props.title}</StyledMiniCardHeader>
+      <StyledMiniCardHeader>{props.title}</StyledMiniCardHeader>
       {props.desc && <StyledMiniCardDesc>{props.desc}</StyledMiniCardDesc>}
       {/* <StyledArrow>{'->'}</StyledArrow> */}
       {props.children}

@@ -15,10 +15,31 @@ const StyledAbout = styled.div`
   padding-bottom: 4rem;
   margin-bottom: 4rem;
   padding-top: 2rem;
-
-  border-bottom: 1px solid ${({ theme }) => theme.colors.grey2};
-  border-top: 1px solid ${({ theme }) => theme.colors.grey2};
-
+  position:relative;
+  &:after {
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 8px;
+    bottom: 0px;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
+    @media (max-width: 375px) {
+      height: 50px;
+    }
+  }
+  &:before {    
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 2px;
+    bottom: 0px;
+    background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
+}
   @media (max-width: 960px) {
     flex-direction: column;
     grid-template-columns: 1fr;
@@ -34,7 +55,11 @@ const StyledSidebar = styled.div`
   top: 6rem;
   align-self: flex-start;
   padding-right: 1rem;
-  color: ${({ theme }) => theme.colors.link};
+  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+  box-shadow: 0px 0px 6px 0px #b0deff;
+  transform: scale(0.98);
+  transition: transform 0.25s ease;
   @media (max-width: 960px) {
     top: 0px;
     position: relative;
@@ -43,6 +68,7 @@ const StyledSidebar = styled.div`
     margin-bottom: 1rem;
     display: none;
   }
+  :hover { transform: scale(1); box-shadow: 0px 0px 10px 0px #b0deff; color:#b0deff; }
 `
 
 const StyledSectionFlex = styled.div`

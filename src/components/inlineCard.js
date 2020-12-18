@@ -16,7 +16,6 @@ const StyledMiniCards = styled(Link)`
   margin-bottom: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colors.grey2};
   box-shadow: ${({ theme }) => theme.shadows.huge};
-
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -27,6 +26,7 @@ const StyledMiniCards = styled(Link)`
   will-change: transform;
   :hover {
     transform: scale(1.03);
+    color:#b0deff;
   }
 
   @media (max-width: 960px) {
@@ -73,7 +73,7 @@ const InlineCard = props => {
   return (
     <StyledMiniCards {...props} style={{ backgroundColor: props.backgroundColor, color: props.color }} to={props.to}>
       {props.image && <StyledCardBG fluid={props.image} />}
-      <StyledMiniCardHeader style={{ color: props.color }}>{props.title}</StyledMiniCardHeader>
+      <StyledMiniCardHeader>{props.title}</StyledMiniCardHeader>
       <span>
         <StyledMiniCardDesc>{props.description || props.desc}</StyledMiniCardDesc>
         <Tag>{props.icon}</Tag>

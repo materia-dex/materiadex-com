@@ -51,37 +51,33 @@ const StyledMenu = styled.button`
 `
 
 const MenuFlyout = styled.span`
-  /* font-size: 1.125rem; */
-  background-color: ${({ theme }) => theme.inputBackground};
-  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 2.5rem;
+  top: 2rem;
   left: -1rem;
-  min-width: 196px;
+  min-width: 220px;
   padding: 0.5rem 1rem;
-  border-radius: 12px;
-  background-color: ${({ theme }) => theme.menuBG};
-  /* backdrop-filter: blur(20px); */
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
-    0px 24px 32px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  border-top: none;
+  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+  
+  transform: scale(0.98);
+  transition: transform 0.25s ease;
   z-index: 4;
-
-  p {
-    padding: 0px;
+  p { padding: 0px; }
+  :hover {
+    transform: scale(1);
+    color:#b0deff;
   }
-
   @media (max-width: 960px) {
     font-size: 1rem;
     position: initial;
-    box-shadow: none;
     top: unset;
     left: unset;
     padding: 0;
-    margin-top: 1rem;
-    backdrop-filter: 'none';
-    background-color: rgba(255, 255, 255, 0);
+    margin-top: 1rem;    
   }
 `
 
@@ -90,41 +86,25 @@ const StyledMenuTitle = styled.span`
   margin: 0px;
   font-weight: 400;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.link};
-  
+  color: ${({ theme }) => theme.colors.link};  
   padding: 0.25rem 1.5rem;
   text-shadow: 0px 0px 6px 0px #b0deff;
   background-color: transparent;
   display:inline-block;
   transform: scale(0.98);
   transition: transform 0.25s ease;
-  font-weight: 400;
-  @media (max-width: 960px) {
-    margin-bottom: 1rem;
-    user-select: none;
-  }
-  :hover {
-    transform: scale(1);
-    text-shadow: 0px 0px 10px 0px #b0deff;
-    color: #b0deff;
-  }
-  :hover a {
-    color: #b0deff;
-  }
+  font-weight: 400;  
+  @media (max-width: 960px) { margin-bottom: 1rem; user-select: none; }
+  :hover { transform: scale(1); text-shadow: 0px 0px 10px 0px #b0deff; color: #b0deff; }
+  :hover a { color: #b0deff; }
 `
 
 const StyledMenuItem = styled.span`
   text-decoration: none;
   margin: 0px;
-  :hover {
-    border-radius: 8px;
-    color: ${({ theme }) => theme.colors.link};
-    p {
-      color: ${({ theme }) => theme.colors.link};
-    }
-  }
-  @media (max-width: 960px) {
-  }
+  color: ${({ theme }) => theme.colors.link};
+  :hover { color: #b0deff; }
+  @media (max-width: 960px) { }
 `
 
 const StyledLink = styled(Link)`
@@ -135,6 +115,8 @@ const StyledLink = styled(Link)`
   display: block;
   width: 100%;
   cursor: pointer;
+  position: relative;
+  
 `
 const StyledExternalLink = styled.a`
   margin: 0;
@@ -158,6 +140,18 @@ const StyledTitle = styled.p`
   @media (max-width: 960px) {
     padding: 0;
   }
+`
+const StyledMenuItemTitle = styled.span`
+  display: block;
+  font-weight: ${({ active }) => active && 500};
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0.125rem 0.5rem 0px 0.5rem;
+  transition: padding-left .3s linear;
+  color: ${({ theme }) => theme.colors.link};
+  :hover, :active { color: #b0deff; padding-left: 1rem; }
+  @media (max-width: 960px) { padding: 0; }
 `
 
 const StyledDescription = styled.p`
@@ -234,17 +228,17 @@ export default function Menu(props) {
                 <StyledMenuItem tabindex={index} key={index}>
                   {item.link.split('.').slice(-1)[0] === 'pdf' ? (
                     <StyledExternalLink href={item.link} target="_blank" rel="noopener noreferrer">
-                      <StyledTitle>{item.name}</StyledTitle>
+                      <StyledMenuItemTitle>{item.name}</StyledMenuItemTitle>
                       {item.description && <StyledDescription>{item.description}</StyledDescription>}
                     </StyledExternalLink>
                   ) : item.link === '/about#brand-assets' ? null : item.link.split('/')[0] === '' ? (
                     <StyledLink to={item.link}>
-                      <StyledTitle>{item.name}</StyledTitle>
+                      <StyledMenuItemTitle>{item.name}</StyledMenuItemTitle>
                       {item.description && <StyledDescription>{item.description}</StyledDescription>}
                     </StyledLink>
                   ) : (
                     <StyledExternalLink href={item.link}>
-                      <StyledTitle>{item.name}</StyledTitle>
+                      <StyledMenuItemTitle>{item.name}</StyledMenuItemTitle>
                       {item.description && <StyledDescription>{item.description}</StyledDescription>}
                     </StyledExternalLink>
                   )}

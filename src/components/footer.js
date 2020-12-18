@@ -114,12 +114,12 @@ const StyledButton = styled.button`
   :focus { outline: none; }
   align-items: center;
   justify-content: center;
-  :hover { cursor: pointer; }
-  :hover > svg { transform: scale(1.5); }
   a { height: 24px; }
   svg > path, svg path.cls-1, svg circle { fill: #b0deff; }
-  a > svg { transform: scale(1); transition: transform 0.25s ease; }
-  a.discordIcon { padding-top: 4px; }  
+  a > svg { transform: scale(0.98); transition: transform 0.25s ease; }
+  a.discordIcon { padding-top: 4px; } 
+  :hover { cursor: pointer; transform: scale(1); }
+  a:hover > svg { transform: scale(1.2); }
 `
 
 

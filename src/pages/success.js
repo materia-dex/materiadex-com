@@ -14,7 +14,31 @@ const StyledAbout = styled.div`
   align-items: center;
   padding-bottom: 4rem;
   margin-bottom: 4rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.grey2};
+  position:relative;
+  &:after {
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 8px;
+    bottom: 0px;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
+    @media (max-width: 375px) {
+      height: 50px;
+    }
+  }
+  &:before {    
+    content: "";
+    width: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 2px;
+    bottom: 0px;
+    background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
+}
 `
 
 const StyledSectionFlex = styled.div`
