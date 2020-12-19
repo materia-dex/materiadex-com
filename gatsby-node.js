@@ -41,3 +41,10 @@ exports.onCreateNode = ({ node, getNodesByType, actions }) => {
     })
   }
 }
+
+exports.createPages = ({ graphql, actions }) => {
+  //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+  const {createRedirect} = actions
+  createRedirect({ fromPath: '/incentives', toPath: '/', isPermanent: true });
+  //createRedirect({ fromPath: '/community', toPath: '/', isPermanent: true });
+}

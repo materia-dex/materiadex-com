@@ -115,7 +115,6 @@ const Confirm = props => {
       <SEO title="Confirm" path={props.location.pathname} />
       <StyledAbout>
         <StyledSectionFlex style={{ flexDirection: 'column', paddingBottom: '0px' }}>
-          <StyledCardBG fluid={data.unicornImage.childImageSharp.fluid} />
           <Title style={{ width: '100%' }}>Check your email to confirm.</Title>
           <p>{"We'll be in touch soon."}</p>
           <Link to="/">Back home</Link>

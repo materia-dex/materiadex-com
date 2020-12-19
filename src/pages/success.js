@@ -114,7 +114,7 @@ const Success = props => {
       <SEO title="Success" path={props.location.pathname} />
       <StyledAbout>
         <StyledSectionFlex style={{ flexDirection: 'column', paddingBottom: '0px' }}>
-          <StyledCardBG fluid={data.unicornImage.childImageSharp.fluid} />
+          
           <Title style={{ width: '100%' }}>You are now subscribed.</Title>
           <p>
             {"We'll be in touch soon. You can always unsubscribe"}

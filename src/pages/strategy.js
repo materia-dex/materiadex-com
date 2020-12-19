@@ -192,28 +192,6 @@ const StyledTableContainer = styled.div`
     max-width: fit-content;
   }
 `
-
-
-
-
-
-
-
-// const Title = styled.h1`
-//   /* font-size: 3rem; */
-//   margin-bottom: 1rem;
-//   font-size: 3.5rem;
-//   color: ${({ theme }) => theme.colors.link};
-//   pointer-events: none;
-//   white-space: wrap;
-//   overflow-wrap: normal;
-//   max-width: 900px;
-//   /* text-align: center; */
-//   @media (max-width: 960px) {
-//     font-size: 3rem;
-//   }
-// 
-
 const StyledImgSectionLeft = styled.div`
   color: ${({ theme }) => theme.colors.link};
   position: relative;
@@ -341,7 +319,15 @@ const StyledImage = styled(Img)`
   box-shadow: ${({ theme }) => theme.shadows.huge};
   @media (max-width: 960px) { min-width: unset; }
 `
-
+const ParagraphContent = styled.p`
+  font-size: 1.2rem;
+  font-family: 'Cera Pro';
+  > a { color: #81cdf3; }
+  > a:hover { text-decordation: underline !important; }
+`
+const ParagraphContentEvidence = styled.strong`
+  color:#ffffff;
+`
 const About = props => {
   const data = useStaticQuery(graphql`
     {
@@ -412,29 +398,29 @@ const About = props => {
   const tableData = [
     {
       id: 0,
-      percentage: '3,5%',
-      gil: '3.500.000,00',
+      percentage: '28,5%',
+      gil: '5.700.000,00',
       usage: 'Liquidity Pool',
       description: 'Available for trading. Token will be listed on uniswap DEX and then on Materia.',
     },
     {
       id: 1,
-      percentage: '30%',
-      gil: '30.000.000,00',
+      percentage: '20%',
+      gil: '4.000.000,00',
       usage: 'Governance and funding',
       description: 'Owned by Materia DFO, regulated by $gil owners.',
     },
     {
       id: 2,
-      percentage: '25%',
-      gil: '25.000.000,00',
+      percentage: '40%',
+      gil: '8.000.000,00',
       usage: 'Investors governance',
       description: 'Available for investments rounds. First under development team control, this asset will be lost after investment stages.',
     },
     {
       id: 3,
-      percentage: '40%',
-      gil: '40.000.000,00',
+      percentage: '10%',
+      gil: '2.000.000,00',
       usage: 'Founders',
       description: 'Stored in the Founders Vault. These funds are locked for at the long run.',
     },
@@ -499,13 +485,13 @@ const About = props => {
             }}>
             Manifesto
           </StyledHeadingLink>
-          <StyledHeadingLink
+          {/* <StyledHeadingLink
             onClick={() => {
               scrollTo('#Distribution')
               window.history.pushState({}, '', '#Distribution')
             }}>
             Distribution
-          </StyledHeadingLink>
+          </StyledHeadingLink> */}
           <StyledHeadingLink
             onClick={() => {
               scrollTo('#Security')
@@ -519,13 +505,6 @@ const About = props => {
               window.history.pushState({}, '', '#Voting')
             }} >
             Voting
-          </StyledHeadingLink>
-          <StyledHeadingLink
-            onClick={() => {
-              scrollTo('#Community')
-              window.history.pushState({}, '', '#Community')
-            }}>
-            Community
           </StyledHeadingLink>
         </StyledSidebar>
         <span>
@@ -549,31 +528,46 @@ const About = props => {
               </p>
             </StyleSectionRight>
             <StyleSectionFull>
-              <p>
-                The R&amp;D activities will also focus on gamification strategies for better engaging people and gathering liquidity. Furthermore, for the first 60 days and on a daily base, shares of GIL will be assigned to users and investors of Materia.exchange. The distribution of GIL is a method of both fairly issuing governance tokens and incentivize liquidity. In the early stages, Materia will keep following a constant product formula, forked by UniSwap, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool. In the second stage, we will start experimenting with innovative strategies to allow a real-time distributed value actualization.
-              </p>
+              <ParagraphContent>
+                The decentralized finance industry requires decentralized liquidity. We expect the DeFi space to keep growing in leaps and bounds in the future. Fueling that growth will require more efficiencies, scalability, and innovative incentives. Moreover, protocols, dApp, and user-interactions must be evolved to become more intuitive and user friendly.
+              </ParagraphContent>
+              <ParagraphContent>
+                Our aims are to explore complex liquidity provision interactions (like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support) keeping always in mind that we need to aim inclusion in order to be resilient and to keep evolving.
+              </ParagraphContent>
+              <ParagraphContent>
+                Materia will provide tools and technologies to allow both Distributed Flexible Organization (DFO) and Decentralized Autonomous Organization (DAO) to get started and to implement their strategies, leveraging services for Initial Liquidity Offering, staking, pooling and time-locked funds release.
+              </ParagraphContent>
+              <ParagraphContent>
+                The R&amp;D activities will focus on gamification strategies for better engaging people and gathering liquidity, and on the evolution of current protocols, to include every kind of tokenized digital asset into the game.
+              </ParagraphContent>
+              <ParagraphContent>
+                To attract the required liquidity, for the first 60 days and on a daily base, shares of GIL will be assigned to liquidity providers and investors of Materia.exchange. The distribution of GIL is a method of both fairly issuing governance tokens and incentivize liquidity. In the early stages, Materia will keep following a constant product formula, forked by UniSwap, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool.
+              </ParagraphContent>
+              <ParagraphContent>
+                We chose uSD as a bridge token of our protocol. It is a super-stable coin that achieves its stability by collateralizing other stablecoins. Having 50% of the entire DEX liquidity collateralized with uSD, allow us to achieve a superior level of price stability. We will be focusing our R&D on the evolution of our protocol toward the impermanent loss reduction and the enhancement of swap among different standards and protocols.
+              </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
 
           <StyledSectionFlex id="Manifesto" style={{ "marginBottom": "2.5rem" }}>
             <Title style={{ width: '100%' }}>Manifesto</Title>
             <StyleSectionLeft>
-              <p>
-                We want to prove the true potential of on-Chain decentralized organization by implementing the first, enterprise-free DEX, completely managed and developed, since the beginning, by the community for the community.
-              </p>
-              <p>
-                By starting from the state of the art of several protocols, we want to contribute to the DEX evolution from both a technological and UX perspective, by exploring the frontiers of liquidity provisioning, implementing strategies, and protocol to involve and engage a wide community of dreamers.
-              </p>
-              <p>
+              <ParagraphContent>
+                Our aim is to lead this project as an R&amp;D initiative, we plan to gradually loose control of it over time.
+              </ParagraphContent>
+              <ParagraphContent>
+                By starting from the state of the art of several protocols, we want to contribute to the DEX evolution from both a technological and UX perspective, by exploring the frontiers of liquidity provisioning, implementing strategies, and protocols.
+              </ParagraphContent>
+              <ParagraphContent>
                 We believe in openness. Our work will be committed on github and we encourage people to join the project and contribute to its evolution and success.
-              </p>
+              </ParagraphContent>
             </StyleSectionLeft>
             <StyledImgSectionRight>
               <StyledImage fadeIn={false} fluid={data.manifestoImage.childImageSharp.fluid} />
             </StyledImgSectionRight>
           </StyledSectionFlex>
 
-          <StyledSectionFlex id="Distribution">
+          {/* <StyledSectionFlex id="Distribution">
             <Title style={{ width: '100%' }}>GIL Distribution</Title>
             <StyleSectionLeft>
               <p>
@@ -590,87 +584,56 @@ const About = props => {
                 <Pie data={chartData} options={{ maintainAspectRatio: false, height: 10 }} />
               </StyledChartContainer>
             </StyledImgSectionRight>
-          </StyledSectionFlex>
+          </StyledSectionFlex> */}
 
           <StyledSectionFlex id="Security" style={{ "marginBottom": '2.5rem' }}>
             <Title style={{ width: '100%' }}>Security</Title>
-            <StyleSectionFull style={{ margin: "0" }}>
-              <p style={{ "marginBottom": "1rem" }}>
-                Materia starts from a Uniswap V2, and other DeFi projects fork with innovative yield incentive for liquidity providers, powered by GIL.
-              </p>
-            </StyleSectionFull>
             <StyledImgSectionLeft>
               <StyledImage fadeIn={false} fluid={data.securityImage.childImageSharp.fluid} />
             </StyledImgSectionLeft>
             <StyleSectionRight>
-              <p>
-                Materia smart contracts and DeFi operating model were audited by our security team. <br />
-                We have also implemented several more features, leveraging DFO capabilities in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire dApp.<br />
-                We invite the entire community and professionals to audit our contracts. We will a reward to community members that will help us to improve and keep secure our contracts which are available at <a href="https://github.com/materia-dex/ and are ready for any audit">Materia github repository</a>.
-              </p>
+              <ParagraphContent>
+                Materia smart contracts and DeFi operating model were audited by our security team.  We have also implemented several more features, leveraging DFO CAPABILITIES in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire dApp.
+                We invite the entire community and professionals to audit our contracts. We will a reward to community members that will help us to improve and keep secure our contracts which are available at <a href="https://github.com/materia-dex/">https://github.com/materia-dex/</a> and are ready for any audit.
+              </ParagraphContent>
             </StyleSectionRight>
           </StyledSectionFlex>
 
           <StyledSectionFlex id="Voting">
             <Title style={{ width: '100%' }}>Voting</Title>
             <StyleSectionRight style={{ "margin": "1rem 0rem 1rem 0rem" }}>
-              <p style={{ "maxWidth": "450px" }}>
-                We strongly believe that for supporting and evolving any protocol in this challenging and fast-changing DeFi world, it is required to build a fluid, dynamic organization, free to evolve according to user needs and leveraging everyone's contribution.
-              </p>
+              <ParagraphContent>
+                  We strongly believe that for supporting and evolving any protocol in this challenging and fast-changing DeFi world, it is required to build a fluid, dynamic organization, free to evolve according to user needs and leveraging everyone's contribution.
+              </ParagraphContent>
               <StyledQuote style={{ "maxWidth": "450px" }}>
-                <i>“The market is becoming more mature, and both voting, and its discussion are an important step towards the decentralization that is constantly brought up”</i><br />
-                <b>[cit.] Alexander Kerya, Chief Product Owner of Everstake Alexandr Kerya</b>
-              </StyledQuote>
-              <p style={{ "maxWidth": "450px" }}>
-                We want to build and develop a solid community involved in democratic decisions, that guarantee the highest degree of legitimacy in the outcome of that decision.
-              </p>
-              <StyledQuote style={{ "maxWidth": "450px" }}  >
-                <i>“The fundamental problem of blockchain voting today or blockchain governance today is that 100 percent of it is plutocratic.”</i><br />
-                <b>[cit.] Santi Siri founder of Democracy Earth ($sovereign)</b>
+                <i>"The market is becoming more mature, and both voting, and its discussion are an important step towards the decentralization that is constantly brought up"</i><br />
+                <b>[cfr.] Alexander Kerya, Chief Product Owner of Everstake Alexandr Kerya</b>
               </StyledQuote>
             </StyleSectionRight>
             <StyleSectionLeft>
-              <p>
-                By deciding the outcome of the election, whoever has the largest amount of tokens or the largest economic weight can make the influence of others irrelevant. Any malicious network attacker could buy up large amount of tokens, vote in the worst interests of the application and subsequently sell all their holdings immediately thereafter without penalty.
-              </p>
-              <p>
-                For this reason we are keeping a large amount of GIL for the first stages and planning to progressively lose control over time, after securing the release of the project.
-              </p>
-              <p>
-                We are also studing several mechanisms to guarantee greater voting power to those token holders who have staked their assets on the network for a long period of time. The aim is to incentivizing people to think and participate long-term.
-              </p>
+              <ParagraphContent>
+                We want to build and develop a solid community involved in democratic decisions, that guarantee the highest degree of legitimacy in the outcome of that decision.
+                <br/><br/>
+              </ParagraphContent>
+              <StyledQuote style={{ "maxWidth": "450px", height: "176px" }}>
+                <i>"The fundamental problem of blockchain voting today or blockchain governance today is that 100 percent of it is plutocratic."</i><br />
+                <b>[cfr.] Santi Siri founder of Democracy Earth ($sovereign)</b>
+              </StyledQuote>
             </StyleSectionLeft>
+            <StyleSectionFull>
+              <ParagraphContent style={{ "paddingTop": "0px" }}>
+                By deciding the outcome of the election, whoever has the largest amount of tokens or the largest economic weight can make the influence of others irrelevant. Any malicious network attacker could buy up large amount of tokens, vote in the worst interests of the application and subsequently sell all their holdings immediately thereafter without penalty.
+              </ParagraphContent>
+              <ParagraphContent>
+                For this reason we are keeping a large amount of GIL for the first stages and planning to progressively lose control over time, after securing the release of the project.
+              </ParagraphContent>
+              <ParagraphContent>
+                We are also studing several mechanisms to guarantee greater voting power to those token holders who have staked their assets on the network for a long period of time. The aim is to incentivizing people to think and participate long-term.
+              </ParagraphContent>
+            </StyleSectionFull>
           </StyledSectionFlex>
 
-          <StyledSectionFlex id="Community" style={{ "paddingTop": '2.5rem' }}>
-            <Title style={{ width: '100%' }}>Community</Title>
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-              <MiniCard
-                href="https://discord.gg/jdYMZrv"
-                title={'Discord'}
-                small
-                image={data.discord.childImageSharp.fluid}
-                color={'white'}
-                backgroundColor={'#7289da'}
-              />
-              <MiniCard
-                href="https://twitter.com/dexmateria"
-                title={'Twitter'}
-                small
-                image={data.twitter.childImageSharp.fluid}
-                backgroundColor={'#B0D8F0'}
-                color={'black'}
-              />
-              <MiniCard
-                href="https://www.reddit.com/r/materiadex"
-                title={'Reddit'}
-                small
-                image={data.reddit.childImageSharp.fluid}
-                backgroundColor={'white'}
-                color={'black'}
-              />
-            </div>
-          </StyledSectionFlex>
+          
         </span>
       </StyledAbout>
     </Layout>

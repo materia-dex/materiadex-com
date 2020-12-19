@@ -166,6 +166,16 @@ const StyleSectionFull = styled.div`
     max-width: unset;
   }
 `
+const ParagraphContent = styled.p`
+  font-size: 1.2rem;
+  font-family: 'Cera Pro';
+  > a { color: #81cdf3; }
+  > a:hover { text-decordation: underline !important; }
+`
+const ParagraphContentEvidence = styled.strong`
+  color:#ffffff;
+`
+
 const About = props => {
   const data = useStaticQuery(graphql`
     {
@@ -190,6 +200,13 @@ const About = props => {
           }
         }
       }
+      github: file(relativePath: { eq: "githhub-aboutus.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 960) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -208,13 +225,6 @@ const About = props => {
           </StyledHeadingLink>
           <StyledHeadingLink
             onClick={() => {
-              scrollTo('#Contact')
-              window.history.pushState({}, '', '#Contact')
-            }}>
-            Contact
-          </StyledHeadingLink>
-          <StyledHeadingLink
-            onClick={() => {
               scrollTo('#Community')
               window.history.pushState({}, '', '#Community')
             }}>
@@ -225,22 +235,15 @@ const About = props => {
           <StyledSectionFlex id="About">
             <Title style={{ width: '100%' }}>About</Title>
             <StyleSectionFull style={{ margin: '1rem 0rem 0rem 0rem' }}>
-              <p>
-                <b>Materia</b> is the world&#39;s first completely decentralized exchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.<br />
-                We are committed to open source software and building on the decentralized web.<br />
-              </p>
-              <p>
-                You can read about Enterprise-Free Organization and DFOHub here: <a href="https://www.dfohub.com/">dfohub.com</a>
-              </p>
-            </StyleSectionFull>
-          </StyledSectionFlex>
-
-          <StyledSectionFlex id="Contact">
-            <Title style={{ width: '100%', 'maxWidth': 'unset' }}>Contact</Title>
-            <StyleSectionFull style={{ margin: '1rem 0rem 0rem 0rem' }}>
-              <p>
-                To get in touch, please email <a href="mailto:contact@materiadex.com">materiadex@gmail.com</a>
-              </p>
+              <ParagraphContent>
+                <ParagraphContentEvidence>Materia</ParagraphContentEvidence> is a User-centric, Decentralized EXchange controlled by On-Chain, Enterprise-Free Organization based on DFOHub protocol.
+              </ParagraphContent>
+              <ParagraphContent>
+                <ParagraphContentEvidence>Materia's token $gil</ParagraphContentEvidence> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
+              </ParagraphContent>
+              <ParagraphContent>
+                Through $gil, the entire community can actively partecipate to its evolution, proposing new features and voting for their implementation.
+              </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
 
@@ -268,6 +271,14 @@ const About = props => {
                 title={'Reddit'}
                 small
                 image={data.reddit.childImageSharp.fluid}
+                backgroundColor={'white'}
+                color={'black'}
+              />              
+              <MiniCard
+                href="https://github.com/materia-dex"
+                title={'Github'}
+                small
+                image={data.github.childImageSharp.fluid}
                 backgroundColor={'white'}
                 color={'black'}
               />

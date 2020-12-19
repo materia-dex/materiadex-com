@@ -9,7 +9,7 @@ const StyledMiniCards = styled.a`
   padding-bottom: 0rem;
   padding-left: 1rem;
   color: ${({ theme, outlined }) => (outlined ? theme.colors.link : theme.textColor)};
-  width: 250px;
+  width: 230px;
   height: ${({ small }) => (small ? '80px' : '160px')};
   max-width: 450px;
   margin: 1rem;

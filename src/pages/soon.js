@@ -177,6 +177,15 @@ const StyleSectionFull = styled.div`
     max-width: unset;
   }
 `
+const ParagraphContent = styled.p`
+  font-size: 1.2rem;
+  font-family: 'Cera Pro';
+  > a { color: #81cdf3; }
+  > a:hover { text-decordation: underline !important; }
+`
+const ParagraphContentEvidence = styled.strong`
+  color:#ffffff;
+`
 
 const About = props => {
   const data = useStaticQuery(graphql`
@@ -229,42 +238,12 @@ const About = props => {
           <StyledSectionFlex id="Soon">
             <Title>Coming Soon</Title>
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
-              <p>
+              <ParagraphContent>
                 This feature is still under development from our best engineering team.<br />
                 We are committed to open source software and building on the decentralized web giving the community the true power to chose.<br />
                 You can contribute to Materia too! Check out our social profiles to get started!<br />
-              </p>
+              </ParagraphContent>
             </StyleSectionFull>
-          </StyledSectionFlex>
-
-          <StyledSectionFlex id="Community">
-            <Title style={{ width: '100%' }}>Community</Title>
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-              <MiniCard
-                href="https://discord.gg/jdYMZrv"
-                title={'Discord'}
-                small
-                image={data.discord.childImageSharp.fluid}
-                color={'white'}
-                backgroundColor={'#7289da'}
-              />
-              <MiniCard
-                href="https://twitter.com/dexmateria"
-                title={'Twitter'}
-                small
-                image={data.twitter.childImageSharp.fluid}
-                backgroundColor={'#B0D8F0'}
-                color={'black'}
-              />
-              <MiniCard
-                href="https://www.reddit.com/r/materiadex"
-                title={'Reddit'}
-                small
-                image={data.reddit.childImageSharp.fluid}
-                backgroundColor={'white'}
-                color={'black'}
-              />
-            </div>
           </StyledSectionFlex>
         </span>
       </StyledAbout>

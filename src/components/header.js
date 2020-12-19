@@ -210,9 +210,11 @@ const Header = props => {
             name
             link
             isExternal
+            enabled
             sublinks {
               name
               link
+              enabled
             }
           }
           title
@@ -264,11 +266,10 @@ const Header = props => {
       <StyledNav ref={node} open={isMenuOpen}>
         {data.site.siteMetadata.menulinks
           .filter(item => {
-            return item.name !== 'Community'
+            item.sublinks = item.sublinks.filter(sublink => { return sublink.enabled; });
+            return item.enabled;
           })
-          .map(item => {
-            return <Menu key={item.name} data={item} />
-          })}
+          .map(item => { return <Menu key={item.name} data={item} /> })}
         <StyledButton type="button" onClick={toggleDarkMode}>
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </StyledButton>

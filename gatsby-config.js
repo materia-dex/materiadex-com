@@ -39,7 +39,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
-        path: `${__dirname}/src/pages`
+        path: `${__dirname}/src/pages`,
+        ignore: [`incentives.js`, `community.js`, `roadmap.js`, `success.js`, `confirm.js`],
       }
     },
     {
@@ -163,5 +164,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-client-side-redirect`
   ]
 }
