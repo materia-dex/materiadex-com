@@ -510,23 +510,6 @@ const About = props => {
         <span>
           <StyledSectionFlex id="Strategy">
             <Title style={{ width: '100%' }}>Strategy</Title>
-            <StyledImgSectionLeft>
-              <StyledImage fadeIn={false} fluid={data.gladiatorsImage.childImageSharp.fluid} />
-            </StyledImgSectionLeft>
-            <StyleSectionRight>
-              <p>
-                The decentralized finance industry requires decentralized liquidity. We expect the DeFi space to keep growing in leaps and bounds in the future. Fueling that growth will require more efficiencies, scalability, and innovative incentives. Moreover, protocols, dApp, and user-interactions must be evolved to become more intuitive and user friendly.
-              </p>
-              <p>
-                Our aim is to explore complex liquidity provision interactions like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support, keeping always in mind that we need to aim inclusion in order to be resilient and to keep evolving. We are doing it extending the several protocols (UniSwap, SushiSwap, 1inch, etc.) that are our starting point for the R&amp;D activities.
-              </p>
-              <p>
-                Materia will provide tools and technologies to allow both Distributed Flexible Organization (DFO) and Decentralized Autonomous Organization (DAO) to get started and to implement their strategies, leveraging services for Initial Liquidity Offering, staking, pooling and time-locked funds release.
-              </p>
-              <p>
-                The Initial Liquidity Offering will take place after the official launch of Materia and will last two weeks, providing huge rewards and incentives to participants.
-              </p>
-            </StyleSectionRight>
             <StyleSectionFull>
               <ParagraphContent>
                 The decentralized finance industry requires decentralized liquidity. We expect the DeFi space to keep growing in leaps and bounds in the future. Fueling that growth will require more efficiencies, scalability, and innovative incentives. Moreover, protocols, dApp, and user-interactions must be evolved to become more intuitive and user friendly.
@@ -607,7 +590,7 @@ const About = props => {
               </ParagraphContent>
               <StyledQuote style={{ "maxWidth": "450px" }}>
                 <i>"The market is becoming more mature, and both voting, and its discussion are an important step towards the decentralization that is constantly brought up"</i><br />
-                <b>[cfr.] Alexander Kerya, Chief Product Owner of Everstake Alexandr Kerya</b>
+                <b>Alexander Kerya, Chief Product Owner of Everstake Alexandr Kerya</b>
               </StyledQuote>
             </StyleSectionRight>
             <StyleSectionLeft>
@@ -617,7 +600,7 @@ const About = props => {
               </ParagraphContent>
               <StyledQuote style={{ "maxWidth": "450px", height: "176px" }}>
                 <i>"The fundamental problem of blockchain voting today or blockchain governance today is that 100 percent of it is plutocratic."</i><br />
-                <b>[cfr.] Santi Siri founder of Democracy Earth ($sovereign)</b>
+                <b>Santi Siri founder of Democracy Earth ($sovereign)</b>
               </StyledQuote>
             </StyleSectionLeft>
             <StyleSectionFull>

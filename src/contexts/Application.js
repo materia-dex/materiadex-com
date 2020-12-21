@@ -75,8 +75,8 @@ export function useDarkMode() {
 
   function toggleDarkMode() {
     if (darkModeOn) {
-      updateDarkMode(DARK_MODE_OPTION.LIGHT)
-      localStorage.setItem('color-mode', 'light')
+      updateDarkMode(DARK_MODE_OPTION.DARK)
+      localStorage.setItem('color-mode', 'dark')
     } else {
       updateDarkMode(DARK_MODE_OPTION.DARK)
       localStorage.setItem('color-mode', 'dark')

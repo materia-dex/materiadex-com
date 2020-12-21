@@ -52,9 +52,6 @@ const StyledTitle = styled.div`
   justify-content: center;
   will-change: transform;
   margin: 1rem;
-  @media (max-width: 960px) {
-    margin: 1rem;
-  }
 `
 
 const StyledHeading = styled.h2`
@@ -98,10 +95,9 @@ const StyledBodyTitle = styled.h1`
     max-width: 600px;
   }
   @media (max-width: 375px) {
-    font-size: 2rem;
+    font-size: 3rem;
     width: 100%;
     margin: 0rem 0 0rem 0;
-    font-weight: 400;
   }
 `
 
@@ -129,19 +125,14 @@ const StyledCardImage = styled(Img)`
 const StyledNormalImage = styled(Img)`
   max-width: 60px;
   min-width: 60px;
-  background-color: none;
   border-radius: 0px;
-  margin: 1rem 0px 1rem 170px;  
-  float:left;
 `
 
 const StyledNormalImage2 = styled(Img)`
   max-width: 400px;
-  min-width: 320px;
-  background-color: none;
+  min-width: 250px;
   border-radius: 0px;
-  margin: 1.1rem 25px 1.1rem;   
-  float:left; 
+  margin: auto;   
 `
 
 const StyledCornerImage = styled(Img)`
@@ -208,7 +199,6 @@ const StyledTitleAfter = styled.div`
 
 const StyledBoxFade = styled.div`
 font-size: 1em;
-max-width: 800px;
 background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8));
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
 padding: 20px;
@@ -217,6 +207,10 @@ border-radius: 20px;
 box-shadow: 0px 0px 10px 0px #b0deff;
 transition: transform .33s ease-in-out .66s,opacity .33s ease-in-out .66s,-webkit-transform .33s ease-in-out .66s;
 position: relative;
+max-width: 700px;
+@media (max-width: 375px) {
+  max-width: 350px;;
+}
 `
 
 const StyledSpanTopRight = styled.span`
@@ -272,7 +266,6 @@ const StyledSectionFlex = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  /* max-width: 650px; */
   @media (max-width: 1024px) {
     padding: 1rem;
     margin-top: 0rem;
@@ -283,6 +276,12 @@ const StyledSectionFlex = styled.div`
     margin-top: 0rem;
     width: 100%;
     max-width: 450px;
+  }
+  @media (max-width: 375px) {
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+    max-width: 350px;
   }
 
   h2 {
@@ -439,7 +438,7 @@ const SummarySection = props => {
           </p>
           <div class="divider"></div>
           <div class="homeSloganContainer">
-              <StyledNormalImage fadeIn={false} fluid={props.data.dfoHUbImage.childImageSharp.fluid} />
+              {/* <StyledNormalImage fadeIn={false} fluid={props.data.dfoHUbImage.childImageSharp.fluid} /> */}
               <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
               <p>
                 <span>Materia + DFO Protocol</span>
@@ -508,24 +507,21 @@ const InfoSection = props => {
           <StyledBoxFade>
             <StyledTitleAfter>NAUF (Not another Uniswap Fork)</StyledTitleAfter>
             <p>
-              By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens <a href="https://medium.com/dfohub/a-black-hole-in-uniswap-v2s-front-end-router-is-draining-the-value-of-tokens-26f5a459b5d7">(link)</a>.
-            </p>
-            <p>
-              We started to work on this issue, challenging ourselves in a R&D mission to overcome these limits and to simplify the swap process of the AMM.
-            </p>
-            <p>
-              We believe that a safe restart should begin from the single ERC20 routing of UniSwap v1 in order to ensure stability and optimized gas consumptions.
-            </p>
-            <p>
-              We will take advantage of DFOHub microservices architecture and its next evolution to v0.5 to allow the community to self-determine the future and success of their investments in Materia.
+            By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens.
+</p><p>
+We started to work on this issue, challenging ourselves in a R&D mission to overcome these limits and to simplify the swap process of the AMM.
+</p><p>
+We believe that a safe restart should begin from the single ERC20 routing of UniSwap v1 in order to ensure stability and optimized gas consumptions.
+</p><p>
+We will take advantage of DFOHub microservices architecture and its next evolution to v0.5 to allow the community to self-determine the future and success of their investments in Materia.
             </p>
             <StyledTitleAfter>uSD Routing</StyledTitleAfter>
             <p>
-              uSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experiment a reduced slippage compared to ETH.
+            uSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experiment a reduced slippage and impermanent loss compared to ETH. 
             </p>
             <StyledTitleAfter>Lego Swap via ETHItems</StyledTitleAfter>
             <p>
-              Materia is designed to leverage the power of ETHItem standard, taking advantage of its underneath support for both ERC20 and ERC1155 standards. This choice will allow a native support even for NFT tokens and the possibility to take advantage of  **batch transfer** function, efficiently creating complex LEGO Swaps, saving gas costs.
+            Materia is designed to leverage the power of ETHItem standard, taking advantage of its underneath support for both ERC20 and ERC1155 standards. This choice will allow a native support even for NFT tokens and the possibility to take advantage of **batch transfer** function, efficiently creating complex LEGO Swaps, saving gas costs.
             </p>
           </StyledBoxFade>
         </StyledImgSection>
@@ -547,28 +543,28 @@ const ProductsSection = props => {
         <MiniCard
           href="#"
           title={'Swap'}
-          desc={'Swap between any two tokens'}
+          desc={'Swap between any two supported token through an automatic wrap into the ethitem standard'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />
         <MiniCard
           href="#"
           title={'Pool'}
-          desc={'Reserve two tokens and receive swap fee'}
+          desc={'All the liquidity is available through a bridge token (uSD) and an Item. Materia is the very first dollar based DEX'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />
         <MiniCard
           href="#"
           title={'Batch Transfer'}
-          desc={'Send multiple items to single address'}
+          desc={'The incentive to liquidity providers to earn fees and governance tokens by providing liquidity'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />
         <MiniCard
           href="#"
-          title={'Exping'}
-          desc={'Stake and farm GIL or any UniSwap compatible LP token receiving GIL'}
+          title={'Exping (coming soon)'}
+          desc={'Why farm when you can exp? News will be available very soon…'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />

@@ -4,8 +4,8 @@ const menu = [
     sublinks: [
       { name: 'Swap', link: '/soon', enabled: true },
       { name: 'Pool', link: '/soon', enabled: true },
-      { name: 'Derivative & NFT DEX', link: '/soon', enabled: true },
-      { name: 'Farming', link: '/soon', enabled: true },
+      { name: 'Liquidity Mining', link: '/soon', enabled: true },
+      { name: 'Exping', link: '/soon', enabled: true },
       { name: 'Analytics', link: '/soon', enabled: true }
     ],
     enabled: true
