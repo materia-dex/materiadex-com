@@ -556,7 +556,7 @@ const ProductsSection = props => {
         />
         <MiniCard
           href="#"
-          title={'Batch Transfer'}
+          title={'Liquidity Mining'}
           desc={'The incentive to liquidity providers to earn fees and governance tokens by providing liquidity'}
           backgroundColor={'#377e9a'}
           color={'white'}
