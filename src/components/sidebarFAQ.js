@@ -15,7 +15,7 @@ const StyledHeadingListElement = styled.li`
 
 const StyledHeadingLink = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.pink1};
+  color: ${({ theme }) => theme.colors.pink1} !important;
   cursor: pointer;
 
   :hover {

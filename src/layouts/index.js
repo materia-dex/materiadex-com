@@ -57,11 +57,7 @@ const Layout = ({ path, children, nofooter, isDocs }) => {
           <div className='videoOverlay'></div>
         </div>
       </div>
-      {isDocs ? (
-        <MiniHeader path={path} siteTitle={data.site.siteMetadata.title} />
-      ) : (
-          <Header path={path} siteTitle={data.site.siteMetadata.title} />
-        )}
+      <Header path={path} siteTitle={data.site.siteMetadata.title} />
       <Mdx>{children}</Mdx>
       {nofooter ? null : <Footer />}
     </StyledThemeProvider>

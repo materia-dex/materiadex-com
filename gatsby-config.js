@@ -107,6 +107,7 @@ module.exports = {
         icon: `src/images/gil.png` // This path is relative to the root of the site.
       }
     },
+    
     // {
     //   resolve: `gatsby-plugin-feed`,
     //   options: {

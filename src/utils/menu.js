@@ -29,7 +29,14 @@ const menu = [
       { name: 'About', link: '/about', enabled: true },
     ],
     enabled: true
-  },  
+  },
+  {
+    name: 'Docs',
+    link: '/docs/v2',
+    sublinks: [
+    ],
+    enabled: true
+  },
   {
     name: 'DFO Hub',
     link: 'https://www.dfohub.com/',

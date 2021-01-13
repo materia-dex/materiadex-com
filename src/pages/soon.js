@@ -146,7 +146,7 @@ const Title = styled.h1`
 
 const StyledHeadingLink = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.pink1};  
+  color: ${({ theme }) => theme.colors.pink1} !important;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   transition: padding-left .3s linear;  
   position: relative;
