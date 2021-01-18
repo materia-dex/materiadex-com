@@ -1,5 +1,5 @@
 const v2DocsQuery = `{
-  allMdx(filter: {fileAbsolutePath: {regex: "/docs/v2/"}}) {
+  allMdx(filter: {fileAbsolutePath: {regex: "/docs/materia/"}}) {
     nodes {
       id
       frontmatter {
@@ -71,7 +71,7 @@ module.exports = queries
 
 // const mdxQuery = `
 // {
-//   allMdx(filter: {fileAbsolutePath: {regex: "/docs/v2/"}}) {
+//   allMdx(filter: {fileAbsolutePath: {regex: "/docs/materia/"}}) {
 //     edges {
 //       node {
 //         excerpt

@@ -52,6 +52,7 @@ const StyledTitle = styled.div`
   justify-content: center;
   will-change: transform;
   margin: 1rem;
+  color: white
 `
 
 const StyledHeading = styled.h2`

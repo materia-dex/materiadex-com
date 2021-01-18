@@ -32,7 +32,7 @@ const menu = [
   },
   {
     name: 'Docs',
-    link: '/docs/v2',
+    link: '/docs/materia',
     sublinks: [
     ],
     enabled: true

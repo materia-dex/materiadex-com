@@ -8,7 +8,7 @@ import Github from '../images/githubicon.inline.svg'
 import { GlobalStyle } from '../styles/theme'
 import '../styles/prism-github.css'
 import { useMediaQuery } from '@react-hook/media-query'
-import SidebarV2 from '../components/sidebarV2'
+import Sidebar from '../components/sidebar'
 
 const StyledDocs = styled.div`
   display: grid;
@@ -201,20 +201,20 @@ const Docs = props => {
             <SEO
               key={node.fields.slug}
               title={props.pageContext.frontmatter.title}
-              site={'Uniswap ' + title}
+              site={'Materia ' + title}
               path={props.location.pathname}
               description={node.excerpt}
             />
           )
         })}
       <StyledDocs id="docs-header">
-        <SidebarV2 parent={'/docs/'} {...props} />
+        <Sidebar parent={'/docs/'} {...props} />
         <StyledMDX>
           <StyledPageTitle>
             <small style={{ marginBottom: '.5rem' }}>
               {data.allMdx.edges
                 .filter(({ node }) => {
-                  return node.fields.slug === props.path && node.fields.slug !== '/docs/v2/'
+                  return node.fields.slug === props.path && node.fields.slug !== '/docs/materia/'
                 })
                 .map(({ node }) => {
                   return node.fields.rawSlug
@@ -230,7 +230,7 @@ const Docs = props => {
             <div style={{ display: 'flex' }}>
               {data.allMdx.edges
                 .filter(({ node }) => {
-                  return node.fields.slug === props.path && node.fields.slug !== '/docs/v2/'
+                  return node.fields.slug === props.path && node.fields.slug !== '/docs/materia/'
                 })
                 .map(({ node }) => {
                   return (
@@ -264,7 +264,7 @@ const Docs = props => {
                   <StyledDocsNav>
                     {/* index.md file is considered the "last" based on the sort order. Check to remove links when not relevent */}
                     {previous &&
-                      node.fields.slug !== '/docs/v2/' &&
+                      node.fields.slug !== '/docs/materia/' &&
                       previous.fields.parentDir === node.fields.parentDir && (
                         <StyledLink style={{ alignItems: 'flex-end' }} to={previous.fields.slug} rel="prev">
                           <small>Previous</small>
@@ -274,16 +274,16 @@ const Docs = props => {
                   </StyledDocsNav>
                   <StyledDocsNav>
                     {/* index.md file is considered the "last" based on the sort order. Check to remove when not relevent */}
-                    {next && next.fields.slug !== '/docs/v2/' && next.fields.parentDir === node.fields.parentDir && (
+                    {next && next.fields.slug !== '/docs/materia/' && next.fields.parentDir === node.fields.parentDir && (
                       <StyledLink style={{ alignItems: 'flex-start' }} to={next.fields.slug} rel="next">
                         <small>Next</small>
                         <span>{next.frontmatter.title} →</span>
                       </StyledLink>
                     )}
-                    {node.fields.slug === '/docs/v2/' && (
-                      <StyledLink style={{ alignItems: 'flex-start' }} to={'/docs/v2/protocol-overview/'} rel="next">
+                    {node.fields.slug === '/docs/materia/' && (
+                      <StyledLink style={{ alignItems: 'flex-start' }} to={'/docs/materia/protocol-overview/'} rel="next">
                         <small>Next</small>
-                        <span>How Uniswap works →</span>
+                        <span>How Materia works →</span>
                       </StyledLink>
                     )}
                   </StyledDocsNav>

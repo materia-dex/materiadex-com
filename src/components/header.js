@@ -82,7 +82,7 @@ const StyledTradeLink = styled.a`
   background-color: transparent;
   box-shadow: 0px 0px 6px 0px #b0deff;
   text-decoration: none;
-  color: ${({ theme }) => theme.invertedTextColor};
+  // color: ${({ theme }) => theme.invertedTextColor};
   border-radius: 20px;
   margin-left: 1.5rem;
   display: inline-block;
