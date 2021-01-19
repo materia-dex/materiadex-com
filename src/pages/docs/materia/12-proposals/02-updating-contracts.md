@@ -7,7 +7,7 @@ tags: smart-contracts, documentation, governance
 
 The steps to update the orchestrator are:
 
-1. Deploy the new orchestrator, if you want to keep the old materia operators, pass their addresses to the constructor.
+1. Deploy the new orchestrator passing the old Materia Operators addresses in the constructor.
 2. Call `retire(newOrchestrator)` of the old orchestrator, now the materia operators (liquidity adder, liquidity remover and swapper) can only be used by the new orchestator.
 
 ## Code example
@@ -33,7 +33,19 @@ The steps to update an operator (like the liquidity adder, the liquidity remover
 ```solidity
 function callOneTime(address) public {
   IMVDProxy dfoProxy = IMVDProxy(msg.sender);
+  address materiaOrchestrator = <materiaOrchestrator>;
+  address newLiquidityAdder = <newLiquidityAdder>; //e.g. add the liquidity adder 
   
+  IMateriaOrchestrator(materiaOrchestrator).set(
+    address(0),
+    address(0)
+    newLiquidityAdder,
+    address(0),
+    address(0),
+    address(0),
+    address(0),
+    0
+  );
 }
 ```
 
