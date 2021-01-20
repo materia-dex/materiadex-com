@@ -34,3 +34,13 @@ It's also possible to set the default *swap fee* and *Materia fee* i.e. the fees
 
 ## Code example
 
+```solidity
+function callOneTime(address) public {
+  IMVDProxy dfoProxy = IMVDProxy(msg.sender);
+
+  materiaOrchestrator.setDefaultFees(
+    5, //Materia fee
+    3, //Swap fee
+  ); 
+}
+```
