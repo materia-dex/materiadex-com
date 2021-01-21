@@ -6,7 +6,7 @@ related: '/docs/materia/core-concepts/pools'
 
 ![](/images/participants.jpg)
 
-The Materia ecosystem is primarily comprised of three types of users: liquidity providers, traders, and developers. Liquidity providers are incentivized to contribute [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens to common liquidity pools. Traders can swap these tokens for one another for a fixed <Link to="/docs/materia/advanced-topics/fees">0.30% fee</Link> (which goes to liquidity providers). Developers can integrate directly with Materia smart contracts to power new and exciting interactions with tokens, trading interfaces, retail experiences, and more.
+The Materia ecosystem is primarily comprised of three types of users: liquidity providers, traders, GIL holders, and developers. Liquidity providers are incentivized to contribute [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens to common liquidity pools. Traders can swap these tokens for one another for a fixed <Link to="/docs/materia/advanced-topics/fees">0.30% fee</Link> (which goes to liquidity providers). Developers can integrate directly with Materia smart contracts to power new and exciting interactions with tokens, trading interfaces, retail experiences, and more. The GIL holders can create and vote new proposals, that is, adjusting and chaniging the protocol.
 
 In total, interactions between these classes create a positive feedback loop, fueling digital economies by defining a common language through which tokens can be pooled, traded and used.
 
@@ -38,16 +38,20 @@ In all cases, trades are subject to the same flat fee for trading on the protoco
 
 # Developers/Projects
 
-There are far too many ways Materia is used in the wider Ethereum ecosystem to count, but some examples include:
+There are far too many ways Materia can be used in the wider Ethereum ecosystem to count, but some examples include:
 
-- The open-source, accessible nature of Materia means there are countless UX experiments and front-ends built to offer access to Materia functionality. You can find Materia functions in most of the major DeFi dashboard projects. There are also many [Materia-specific tools](https://github.com/Materia/universe) built by the community.
+- The open-source, accessible nature of Materia means there could be different UX experiments and front-ends built to offer access to Materia functionality.
 
 - Wallets often integrate swapping and liquidity provision functionality as a core offering of their product.
 
-- DEX (decentralized exchange) aggregators pull liquidity from many liquidity protocols to offer traders the best prices but splitting their trades. Materia is the biggest single decentralized liquidity source for these projects.
+- DEX (decentralized exchange) aggregators pull liquidity from many liquidity protocols to offer traders the best prices but splitting their trades.
 
-- Smart contract developers use the suite of functions available to invent new DeFi tools and other various experimental ideas. See projects like [Unisocks](https://unisocks.exchange/) or [Zora](https://ourzora.com/), among many, many others.
+- Smart contract developers use the suite of functions available to invent new DeFi tools and other various experimental ideas.
 
-# Materia Team and Community
+# GIL holders
 
-The Materia team along with the broader Materia community drives development of the protocol and ecosystem.
+GIL holders can create new proposals to add new functionalities or to modify the protocol, for example they can:
+
+- Change the *Materia fee* and the *Swap fee* for a single pair.
+- Officially deploy as DFO a smart contract to better interface with the core contracts.
+- Officially Deploy new smart contracts which extends the protocol with new functionalities.
