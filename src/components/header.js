@@ -200,7 +200,7 @@ const Header = props => {
   const node = useRef()
   const button = useRef()
   const [isMenuOpen, updateIsMenuOpen] = useState(false)
-  const [darkMode, toggleDarkMode] = false //useDarkMode()
+  const [darkMode, toggleDarkMode] = useDarkMode()
 
   const data = useStaticQuery(graphql`
     {
