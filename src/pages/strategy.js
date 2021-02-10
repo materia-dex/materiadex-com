@@ -512,23 +512,17 @@ const About = props => {
             <Title style={{ width: '100%' }}>Strategy</Title>
             <StyleSectionFull>
               <ParagraphContent>
-                The decentralized finance industry requires decentralized liquidity. We expect the DeFi space to keep growing in leaps and bounds in the future. Fueling that growth will require more efficiencies, scalability, and innovative incentives. Moreover, protocols, dApp, and user-interactions must be evolved to become more intuitive and user friendly.
-              </ParagraphContent>
+                The decentralized finance industry requires decentralized liquidity. We expect the DeFi space to keep growing by leaps and bounds in the future. Fueling that growth will require more efficient, scalable, and innovative incentives. Moreover, protocols, dApps, and user-interactions must evolve to become more intuitive and user friendly.              </ParagraphContent>
               <ParagraphContent>
-                Our aims are to explore complex liquidity provision interactions (like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support) keeping always in mind that we need to aim inclusion in order to be resilient and to keep evolving.
-              </ParagraphContent>
+                Our aim is to explore complex liquidity provision interactions (like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support), always keeping in mind that we need to aim for inclusion in order to be resilient and to keep evolving.              </ParagraphContent>
               <ParagraphContent>
-                Materia will provide tools and technologies to allow both Distributed Flexible Organization (DFO) and Decentralized Autonomous Organization (DAO) to get started and to implement their strategies, leveraging services for Initial Liquidity Offering, staking, pooling and time-locked funds release.
-              </ParagraphContent>
+                Materia will provide tools and technologies to allow both Distributed Flexible Organization (DFO) and Decentralized Autonomous Organization (DAO) to get started and to implement their strategies, leveraging services for Initial Liquidity Offering, staking, pooling and time-locked funds release.              </ParagraphContent>
               <ParagraphContent>
-                The R&amp;D activities will focus on gamification strategies for better engaging people and gathering liquidity, and on the evolution of current protocols, to include every kind of tokenized digital asset into the game.
-              </ParagraphContent>
+                The R&amp;D activities will focus on gamification strategies for better engaging people and gathering liquidity, and on the evolution of current protocols, to include every kind of tokenized digital asset into the game.              </ParagraphContent>
               <ParagraphContent>
-                To attract the required liquidity, for the first 60 days and on a daily base, shares of GIL will be assigned to liquidity providers and investors of Materia.exchange. The distribution of GIL is a method of both fairly issuing governance tokens and incentivize liquidity. In the early stages, Materia will keep following a constant product formula, forked by UniSwap, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool.
-              </ParagraphContent>
+                To attract the required liquidity, for the first 60 days and on a daily base, shares of GIL will be assigned to liquidity providers and investors of Materia. The distribution of GIL is a method of both fairly issuing governance tokens and incentivizing liquidity. In the early stages, Materia will keep following a constant product formula, forked by UniSwap, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool.              </ParagraphContent>
               <ParagraphContent>
-                We chose uSD as a bridge token of our protocol. It is a super-stable coin that achieves its stability by collateralizing other stablecoins. Having 50% of the entire DEX liquidity collateralized with uSD, allow us to achieve a superior level of price stability. We will be focusing our R&D on the evolution of our protocol toward the impermanent loss reduction and the enhancement of swap among different standards and protocols.
-              </ParagraphContent>
+                We chose uSD as a bridge token of our protocol. It is a super-stable coin that achieves its stability by collateralizing other stablecoins. Having 50% of the entire DEX liquidity collateralized with uSD, allows us to achieve a superior level of price stability. We will be focusing our R&amp;D on the evolution of our protocol toward impermanent loss reduction and the enhancement of swaps among different standards and protocols.              </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
 
@@ -536,14 +530,11 @@ const About = props => {
             <Title style={{ width: '100%' }}>Manifesto</Title>
             <StyleSectionLeft>
               <ParagraphContent>
-                Our aim is to lead this project as an R&amp;D initiative, we plan to gradually loose control of it over time.
-              </ParagraphContent>
+                Our aim is to lead this project as an R&amp;D initiative, we plan to gradually loose control of it over time.              </ParagraphContent>
               <ParagraphContent>
-                By starting from the state of the art of several protocols, we want to contribute to the DEX evolution from both a technological and UX perspective, by exploring the frontiers of liquidity provisioning, implementing strategies, and protocols.
-              </ParagraphContent>
+                By starting from several state of the art protocols, we want to contribute to the DEX evolution from both a technological and UX perspective, by exploring the frontiers of liquidity provisioning, implementing strategies, and protocols.              </ParagraphContent>
               <ParagraphContent>
-                We believe in openness. Our work will be committed on github and we encourage people to join the project and contribute to its evolution and success.
-              </ParagraphContent>
+                We believe in openness. Our work will be committed on Github and we encourage people to join the project and contribute to its evolution and success.              </ParagraphContent>
             </StyleSectionLeft>
             <StyledImgSectionRight>
               <StyledImage fadeIn={false} fluid={data.manifestoImage.childImageSharp.fluid} />
@@ -576,9 +567,7 @@ const About = props => {
             </StyledImgSectionLeft>
             <StyleSectionRight>
               <ParagraphContent>
-                Materia smart contracts and DeFi operating model were audited by our security team.  We have also implemented several more features, leveraging DFO CAPABILITIES in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire dApp.
-                We invite the entire community and professionals to audit our contracts. We will a reward to community members that will help us to improve and keep secure our contracts which are available at <a href="https://github.com/materia-dex/">https://github.com/materia-dex/</a> and are ready for any audit.
-              </ParagraphContent>
+                Materia smart contracts and DeFi operating models are audited by our security team. We have also implemented several more features, leveraging DFO capabilties in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire dApp. We invite the entire community and professionals to audit our contracts. We will a reward to community members that will help us to improve and keep secure our contracts which are available at https://github.com/materia-dex/ and are ready for any audit.</ParagraphContent>
             </StyleSectionRight>
           </StyledSectionFlex>
 
@@ -586,8 +575,7 @@ const About = props => {
             <Title style={{ width: '100%' }}>Voting</Title>
             <StyleSectionRight style={{ "margin": "1rem 0rem 1rem 0rem" }}>
               <ParagraphContent>
-                  We strongly believe that for supporting and evolving any protocol in this challenging and fast-changing DeFi world, it is required to build a fluid, dynamic organization, free to evolve according to user needs and leveraging everyone's contribution.
-              </ParagraphContent>
+                We strongly believe that for supporting and evolving any protocol in this challenging and fast-changing DeFi world, it is required to build a fluid, dynamic organization, free to evolve according to user needs and leveraging everyone's contribution.              </ParagraphContent>
               <StyledQuote style={{ "maxWidth": "450px" }}>
                 <i>"The market is becoming more mature, and both voting, and its discussion are an important step towards the decentralization that is constantly brought up"</i><br />
                 <b>Alexander Kerya, Chief Product Owner of Everstake Alexandr Kerya</b>
@@ -595,8 +583,7 @@ const About = props => {
             </StyleSectionRight>
             <StyleSectionLeft>
               <ParagraphContent>
-                We want to build and develop a solid community involved in democratic decisions, that guarantee the highest degree of legitimacy in the outcome of that decision.
-                <br/><br/>
+                We want to build and develop a solid community involved in democratic decisions, that guarantee the highest degree of legitimacy in the outcome of that decision.                <br /><br />
               </ParagraphContent>
               <StyledQuote style={{ "maxWidth": "450px", height: "176px" }}>
                 <i>"The fundamental problem of blockchain voting today or blockchain governance today is that 100 percent of it is plutocratic."</i><br />
@@ -605,18 +592,15 @@ const About = props => {
             </StyleSectionLeft>
             <StyleSectionFull>
               <ParagraphContent style={{ "paddingTop": "0px" }}>
-                By deciding the outcome of the election, whoever has the largest amount of tokens or the largest economic weight can make the influence of others irrelevant. Any malicious network attacker could buy up large amount of tokens, vote in the worst interests of the application and subsequently sell all their holdings immediately thereafter without penalty.
-              </ParagraphContent>
+                By deciding the outcome of the election, whoever has the largest amount of tokens or the largest economic weight can make the influence of others irrelevant. Any malicious network attacker could buy up large amount of tokens, vote in the worst interests of the application and subsequently sell all their holdings immediately thereafter without penalty.              </ParagraphContent>
               <ParagraphContent>
-                For this reason we are keeping a large amount of GIL for the first stages and planning to progressively lose control over time, after securing the release of the project.
-              </ParagraphContent>
+                For this reason we are keeping a large amount of GIL for the first stages and planning to progressively lose control over time, after securing the release of the project.              </ParagraphContent>
               <ParagraphContent>
-                We are also studing several mechanisms to guarantee greater voting power to those token holders who have staked their assets on the network for a long period of time. The aim is to incentivizing people to think and participate long-term.
-              </ParagraphContent>
+                We are also studying several mechanisms to guarantee greater voting power to those token holders who have staked their assets on the network for a long period of time. The aim is to incentivize people to think and participate long-term.              </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
 
-          
+
         </span>
       </StyledAbout>
     </Layout>

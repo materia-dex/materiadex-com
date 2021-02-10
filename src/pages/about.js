@@ -242,7 +242,7 @@ const About = props => {
                 <ParagraphContentEvidence>Materia's token $gil</ParagraphContentEvidence> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
               </ParagraphContent>
               <ParagraphContent>
-                Through $gil, the entire community can actively partecipate to its evolution, proposing new features and voting for their implementation.
+              Through $gil, the entire community can actively participate in its evolution by proposing new features and voting for their implementation.
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>

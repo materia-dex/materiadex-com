@@ -427,26 +427,26 @@ const MiniNewInfo = styled(Link)`
 const SummarySection = props => {
   return (
     <StyledSectionFlex>
-        <StyledBoxFade>
-          <h1>
-            <b>Materia</b> is the world-first, User-centric Decentralized EXchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
+      <StyledBoxFade>
+        <h1>
+          <b>Materia</b> is the world-first, User-centric Decentralized EXchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
           </h1>
-          <p>
-            Materia’s token <b>GIL</b> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
+        <p>
+          Materia’s token <b>GIL</b> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
           </p>
-          <p>
-            Through GIL, the entire community can actively partecipate to its evolution, proposing new features and voting for their implementation.
+        <p>
+          Through GIL, the entire community can actively participate in its evolution, propose new features and vote for their implementation.
           </p>
-          <div class="divider"></div>
-          <div class="homeSloganContainer">
-              {/* <StyledNormalImage fadeIn={false} fluid={props.data.dfoHUbImage.childImageSharp.fluid} /> */}
-              <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
-              <p>
-                <span>Materia + DFO Protocol</span>
-                <span>REAL DECENTRALIZED EXCHANGE</span>
-              </p>
-          </div>
-        </StyledBoxFade>      
+        <div class="divider"></div>
+        <div class="homeSloganContainer">
+          {/* <StyledNormalImage fadeIn={false} fluid={props.data.dfoHUbImage.childImageSharp.fluid} /> */}
+          <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
+          <p>
+            <span>Materia + DFO Protocol</span>
+            <span>REAL DECENTRALIZED EXCHANGE</span>
+          </p>
+        </div>
+      </StyledBoxFade>
     </StyledSectionFlex>
   )
 }
@@ -477,10 +477,10 @@ const InfoSection = props => {
         <StyledImgSection>
           <div class="homeImagesCardContainer">
             <div class="homeImageContainer">
-                <StyledCardImage fadeIn={false} fluid={props.data.naufImage.childImageSharp.fluid} />
-              </div>
-              <p class="homeImageCaption">
-                <strong>NAUF</strong><br/>
+              <StyledCardImage fadeIn={false} fluid={props.data.naufImage.childImageSharp.fluid} />
+            </div>
+            <p class="homeImageCaption">
+              <strong>NAUF</strong><br />
                 Materia is NOT Another Uniswap Fork
               </p>
           </div>
@@ -489,17 +489,17 @@ const InfoSection = props => {
               <StyledCardImage fadeIn={false} fluid={props.data.usdImage.childImageSharp.fluid} />
             </div>
             <p class="homeImageCaption">
-              <strong>Unified Stable Dollar</strong><br/>
+              <strong>Unified Stable Dollar</strong><br />
               uSD is a Stable Coin based on Uniswap Liquidity Pools
             </p>
           </div>
           <div class="homeImagesCardContainer">
             <div class="homeImageContainer">
-            <StyledCardImage fadeIn={false} fluid={props.data.ethItemImage.childImageSharp.fluid} />
+              <StyledCardImage fadeIn={false} fluid={props.data.ethItemImage.childImageSharp.fluid} />
             </div>
             <p class="homeImageCaption">
-              <strong>EthItem</strong><br/>
-              ethItem is a synthesis of the ERC1155 &amp; ERC20 standards, enabling their total interoperability.<br/>
+              <strong>EthItem</strong><br />
+              ethItem is a synthesis of the ERC1155 &amp; ERC20 standards, enabling their total interoperability.<br />
               Each unique NFT ID can now become a source of an ERC20
             </p>
           </div>
@@ -508,22 +508,16 @@ const InfoSection = props => {
           <StyledBoxFade>
             <StyledTitleAfter>NAUF (Not another Uniswap Fork)</StyledTitleAfter>
             <p>
-            By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens.
-</p><p>
-We started to work on this issue, challenging ourselves in a R&D mission to overcome these limits and to simplify the swap process of the AMM.
-</p><p>
-We believe that a safe restart should begin from the single ERC20 routing of UniSwap v1 in order to ensure stability and optimized gas consumptions.
-</p><p>
-We will take advantage of DFOHub microservices architecture and its next evolution to v0.5 to allow the community to self-determine the future and success of their investments in Materia.
-            </p>
+            By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens.</p><p>
+            We started to work on this issue, challenging ourselves with a R&amp;D mission to overcome these limits and to simplify the swap process of the AMM.</p><p>
+            We believe that a safe restart should begin from the single ERC20 routing of UniSwap v1 in order to ensure stability and optimized gas consumption.</p><p>
+            We will take advantage of DFOHub microservices architecture and its next evolution to v0.5 to allow the community to self-determine the future and success of their investments in Materia.</p>
             <StyledTitleAfter>uSD Routing</StyledTitleAfter>
             <p>
-            uSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experiment a reduced slippage and impermanent loss compared to ETH. 
-            </p>
+            uSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experience a reduced slippage and impermanent loss compared to ETH.</p>
             <StyledTitleAfter>Lego Swap via ETHItems</StyledTitleAfter>
             <p>
-            Materia is designed to leverage the power of ETHItem standard, taking advantage of its underneath support for both ERC20 and ERC1155 standards. This choice will allow a native support even for NFT tokens and the possibility to take advantage of **batch transfer** function, efficiently creating complex LEGO Swaps, saving gas costs.
-            </p>
+            Materia is designed to leverage the power of ETHItem standard, taking advantage of its underlying support for both ERC20 and ERC1155 standards. This choice will allow native support even for NFT tokens and the possibility to take advantage of **batch transfer** function, efficiently creating complex LEGO Swaps, saving gas costs.</p>
           </StyledBoxFade>
         </StyledImgSection>
       </StyledSectionFlex>
