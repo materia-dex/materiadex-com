@@ -7,7 +7,7 @@ This documentation covers ERC-20 functionality for denominating pool tokens. For
 
 # Code
 
-[`MateriaV2ERC20.sol`](https://github.com/Materia/Materia-v2-core/blob/master/contracts/MateriaV2ERC20.sol)
+[`MateriaV2ERC20.sol`](https://github.com/materia-dex/Materia-v2-core/blob/master/contracts/MateriaV2ERC20.sol)
 
 # Events
 
@@ -148,7 +148,7 @@ Sets the allowance for a spender where approval is granted via a signature.
 # Interface
 
 ```solidity
-import '@Materia/v2-core/contracts/interfaces/IMateriaV2ERC20.sol';
+import '@materia/v2-core/contracts/interfaces/IMateriaV2ERC20.sol';
 ```
 
 ```solidity
@@ -180,7 +180,7 @@ interface IMateriaV2ERC20 {
 # ABI
 
 ```typescript
-import IMateriaV2ERC20 from '@Materia/v2-core/build/IMateriaV2ERC20.json'
+import IMateriaV2ERC20 from '@materia/v2-core/build/IMateriaV2ERC20.json'
 ```
 
 [https://unpkg.com/@Materia/v2-core@1.0.0/build/IMateriaV2ERC20.json](https://unpkg.com/@Materia/v2-core@1.0.0/build/IMateriaV2ERC20.json)

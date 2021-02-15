@@ -9,7 +9,7 @@ This section explains the Materia Subgraph and how to interact with it. The Mate
 
 [Subgraph Explorer](https://thegraph.com/explorer/subgraph/Materia/Materia-v2) - sandbox for querying data and endpoints for developers.
 
-[Materia V2 Subgraph](https://github.com/Materia/Materia-v2-subgraph) - source code for deployed subgraph.
+[Materia V2 Subgraph](https://github.com/materia-dex/Materia-v2-subgraph) - source code for deployed subgraph.
 
 ## Usage
 

@@ -18,7 +18,7 @@ Let's consider the mid price for DAI-WETH (that is, the amount of DAI per 1 WETH
 The simplest way to get the DAI-WETH mid price is to observe the pair directly:
 
 ```typescript
-import { ChainId, Token, WETH, Fetcher, Route } from '@Materia/sdk'
+import { ChainId, Token, WETH, Fetcher, Route } from '@materia/sdk'
 
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
 
@@ -43,7 +43,7 @@ Finally, you may have noticed that we're formatting the price to 6 significant d
 For the sake of example, let's imagine a direct pair between DAI and WETH _doesn't exist_. In order to get a DAI-WETH mid price we'll need to pick a valid route. Imagine both DAI and WETH have pairs with a third token, USDC. In that case, we can calculate an indirect mid price through the USDC pairs: 
 
 ```typescript
-import { ChainId, Token, WETH, Fetcher, Route } from '@Materia/sdk'
+import { ChainId, Token, WETH, Fetcher, Route } from '@materia/sdk'
 
 const USDC = new Token(ChainId.MAINNET, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6)
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
@@ -66,7 +66,7 @@ Mid prices are great representations of the _current_ state of a route, but what
 Imagine we're interested in trading 1 WETH for DAI:
 
 ```typescript
-import { ChainId, Token, WETH, Fetcher, Trade, Route, TokenAmount, TradeType } from '@Materia/sdk'
+import { ChainId, Token, WETH, Fetcher, Trade, Route, TokenAmount, TradeType } from '@materia/sdk'
 
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
 

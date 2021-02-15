@@ -12,7 +12,7 @@ The Route entity represents one or more ordered Materia pairs with a fully speci
 # Example
 
 ```typescript
-import { ChainId, Token, TokenAmount, Pair, Route } from '@Materia/sdk'
+import { ChainId, Token, TokenAmount, Pair, Route } from '@materia/sdk'
 
 const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
 const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')

@@ -14,7 +14,7 @@ This guide will focus exclusively on sending a transaction to the <Link to='/doc
 Let's say we want to trade 1 WETH for as much DAI as possible:
 
 ```typescript
-import { ChainId, Token, WETH, Fetcher, Trade, Route, TokenAmount, TradeType } from '@Materia/sdk'
+import { ChainId, Token, WETH, Fetcher, Trade, Route, TokenAmount, TradeType } from '@materia/sdk'
 
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
 
@@ -47,7 +47,7 @@ function swapExactETHForTokens(uint amountOutMin, address[] calldata path, addre
 Jumping back to our trading code, we can construct all the necessary parameters:
 
 ```typescript
-import { Percent } from '@Materia/sdk'
+import { Percent } from '@materia/sdk'
 
 const slippageTolerance = new Percent('50', '10000') // 50 bips, or 0.50%
 

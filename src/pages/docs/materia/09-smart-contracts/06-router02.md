@@ -7,11 +7,11 @@ Because routers are stateless and do not hold token balances, they can be replac
 
 # Code
 
-[`MateriaV2Router02.sol`](https://github.com/Materia/Materia-v2-periphery/blob/master/contracts/MateriaV2Router02.sol)
+[`MateriaV2Router02.sol`](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/MateriaV2Router02.sol)
 
 # Address
 
-`MateriaV2Router02` is deployed at `0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D` on the Ethereum [mainnet](https://etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and the [Ropsten](https://ropsten.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Rinkeby](https://rinkeby.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Görli](https://goerli.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and [Kovan](https://kovan.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D) testnets. It was built from commit [6961711](https://github.com/Materia/Materia-v2-periphery/tree/69617118cda519dab608898d62aaa79877a61004).
+`MateriaV2Router02` is deployed at `0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D` on the Ethereum [mainnet](https://etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and the [Ropsten](https://ropsten.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Rinkeby](https://rinkeby.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Görli](https://goerli.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and [Kovan](https://kovan.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D) testnets. It was built from commit [6961711](https://github.com/materia-dex/Materia-v2-periphery/tree/69617118cda519dab608898d62aaa79877a61004).
 
 # Read-Only Functions
 
@@ -530,7 +530,7 @@ Identical to [swapExactTokensForETH](#swapexacttokensforeth), but succeeds for t
 # Interface
 
 ```solidity
-import '@Materia/v2-periphery/contracts/interfaces/IMateriaV2Router02.sol';
+import '@materia/v2-periphery/contracts/interfaces/IMateriaV2Router02.sol';
 ```
 
 ```solidity
@@ -675,7 +675,7 @@ interface IMateriaV2Router02 is IMateriaV2Router01 {
 # ABI
 
 ```typescript
-import IMateriaV2Router02 from '@Materia/v2-periphery/build/IMateriaV2Router02.json'
+import IMateriaV2Router02 from '@materia/v2-periphery/build/IMateriaV2Router02.json'
 ```
 
 [https://unpkg.com/@Materia/v2-periphery@1.1.0-beta.0/build/IMateriaV2Router02.json](https://unpkg.com/@Materia/v2-periphery@1.1.0-beta.0/build/IMateriaV2Router02.json)
