@@ -11,12 +11,12 @@ and **security**. Materia is **open-source software** licensed under the
 
 It differs from Uniswap mainly for two reasons:
 
-- Every pair is made up by a generic [ERC-20](https://eips.ethereum.org/EIPS/eip-20) [ITEM](https://ethitem.com/) interoperable and the [Unified Stable Dollar](https://www.unifihub.com/), an innovative stablecoin tied to the the American Dollar.
+- Every pair is made up by a generic [ERC-20](https://eips.ethereum.org/EIPS/eip-20) [ITEM](https://ethitem.com/) interoperable and the [Wrapped USD](https://www.unifihub.com/), an innovative stablecoin tied to the the American Dollar.
 - Materia, as well as being a protocol, is also a [DFO](https://www.dfohub.com/), a Decentralized Flexible Organizations. This allows the GIL holders (the Materia DFO's governance token) to customize the protocol's parameters in real decentralized way, simply interacting with a set of smart contracts, possibile future applications are endless.
 
-Each Materia pair manages a liquidity pool made up of reserves of the generic token and the uSD token.
+Each Materia pair manages a liquidity pool made up of reserves of the generic token and the WUSD token.
 
-Anyone can become a liquidity provider (LP) for a pool by depositing an equivalent value of uSD and the token in return for pool tokens. These tokens track pro-rata LP shares of the total reserves, and can be redeemed for the underlying assets at any time.
+Anyone can become a liquidity provider (LP) for a pool by depositing an equivalent value of WUSD and the token in return for pool tokens. These tokens track pro-rata LP shares of the total reserves, and can be redeemed for the underlying assets at any time.
 
 ![](images/addliquidity.jpg)
 

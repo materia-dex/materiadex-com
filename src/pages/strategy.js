@@ -522,7 +522,7 @@ const About = props => {
               <ParagraphContent>
                 To attract the required liquidity, for the first 60 days and on a daily base, shares of GIL will be assigned to liquidity providers and investors of Materia. The distribution of GIL is a method of both fairly issuing governance tokens and incentivizing liquidity. In the early stages, Materia will keep following a constant product formula, forked by UniSwap, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool.              </ParagraphContent>
               <ParagraphContent>
-                We chose uSD as a bridge token of our protocol. It is a super-stable coin that achieves its stability by collateralizing other stablecoins. Having 50% of the entire DEX liquidity collateralized with uSD, allows us to achieve a superior level of price stability. We will be focusing our R&amp;D on the evolution of our protocol toward impermanent loss reduction and the enhancement of swaps among different standards and protocols.              </ParagraphContent>
+                We chose WUSD as a bridge token of our protocol. It is a super-stable coin that achieves its stability by collateralizing other stablecoins. Having 50% of the entire DEX liquidity collateralized with WUSD, allows us to achieve a superior level of price stability. We will be focusing our R&amp;D on the evolution of our protocol toward impermanent loss reduction and the enhancement of swaps among different standards and protocols.              </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
 

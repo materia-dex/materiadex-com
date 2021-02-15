@@ -10,7 +10,7 @@ In the following pages is contained the full documentation of the Materia protoc
 Taking advantage of a microservices architecture Materia aims to scale over time in order to implement new features and granting security by design in an environment where immutability reigns supreme.
 We base our protocol on the following pillar:
 
-- uSD: a Stable Coin based on Liquidity Pools
+- WUSD: a Stable Coin based on Liquidity Pools
 - EthItem: a synthesis of the ERC1155 & ERC20 standards, enabling their total interoperability.
 - Microservices: real possibility of upgrading over time
 - DFOs Governance: On-Chain companies with proprietary assets and voting tokens as programmable equities.

@@ -489,8 +489,8 @@ const InfoSection = props => {
               <StyledCardImage fadeIn={false} fluid={props.data.usdImage.childImageSharp.fluid} />
             </div>
             <p class="homeImageCaption">
-              <strong>Unified Stable Dollar</strong><br />
-              uSD is a Stable Coin based on Uniswap Liquidity Pools
+              <strong>Wrapped USD</strong><br />
+              WUSD is a Stable Coin based on Uniswap Liquidity Pools
             </p>
           </div>
           <div class="homeImagesCardContainer">
@@ -512,9 +512,9 @@ const InfoSection = props => {
             We started to work on this issue, challenging ourselves with a R&amp;D mission to overcome these limits and to simplify the swap process of the AMM.</p><p>
             We believe that a safe restart should begin from the single ERC20 routing of UniSwap v1 in order to ensure stability and optimized gas consumption.</p><p>
             We will take advantage of DFOHub microservices architecture and its next evolution to v0.5 to allow the community to self-determine the future and success of their investments in Materia.</p>
-            <StyledTitleAfter>uSD Routing</StyledTitleAfter>
+            <StyledTitleAfter>WUSD Routing</StyledTitleAfter>
             <p>
-            uSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experience a reduced slippage and impermanent loss compared to ETH.</p>
+            WUSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experience a reduced slippage and impermanent loss compared to ETH.</p>
             <StyledTitleAfter>Lego Swap via ETHItems</StyledTitleAfter>
             <p>
             Materia is designed to leverage the power of ETHItem standard, taking advantage of its underlying support for both ERC20 and ERC1155 standards. This choice will allow native support even for NFT tokens and the possibility to take advantage of **batch transfer** function, efficiently creating complex LEGO Swaps, saving gas costs.</p>
@@ -545,7 +545,7 @@ const ProductsSection = props => {
         <MiniCard
           href="#"
           title={'Pool'}
-          desc={'All the liquidity is available through a bridge token (uSD) and an Item. Materia is the very first dollar based DEX'}
+          desc={'All the liquidity is available through a bridge token (WUSD) and an Item. Materia is the very first dollar based DEX'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />
