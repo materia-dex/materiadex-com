@@ -2,7 +2,8 @@
 title: Materia Documentation
 ---
 
-The pages that follow contain full documentation of the Materia protocol. If you are new to Materia, you might want to check out the <Link to="/docs/materia/protocol-overview">Protocol Overview</Link> or <Link to="/faq">FAQ</Link> first.
+Materia is the World first, User-Centric DEX governed by On-Chain, Enterprise-Free Organization ([`DFO`](https://www.dfohub.com/)).
+In the following pages is contained the full documentation of the Materia protocol. If you are new to Materia, you might want to check out our social or get started with the <Link to="/docs/materia/protocol-overview">Protocol Overview</Link>.
 
 ## Getting Started
 
@@ -10,14 +11,9 @@ The pages that follow contain full documentation of the Materia protocol. If you
 
 ## Developer links
 
-The Materia codebase is comprised of an ecosystem of open source components.
+The Materia codebase is embody an ecosystem of open source components.
 
-- [`materia-contracts-core`](https://github.com/materia-dex/materia-contracts-core)
-- [`materia-contracts-proxy`](https://github.com/materia-dex/materia-contracts-proxy)
-- [`materia-contracts-distributor`](https://github.com/materia-dex/materia-contracts-distributor)
-- [`materia-contracts-liquidity-mining`](https://github.com/materia-dex/materia-contracts-liquidity-mining)
-- [`materia-interface`](https://github.com/materia-dex/materia-interface)
-- [`materia-sdk`](https://github.com/materia-dex/materia-sdk)
-- [`materia-claim-api`](https://github.com/materia-dex/materia-claim-api)
-- [`materia-token-list`](https://github.com/materia-dex/materia-token-list)
-- [`materia-retroqueries`](https://github.com/materia-dex/materia-retroqueries)
+- ["Official Web Site of Materia"]("https://github.com/materia-dex/materiadex-com")
+- ["Materia Contracts"](https://github.com/materia-dex/materia-contracts)
+- ["Materia SDK"](https://github.com/materia-dex/materia-sdk)
+- ["Materia Token List"](https://github.com/materia-dex/materia-token-list)
