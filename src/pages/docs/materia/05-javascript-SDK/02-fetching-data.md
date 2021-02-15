@@ -12,13 +12,13 @@ This guide will detail both of these cases, and offer some strategies that you c
 
 Unsurprisingly, the SDK needs some notion of an ERC-20 token to be able to function. This immediately raises the question of _where data about tokens comes from_.
 
-As an example, let's try to represent DAI in a format the SDK can work with. To do so, we need at least 3 pieces of data: a **chainId**, a **token address**, and how many **decimals** the token has. We also may be interested in the **symbol** and/or **name** of the token.
+As an example, let's try to represent WUSD in a format the SDK can work with. To do so, we need at least 3 pieces of data: a **chainId**, a **token address**, and how many **decimals** the token has. We also may be interested in the **symbol** and/or **name** of the token.
 
 ## Identifying Data
 
 The first two pieces of data — **chainId** and **token address** — must be provided by us. Thinking about it, this makes sense, as there's really no other way to unambiguously identify a token.
 
-So, in the case of DAI, we know that the **chainId** is `1` (we're on mainnet), and the **token address** is `0x6B175474E89094C44Da98b954EedeAC495271d0F`. Note that it's very important to externally verify token addresses. Don't use addresses from sources you don't trust!
+So, in the case of WUSD, we know that the **chainId** is `1` (we're on mainnet), and the **token address** is `0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8`. Note that it's very important to externally verify token addresses. Don't use addresses from sources you don't trust!
 
 ## Required Data
 
@@ -26,16 +26,16 @@ The next piece of data we need is **decimals**.
 
 ### Provided by the User
 
-One option here is to simply pass in the correct value, which we may know is `18`. At this point, we're ready to represent DAI as a <Link to='/docs/materia/SDK/token'>Token</Link>:
+One option here is to simply pass in the correct value, which we may know is `18`. At this point, we're ready to represent WUSD as a <Link to='/docs/materia/SDK/token'>Token</Link>:
 
 ```typescript
 import { ChainId, Token } from '@materia/sdk'
 
 const chainId = ChainId.MAINNET
-const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
+const tokenAddress = '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8' // must be checksummed
 const decimals = 18
 
-const DAI = new Token(chainId, tokenAddress, decimals)
+const WUSD = new Token(chainId, tokenAddress, decimals)
 ```
 
 If we don't know or don't want to hardcode the value, we could look it up ourselves via any method of retrieving on-chain data in a function that looks something like:
@@ -56,11 +56,11 @@ If we don't want to provide or look up the value ourselves, we can ask the SDK t
 import { ChainId, Token, Fetcher } from '@materia/sdk'
 
 const chainId = ChainId.MAINNET
-const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
+const tokenAddress = '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8' // must be checksummed
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
-const DAI: Token = await Fetcher.fetchTokenData(chainId, tokenAddress)
+const WUSD: Token = await Fetcher.fetchTokenData(chainId, tokenAddress)
 ```
 
 By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider). 
@@ -74,12 +74,12 @@ Finally, we can talk about **symbol** and **name**. Because these fields aren't 
 ```typescript
 import { ChainId, Token } from '@materia/sdk'
 
-const DAI = new Token(
+const WUSD = new Token(
   ChainId.MAINNET,
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+  '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8',
   18,
-  'DAI',
-  'Dai Stablecoin'
+  'WUSD',
+  'Wrapped USD'
 )
 ```
 
@@ -90,12 +90,12 @@ import { ChainId, Token, Fetcher } from '@materia/sdk'
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
-const DAI = await Fetcher.fetchTokenData(
+const WUSD = await Fetcher.fetchTokenData(
   ChainId.MAINNET,
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+  '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8',
   undefined,
-  'DAI',
-  'Dai Stablecoin'
+  'WUSD',
+  'Wrapped USD'
 )
 ```
 
@@ -103,11 +103,11 @@ const DAI = await Fetcher.fetchTokenData(
 
 Now that we've explored how to define a token, let's talk about pairs. To read more about what Materia pairs are, see <Link to='/docs/materia/smart-contracts/pair'>Pair</Link>.
 
-As an example, let's try to represent the DAI-IETH pair.
+As an example, let's try to represent the WUSD-IETH pair.
 
 ## Identifying Data
 
-Each pair consists of two tokens (see previous section). Note that IETH used by the router is <Link to='/docs/materia/SDK/other-exports/#weth'>exported by the SDK</Link>.
+Each pair consists of two tokens (see previous section). Note that IETH used by the orchestrator is <Link to='/docs/materia/SDK/other-exports/#weth'>exported by the SDK</Link>.
 
 ## Required Data
 
@@ -120,15 +120,15 @@ One option here is to simply pass in values which we've fetched ourselves to cre
 ```typescript
 import { ChainId, Token, IETH, Pair, TokenAmount } from '@materia/sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18)
 
 async function getPair(): Promise<Pair> {
-  const pairAddress = Pair.getAddress(DAI, IETH[DAI.chainId])
+  const pairAddress = Pair.getAddress(WUSD, IETH[WUSD.chainId])
 
   const reserves = [/* use pairAddress to fetch reserves here */]
   const [reserve0, reserve1] = reserves
 
-  const tokens = [DAI, IETH[DAI.chainId]]
+  const tokens = [WUSD, IETH[WUSD.chainId]]
   const [token0, token1] = tokens[0].sortsBefore(tokens[1]) ? tokens : [tokens[1], tokens[0]]
 
   const pair = new Pair(new TokenAmount(token0, reserve0), new TokenAmount(token1, reserve1))
@@ -145,11 +145,11 @@ If we don't want to look up the value ourselves, we can ask the SDK to look them
 ```typescript
 import { ChainId, Token, IETH, Fetcher } from '@materia/sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
-const pair = await Fetcher.fetchPairData(DAI, IETH[DAI.chainId])
+const pair = await Fetcher.fetchPairData(WUSD, IETH[WUSD.chainId])
 ```
 
 By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider). If you're already using ethers.js in your application, you may pass in your provider as a 3rd argument. If you're using another library, you'll have to fetch the data separately.
