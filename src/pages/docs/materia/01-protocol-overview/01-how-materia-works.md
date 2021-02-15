@@ -11,8 +11,8 @@ and **security**. Materia is **open-source software** licensed under the
 
 It differs from Uniswap mainly for two reasons:
 
-- Every pair is made up by a generic [ERC-20](https://eips.ethereum.org/EIPS/eip-20) and the [Unified Stable Dollar](https://www.unifihub.com/), an innovative stablecoin tied to the the American Dollar.
-- Materia, as well as being a protocol, is also a [DFO](https://www.dfohub.com/), a Decentralized Flexible Organizations. This allows the GIL holders (the Materia DFO's governance token) to customize the protocol's parameters in real decentralized way, simply interacting with a set of smart contracts, possibile future applications and endless.
+- Every pair is made up by a generic [ERC-20](https://eips.ethereum.org/EIPS/eip-20) [ITEM](https://ethitem.com/) interoperable and the [Unified Stable Dollar](https://www.unifihub.com/), an innovative stablecoin tied to the the American Dollar.
+- Materia, as well as being a protocol, is also a [DFO](https://www.dfohub.com/), a Decentralized Flexible Organizations. This allows the GIL holders (the Materia DFO's governance token) to customize the protocol's parameters in real decentralized way, simply interacting with a set of smart contracts, possibile future applications are endless.
 
 Each Materia pair manages a liquidity pool made up of reserves of the generic token and the uSD token.
 

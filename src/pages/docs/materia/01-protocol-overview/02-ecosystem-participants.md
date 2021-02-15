@@ -4,9 +4,9 @@ tags: protocol-overview, documentation
 related: '/docs/materia/core-concepts/pools'
 ---
 
-![](/images/participants.jpg)
+![](/images/protocol.jpg)
 
-The Materia ecosystem is primarily comprised of three types of users: liquidity providers, traders, GIL holders, and developers. Liquidity providers are incentivized to contribute [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens to common liquidity pools. Traders can swap these tokens for one another for a fixed <Link to="/docs/materia/advanced-topics/fees">0.30% fee</Link> (which goes to liquidity providers). Developers can integrate directly with Materia smart contracts to power new and exciting interactions with tokens, trading interfaces, retail experiences, and more. The GIL holders can create and vote new proposals, that is, adjusting and chaniging the protocol.
+The Materia ecosystem is primarily comprised of three types of users: liquidity providers, traders, GIL holders, and developers. Liquidity providers are incentivized to contribute [ERC-20](https://eips.ethereum.org/EIPS/eip-20) [ITEM](https://ethitem.com/) interoperable tokens to common liquidity pools. Traders can swap these tokens for one another for a variable <Link to="/docs/materia/advanced-topics/fees">0.30% fee</Link> (which goes to liquidity providers). Developers can integrate directly with Materia smart contracts to power new and exciting interactions with tokens, trading interfaces, retail experiences, and more. The GIL holders can create and vote new proposals, that is, adjusting and chaniging the protocol.
 
 In total, interactions between these classes create a positive feedback loop, fueling digital economies by defining a common language through which tokens can be pooled, traded and used.
 
@@ -53,5 +53,7 @@ There are far too many ways Materia can be used in the wider Ethereum ecosystem 
 GIL holders can create new proposals to add new functionalities or to modify the protocol, for example they can:
 
 - Change the *Materia fee* and the *Swap fee* for a single pair.
+
 - Officially deploy as DFO a smart contract to better interface with the core contracts.
+
 - Officially Deploy new smart contracts which extends the protocol with new functionalities.
