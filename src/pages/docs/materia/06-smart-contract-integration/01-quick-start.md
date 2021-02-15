@@ -29,7 +29,7 @@ npx truffle init
 
 ## Setting up npm
 
-In order to reference the Materia V2 contracts, you should use the npm artifacts we deploy containing the core and
+In order to reference the Materia contracts, you should use the npm artifacts we deploy containing the core and
 periphery smart contracts and interfaces. To add npm dependencies, we first initialize the npm package. 
 We can run `npm init` in the same directory to create a `package.json` file. You can accept all the defaults and
 change it later.
@@ -49,7 +49,7 @@ npm i --save @Materia/v2-core
 npm i --save @Materia/v2-periphery
 ```
 
-If you check the `node_modules/@Materia` directory, you can now find the Materia V2 contracts. 
+If you check the `node_modules/@Materia` directory, you can now find the Materia contracts. 
 
 ```shell script
 moody@MacBook-Pro ~/I/u/demo> ls node_modules/@Materia/v2-core/contracts
@@ -179,7 +179,7 @@ In order to test your contract, you need to:
 Note you should only deploy the precompiled Materia contracts in the `build` directories for unit tests. 
 This is because solidity appends a metadata hash to compiled contract artifacts which includes the hash of the contract
 source code path, and compilations on other machines will not result in the exact same bytecode.
-This is problematic because in Materia V2 we use the hash of the bytecode in the v2-periphery
+This is problematic because in Materia we use the hash of the bytecode in the v2-periphery
 [`MateriaV2Library`](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/libraries/MateriaV2Library.sol#L24),
 to compute the pair address.
 

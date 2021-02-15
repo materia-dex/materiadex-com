@@ -3,7 +3,7 @@ title: Building an Oracle
 tags: oracles, documentation
 ---
 
-To build a price oracle on Materia V2, you must first understand the
+To build a price oracle on Materia, you must first understand the
 requirements for your use case. Once you understand the kind of price
 average you require, it is a matter of storing the cumulative price
 variable from the pair as often as necessary, and computing

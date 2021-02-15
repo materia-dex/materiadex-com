@@ -81,7 +81,7 @@ registerServiceWorker()
 
 ### Writing the queries
 
-Next we'll construct our query and fetch data. For this example we will fetch some data about the Dai token on Materia V2. We'll get the current price, and total liquidity across all pairs. We'll be using the Dai address as an id in this query. We'll also fetch the USD price of ETH to help create USD conversion for Dai data.
+Next we'll construct our query and fetch data. For this example we will fetch some data about the Dai token on Materia. We'll get the current price, and total liquidity across all pairs. We'll be using the Dai address as an id in this query. We'll also fetch the USD price of ETH to help create USD conversion for Dai data.
 
 1. First we need to define the query itself. We'll use `gql` to parse a query string into the GraphQL AST standard. Import the `gql` helper into the app and use it to create the query. Add the following to your `App.js` file:
 
@@ -110,7 +110,7 @@ We use an id of `1` for the bundle because there is only one hardcoded bundle in
 
 ### Fetch data
 
-Now we're ready to use these queries to fetch data from the Materia V2 subgraph. To do this we can use the `useQuery` hook which uses our client instance to fetch data, and gives us live info about the status of the request. To do this add the following to your `App.js` file:
+Now we're ready to use these queries to fetch data from the Materia subgraph. To do this we can use the `useQuery` hook which uses our client instance to fetch data, and gives us live info about the status of the request. To do this add the following to your `App.js` file:
 
 ```javascript
 import { useQuery } from '@apollo/react-hooks'

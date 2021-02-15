@@ -22,7 +22,7 @@ A smart contract that deploys a unique smart contract for any ERC20/ERC20 tradin
 
 ### Pair
 
-A smart contract deployed from the Materia V2 Factory that enables trading between two ERC20 tokens.
+A smart contract deployed from the Materia Factory that enables trading between two ERC20 tokens.
 
 ### Pool
 

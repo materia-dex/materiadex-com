@@ -3,7 +3,7 @@ title: Smart contracts
 tags: protocol-overview, documentation
 ---
 
-Materia V2 is a binary smart contract system. [Core](#core) contracts provide fundamental safety guarantees for all parties interacting with Materia. [Periphery](#periphery) contracts interact with one or more core contracts but are not themselves part of the core.
+Materia is a binary smart contract system. [Core](#core) contracts provide fundamental safety guarantees for all parties interacting with Materia. [Periphery](#periphery) contracts interact with one or more core contracts but are not themselves part of the core.
 
 # Core
 
@@ -29,7 +29,7 @@ Pairs have two primary purposes: serving as automated market makers and keeping 
 
 [Source code](https://github.com/materia-dex/Materia-v2-periphery)
 
-The periphery is a constellation of smart contracts designed to support domain-specific interactions with the core. Because of Materia's permissionless nature, the contracts described below have no special privileges, and are in fact only a small subset of the universe of possible periphery-like contracts. However, they are useful examples of how to safely and efficiently interact with Materia V2.
+The periphery is a constellation of smart contracts designed to support domain-specific interactions with the core. Because of Materia's permissionless nature, the contracts described below have no special privileges, and are in fact only a small subset of the universe of possible periphery-like contracts. However, they are useful examples of how to safely and efficiently interact with Materia.
 
 ## Library
 
@@ -45,7 +45,7 @@ The router, which uses the library, fully supports all the basic requirements of
 
 # Design Decisions
 
-The following sections describe some of the notable design decisions made in Materia V2. These are safe to skip unless you're interested in gaining a deep technical understanding of how V2 works under the hood, or writing smart contract integrations!
+The following sections describe some of the notable design decisions made in Materia. These are safe to skip unless you're interested in gaining a deep technical understanding of how V2 works under the hood, or writing smart contract integrations!
 
 ## Sending Tokens
 
