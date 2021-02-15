@@ -7,7 +7,7 @@ The Materia SDK exists to help developers build on top of Materia. It's designed
 
 # Installation
 
-The easiest way to consume the SDK is via npm. To install it in your project, simply run `yarn add @Materia/sdk` (or `npm install @Materia/sdk`).
+The easiest way to consume the SDK is via npm. To install it in your project, simply run `yarn add @materia/sdk` (or `npm install @materia/sdk`).
 
 # Usage
 
@@ -16,15 +16,15 @@ To run code from the SDK in your application, use an `import` or `require` state
 ## ES6 (import)
 
 ```typescript
-import { ChainId } from '@Materia/sdk'
+import { ChainId } from '@materia/sdk'
 console.log(`The chainId of mainnet is ${ChainId.MAINNET}.`)
 ```
 
 ## CommonJS (require)
 
 ```typescript
-const Materia = require('@Materia/sdk')
-console.log(`The chainId of mainnet is ${Materia.ChainId.MAINNET}.`)
+const MATERIA = require('@materia/sdk')
+console.log(`The chainId of mainnet is ${MATERIA.ChainId.MAINNET}.`)
 ```
 
 # Reference

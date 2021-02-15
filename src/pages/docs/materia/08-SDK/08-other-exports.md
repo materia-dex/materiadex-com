@@ -6,7 +6,7 @@ tags: sdk, documentation
 # JSBI
 
 ```typescript
-import { JSBI } from '@Materia/sdk'
+import { JSBI } from '@materia/sdk'
 // import JSBI from 'jsbi'
 ```
 
@@ -15,7 +15,7 @@ The default export from [jsbi](https://github.com/GoogleChromeLabs/jsbi).
 # BigintIsh
 
 ```typescript
-import { BigintIsh } from '@Materia/sdk'
+import { BigintIsh } from '@materia/sdk'
 // type BigintIsh = JSBI | bigint | string
 ```
 
@@ -24,7 +24,7 @@ A union type comprised of all types that can be cast to a JSBI instance.
 # ChainId
 
 ```typescript
-import { ChainId } from '@Materia/sdk'
+import { ChainId } from '@materia/sdk'
 // enum ChainId {
 //   MAINNET = 1,
 //   ROPSTEN = 3,
@@ -39,7 +39,7 @@ A enum denominating supported chain IDs.
 # TradeType
 
 ```typescript
-import { TradeType } from '@Materia/sdk'
+import { TradeType } from '@materia/sdk'
 // enum TradeType {
 //   EXACT_INPUT,
 //   EXACT_OUTPUT
@@ -51,7 +51,7 @@ A enum denominating supported trade types.
 # Rounding
 
 ```typescript
-import { Rounding } from '@Materia/sdk'
+import { Rounding } from '@materia/sdk'
 // enum Rounding {
 //   ROUND_DOWN,
 //   ROUND_HALF_UP,
@@ -64,7 +64,7 @@ A enum denominating supported rounding options.
 # FACTORY_ADDRESS
 
 ```typescript
-import { FACTORY_ADDRESS } from '@Materia/sdk'
+import { FACTORY_ADDRESS } from '@materia/sdk'
 ```
 
 The <Link to='/docs/materia/smart-contracts/factory/#address'>factory address</Link>.
@@ -72,7 +72,7 @@ The <Link to='/docs/materia/smart-contracts/factory/#address'>factory address</L
 # INIT_CODE_HASH
 
 ```typescript
-import { INIT_CODE_HASH } from '@Materia/sdk'
+import { INIT_CODE_HASH } from '@materia/sdk'
 ```
 
 See <Link to='/docs/materia/smart-contracts/factory/#address'>Pair Addresses</Link>.
@@ -80,7 +80,7 @@ See <Link to='/docs/materia/smart-contracts/factory/#address'>Pair Addresses</Li
 # MINIMUM_LIQUIDITY
 
 ```typescript
-import { MINIMUM_LIQUIDITY } from '@Materia/sdk'
+import { MINIMUM_LIQUIDITY } from '@materia/sdk'
 ```
 
 See <Link to='/docs/materia/protocol-overview/smart-contracts/#minimum-liquidity'>Minimum Liquidity</Link>.
@@ -88,19 +88,19 @@ See <Link to='/docs/materia/protocol-overview/smart-contracts/#minimum-liquidity
 # InsufficientReservesError
 
 ```typescript
-import { InsufficientReservesError } from '@Materia/sdk'
+import { InsufficientReservesError } from '@materia/sdk'
 ```
 
 # InsufficientInputAmountError
 
 ```typescript
-import { InsufficientInputAmountError } from '@Materia/sdk'
+import { InsufficientInputAmountError } from '@materia/sdk'
 ```
 
 # WETH
 
 ```typescript
-import { WETH } from '@Materia/sdk'
+import { WETH } from '@materia/sdk'
 ```
 
 An object whose values are <Link to='/docs/materia/smart-contracts/router02/#weth'>WETH</Link> <Link to='/docs/materia/SDK/token'>Token</Link> instances, indexed by [ChainId](#chainid).

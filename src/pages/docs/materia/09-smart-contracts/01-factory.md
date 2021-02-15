@@ -5,11 +5,11 @@ tags: smart-contracts, documentation
 
 # Code
 
-[`MateriaV2Factory.sol`](https://github.com/Materia/Materia-v2-core/blob/master/contracts/MateriaV2Factory.sol)
+[`MateriaV2Factory.sol`](https://github.com/materia-dex/Materia-v2-core/blob/master/contracts/MateriaV2Factory.sol)
 
 # Address
 
-`MateriaV2Factory` is deployed at `0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f` on the Ethereum [mainnet](https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and the [Ropsten](https://ropsten.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Rinkeby](https://rinkeby.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Görli](https://goerli.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and [Kovan](https://kovan.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f) testnets. It was built from commit [8160750](https://github.com/Materia/Materia-v2-core/tree/816075049f811f1b061bca81d5d040b96f4c07eb).
+`MateriaV2Factory` is deployed at `0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f` on the Ethereum [mainnet](https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and the [Ropsten](https://ropsten.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Rinkeby](https://rinkeby.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Görli](https://goerli.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and [Kovan](https://kovan.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f) testnets. It was built from commit [8160750](https://github.com/materia-dex/Materia-v2-core/tree/816075049f811f1b061bca81d5d040b96f4c07eb).
 
 # Events
 
@@ -87,7 +87,7 @@ Creates a pair for `tokenA` and `tokenB` if one doesn't exist already.
 # Interface
 
 ```solidity
-import '@Materia/v2-core/contracts/interfaces/IMateriaV2Factory.sol';
+import '@materia/v2-core/contracts/interfaces/IMateriaV2Factory.sol';
 ```
 
 ```solidity
@@ -110,7 +110,7 @@ interface IMateriaV2Factory {
 # ABI
 
 ```typescript
-import IMateriaV2Factory from '@Materia/v2-core/build/IMateriaV2Factory.json'
+import IMateriaV2Factory from '@materia/v2-core/build/IMateriaV2Factory.json'
 ```
 
 [https://unpkg.com/@Materia/v2-core@1.0.0/build/IMateriaV2Factory.json](https://unpkg.com/@Materia/v2-core@1.0.0/build/IMateriaV2Factory.json)

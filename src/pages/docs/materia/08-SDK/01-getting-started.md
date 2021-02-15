@@ -27,11 +27,11 @@ The SDK works for all chains on which the <Link to='/docs/materia/smart-contract
 
 ## Code
 
-The [source code is available on GitHub](https://github.com/Materia/Materia-sdk).
+The [source code is available on GitHub](https://github.com/materia-dex/Materia-sdk).
 
 ## Dependencies
 
-The SDK declares its dependencies as [peer dependencies](https://github.com/Materia/Materia-sdk/blob/v2/package.json#L33).
+The SDK declares its dependencies as [peer dependencies](https://github.com/materia-dex/Materia-sdk/blob/v2/package.json#L33).
 This is for two reasons:
 
  - prevent installation of unused dependencies (e.g. `@ethersproject/providers` and `@ethersproject/contracts`, only used in [`Fetcher`](/docs/materia/SDK/fetcher))

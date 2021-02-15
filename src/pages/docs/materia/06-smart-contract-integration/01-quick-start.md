@@ -121,8 +121,8 @@ The [`MateriaV2Library`](/docs/materia/smart-contracts/library/) has some helpfu
 pragma solidity ^0.6.6;
 
 import './interfaces/ILiquidityValueCalculator.sol';
-import '@Materia/v2-periphery/contracts/libraries/MateriaV2Library.sol';
-import '@Materia/v2-core/contracts/interfaces/IMateriaV2Pair.sol';
+import '@materia/v2-periphery/contracts/libraries/MateriaV2Library.sol';
+import '@materia/v2-core/contracts/interfaces/IMateriaV2Pair.sol';
 
 contract LiquidityValueCalculator is ILiquidityValueCalculator {
     function pairInfo(address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB, uint totalSupply) {
@@ -140,8 +140,8 @@ Finally we just need to compute the share value. We will leave that as an exerci
 pragma solidity ^0.6.6;
 
 import './interfaces/ILiquidityValueCalculator.sol';
-import '@Materia/v2-periphery/contracts/libraries/MateriaV2Library.sol';
-import '@Materia/v2-core/contracts/interfaces/IMateriaV2Pair.sol';
+import '@materia/v2-periphery/contracts/libraries/MateriaV2Library.sol';
+import '@materia/v2-core/contracts/interfaces/IMateriaV2Pair.sol';
 
 contract LiquidityValueCalculator is ILiquidityValueCalculator {
     address public factory;
@@ -180,7 +180,7 @@ Note you should only deploy the precompiled Materia contracts in the `build` dir
 This is because solidity appends a metadata hash to compiled contract artifacts which includes the hash of the contract
 source code path, and compilations on other machines will not result in the exact same bytecode.
 This is problematic because in Materia V2 we use the hash of the bytecode in the v2-periphery
-[`MateriaV2Library`](https://github.com/Materia/Materia-v2-periphery/blob/master/contracts/libraries/MateriaV2Library.sol#L24),
+[`MateriaV2Library`](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/libraries/MateriaV2Library.sol#L24),
 to compute the pair address.
 
 To get the bytecode for deploying MateriaV2Factory, you can import the file via:

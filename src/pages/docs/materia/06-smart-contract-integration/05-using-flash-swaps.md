@@ -70,14 +70,14 @@ For further exploration of flash swaps, see the <a href='/whitepaper.pdf' target
 
 # Example
 
-A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/Materia/Materia-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
+A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
 
-<Github href="https://github.com/Materia/Materia-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>
+<Github href="https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>
 
 # Interface
 
 ```solidity
-import '@Materia/v2-core/contracts/interfaces/IMateriaV2Callee.sol';
+import '@materia/v2-core/contracts/interfaces/IMateriaV2Callee.sol';
 ```
 
 ```solidity

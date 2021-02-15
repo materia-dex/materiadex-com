@@ -11,31 +11,31 @@ const links = [
     sublinks: [
       {
         title: 'Getting started with the SDK',
-        link: '/docs/v2/javascript-SDK/quick-start/',
-        description: 'A step-by-step guide to getting started building interfaces with Uniswap.',
+        link: '/docs/materia/javascript-SDK/quick-start/',
+        description: 'A step-by-step guide to getting started building interfaces with Materia.',
         tag: 'tutorial',
         icon: '📌'
       },
       {
         title: 'Smart contract development',
         link: '/docs/v2/smart-contract-integration/quick-start/',
-        description: 'Simplify the process of integrating Uniswap into your project.',
+        description: 'Simplify the process of integrating Materia into your project.',
         tag: 'reference',
         icon: '🖥️'
       },
-      {
-        title: 'Introduction to Flash Swaps',
-        link: '/docs/v2/core-concepts/flash-swaps/',
-        description: 'Withdraw the reserves of any ERC20 token on Uniswap and execute arbitrary logic.',
-        tag: 'guide',
-        icon: '⚡'
-      },
-      {
-        title: 'Introduction to Oracles',
-        link: '/docs/v2/core-concepts/oracles/',
-        description: 'Highly decentralized, manipulation-resistant, on-chain price feeds.',
-        icon: '🔮'
-      }
+      // {
+      //   title: 'Introduction to Flash Swaps',
+      //   link: '/docs/v2/core-concepts/flash-swaps/',
+      //   description: 'Withdraw the reserves of any ERC20 token on Materia and execute arbitrary logic.',
+      //   tag: 'guide',
+      //   icon: '⚡'
+      // },
+      // {
+      //   title: 'Introduction to Oracles',
+      //   link: '/docs/v2/core-concepts/oracles/',
+      //   description: 'Highly decentralized, manipulation-resistant, on-chain price feeds.',
+      //   icon: '🔮'
+      // }
     ]
   },
   {
@@ -65,9 +65,9 @@ const links = [
     name: 'Liquidity',
     sublinks: [
       {
-        title: 'Anatomy of a Uniswap Pool',
+        title: 'Anatomy of a Materia Pool',
         link: '/docs/v2/pools',
-        description: 'An overview of what a Uniswap liquidity pool.'
+        description: 'An overview of what a Materia liquidity pool.'
       },
       {
         title: 'Understanding Liquidity Returns',
@@ -82,7 +82,7 @@ const links = [
       {
         title: 'Core Concepts',
         link: '/docs/v2/protocol-overview',
-        description: 'A high level technical overview of the Uniswap protocol.'
+        description: 'A high level technical overview of the Materia protocol.'
       }
     ]
   }
