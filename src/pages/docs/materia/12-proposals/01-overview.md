@@ -5,8 +5,11 @@ tags: smart-contracts, documentation, governance
 
 # Introduction
 
+Governance of the Materia protocol is available throgh the [`DFO Dapp`](https://dapp.dfohub.com/?addr=0xf056aE03Cf991e4587Da458B2c85e9a353684B3a) where Token Holders can vote proposal to extend the main protocol.
+
 Although the Materia core contracts can be used without limitations and should not be replaced soon, new Materia versions may implement new mechanisms that requires the replacement of some other non-core contracts.
 Moreover some contracts allow the adjustment of some specific values of the protocol.
+
 Since Materia is a [`DFO`](https://www.dfohub.com/) (Decentralized Flexible Organizations) the GIL holders can create new proposals and then vote for them.
 
 ## What is a proposal

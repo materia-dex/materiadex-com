@@ -363,7 +363,7 @@ const SideBar = props => {
               <StyledLink to={'/whitepaper.pdf'}>Whitepaper</StyledLink>
             </StyledListItem>
             <StyledListItem>
-              <StyledLink to={'/docs/materia/governance/governance-reference'}>Governance</StyledLink>
+              <StyledLink to={'https://dapp.dfohub.com/?addr=0xf056aE03Cf991e4587Da458B2c85e9a353684B3a'}>Governance</StyledLink>
             </StyledListItem>
           </StyledList>
         )}
