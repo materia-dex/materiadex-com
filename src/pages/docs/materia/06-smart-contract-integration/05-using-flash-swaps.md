@@ -3,7 +3,7 @@ title: Flash Swaps
 tags: smart contract integration, developer-guides, documentation
 ---
 
-Flash swaps are an integral feature of Materia V2. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because Ethereum transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
+Flash swaps are an integral feature of Materia. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because Ethereum transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
 
 To see how this all works, let's start by examining the interface of the `swap` function:
 
@@ -38,7 +38,7 @@ function MateriaV2Call(address sender, uint amount0, uint amount1, bytes calldat
 }
 ```
 
-The first 2 lines simply fetch the token addresses from the pair, and the 3rd ensures that the `msg.sender` is an actual Materia V2 pair address.
+The first 2 lines simply fetch the token addresses from the pair, and the 3rd ensures that the `msg.sender` is an actual Materia pair address.
 
 # Repayment
 

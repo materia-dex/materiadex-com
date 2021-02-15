@@ -22,7 +22,7 @@ This rule is the [constant product formula](/docs/materia/protocol-overview/glos
 
 ## Anatomy of a swap
 
-At the most basic level, all swaps in Materia V2 happen within a single function, aptly named `swap`:
+At the most basic level, all swaps in Materia happen within a single function, aptly named `swap`:
 
 ```solidity
 function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data);

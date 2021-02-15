@@ -12,19 +12,19 @@ When building smart contracts that integrate with DeFi protocols, developers wil
 Many Oracle designs on Ethereum have been implemented on an ad-hoc basis, with varying degrees of decentralization and security. Because of this, the ecosystem has witnessed numerous high-profile hacks where the oracle implementation is the primary attack vector.
 Some of these vulnerabilities are discussed [here](https://samczsun.com/taking-undercollateralized-loans-for-fun-and-for-profit/). A lack of a robust price oracle has held back the adoption of DeFi and made it difficult and costly for new entrants to launch new derivative products.
 
-While there is no one size fits all solution, Materia V2 enables building highly decentralized and manipulation-resistant on-chain price oracles, which may solve many of the demands encountered while building robust protocols.
+While there is no one size fits all solution, Materia enables building highly decentralized and manipulation-resistant on-chain price oracles, which may solve many of the demands encountered while building robust protocols.
 
-As liquidity and trade volume on the protocol continues to grow, Materia’s on-chain trade history has become an increasingly accurate and manipulation resistant price information source. This insight is now formalized as the Price Oracle mechanism in Materia V2.
+As liquidity and trade volume on the protocol continues to grow, Materia’s on-chain trade history has become an increasingly accurate and manipulation resistant price information source. This insight is now formalized as the Price Oracle mechanism in Materia.
 
-# Materia V2 solution
+# Materia solution
 
-Materia V2 includes several improvements for price feeds built on top of it. First, every pair measures (but does not store) the market price at the beginning of each block, before any trades take place. This price is expensive to manipulate because it is by the last transaction in a previous block.
+Materia includes several improvements for price feeds built on top of it. First, every pair measures (but does not store) the market price at the beginning of each block, before any trades take place. This price is expensive to manipulate because it is by the last transaction in a previous block.
 
 **To set the measured price to one that is out of sync with the global market price, an attacker has to make a bad trade at the end of a previous block** , typically with no guarantee that they will arbitrage it back in the next block. Attackers will lose money to arbitrageurs unless they can “selfishly” mine two blocks in a row. This type of attack presents several challenges and [has not been observed to date](https://arxiv.org/abs/1912.01798).
 
 Unfortunately, this alone is not enough. If significant value settles based on the price resulting from this mechanism, an attack’s profit will likely outweigh the loss.
 
-Instead, Materia V2 adds this end-of-block price to a single cumulative-price variable in the core contract weighted by the amount of time this price existed. **This variable represents a sum of the Materia price for every second in the entire history of the contract.**
+Instead, Materia adds this end-of-block price to a single cumulative-price variable in the core contract weighted by the amount of time this price existed. **This variable represents a sum of the Materia price for every second in the entire history of the contract.**
 
 ![](images/v2_onchain_price_data.png)
 
@@ -42,11 +42,11 @@ A few notes:
 - For a simple TWAP, the cost of manipulation increases (approx. linear) with liquidity on Materia, as well as (approx. linear) with the length of time over which you average.
 - Cost of an attack is relatively simple to estimate. Moving the price 5% on a 1-hour TWAP is approximately equal to the amount lost to arbitrage and fees for moving the price 5% every block for 1 hour.
 
-There are some nuances that are good to be aware of when using Materia V2 as an oracle, especially where manipulation resistance is concerned. The <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whitepaper</a> elaborates on some of them. Additional oracle-focused developer guides and documentation will be released soon.
+There are some nuances that are good to be aware of when using Materia as an oracle, especially where manipulation resistance is concerned. The <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whitepaper</a> elaborates on some of them. Additional oracle-focused developer guides and documentation will be released soon.
 
-In the meantime, check out our [example implementation](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Materia V2!
+In the meantime, check out our [example implementation](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Materia!
 
-In summary, Materia V2 introduces 2 new variables in each pair, `price0CumulativeLast` and `price1CumulativeLast`, that store the prices of `token0` and `token1` respectively, multiplied by how long they were observed (in seconds). These variables are cumulative, meaning they are ever-increasing. They are updated with the first `swap`/`mint`/`burn` of each block.
+In summary, Materia introduces 2 new variables in each pair, `price0CumulativeLast` and `price1CumulativeLast`, that store the prices of `token0` and `token1` respectively, multiplied by how long they were observed (in seconds). These variables are cumulative, meaning they are ever-increasing. They are updated with the first `swap`/`mint`/`burn` of each block.
 
 You can use either of these new variables to compute an average price between 2 observations. To do so, take the difference (i.e., subtraction) of two observations, and divide by the time elapsed between them. This is the basis of building oracles on top of V2.
 
@@ -54,11 +54,11 @@ You can use either of these new variables to compute an average price between 2 
 
 The cost of manipulating the price for a specific time period can be roughly estimated as the amount lost to arbitrage and fees every block for the entire period. For larger liquidity pools and over longer time periods, this attack is impractical, as the cost of manipulation typically exceeds the value at stake.
 
-Other factors, such as network congestion, can reduce the cost of attack. For a more in-depth review of the security of Materia V2 price oracles, read the [security audit section on Oracle Integrity](https://Materia.org/audit.html#org87c8b91).
+Other factors, such as network congestion, can reduce the cost of attack. For a more in-depth review of the security of Materia price oracles, read the [security audit section on Oracle Integrity](https://Materia.org/audit.html#org87c8b91).
 
-## Using Materia V2 price oracles
+## Using Materia price oracles
 
-Importantly, Materia V2 is not opinionated on how you use the new cumulative price variables, allowing you to build oracles that compute different kinds of price averages and over different periods.
+Importantly, Materia is not opinionated on how you use the new cumulative price variables, allowing you to build oracles that compute different kinds of price averages and over different periods.
 
 # Building an oracle
 

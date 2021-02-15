@@ -3,7 +3,7 @@ title: Common Errors
 tags: smart-contracts, documentation
 ---
 
-This document covers a few error codes freqeuently encountered while building on Materia V2.
+This document covers a few error codes freqeuently encountered while building on Materia.
 
 # MateriaV2: K
 
