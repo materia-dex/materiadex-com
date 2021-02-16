@@ -103,6 +103,7 @@ Responsible for formatting percentages (10% instead of 0.1).
 import { Percent } from '@materia/sdk'
 
 const percent = new Percent('60', '100')
+
 console.log(percent.toSignificant(2)) // 60
 ```
 
@@ -127,9 +128,9 @@ Responsible for formatting token amounts with specific decimal places.
 ```typescript
 import { Token, TokenAmount } from '@materia/sdk'
 
-const FRIED = new Token(ChainId.MAINNET, '0xfa1aFe1000000000000000000000000000000000', 18, 'FRIED', 'Beans')
+const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18, 'WUSD', 'Wrapped USD')
+const tokenAmount = new TokenAmount(WUSD, '3000000000000000000')
 
-const tokenAmount = new TokenAmount(FRIED, '3000000000000000000')
 console.log(tokenAmount.toExact()) // 3
 ```
 
@@ -188,16 +189,15 @@ Responsible for denominating the relative price between two tokens. Denominator 
 ## Example
 
 ```typescript
-import { ChainId, WETH as WETHs, Token, Price } from '@materia/sdk'
+import { ChainId, IETH as WETHs, Token, Price } from '@materia/sdk'
 
-const WETH = WETHs[ChainId.MAINNET]
-const ABC = new Token(ChainId.MAINNET, '0xabc0000000000000000000000000000000000000', 18, 'ABC')
+const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18, 'WUSD', 'Wrapped USD')
+const price = new Price(WUSD, IETH[ChainId.MAINNET], '1000000000000000000', '123000000000000000000')
 
-const price = new Price(WETH, ABC, '1000000000000000000', '123000000000000000000')
 console.log(price.toSignificant(3)) // 123
 ```
 
-This example shows the ETH/XYZ price, where ETH is the base token, and XYZ is the quote token. The price is constructed from an amount of XYZ (the numerator) / an amount of WETH (the denominator).
+This example shows the WUSD/IETH price, where WUSD is the base token, and IETH is the quote token. The price is constructed from an amount of IETH (the numerator) / an amount of WUSD (the denominator).
 
 ## Static Methods
 

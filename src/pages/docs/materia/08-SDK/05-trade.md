@@ -7,19 +7,19 @@ tags: sdk, documentation
 constructor(route: Route, amount: TokenAmount, tradeType: TradeType)
 ```
 
-The Trade entity represents a fully specified trade along a route. This entity supplies all the information necessary to craft a router transaction.
+The Trade entity represents a fully specified trade along a route. This entity supplies all the information necessary to craft an orchestrator transaction.
 
 # Example
 
 ```typescript
-import { ChainId, Token, TokenAmount, Pair, TradeType, Route } from '@materia/sdk'
+import { ChainId, Token, TokenAmount, Pair, Route, IETH } from '@materia/sdk'
 
-const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
-const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')
-const HOT_NOT = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NOT, '1000000000000000000'))
-const NOT_TO_HOT = new Route([HOT_NOT], NOT)
+const BASE_FEE = JSBI.BigInt(30)
+const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18, 'WUSD', 'Wrapped USD')
+const WUSD_IETH = new Pair(new TokenAmount(WUSD, '2000000000000000000'), new TokenAmount(IETH[WUSD.chainId], '1000000000000000000'), BASE_FEE)
+const WUSD_TO_IETH = new Route([WUSD_IETH], WUSD)
 
-const trade = new Trade(NOT_TO_HOT, new TokenAmount(NOT, '1000000000000000'), TradeType.EXACT_INPUT)
+const trade = new Trade(WUSD_TO_IETH, new TokenAmount(WUSD, '1000000000000000'), TradeType.EXACT_INPUT)
 ```
 
 # Properties
@@ -30,7 +30,7 @@ const trade = new Trade(NOT_TO_HOT, new TokenAmount(NOT, '1000000000000000'), Tr
 route: Route
 ```
 
-The <Link to='/docs/materia/SDK/route#path'>path</Link> property of the route should be passed as the path parameter to router functions.
+The <Link to='/docs/materia/SDK/route#path'>path</Link> property of the route should be passed as the path parameter to orchestrator functions. Note that in Materia every pair is constructed using EthItems only.
 
 ## tradeType
 
@@ -38,7 +38,7 @@ The <Link to='/docs/materia/SDK/route#path'>path</Link> property of the route sh
 tradeType: TradeType
 ```
 
-`TradeType.EXACT_INPUT` corresponds to `swapExact*For*` router functions. `TradeType.EXACT_OUTPUT` corresponds to `swap*ForExact*` router functions.
+`TradeType.EXACT_INPUT` corresponds to `swapExact*For*` orchestrator functions. `TradeType.EXACT_OUTPUT` corresponds to `swap*ForExact*` orchestrator functions.
 
 ## inputAmount
 
@@ -46,7 +46,7 @@ tradeType: TradeType
 inputAmount: TokenAmount
 ```
 
-For exact input trades, this value should be passed as amountIn to router functions. For exact output trades, this value should be multiplied by a factor >1, representing slippage tolerance, and passed as amountInMax to router functions.
+For exact input trades, this value should be passed as amountIn to orchestrator functions. For exact output trades, this value should be multiplied by a factor >1, representing slippage tolerance, and passed as amountInMax to orchestrator functions.
 
 ## outputAmount
 
@@ -54,7 +54,7 @@ For exact input trades, this value should be passed as amountIn to router functi
 outputAmount: TokenAmount
 ```
 
-For exact output trades, this value should be passed as amountOut to router functions. For exact input trades, this value should be multiplied by a factor <1, representing slippage tolerance, and passed as amountOutMin to router functions.
+For exact output trades, this value should be passed as amountOut to orchestrator functions. For exact input trades, this value should be multiplied by a factor <1, representing slippage tolerance, and passed as amountOutMin to orchestrator functions.
 
 ## executionPrice
 
@@ -86,7 +86,7 @@ The slippage incurred by the trade.
 
 In the context of the following two methods, slippage refers to the percent difference between the actual price and the trade `executionPrice`.
 
-## minimumAmountOut (since 2.0.4)
+## minimumAmountOut
 
 ```typescript
 minimumAmountOut(slippageTolerance: Percent): TokenAmount
@@ -96,7 +96,7 @@ Returns the minimum amount of the output token that should be received from a tr
 
 Useful when constructing a transaction for a trade of type `EXACT_IN`.
 
-## maximumAmountIn (since 2.0.4)
+## maximumAmountIn
 
 ```typescript
 maximumAmountIn(slippageTolerance: Percent): TokenAmount
@@ -126,7 +126,7 @@ Trade.bestTradeExactIn(
     pairs: Pair[],
     amountIn: TokenAmount,
     tokenOut: Token,
-    { maxNumResults = 3, maxHops = 3 }: BestTradeOptions = {}): Trade[]
+    { maxNumResults = 3, maxHops = 2 }: BestTradeOptions = {}): Trade[]
 ```
 
 ## bestTradeExactOut
@@ -140,5 +140,5 @@ Trade.bestTradeExactOut(
     pairs: Pair[],
     tokenIn: Token,
     amountOut: TokenAmount,
-    { maxNumResults = 3, maxHops = 3 }: BestTradeOptions = {}): Trade[]
+    { maxNumResults = 3, maxHops = 2 }: BestTradeOptions = {}): Trade[]
 ```
