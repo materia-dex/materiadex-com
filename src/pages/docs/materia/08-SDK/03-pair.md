@@ -7,7 +7,7 @@ tags: sdk, documentation
 constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount, swapFee?: JSBI)
 ```
 
-The Pair entity represents a Materia pair with a balance of each of its pair tokens and the defined swap fee. The BASE_FEE value is used if the swapFee parameter is not passed in arguments. The BASE_FEE value is 0.3%.
+The Pair entity represents a Materia pair with a balance of each of its pair tokens and the defined swap fee. The BASE_FEE value (0.3%) is used if the swapFee parameter is not passed in arguments.
 
 # Example
 
