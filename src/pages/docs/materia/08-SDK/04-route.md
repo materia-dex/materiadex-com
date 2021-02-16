@@ -7,18 +7,18 @@ tags: sdk, documentation
 constructor(pairs: Pair[], input: Token)
 ```
 
-The Route entity represents one or more ordered Materia pairs with a fully specified path from input token to output token.
+The Route entity represents the ordered Materia pairs with a fully specified path from input token to output token. The route is typically one or two pairs long (if the bridge token is not involved in the trade).
 
 # Example
 
 ```typescript
-import { ChainId, Token, TokenAmount, Pair, Route } from '@materia/sdk'
+import { ChainId, Token, TokenAmount, Pair, Route, IETH } from '@materia/sdk'
 
-const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
-const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')
-const HOT_NOT = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NOT, '1000000000000000000'))
+const BASE_FEE = JSBI.BigInt(30)
+const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18, 'WUSD', 'Wrapped USD')
+const WUSD_IETH = new Pair(new TokenAmount(WUSD, '2000000000000000000'), new TokenAmount(IETH[WUSD.chainId], '1000000000000000000'), BASE_FEE)
 
-const route = new Route([HOT_NOT], NOT)
+const route = new Route([WUSD_IETH], WUSD)
 ```
 
 # Properties
