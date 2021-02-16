@@ -5,6 +5,8 @@ tags: oracles, documentation
 
 # Introduction
 
+Materia extend Uniswap core so, price oracle are implemented too and available for all the Materia Community.
+
 A price oracle is any tool used to view price information about a given asset. When you look at stock prices on your phone, you are using your phone as a price oracle. Similarly, the app on your phone relies on devices to retrieve price information - likely several, which are aggregated and then displayed to you, the end-user. These are price oracles as well.
 
 When building smart contracts that integrate with DeFi protocols, developers will inevitably run into the price oracle problem. What is the best way to retrieve the price of a given asset?
@@ -48,7 +50,7 @@ In the meantime, check out our [example implementation](https://github.com/mater
 
 In summary, Materia introduces 2 new variables in each pair, `price0CumulativeLast` and `price1CumulativeLast`, that store the prices of `token0` and `token1` respectively, multiplied by how long they were observed (in seconds). These variables are cumulative, meaning they are ever-increasing. They are updated with the first `swap`/`mint`/`burn` of each block.
 
-You can use either of these new variables to compute an average price between 2 observations. To do so, take the difference (i.e., subtraction) of two observations, and divide by the time elapsed between them. This is the basis of building oracles on top of V2.
+You can use either of these new variables to compute an average price between 2 observations. To do so, take the difference (i.e., subtraction) of two observations, and divide by the time elapsed between them. This is the basis of building oracles on top of Materia.
 
 ## Manipulation resistance
 
