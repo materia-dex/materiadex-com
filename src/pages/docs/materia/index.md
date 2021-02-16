@@ -22,7 +22,7 @@ We base our protocol on the following pillar:
 
 The Materia codebase is embody an ecosystem of open source components.
 
-- ["Official Web Site of Materia"]("https://github.com/materia-dex/materiadex-com")
-- ["Materia Contracts"](https://github.com/materia-dex/materia-contracts)
-- ["Materia SDK"](https://github.com/materia-dex/materia-sdk)
-- ["Materia Token List"](https://github.com/materia-dex/materia-token-list)
+- [`Official Web Site of Materia`]("https://github.com/materia-dex/materiadex-com")
+- [`Materia Contracts`](https://github.com/materia-dex/materia-contracts)
+- [`Materia SDK`](https://github.com/materia-dex/materia-sdk)
+- [`Materia Token List`](https://github.com/materia-dex/materia-token-list)

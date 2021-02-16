@@ -4,20 +4,20 @@ tags: sdk, documentation
 ---
 
 ```typescript
-constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount)
+constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount, swapFee?: JSBI)
 ```
 
-The Pair entity represents a Materia pair with a balance of each of its pair tokens.
+The Pair entity represents a Materia pair with a balance of each of its pair tokens and the defined swap fee. The BASE_FEE value is used if the swapFee parameter is not passed in arguments. The BASE_FEE value is 0.3%.
 
 # Example
 
 ```typescript
-import { ChainId, Token, TokenAmount, Pair } from '@materia/sdk'
+import { ChainId, Token, TokenAmount, Pair, JSBI, IETH } from '@materia/sdk'
 
-const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
-const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')
+const BASE_FEE = JSBI.BigInt(30)
+const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18, 'WUSD', 'Wrapped USD')
 
-const pair = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NOT, '1000000000000000000'))
+const pair = new Pair(new TokenAmount(WUSD, '2000000000000000000'), new TokenAmount(IETH[WUSD.chainId], '1000000000000000000'), BASE_FEE)
 ```
 
 # Static Methods
@@ -28,7 +28,7 @@ const pair = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmou
 getAddress(tokenA: Token, tokenB: Token): string
 ```
 
-Computes the pair address for the passed <Link to='/docs/materia/SDK/token'>Token</Link>s. See <Link to='/docs/materia/javascript-SDK/getting-pair-addresses/'>Pair Addresses</Link>.
+Computes the pair address for the passed <Link to='/docs/materia/SDK/token'>Token</Link>s using the <Link to='/docs/materia/SDK/other-exports/#init_code_hash'>INIT_CODE_HASH</Link>. See <Link to='/docs/materia/javascript-SDK/getting-pair-addresses/'>Pair Addresses</Link>.
 
 # Properties
 
@@ -40,13 +40,21 @@ liquidityToken: Token
 
 A Token representing the liquidity token for the pair. See <Link to='/docs/materia/smart-contracts/pair-erc-20'>Pair (ERC-20)</Link>.
 
+## swapFee
+
+```typescript
+swapFee: JSBI
+```
+
+The dynamic swap fee value that can be changed though a DFO proposal.
+
 ## token0
 
 ```typescript
 token0: Token
 ```
 
-See <Link to='/docs/materia/smart-contracts/pair/#token0'></Link>.
+See <Link to='/docs/materia/smart-contracts/pair/#token0'>token0</Link>.
 
 ## token1
 
@@ -54,7 +62,7 @@ See <Link to='/docs/materia/smart-contracts/pair/#token0'></Link>.
 token1: Token
 ```
 
-See <Link to='/docs/materia/smart-contracts/pair/#token1'></Link>.
+See <Link to='/docs/materia/smart-contracts/pair/#token1'>token1</Link>.
 
 ## reserve0
 

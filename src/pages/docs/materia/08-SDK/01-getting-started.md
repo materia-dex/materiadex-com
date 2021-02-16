@@ -8,7 +8,7 @@ Looking for a <Link to='/docs/materia/javascript-SDK/quick-start'>quickstart</Li
 You may also want to jump into a <Link to='/docs/materia/javascript-SDK/fetching-data'>guide</Link>, 
 which offers a friendlier introduction to the SDK!
 
-The SDK is written in TypeScript, has a robust test suite, performs arbitrary precision arithmetic, 
+The SDK is written in TypeScript, performs arbitrary precision arithmetic, 
 and supports rounding to significant digits or fixed decimal places. 
 The principal exports of the SDK are _entities_: classes that contain initialization and validation checks, 
 necessary data fields, and helper functions.
@@ -27,11 +27,11 @@ The SDK works for all chains on which the <Link to='/docs/materia/smart-contract
 
 ## Code
 
-The [source code is available on GitHub](https://github.com/materia-dex/Materia-sdk).
+The [source code is available on GitHub](https://github.com/materia-dex/materia-sdk).
 
 ## Dependencies
 
-The SDK declares its dependencies as [peer dependencies](https://github.com/materia-dex/Materia-sdk/blob/v2/package.json#L33).
+The SDK declares its dependencies as [peer dependencies](https://github.com/materia-dex/materia-sdk/blob/v2/package.json#L33).
 This is for two reasons:
 
  - prevent installation of unused dependencies (e.g. `@ethersproject/providers` and `@ethersproject/contracts`, only used in [`Fetcher`](/docs/materia/SDK/fetcher))

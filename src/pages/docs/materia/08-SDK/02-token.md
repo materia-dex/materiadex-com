@@ -14,7 +14,7 @@ The Token entity represents an ERC-20 token at a specific address on a specific 
 ```typescript
 import { ChainId, Token } from '@materia/sdk'
 
-const token = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
+const token = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18, 'WUSD', 'Wrapped USD')
 ```
 
 # Properties

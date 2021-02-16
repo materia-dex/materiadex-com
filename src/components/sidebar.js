@@ -354,9 +354,6 @@ const SideBar = props => {
               <StyledLink to={'/docs/materia/SDK/getting-started'}>SDK</StyledLink>
             </StyledListItem>
             <StyledListItem>
-              <StyledLink to={'/docs/materia/API/overview'}>API</StyledLink>
-            </StyledListItem>
-            <StyledListItem>
               <StyledLink to={'/docs/materia/smart-contracts/factory'}>Smart Contracts</StyledLink>
             </StyledListItem>
             <StyledListItem>
