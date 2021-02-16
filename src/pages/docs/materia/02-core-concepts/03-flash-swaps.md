@@ -3,10 +3,12 @@ title: Flash Swaps
 tags: flash-swaps, documentation
 ---
 
-Materia flash swaps allow you to withdraw up to the full reserves of any ERC20 token on Materia and execute arbitrary logic at no upfront cost, provided that by the end of the transaction you either:
+Materia extend Uniswap core so, the possibility to perform Flash swaps stands.
 
-- pay for the withdrawn ERC20 tokens with the corresponding pair tokens
-- return the withdrawn ERC20 tokens along with a small fee
+Materia flash swaps allow you to withdraw up to the full reserves of any ITEM token on Materia and execute arbitrary logic at no upfront cost, provided that by the end of the transaction you either:
+
+- pay for the withdrawn tokens with the corresponding pair tokens
+- return the withdrawn tokens along with a small fee
 
 Flash swaps are incredibly useful because they obviate upfront capital requirements and unnecessary order-of-operations constraints for multi-step transactions involving Materia.
 
