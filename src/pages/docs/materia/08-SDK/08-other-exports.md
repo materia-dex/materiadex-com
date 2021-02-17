@@ -151,4 +151,4 @@ import { InsufficientInputAmountError } from '@materia/sdk'
 import { IETH } from '@materia/sdk'
 ```
 
-An object whose values are <Link to='/docs/materia/smart-contracts/orchestrator/#ieth'>IETH</Link> <Link to='/docs/materia/SDK/token'>Token</Link> instances, indexed by [ChainId](#chainid).
+An object whose values are <Link to='/docs/materia/smart-contracts/orchestrator/#ieth'>IETH</Link> <Link to='/docs/materia/SDK/token'>Token</Link> instances, indexed by [ChainId](#chainid). IETH is the representation of Ethereum in the EthItem ecosystem.
