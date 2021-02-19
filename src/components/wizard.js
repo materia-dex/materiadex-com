@@ -18,7 +18,7 @@ const links = [
       },
       {
         title: 'Smart contract development',
-        link: '/docs/v2/smart-contract-integration/quick-start/',
+        link: '/docs/materia/smart-contract-integration/quick-start/',
         description: 'Simplify the process of integrating Materia into your project.',
         tag: 'reference',
         icon: '🖥️'

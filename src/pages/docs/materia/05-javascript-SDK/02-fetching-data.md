@@ -140,7 +140,7 @@ Note that these values can change as frequently as every block, and should be ke
 
 ### Fetched by the SDK
 
-If we don't want to look up the value ourselves, we can ask the SDK to look them up for us with <Link to='/docs/materia/SDK/fetcher#fetchpairdata'>Fetcher.fetchPairData</Link>:
+If we don't want to look up the values ourselves, we can ask the SDK to look them up for us with <Link to='/docs/materia/SDK/fetcher#fetchpairdata'>Fetcher.fetchPairData</Link>:
 
 ```typescript
 import { ChainId, Token, IETH, Fetcher } from '@materia/sdk'

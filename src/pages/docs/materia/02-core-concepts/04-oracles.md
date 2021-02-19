@@ -5,7 +5,7 @@ tags: oracles, documentation
 
 # Introduction
 
-Materia extend Uniswap core so, price oracle are implemented too and available for all the Materia Community.
+Materia extends Uniswap core, so price oracles are implemented too and available for all of the Materia Community.
 
 A price oracle is any tool used to view price information about a given asset. When you look at stock prices on your phone, you are using your phone as a price oracle. Similarly, the app on your phone relies on devices to retrieve price information - likely several, which are aggregated and then displayed to you, the end-user. These are price oracles as well.
 
@@ -20,7 +20,7 @@ As liquidity and trade volume on the protocol continues to grow, Materia’s on-
 
 # Materia solution
 
-Materia includes several improvements for price feeds built on top of it. First, every pair measures (but does not store) the market price at the beginning of each block, before any trades take place. This price is expensive to manipulate because it is by the last transaction in a previous block.
+Materia includes several improvements for price feeds built on top of it. First, every pair measures (but does not stores) the market price at the beginning of each block, before any trades take place. This price is expensive to manipulate because it is by the last transaction in a previous block.
 
 **To set the measured price to one that is out of sync with the global market price, an attacker has to make a bad trade at the end of a previous block** , typically with no guarantee that they will arbitrage it back in the next block. Attackers will lose money to arbitrageurs unless they can “selfishly” mine two blocks in a row. This type of attack presents several challenges and [has not been observed to date](https://arxiv.org/abs/1912.01798).
 

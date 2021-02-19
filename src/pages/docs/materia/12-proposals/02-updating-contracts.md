@@ -54,7 +54,7 @@ function callOneTime(address) public {
 The steps to update the DFO double proxy are:
 
 1. Deploy the new double proxy
-2. Set the new double proxy address in all the contracts that implement the `byDFO` modifier, this step is very important, an oversight here can lead to fatal consequences where the DFO lose the control over a contract.
+2. Set the new double proxy address in all the contracts that implement the `byDFO` modifier, this step is very important, an oversight here can lead to fatal consequences where the DFO loses control over a contract.
 3. Set the new double proxy in the DFO proxy.
 
 ## Code example 

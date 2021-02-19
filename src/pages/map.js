@@ -211,13 +211,6 @@ const About = props => {
             }}>
             Roadmap
           </StyledHeadingLink>
-          <StyledHeadingLink
-            onClick={() => {
-              scrollTo('#Community')
-              window.history.pushState({}, '', '#Community')
-            }}>
-            Community
-          </StyledHeadingLink>
         </StyledSidebar>
         <span>
           <StyledSectionFlex id="Roadmap">
@@ -225,7 +218,7 @@ const About = props => {
             <Timeline lineColor={'#ddd'}>
               <TimelineItem
                 key="001"
-                dateText="Q4 2020"
+                dateText="Q1 2021"
                 dateInnerStyle={{ background: '#f33a33', color: '#fff' }}
                 style={{ color: '#f33a33' }}>
                 <StyledH3>Materia Beta 0.1</StyledH3>
@@ -233,38 +226,44 @@ const About = props => {
                   - Front end Web Site <br />
                   - Manifesto &amp; Strategy <br />
                   - Medium Post + Presentation <br />
+                  - Multiple AMA session <br />
                   - Deploy Onchain: DFO + Dapp <br />
+                  - Liquidity Mining Mechaninsm <br />
+                  - First $GIL Airdrop <br />
+                  - CoinGeko Listing
                 </StyledP>
               </TimelineItem>
               <TimelineItem
                 key="002"
-                dateText="Q4 2020"
+                dateText="Q2 2021"
                 dateInnerStyle={{ background: '#10a54d', color: '#fff' }}
                 style={{ color: '#10a54d' }}
               >
                 <StyledH3>Materia Beta 0.2</StyledH3>
                 <StyledP>
-                  - Liquidity Mining Mechanisms <br />
-                  - ILO<br />
-                  - Smart Contract for investors <br />
+                  - Liquidity Info Web site <br />
+                  - One Token Liquidity <br />
+                  - Batch Swap <br />
+                  - AMM Integration <br />
                 </StyledP>
               </TimelineItem>
               <TimelineItem
                 key="003"
-                dateText="Q4 2020"
+                dateText="QX 202X"
                 dateInnerStyle={{ background: '#3977ed', color: '#fff' }}
                 style={{ color: '#3977ed' }}
               >
                 <StyledH3>Materia Beta 0.3</StyledH3>
                 <StyledP>
                   - DefiPulse Listing <br />
-                  - StartUp Tools <br />
-                  - Inflation Rules <br />
+                  - UI Enhancement <br />
+                  - SDK improvement <br />
+                  - Fair Inflation Rules <br />
                 </StyledP>
               </TimelineItem>
               <TimelineItem
                 key="004"
-                dateText="Q4 2020"
+                dateText="QY 202Y"
                 dateInnerStyle={{ background: '#fcb42c', color: '#fff' }}
                 style={{ color: '#fcb42c' }}
               >
@@ -272,80 +271,27 @@ const About = props => {
                 <StyledP>
                   - Exping &amp; Quests <br />
                   - NFT Incentives <br />
-                </StyledP>
-              </TimelineItem>
-              <TimelineItem
-                key="005"
-                dateText="Q4 2020"
-                dateInnerStyle={{ background: '#b911b3', color: '#fff' }}
-                style={{ color: '#b911b3' }}
-              >
-                <StyledH3>Materia Beta 0.5</StyledH3>
-                <StyledP>
-                  - Progressive Annual Percentage Yield <br />
-                  - Native Migrator <br />
-                </StyledP>
-              </TimelineItem>
-              <TimelineItem
-                key="006"
-                dateText="Q1 2021"
-                dateInnerStyle={{ background: '#f33a33', color: '#fff' }}
-                style={{ color: '#f33a33' }}
-              >
-                <StyledH3>Materia Beta 0.6</StyledH3>
-                <StyledP>
-                  - DEX-Evolution on DFO <br />
                   - Gamification contests <br />
                 </StyledP>
               </TimelineItem>
               <TimelineItem
                 key="007"
-                dateText="Q2 2021"
+                dateText="QZ 202Z"
                 dateInnerStyle={{ background: '#10a54d', color: '#fff' }}
                 style={{ color: '#10a54d' }}
               >
-                <StyledH3>Materia Beta 0.7</StyledH3>
+                <StyledH3>Materia Beta 0.5</StyledH3>
                 <StyledP>
                   - NFT Marketplace <br />
                 </StyledP>
               </TimelineItem>
             </Timeline>
 
-            {/* <StyledDivCenter>
+            <StyledDivCenter>
               <StyledRoadMapImage fadeIn={false} fluid={data.roadmapImage.childImageSharp.fluid} />
-            </StyledDivCenter> */}
+            </StyledDivCenter> 
 
 
-          </StyledSectionFlex>
-
-          <StyledSectionFlex id="Community" style={{ "paddingTop": '2.5rem' }}>
-            <Title style={{ width: '100%' }}>Community</Title>
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-              <MiniCard
-                href="https://discord.gg/jdYMZrv"
-                title={'Discord'}
-                small
-                image={data.discord.childImageSharp.fluid}
-                color={'white'}
-                backgroundColor={'#7289da'}
-              />
-              <MiniCard
-                href="https://twitter.com/dexmateria"
-                title={'Twitter'}
-                small
-                image={data.twitter.childImageSharp.fluid}
-                backgroundColor={'#B0D8F0'}
-                color={'black'}
-              />
-              <MiniCard
-                href="https://www.reddit.com/r/materiadex"
-                title={'Reddit'}
-                small
-                image={data.reddit.childImageSharp.fluid}
-                backgroundColor={'white'}
-                color={'black'}
-              />
-            </div>
           </StyledSectionFlex>
         </span>
       </StyledAbout>

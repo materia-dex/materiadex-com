@@ -35,7 +35,7 @@ So, we've constructed a trade entity, but how do we use it to actually send a tr
 
 Before going on, we should explore how ETH works in the context of trading. Internally, the SDK uses IETH. However, it's perfectly possible for you as an end user to use ETH, and rely on the router to handle converting to/from IETH. So, let's use ETH.
 
-The first step is selecting the appropriate orchestrator function. The names of orchestrator functions are intended to be self-explanatory; in this case we want <Link to='/docs/materia/smart-contracts/router02/#swapexactethfortokens'>swapExactETHForTokens</Link>, because we're...swapping an exact amount of ETH for tokens.
+The first step is selecting the appropriate orchestrator function. The names of orchestrator functions are intended to be self-explanatory; in this case we want <Link to='/docs/materia/smart-contracts/router02/#swapexactethfortokens'>swapExactETHForTokens</Link>, because we're swapping an exact amount of ETH for tokens.
 
 That Solidity interface for this function is:
 

@@ -3,7 +3,7 @@ title: Flash Swaps
 tags: flash-swaps, documentation
 ---
 
-Materia extend Uniswap core so, the possibility to perform Flash swaps stands.
+Materia extends Uniswap core, so the possibility to perform Flash swaps remains.
 
 Materia flash swaps allow you to withdraw up to the full reserves of any ITEM token on Materia and execute arbitrary logic at no upfront cost, provided that by the end of the transaction you either:
 

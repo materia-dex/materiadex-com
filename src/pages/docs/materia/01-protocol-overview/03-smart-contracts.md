@@ -41,7 +41,7 @@ The library provides a variety of convenience functions for fetching data and pr
 
 <Link to='/docs/materia/smart-contracts/router02'>Reference documentation</Link>
 
-The router, which uses the library, fully supports all the basic requirements of a front-end offering trading and liquidity management functionality. Notably, it natively supports multi-pair trades (e.g. x to y to z), treats ETH as a first-class citizen, and offers meta-transactions for removing liquidity.
+The router, which uses the library, fully supports all the basic requirements of a front-end, offering trading and liquidity management functionality. Notably, it natively supports multi-pair trades (e.g. x to y to z), treats ETH as a first-class citizen, and offers meta-transactions for removing liquidity.
 
 # Design Decisions
 

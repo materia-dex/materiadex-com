@@ -28,7 +28,7 @@ Learn more with advanced topics:
 
 # Why pools?
 
-Materia is unique, such as Uniswap, in that it doesn’t use an order book to derive the price of an asset or to match buyers and sellers of tokens. Instead, Materia uses what are called Liquidity Pools.
+Materia, like Uniswap, is unique in that it doesn’t use an order book to derive the price of an asset or to match buyers and sellers of tokens. Instead, Materia uses what are called Liquidity Pools.
 
 Liquidity is typically represented by discrete orders placed by individuals onto a centrally operated order book. A participant looking to provide liquidity or make markets must actively manage their orders, continuously updating them in response to the activity of others in the marketplace.
 

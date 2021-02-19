@@ -217,24 +217,28 @@ const About = props => {
   return (
     <Layout path={props.location.pathname}>
       <BG />
-      <SEO title="Coming Soon" path={props.location.pathname} />
+      <SEO title="Swap" path={props.location.pathname} />
       <StyledAbout>
         <StyledSidebar>
           <StyledHeadingLink onClick={() => {
-              scrollTo('#Soon')
-              window.history.pushState({}, '', '#Soon')
+              scrollTo('#Swap')
+              window.history.pushState({}, '', '#Swap')
             }}>
-            Coming soon
+            Swap
           </StyledHeadingLink>
         </StyledSidebar>
         <span>
-          <StyledSectionFlex id="Soon">
-            <Title>Coming Soon</Title>
+          <StyledSectionFlex id="Swap">
+            <Title>Swap</Title>
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
               <ParagraphContent>
-                This feature is still under development from our best engineering team.<br />
-                We are committed to open source software and building on the decentralized web giving the community the true power to chose.<br />
-                You can contribute to Materia too! Check out our social profiles to get started!<br />
+Token swaps in Materia are a way to trade one token for another, you will be able to exchange EthItem ERC20 interoperable. <br /> <br />
+
+For end-users, swapping is intuitive: a user picks an input token and an output token. They specify an input amount, and the protocol calculates how much of the output token they’ll receive. They then execute the swap with one click, receiving the output token in their wallet immediately. <br />
+<br />
+While swapping you will be able to see the tipology of the your tokens (ERC20 or ITEMs) and behave accordingy. <br />
+ERC20 Tokens will have a higher swap fee price due to the need of wrapping them into ITEMs. As stated in the Protocol Overview, every pair in Materia is actually composed of an ITEM ERC20 Interoperable and WUSD.<br /><br />
+
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>

@@ -5,7 +5,7 @@ tags: protocol-overview, documentation
 
 ### Automated market maker
 
-An automated market maker is a smart contract on Ethereum that hold on-chain liquidity reserves. Users can trade against these reserves at prices set by an automated market making formula.
+An automated market maker is a smart contract on Ethereum that holds on-chain liquidity reserves. Users can trade against these reserves at prices set by an automated market making formula.
 
 ### Constant product formula
 
@@ -34,7 +34,7 @@ A liquidity provider is someone who deposits an equivalent value of two ERC20 to
 
 ### Mid price
 
-The price between what users can buy and sell tokens at a given moment. In Materia this is the ratio of the two ERC20 token reserves.
+The price between what users can buy and sell tokens at, at a given moment. In Materia this is the ratio of the two ERC20 token reserves.
 
 ### Price impact
 

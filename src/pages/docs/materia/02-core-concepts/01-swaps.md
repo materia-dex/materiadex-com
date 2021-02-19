@@ -12,7 +12,7 @@ Token swaps in Materia are a way to trade one token for another, you will be abl
 
 For end-users, swapping is intuitive: a user picks an input token and an output token. They specify an input amount, and the protocol calculates how much of the output token they’ll receive. They then execute the swap with one click, receiving the output token in their wallet immediately.
 
-While swapping you will be able to see the tipology of the your tokens (ERC20 or ITEMs) and behave accordingy. ERC20 Tokens will have a higher swap fee price due to the need of wrapping them into ITEMs. As stated in the [Protocol Overview](/docs/materia/protocol-overview), all the pair in Materia is actually composed by an ITEM ERC20 Interoperable and WUSD.
+While swapping you will be able to see the tipology of the your tokens (ERC20 or ITEMs) and behave accordingy. ERC20 Tokens will have a higher swap fee price due to the need of wrapping them into ITEMs. As stated in the [Protocol Overview](/docs/materia/protocol-overview), every pair in Materia is actually composed of an ITEM ERC20 Interoperable and WUSD.
 
 In this guide, we’ll look at what happens during a swap at the protocol level in order to gain a deeper understanding of how Materia works.
 

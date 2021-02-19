@@ -6,7 +6,7 @@ related: '/docs/materia/core-concepts/pools'
 
 ![](/images/protocol.jpg)
 
-The Materia ecosystem is primarily comprised of three types of users: liquidity providers, traders, GIL holders, and developers. Liquidity providers are incentivized to contribute [ERC-20](https://eips.ethereum.org/EIPS/eip-20) [ITEM](https://ethitem.com/) interoperable tokens to common liquidity pools. Traders can swap these tokens for one another for a variable <Link to="/docs/materia/advanced-topics/fees">0.30% fee</Link> (which goes to liquidity providers). Developers can integrate directly with Materia smart contracts to power new and exciting interactions with tokens, trading interfaces, retail experiences, and more. The GIL holders can create and vote new proposals, that is, adjusting and chaniging the protocol.
+The Materia ecosystem is primarily comprised of four types of users: liquidity providers, traders, GIL holders, and developers. Liquidity providers are incentivized to contribute [ERC-20](https://eips.ethereum.org/EIPS/eip-20) [ITEM](https://ethitem.com/) interoperable tokens to common liquidity pools. Traders can swap these tokens for one another for a variable <Link to="/docs/materia/advanced-topics/fees">0.30% fee</Link> (which goes to liquidity providers). Developers can integrate directly with Materia smart contracts to power new and exciting interactions with tokens, trading interfaces, retail experiences, and more. The GIL holders can create and vote new proposals, that is, adjusting and chaniging the protocol.
 
 In total, interactions between these classes create a positive feedback loop, fueling digital economies by defining a common language through which tokens can be pooled, traded and used.
 
@@ -44,7 +44,7 @@ There are far too many ways Materia can be used in the wider Ethereum ecosystem 
 
 - Wallets often integrate swapping and liquidity provision functionality as a core offering of their product.
 
-- DEX (decentralized exchange) aggregators pull liquidity from many liquidity protocols to offer traders the best prices but splitting their trades.
+- DEX (decentralized exchange) aggregators pull liquidity from many liquidity protocols to offer traders the best prices by splitting their trades.
 
 - Smart contract developers use the suite of functions available to invent new DeFi tools and other various experimental ideas.
 

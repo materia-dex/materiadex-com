@@ -23,7 +23,7 @@ Imagine you want to swap 50 DAI for as much ETH as possible from your smart cont
 
 ## transferFrom
 
-Before swapping, our smart contracts needs to be in control of 50 DAI. The easiest way to accomplish this is by calling `transferFrom` on DAI with the owner set to `msg.sender`:
+Before swapping, our smart contract needs to be in control of 50 DAI. The easiest way to accomplish this is by calling `transferFrom` on DAI with the owner set to `msg.sender`:
 
 ```solidity
 uint amountIn = 50 * 10 ** DAI.decimals();
@@ -32,7 +32,7 @@ require(DAI.transferFrom(msg.sender, address(this), amountIn), 'transferFrom fai
 
 ## approve
 
-Now that our contract owns 50 DAI, we need to approve to the <Link to='/docs/materia/smart-contracts/router02'>router</Link> to withdraw this DAI:
+Now that our contract owns 50 DAI, we need to give approval to the <Link to='/docs/materia/smart-contracts/router02'>router</Link> to withdraw this DAI:
 
 ```solidity
 require(DAI.approve(address(MateriaV2Router02), amountIn), 'approve failed.');

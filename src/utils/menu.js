@@ -2,9 +2,10 @@ const menu = [
   {
     name: 'Services',
     sublinks: [
-      { name: 'Swap', link: '/soon', enabled: true },
-      { name: 'Pool', link: '/soon', enabled: true },
-      { name: 'Liquidity Mining', link: '/soon', enabled: true },
+      { name: 'Swap', link: '/swap', enabled: true },
+      { name: 'Pool', link: '/pool', enabled: true },
+      { name: 'Liquidity Mining', link: '/lm', enabled: true },
+      { name: 'Airdrop', link: '/airdrop', enabled: false },
       { name: 'Exping', link: '/soon', enabled: true },
       { name: 'Analytics', link: '/soon', enabled: true }
     ],
@@ -25,21 +26,30 @@ const menu = [
     sublinks: [
       { name: 'Strategy & Manifesto', link: '/strategy', enabled: true },
       { name: 'Incentives Strategy', link: '/incentives', enabled: false },
-      { name: 'Roadmap', link: '/roadmap', enabled: false },
+      { name: 'Roadmap', link: '/map', enabled: true },
       { name: 'About', link: '/about', enabled: true },
     ],
     enabled: true
   },
-  // {
-  //   name: 'Docs',
-  //   link: '/docs/materia',
-  //   sublinks: [
-  //   ],
-  //   enabled: true
-  // },
+  {
+    name: 'Docs',
+    link: '/docs/materia',
+    sublinks: [
+    ],
+    enabled: false
+  },
   {
     name: 'DFO Hub',
     link: 'https://www.dfohub.com/',
+    isExternal: true,
+    sublinks: [
+      //{ name: 'About', link: 'https://www.dfohub.com/' },
+    ],
+    enabled: true
+  },
+  {
+    name: 'EthItem',
+    link: 'https://ethitem.com/',
     isExternal: true,
     sublinks: [
       //{ name: 'About', link: 'https://www.dfohub.com/' },

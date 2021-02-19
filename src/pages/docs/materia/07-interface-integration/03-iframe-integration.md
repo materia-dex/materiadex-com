@@ -11,7 +11,7 @@ Integrating the Materia site directly into your web application can be useful fo
 
 The interface allows users to buy, sell, send, or provide liquidity for ERC20 tokens and EthItems. An iframe integration may be useful if your application provides services around these tokens. For example, users can buy WUSD through a Materia iframe on your site, then allow users to lend that WUSD on your site.
 
-It can also be useful if your application requires users to acquire some token in order to use some service. For example, allow users to buy WUSD token so they can engage in farm pools on the [Covenants Dapps](https://covenants.eth.link).
+It can also be useful if your application requires users to acquire some token in order to use some service. For example, allow users to buy WUSD tokens so they can engage in farm pools on the [Covenants Dapps](https://covenants.eth.link).
 
 # iframe vs. custom UI
 
@@ -35,7 +35,7 @@ One benefit of an iframe integration is that the your site will automatically ke
 
 # Add To Your Site
 
-To include a Materia iframe within your site just add an iframe element within your website code and link to the Materia frontent.
+To include a Materia iframe within your site just add an iframe element within your website code and link to the Materia frontend.
 
 Linking to a WUSD/GIL swap page would look something like this. To link to a token of your choice replace the address after "outputCurrency" with the token address of the token you want to link to.
 

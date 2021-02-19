@@ -217,24 +217,24 @@ const About = props => {
   return (
     <Layout path={props.location.pathname}>
       <BG />
-      <SEO title="Coming Soon" path={props.location.pathname} />
+      <SEO title="Liquidity Mining" path={props.location.pathname} />
       <StyledAbout>
         <StyledSidebar>
           <StyledHeadingLink onClick={() => {
-              scrollTo('#Soon')
-              window.history.pushState({}, '', '#Soon')
+              scrollTo('#LiquidityMining')
+              window.history.pushState({}, '', '#LiquidityMining')
             }}>
-            Coming soon
+            Liquidity Mining
           </StyledHeadingLink>
         </StyledSidebar>
         <span>
           <StyledSectionFlex id="Soon">
-            <Title>Coming Soon</Title>
+            <Title>Liquidity Mining</Title>
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
               <ParagraphContent>
-                This feature is still under development from our best engineering team.<br />
-                We are committed to open source software and building on the decentralized web giving the community the true power to chose.<br />
-                You can contribute to Materia too! Check out our social profiles to get started!<br />
+              Anyone can become a liquidity provider by adding liquidity to our protocol. <br />
+              An initial liquidity mining program will go live immediately after the mainnet release.   <br /> The initial program will run for 45 days and target the first five pairs on Materia.  <br />
+              To better understand the liquidity mining mechaninsm feel free to read our Medium Article about it.
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>

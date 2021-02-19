@@ -11,7 +11,7 @@ Materia uses the ITEM Standard as the foundation of its core. Pairs within Mater
 
 While adding liquidity or swapping, if ERC20 tokens are used, they will be automatically wrapped inside ITEMs enabling future developments and the use of ERC1155 features inside Materia.
 
-Taking leverage of the ITEM Standard Materia is able to grant feature such as Batch/Lego Swap, removing the fee for approving the transfer of token and awsome new functionalites that will be developed over time.
+Taking advantage of the ITEM Standard, Materia is able to grant features such as Batch/Lego Swap, remove the fee for approving the transfer of tokens and awsome new functionalites that will be developed over time.
 
 ## How ITEM Standard works
 

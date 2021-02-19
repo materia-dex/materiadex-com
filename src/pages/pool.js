@@ -217,24 +217,25 @@ const About = props => {
   return (
     <Layout path={props.location.pathname}>
       <BG />
-      <SEO title="Coming Soon" path={props.location.pathname} />
+      <SEO title="Pool" path={props.location.pathname} />
       <StyledAbout>
         <StyledSidebar>
           <StyledHeadingLink onClick={() => {
-              scrollTo('#Soon')
-              window.history.pushState({}, '', '#Soon')
+              scrollTo('#Pool')
+              window.history.pushState({}, '', '#Pool')
             }}>
-            Coming soon
+            Pool
           </StyledHeadingLink>
         </StyledSidebar>
         <span>
-          <StyledSectionFlex id="Soon">
-            <Title>Coming Soon</Title>
+          <StyledSectionFlex id="Pool">
+            <Title>Pool</Title>
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
               <ParagraphContent>
-                This feature is still under development from our best engineering team.<br />
-                We are committed to open source software and building on the decentralized web giving the community the true power to chose.<br />
-                You can contribute to Materia too! Check out our social profiles to get started!<br />
+                Each Materia core smart contracts — factory, pair— manages a liquidity pool made up of reserves of two ITEMs. <br />
+                But more specifically, all liquidity pools are between wUSD and a single ITEMs. <br /> <br />
+                Users can interchange any ITEM by routing through wUSD. Since wUSD is currently the most resilient and secure stablecoin in the industry, we deemed it the best choice for Materia. 
+                <br /> wUSD liberates holders from censorship or centralized manipulation by states and stablecoin issuers and resolves all risks that come with trusting the big stablecoin organizations, like MakerDAO, Coinbase, etc. <br /><br />
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
