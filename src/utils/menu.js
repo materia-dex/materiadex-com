@@ -26,18 +26,18 @@ const menu = [
     sublinks: [
       { name: 'Strategy & Manifesto', link: '/strategy', enabled: true },
       { name: 'Incentives Strategy', link: '/incentives', enabled: false },
-      { name: 'Roadmap', link: '/map', enabled: true },
+      // { name: 'Roadmap', link: '/map', enabled: true },
       { name: 'About', link: '/about', enabled: true },
     ],
     enabled: true
   },
-  {
-    name: 'Docs',
-    link: '/docs/materia',
-    sublinks: [
-    ],
-    enabled: false
-  },
+  // {
+  //   name: 'Docs',
+  //   link: '/docs/materia',
+  //   sublinks: [
+  //   ],
+  //   enabled: false
+  // },
   {
     name: 'DFO Hub',
     link: 'https://www.dfohub.com/',
