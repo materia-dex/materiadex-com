@@ -7,7 +7,8 @@ import styled from 'styled-components'
 const StyledMiniCards = styled(Link)`
   padding: 1.25rem;
   color: ${({ theme, outlined }) => (outlined ? theme.colors.link : theme.textColor)};
-  background-color: ${({ theme }) => theme.cardBG};
+  /*background-color: ${({ theme }) => theme.cardBG};*/
+  background: linear-gradient(-60deg ,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%);
   height: 120px;
   max-width: 100%;
   min-width: 45%;

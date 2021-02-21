@@ -124,7 +124,8 @@ const Title = styled.h1`
   
   margin-bottom: 1rem;
   font-size: 3.5rem;
-  color: ${({ theme }) => theme.colors.link};
+  /*color: ${({ theme }) => theme.colors.link};*/
+  color:#95e1ff;
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;

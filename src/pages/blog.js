@@ -26,7 +26,8 @@ const Posts = styled.div`
   width: 100%;
   max-width: 960px;
   box-shadow: ${({ theme, index }) => (index === 0 ? theme.shadows.huge : 'none')};
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   text-decoration: none;
   background-color: ${({ theme }) => theme.cardBG};
   /* border: 1px solid ${({ theme, index }) => (index === 0 ? 'none' : theme.colors.grey2)}; */

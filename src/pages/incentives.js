@@ -133,7 +133,8 @@ const Title = styled.h1`
   
   margin-bottom: 1rem;
   font-size: 3.5rem;
-  color: ${({ theme }) => theme.colors.link};
+  /*color: ${({ theme }) => theme.colors.link};*/
+  color:#95e1ff;
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
@@ -261,11 +262,13 @@ const StyleSectionLeft = styled.div`
 `
 const StyledQuote = styled.p`
   border: solid;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   padding: 0.5rem 1rem;
   color: ${({ theme }) => theme.invertedTextColor};
   border-color: ${({ theme }) => theme.colors.link};
-  background-color: ${({ theme }) => theme.colors.link};;
+  /background-color: ${({ theme }) => theme.colors.link};*/
+  background: linear-gradient(-60deg,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%)
 `
 
 const StyledChartContainer = styled.div`
