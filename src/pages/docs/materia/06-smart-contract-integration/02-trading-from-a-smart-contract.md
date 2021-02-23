@@ -9,11 +9,11 @@ _Read [safety considerations](#safety-considerations) for more._
 
 # Using the Router
 
-The easiest way to safely swap tokens is to use the <Link to='/docs/materia/smart-contracts/router02'>router</Link>, which provides a variety of methods to safely swap to and from different assets. You'll notice that there is a function for each permutation of swapping to/from an exact amount of ETH/tokens.
+The easiest way to safely swap tokens is to use the <Link to='/docs/materia/smart-contracts/orchestrator'>orchestrator</Link>, which provides a variety of methods to safely swap to and from different assets. You'll notice that there is a function for each permutation of swapping to/from an exact amount of ETH/tokens.
 
 First you must use an external price source to calculate the safety parameters for the function you'd like to call. This is either a minimum amount received when selling an exact input or the maximum amount you are willing to pay when a buying an exact output amount
 
-It is also important to ensure that your contract controls enough ETH/tokens to make the swap, and has granted approval to the router to withdraw this many tokens.
+It is also important to ensure that your contract controls enough ETH/tokens to make the swap, and has granted approval to the orchestrator to withdraw this many tokens.
 
 _Check out the <Link to='/docs/materia/advanced-topics/pricing/#pricing-trades'>Pricing</Link> page for a more in depth discussion on getting prices._
 
@@ -32,7 +32,7 @@ require(DAI.transferFrom(msg.sender, address(this), amountIn), 'transferFrom fai
 
 ## approve
 
-Now that our contract owns 50 DAI, we need to give approval to the <Link to='/docs/materia/smart-contracts/router02'>router</Link> to withdraw this DAI:
+Now that our contract owns 50 DAI, we need to give approval to the <Link to='/docs/materia/smart-contracts/orchestrator'>orchestrator</Link> to withdraw this DAI:
 
 ```solidity
 require(DAI.approve(address(MateriaV2Router02), amountIn), 'approve failed.');
@@ -44,9 +44,10 @@ Now we're ready to swap:
 
 ```solidity
 // amountOutMin must be retrieved from an oracle of some kind
-address[] memory path = new address[](2);
+address[] memory path = new address[](3);
 path[0] = address(DAI);
-path[1] = MateriaV2Router02.WETH();
+path[1] = address(WUSD);
+path[2] = address(IETH);
 MateriaV2Router02.swapExactTokensForETH(amountIn, amountOutMin, path, msg.sender, block.timestamp);
 ```
 
