@@ -362,7 +362,7 @@ const IndexPage = props => {
       />
       <StyledBody>
         <StyledTitle>
-          <StyledBodyTitle>World first, User-Centric DEX governed by On-Chain, Enterprise-Free Organization.</StyledBodyTitle>
+          <StyledBodyTitle>World first, User-Centric DEX governed by On-Chain, Enterprise-Free Organization</StyledBodyTitle>
           <span>
             <Button href="https://materia.exchange/">Launch Dapp</Button>
           </span>
