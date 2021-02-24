@@ -8,7 +8,8 @@ const StyledCard = styled(Link)`
   justify-content: space-between;
   padding: 1.5rem;
   max-width: 300px;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   text-decoration: none;
   transform: scale(0.99);
   background-color: ${({ theme }) => theme.cardBG};
@@ -32,7 +33,8 @@ const StyledCard = styled(Link)`
   ::after {
     content: '';
     position: absolute;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
+    border-radius: 5px;
     z-index: -1;
     top: 0;
     left: 0;
@@ -55,7 +57,8 @@ const StyledExternalCard = styled.a`
   justify-content: space-between;
   padding: 1.5rem;
   max-width: 300px;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   text-decoration: none;
   transform: scale(0.99);
   background-color: ${({ theme }) => theme.cardBG};
@@ -77,7 +80,8 @@ const StyledExternalCard = styled.a`
   ::after {
     content: '';
     position: absolute;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
+    border-radius: 5px;
     z-index: -1;
     top: 0;
     left: 0;

@@ -686,7 +686,8 @@ pre tt:after {
   position: fixed;
   top:0;
   left:0;
-  background-color: rgba(29,29,29,0.8);
+  /*background-color: rgba(29,29,29,0.8);*/
+  background-color: rgba(2,23,55,0.8);
   min-width: 100%;
   min-height: 100%;
 }
@@ -699,7 +700,8 @@ pre tt:after {
   background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
   box-shadow: 0px 0px 6px 0px #b0deff;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   color:#eaeaea;
   padding: 0.5rem;
 }
@@ -714,10 +716,12 @@ pre tt:after {
 .homeImagesCardContainer { 
   overflow: hidden; 
   margin-bottom: 40px; 
-  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+  /*background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);*/
+  background: linear-gradient(-60deg ,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%);
   box-shadow: 0px 0px 6px 0px #b0deff;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   color:#eaeaea;
   border: 1px solid #1e9de3;
   padding: 1.5rem 1rem;

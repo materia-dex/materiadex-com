@@ -93,7 +93,8 @@ const StyledWizard = styled.div`
   width: 100%;
   max-width: 720px;
   /* border: 1px solid ${({ theme }) => theme.colors.grey2}; */
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   /* overflow: hidden; */
   position: relative;
   display: flex;

@@ -10,13 +10,15 @@ const StyledMiniCards = styled.a`
   padding-left: 1rem;
   color: ${({ theme, outlined }) => (outlined ? theme.colors.link : theme.textColor)};
   width: 230px;
-  height: ${({ small }) => (small ? '80px' : '160px')};
+  height: ${({ small }) => (small ? '80px' : '180px')};
   max-width: 450px;
   margin: 1rem;
-  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+  /*background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);*/
+  background: linear-gradient(-60deg ,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%);
   border: 1px solid #1e9de3;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   box-shadow: 0px 0px 10px 0px #b0deff;
   overflow: hidden;
   position: relative;

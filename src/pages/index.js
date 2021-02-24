@@ -52,7 +52,8 @@ const StyledTitle = styled.div`
   justify-content: center;
   will-change: transform;
   margin: 1rem;
-  color: white
+  /*color: white*/
+  color: #95e1ff;
 `
 
 const StyledHeading = styled.h2`
@@ -75,7 +76,8 @@ const StyledHeading = styled.h2`
 `
 
 const StyledBodyTitle = styled.h1`
-  color: ${({ theme }) => theme.colors.link};
+  /*color: ${({ theme }) => theme.colors.link};*/
+  color: #95e1ff;
   font-size: 54px;
   margin: 2rem 0 2rem 0;
   pointer-events: none;
@@ -169,6 +171,7 @@ const StyledTitleAfter = styled.div`
     z-index: 0;
     font-weight: 300;
     text-shadow: 2px 2px 4px #000;
+    color:#95e1ff;
   &:after {
     content: "";
     width: 100%;
@@ -200,11 +203,13 @@ const StyledTitleAfter = styled.div`
 
 const StyledBoxFade = styled.div`
 font-size: 1em;
-background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8));
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+/*background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);*/
+background: linear-gradient(-60deg ,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%);
 padding: 20px;
 border: 1px solid #1e9de3;
-border-radius: 20px;
+/*border-radius: 20px;*/
+border-radius: 5px;
 box-shadow: 0px 0px 10px 0px #b0deff;
 transition: transform .33s ease-in-out .66s,opacity .33s ease-in-out .66s,-webkit-transform .33s ease-in-out .66s;
 position: relative;

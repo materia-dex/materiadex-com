@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components'
 const ButtonStyles = css`
   padding: 0.25rem 1.5rem;
   text-decoration: none;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   margin-right: 0.75rem;
   display: inline-block;
   box-sizing: border-box;

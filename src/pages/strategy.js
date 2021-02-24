@@ -127,7 +127,8 @@ const Title = styled.h1`
   
   margin-bottom: 1rem;
   font-size: 3.5rem;
-  color: ${({ theme }) => theme.colors.link};
+  /*color: ${({ theme }) => theme.colors.link};*/
+  color:#95e1ff;
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
@@ -167,7 +168,8 @@ const StyleSectionFull = styled.div`
   p { padding-top: 40px; }
 `
 const StyledQuote = styled.p`  
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   padding: 1rem;
   /*border: solid;
   color: ${({ theme }) => theme.invertedTextColor};
@@ -175,6 +177,7 @@ const StyledQuote = styled.p`
   background-color: ${({ theme }) => theme.colors.link};*/
   background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
+  background: linear-gradient(-60deg,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%);
   box-shadow: 0px 0px 6px 0px #b0deff;
   color:#eaeaea;
 `
@@ -315,7 +318,8 @@ const StyledImage = styled(Img)`
   background-color: none;
   margin-top: 0rem;
   margin-bottom: 1rem;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
   box-shadow: ${({ theme }) => theme.shadows.huge};
   @media (max-width: 960px) { min-width: unset; }
 `
