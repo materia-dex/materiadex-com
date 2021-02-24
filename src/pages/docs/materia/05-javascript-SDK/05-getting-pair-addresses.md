@@ -11,7 +11,7 @@ The most obvious way to get the address for a pair is to call <Link to='/docs/ma
 
 # CREATE2
 
-Thanks to some [fancy footwork in the factory](https://github.com/materia-dex/Materia-v2-core/blob/master/contracts/MateriaV2Factory.sol#L32), we can also compute pair addresses _without any on-chain lookups_ because of [CREATE2](https://eips.ethereum.org/EIPS/eip-1014). The following values are required for this technique:
+Thanks to some [fancy footwork in the factory](https://github.com/materia-dex/materia-contracts-core/blob/master/contracts/MateriaFactory.sol#L32), we can also compute pair addresses _without any on-chain lookups_ because of [CREATE2](https://eips.ethereum.org/EIPS/eip-1014). The following values are required for this technique:
 
 |                        |                                                                                 |
 | :--------------------- | :------------------------------------------------------------------------------ |

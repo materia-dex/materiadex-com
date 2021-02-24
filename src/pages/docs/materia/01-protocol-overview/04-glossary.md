@@ -48,9 +48,9 @@ The amount the price moves in a trading pair between when a transaction is submi
 
 Smart contracts that are essential for Materia to exist. Upgrading to a new version of core would require a liquidity migration.
 
-### Periphery
+### Orchestrator
 
-External smart contracts that are useful, but not required for Materia to exist. New periphery contracts can always be deployed without migrating liquidity.
+External smart contract (actually more than one) used to interact with the factory and the pairs by the interface. It's the main entry point to the Materia ecosystem and it's used to change the protocol paramethers by the DFO.
 
 ### Flash swap
 
@@ -63,3 +63,7 @@ The constant product formula.
 ### Invariant
 
 The "k" value in the constant product formula
+
+### DFO
+
+Decentralized Flexible Organization

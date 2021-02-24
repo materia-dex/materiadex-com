@@ -45,7 +45,7 @@ For the sake of example, let's imagine we want to trade IETH to IUSDC. In order 
 ```typescript
 import { ChainId, Token, IETH, Fetcher, Route } from '@materia/sdk'
 
-const IUSDC = new Token(ChainId.MAINNET, '0x997E36EEB40dc9A46Cc4cef000f1e1E7edE82ce9', 18)
+const IUSDC = new Token(ChainId.MAINNET, '0x7a3428F1CBA2756aB9a6D672311ca6C8DcE65C6B', 18)
 const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18)
 
 // note that you may want/need to handle this async code differently,

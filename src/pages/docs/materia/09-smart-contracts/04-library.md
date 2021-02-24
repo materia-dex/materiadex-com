@@ -5,7 +5,7 @@ tags: smart-contracts, documentation
 
 # Code
 
-[`MateriaV2Library.sol`](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/libraries/MateriaV2Library.sol)
+[`MateriaLibrary.sol`](https://github.com/materia-dex/materia-contracts-proxy/blob/master/contracts/libraries/MateriaLibrary.sol)
 
 # Internal Functions
 

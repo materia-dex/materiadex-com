@@ -16,13 +16,13 @@ It differs from Uniswap mainly in two ways:
 
 Each Materia pair manages a liquidity pool made up of reserves of the generic token and the WUSD token.
 
-Anyone can become a liquidity provider (LP) for a pool by depositing an equivalent value of WUSD and the token in return for pool tokens. These tokens track pro-rata LP shares of the total reserves, and can be redeemed for the underlying assets at any time.
+Anyone can become a liquidity provider (LP) for a pool by depositing an equivalent value of WUSD and the token in return for pool tokens. These tokens track pro-rata MP (Materia Pool) shares of the total reserves, and can be redeemed for the underlying assets at any time.
 
 ![](images/addliquidity.jpg)
 
 Pairs act as automated market makers, standing ready to accept one token for the other as long as the “constant product” formula is preserved. This formula, most simply expressed as `x * y = k`, states that trades must not change the product (`k`) of a pair’s reserve balances (`x` and `y`). Because `k` remains unchanged from the reference frame of a trade, it is often referred to as the invariant. This formula has the undesirable consequence that larger trades (relative to reserves) execute at exponentially worse rates than smaller ones, this loss is called *slippage*.
 
-In practice, Materia applies a fee to trades, which is added to reserves, this is called the *swap fee*. As a result, each trade actually increases `k`. This functions as a payout to LPs and to the Materia DFO itsef, which is realized when they burn their pool tokens to withdraw their portion of total reserves.
+In practice, Materia applies a fee to trades, which is added to reserves, this is called the *swap fee*. As a result, each trade actually increases `k`. This functions as a payout to liquidity providers and to the Materia DFO itsef, which is realized when they burn their pool tokens to withdraw their portion of total reserves.
 The fee reserved for the Materia DFO is called *Materia fee* and it's expressed as a percentage of the *swap fee*.
 The default values (possibly editable by a proposal) are 0.30% for the *swap fee* and 16% for the *Materia fee*, this means that the traders will pay a fee of 0.3% but the liquidity providers will receive about 0.25%, i.e. 0.30% taken out the *Materia fee*.
 

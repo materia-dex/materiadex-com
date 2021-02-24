@@ -5,7 +5,7 @@ tags: smart-contracts, documentation
 
 This document covers a few error codes freqeuently encountered while building on Materia.
 
-# MateriaV2: K
+# Materia: K
 
 This is an error that is frequently encountered, and requires a bit of context to understand it.
 
@@ -57,7 +57,7 @@ While positive rebalancing does not break any functionality of Materia, those in
 
 For those interested in building a rebasing token, a word of caution: many contracts involving decentralized trading and liquidity provisioning will break upon interacting with your token. An example approach that will lead to much easier integration in future protocols can be found in [CHAI](https://chai.money/about.html). CHAI uses a wrapper function that contains the rebalancing within the wrapper, such that the redeemable token can be easily integrated into many different systems.
 
-# MateriaV2: LOCKED
+# Materia: LOCKED
 
 The LOCKED error is a guard built into the router contract that prevents customized reentrancy contracts from attempting to return malicious code into the router contract at the end of a transaction.
 
@@ -73,11 +73,11 @@ This is an error with either Metamask or Ganache-CLI. It usually occurs after a 
 A temporary fix is available by restarting the local fork and resetting metamask.
 
 
-# MateriaV2: TRANSFER_FAILED
+# Materia: TRANSFER_FAILED
 
 This means the core contract was unable to send tokens to the recipient. This is most likely due to a scam token, where the token owner has maliciously disabled the transfer function in a way that allows users to buy the token, but not sell them. 
 
-# MateriaV2: EXPIRED
+# Materia: EXPIRED
 
 This is a result of a transaction that took too long to be broadcast to the mainnet. 
 

@@ -5,7 +5,7 @@ tags: flash-swaps, documentation
 
 Materia extends Uniswap core, so the possibility to perform Flash swaps remains.
 
-Materia flash swaps allow you to withdraw up to the full reserves of any ITEM token on Materia and execute arbitrary logic at no upfront cost, provided that by the end of the transaction you either:
+Materia flash swaps allow you to withdraw up to the full reserves of any ITEM token (or WUSD) on Materia and execute arbitrary logic at no upfront cost, provided that by the end of the transaction you either:
 
 - pay for the withdrawn tokens with the corresponding pair tokens
 - return the withdrawn tokens along with a small fee
@@ -27,9 +27,7 @@ The first step is to _optimistically_ withdraw 1 ETH from Materia via a flash sw
 - 1 ETH is the pre-calculated profit-maximizing trade
 - The price has not changed on Materia or Oasis since our calculation
 
-It may be the case that we'd like to calculate the profit-maximizing trade on-chain at the moment of execution, which is robust to price movements. This can be somewhat complex, depending on the strategy being executed. However, one common strategy is trading as profitably as possible _against a fixed external price_. (This price may be e.g. the average execution price of one or more orders on Oasis.) If the Materia market price is far enough above or below this external price, the following example contains code that calculates the amount to trade over Materia for maximum profit: [`ExampleSwapToPrice.sol`](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol).
-
-<Github href="https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol">ExampleSwapToPrice.sol</Github>
+It may be the case that we'd like to calculate the profit-maximizing trade on-chain at the moment of execution, which is robust to price movements. This can be somewhat complex, depending on the strategy being executed. However, one common strategy is trading as profitably as possible _against a fixed external price_. (This price may be e.g. the average execution price of one or more orders on Oasis.)
 
 ### Trade at External Venue
 
