@@ -31,13 +31,13 @@ const menu = [
     ],
     enabled: true
   },
-  // {
-  //   name: 'Docs',
-  //   link: '/docs/materia',
-  //   sublinks: [
-  //   ],
-  //   enabled: false
-  // },
+  {
+    name: 'Docs',
+    link: '/docs/materia',
+    sublinks: [
+    ],
+    enabled: true
+  },
   {
     name: 'DFO Hub',
     link: 'https://www.dfohub.com/',
