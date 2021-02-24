@@ -26,7 +26,7 @@ function callOneTime(address) public {
 The steps to update an operator (like the liquidity adder, the liquidity remover or the swapper) are:
 
 1. Deploy the new operator passing the orchestrator to the constructor.
-2. Call `set(..., newOperator, ...)` of the orchestator to set the new operator.
+2. Call `setSwapper(newSwapper)`.
 
 ## Code example 
 
@@ -34,18 +34,13 @@ The steps to update an operator (like the liquidity adder, the liquidity remover
 function callOneTime(address) public {
   IMVDProxy dfoProxy = IMVDProxy(msg.sender);
   address materiaOrchestrator = <materiaOrchestrator>;
-  address newLiquidityAdder = <newLiquidityAdder>; //e.g. add the liquidity adder 
+  address newSwapper = <newSwapper>; //e.g. a new swapper
   
-  IMateriaOrchestrator(materiaOrchestrator).set(
-    address(0),
-    address(0)
-    newLiquidityAdder,
-    address(0),
-    address(0),
-    address(0),
-    address(0),
-    0
-  );
+  IMateriaOrchestrator(materiaOrchestrator).setSwapper(newSwapper);
+}
+
+interface IMateriaOrchestrator {
+  function setSwapper(address newSwapper) external;
 }
 ```
 
@@ -64,16 +59,7 @@ function callOneTime(address) public {
   IMVDProxy dfoProxy = IMVDProxy(msg.sender);
   address newDoubleProxy = <newDoubleProxy>;
 
-  materiaOrchestrator.set(
-    newDoubleProxy,
-    address(0)
-    address(0),
-    address(0),
-    address(0),
-    address(0),
-    address(0),
-    0
-  ); //if necessary it's possible changing also other orchestrator paramethers
+  materiaOrchestrator.setDobuleProxy(newDoubleProxy);
   
   dfoProxy.setDoubleProxy(newDoubleProxy);
   

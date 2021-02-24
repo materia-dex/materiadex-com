@@ -60,10 +60,10 @@ The Pool page is made up of 2 subroutes: `add`, `remove`.
 
 | Parameter | Type      | Description                                                                          |
 | :-------- | :-------- | :----------------------------------------------------------------------------------- |
-| token0    | `address` | Pool to withdraw liquidity from. \(Must be an ERC20 address with an existing token\) |
-| token1    | `address` | Pool to withdraw liquidity from. \(Must be an ERC20 address with an existing token\) |
+| token     | `address` | Pool to withdraw liquidity from. \(Must be an ERC20 address with an existing token\) |
 
-Note that if one of the two tokens isn't WUSD, the token0 attribute is updated with WUSD address. This behavior is present because in Materia all the pairs are bonded to the WUSD bridge token.
+Note that the token address must be an Item's interoperable address (i.e. as ERC20).
+
 ### Example Usage
 
 `https://materia.exchange/#/add/0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8/ETH`
@@ -72,10 +72,10 @@ Note that if one of the two tokens isn't WUSD, the token0 attribute is updated w
 
 | Parameter | Type      | Description                                                                          |
 | :-------- | :-------- | :----------------------------------------------------------------------------------- |
-| token0    | `address` | Pool to withdraw liquidity from. \(Must be an ERC20 address with an existing token\) |
-| token1    | `address` | Pool to withdraw liquidity from. \(Must be an ERC20 address with an existing token\) |
+| token     | `address` | Pool to withdraw liquidity from. \(Must be an ERC20 address with an existing token\) |
 
-Note that in Materia every pair contains the bridge token and an EthItem. If the provided token0 and token1 parameters don't match this rule no pool is found. 
+Note that the token address must be an Item's interoperable address (i.e. as ERC20), if the provided item doesn't match this rule no pool is found.
+
 
 ### Example Usage
 

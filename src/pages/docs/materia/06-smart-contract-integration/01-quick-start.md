@@ -41,8 +41,8 @@ npm init
 ## Adding dependencies
 
 Now that we have an npm package, we can add our dependencies. Let's add both the 
-[`@Materia/materia-contracts-core`](https://www.npmjs.com/package/@Materia/v2-core) and 
-[`@Materia/materia-contracts-proxy`](https://www.npmjs.com/package/@Materia/v2-periphery) packages.
+[`@Materia/materia-contracts-core`](https://www.npmjs.com/package/@Materia/materia-contracts-core) and 
+[`@Materia/materia-contracts-proxy`](https://www.npmjs.com/package/@Materia/materia-contracts-proxy) packages.
 
 ```shell script
 npm i --save @Materia/materia-contracts-core
@@ -74,7 +74,7 @@ interface ILiquidityValueCalculator {
 }
 ```
 
-Now let's start with the constructor. You need to know where the `MateriaV2Factory` is deployed in order to compute the
+Now let's start with the constructor. You need to know where the `MateriaFactory` is deployed in order to compute the
 address of the pair and look up the total supply of liquidity shares, plus the amounts for the reserves. 
 We can store this as an address passed to the constructor.
 
@@ -109,8 +109,8 @@ The [`MateriaLibrary`](/docs/materia/smart-contracts/library/) has some helpful 
 pragma solidity ^0.6.6;
 
 import './interfaces/ILiquidityValueCalculator.sol';
-import '@materia/v2-periphery/contracts/libraries/MateriaLibrary.sol';
-import '@materia/v2-core/contracts/interfaces/IMateriaPair.sol';
+import '@materia/materia-contracts-proxy/contracts/libraries/MateriaLibrary.sol';
+import '@materia/materia-contracts-core/contracts/interfaces/IMateriaPair.sol';
 
 contract LiquidityValueCalculator is ILiquidityValueCalculator {
     function pairInfo(address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB, uint totalSupply) {
@@ -149,44 +149,3 @@ contract LiquidityValueCalculator is ILiquidityValueCalculator {
     }
 }
 ``` 
-
-## Writing tests
-
-In order to test your contract, you need to:
-
-1. Bring up a testnet
-2. Deploy the `MateriaFactory`
-3. Deploy at least 2 ERC20 tokens for a pair
-4. Create a pair for the factory
-5. Deploy your `LiquidityValueCalculator` contract
-6. Call `LiquidityValueCalculator#computeLiquidityShareValue`
-7. Verify the result with an assertion
-
-\#1 is handled for you automatically by the `truffle test` command.
-
-Note you should only deploy the precompiled Materia contracts in the `build` directories for unit tests. 
-This is because solidity appends a metadata hash to compiled contract artifacts which includes the hash of the contract
-source code path, and compilations on other machines will not result in the exact same bytecode.
-This is problematic because in Materia we use the hash of the bytecode in the materia-contracts-proxy,
-to compute the pair address.
-
-To get the bytecode for deploying MateriaFactory, you can import the file via:
-
-```javascript
-const MateriaV2FactoryBytecode = require('@Materia/v2-core/build/MateriaFactory.json').bytecode
-```
-
-We recommend using a standard ERC20 from `@openzeppelin/contracts` for deploying an ERC20.
-
-You can read more about deploying contracts and writing tests using Truffle 
-[here](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript).
-
-## Compiling and deploying the contract
-
-Learn more about compiling and deploying contracts using Truffle 
-[here](https://www.trufflesuite.com/docs/truffle/getting-started/compiling-contracts) and
-[here](https://www.trufflesuite.com/docs/truffle/getting-started/running-migrations) respectively.
-
-## WIP
-
-This guide is a WIP. Please contribute to this guide with the edit button below!

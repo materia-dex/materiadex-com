@@ -12,7 +12,7 @@ In total, interactions between these classes create a positive feedback loop, fu
 
 # Liquidity Providers
 
-Liquidity providers, or LPs, are not a homogenous group:
+Liquidity providers, or LPs, are not an homogenous group:
 
 - Passive LPs are token holders who wish to passively invest their assets to accumulate trading fees.
 
@@ -56,4 +56,4 @@ GIL holders can create new proposals to add new functionalities or to modify the
 
 - Officially deploy as DFO a smart contract to better interface with the core contracts.
 
-- Officially Deploy new smart contracts which extends the protocol with new functionalities.
+- Officially Deploy as DFO new smart contracts which extends the protocol with new functionalities.

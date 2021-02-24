@@ -13,7 +13,7 @@ When other liquidity providers add to an existing pool, they must deposit pair t
 
 # Pool tokens
 
-Whenever liquidity is deposited into a pool, unique tokens known as _materia liquidity tokens (MP)_ are minted and sent to the provider's address. These tokens represent a given liquidity provider's contribution to a pool. The proportion of the pool's liquidity provided determines the number of liquidity tokens the provider receives. If the provider is minting a new pool, the number of liquidity tokens they will receive will equal sqrt(x \* y), where x and y represent the amount of each token provided.
+Whenever liquidity is deposited into a pool, unique tokens known as _Materia liquidity pool tokens (MP)_ are minted and sent to the provider's address. These tokens represent a given liquidity provider's contribution to a pool. The proportion of the pool's liquidity provided determines the number of liquidity tokens the provider receives. If the provider is minting a new pool, the number of liquidity tokens they will receive will equal sqrt(x \* y), where x and y represent the amount of each token provided.
 
 Whenever a trade occurs, a 0.3% fee is charged to the transaction sender. This fee is distributed _pro-rata_ to all LPs in the pool upon completion of the trade. This fee could be changed via a Governance Proposal on each pair.
 

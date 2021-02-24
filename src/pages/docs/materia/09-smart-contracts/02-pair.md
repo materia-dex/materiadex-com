@@ -7,7 +7,7 @@ This documentation covers Materia-specific functionality. For ERC-20 functionali
 
 # Code
 
-[`MateriaV2Pair.sol`](https://github.com/materia-dex/Materia-v2-core/blob/master/contracts/MateriaV2Pair.sol)
+[`MateriaPair.sol`](https://github.com/materia-dex/materia-contracts-core/blob/master/contracts/MateriaPair.sol)
 
 # Address
 
@@ -173,13 +173,13 @@ See the <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whit
 # Interface
 
 ```solidity
-import '@materia/v2-core/contracts/interfaces/IMateriaV2Pair.sol';
+import '@materia/materia-contracts-core/contracts/interfaces/IMateriaPair.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IMateriaV2Pair {
+interface IMateriaPair {
   event Approval(address indexed owner, address indexed spender, uint value);
   event Transfer(address indexed from, address indexed to, uint value);
 
@@ -232,7 +232,5 @@ interface IMateriaV2Pair {
 # ABI
 
 ```typescript
-import IMateriaV2Pair from '@materia/v2-core/build/IMateriaV2Pair.json'
+import IMateriaPair from '@materia/materia-contracts-core/build/IMateriaPair.json'
 ```
-
-[https://unpkg.com/@Materia/v2-core@1.0.0/build/IMateriaV2Pair.json](https://unpkg.com/@Materia/v2-core@1.0.0/build/IMateriaV2Pair.json)

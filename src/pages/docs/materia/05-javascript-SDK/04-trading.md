@@ -7,7 +7,7 @@ Looking for a <Link to='/docs/materia/javascript-SDK/quick-start'>quickstart</Li
 
 The SDK _cannot execute trades or send transactions on your behalf_. Rather, it offers utility classes and functions which make it easy to calculate the data required to safely interact with Materia. Nearly everything you need to safely transact with Materia is provided by the <Link to='/docs/materia/SDK/trade'>Trade</Link> entity. However, it is your responsibility to use this data to send transactions in whatever context makes sense for your application.
 
-This guide will focus exclusively on sending a transaction to the <Link to='/docs/materia/smart-contracts/router02'>currently recommended Materia orchestrator</Link>.
+This guide will focus exclusively on sending a transaction to the <Link to='/docs/materia/smart-contracts/orchestrator'>currently recommended Materia orchestrator</Link>.
 
 # Sending a Transaction to the Orchestrator
 
@@ -16,7 +16,7 @@ Let's say we want to trade 1 IETH for as much IDAI as possible:
 ```typescript
 import { ChainId, Token, IETH, Fetcher, Trade, Route, TokenAmount, TradeType } from '@materia/sdk'
 
-const IDAI = new Token(ChainId.MAINNET, '0x468a1f0e1e3139B71464E6200571A8061D850A2c', 18)
+const IDAI = new Token(ChainId.MAINNET, '0x4d69a1d482ff9b89600c1DD9e535538957Cd8E29', 18)
 const WUSD = new Token(ChainId.MAINNET, '0x7C974104DF9dd7fb91205ab3D66d15AFf1049DE8', 18)
 
 // note that you may want/need to handle this async code differently,
@@ -35,7 +35,7 @@ So, we've constructed a trade entity, but how do we use it to actually send a tr
 
 Before going on, we should explore how ETH works in the context of trading. Internally, the SDK uses IETH. However, it's perfectly possible for you as an end user to use ETH, and rely on the router to handle converting to/from IETH. So, let's use ETH.
 
-The first step is selecting the appropriate orchestrator function. The names of orchestrator functions are intended to be self-explanatory; in this case we want <Link to='/docs/materia/smart-contracts/router02/#swapexactethfortokens'>swapExactETHForTokens</Link>, because we're swapping an exact amount of ETH for tokens.
+The first step is selecting the appropriate orchestrator function. The names of orchestrator functions are intended to be self-explanatory; in this case we want <Link to='/docs/materia/smart-contracts/orchestrator/#swapexactethfortokens'>swapExactETHForTokens</Link>, because we're swapping an exact amount of ETH for tokens.
 
 That Solidity interface for this function is:
 

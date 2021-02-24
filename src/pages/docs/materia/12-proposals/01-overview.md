@@ -14,7 +14,7 @@ Since Materia is a [`DFO`](https://www.dfohub.com/) (Decentralized Flexible Orga
 
 ## What is a proposal
 
-In its essence, a proposal is a smart contract that implements methods with a specific signature.
+In its essence, a proposal is a smart contract that implements methods with specific signatures.
 If the proposal expresses a functionality that can be enabled or disabled then it must implement two methods:
 
 ```solidity

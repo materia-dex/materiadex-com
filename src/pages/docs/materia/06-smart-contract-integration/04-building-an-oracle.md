@@ -31,14 +31,7 @@ are weighted equally with historical prices, it is enough to
 store the cumulative price once per period (e.g. once per 24 hours.)
 
 Computing the average price over these data points gives you 'fixed windows',
-which can be updated after the lapse of each period. We wrote
-an example oracle of this kind
-[here](https://github.com/uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol).
-
-<Github href="https://github.com/uniswap/uniswap-v2-core/blob/master/contracts/examples/ExampleOracleSimple.sol">ExampleOracleSimple.sol</Github>
-
-This example does not limit the maximum size of the fixed window, i.e.
-it only requires that the window size is greater than 1 period (e.g. 24 hours).
+which can be updated after the lapse of each period.
 
 ## Moving averages
 
@@ -51,9 +44,7 @@ There are at least
 that you can compute using the Materia cumulative price variable.
 
 [Simple moving averages](https://www.investopedia.com/terms/s/sma.asp)
-give equal weight to each price measurement. We have built
-an example of a sliding window oracle
-[here](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol).
+give equal weight to each price measurement.
 
 [Exponential moving averages](https://www.investopedia.com/terms/e/ema.asp)
 give more weight to the most recent price measurements. We do not yet have an example written for this type of oracle.
@@ -83,13 +74,6 @@ price, you should use the cumulative price values from the current block. If the
 in the current block, e.g. because there has not been any liquidity event (`mint`/`burn`/`swap`) on the pair in the current
 block, you can compute the cumulative price counterfactually.
 
-We provide a library for use in oracle contracts that has the method
-[`MateriaV2OracleLibrary#currentCumulativePrices`](https://github.com/uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/MateriaV2OracleLibrary.sol#L16)
-for getting the cumulative price as of the current block.
-The current cumulative price returned by this method is computed _counterfactually_, meaning it requires no call to
-the relative gas-expensive `#sync` method on the pair.
-It is correct regardless of whether a swap has already executed in the current block.
-
 # Notes on overflow
 
 The `MateriaPair` cumulative price variables are designed to eventually overflow,
@@ -106,11 +90,8 @@ This is feasible because the pair is only concerned with the time that elapses b
 the cumulative prices, which is always expected to be less than `2^32` seconds.
 
 When computing time elapsed within your own oracle, you can simply store the `block.timestamp` of your observations
-as `uint256`, and avoid dealing with overflow math for computing the time elapsed between observations. This is how the
-[ExampleSlidingWindowOracle](https://github.com/materia-dex/Materia-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol)
-handles observation timestamps.
+as `uint256`, and avoid dealing with overflow math for computing the time elapsed between observations.
 
-<Github href="https://github.com/uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol">ExampleSlidingWindowOracle</Github>
 
 ## Integrating the oracle
 
@@ -137,9 +118,3 @@ maintenance calls by other parties.
 It is possible to avoid regularly storing this cumulative price at the
 start of the period by utilizing storage proofs. However, this approach has limitations,
 especially in regard to gas cost and maximum length of the time period over which the average price can be measured.
-If you wish to try this approach, you can follow
-[this repository by Keydonix](https://github.com/Keydonix/uniswap-oracle/).
-
-<Github href="https://github.com/Keydonix/uniswap-oracle">Keydonix: on-chain trustless and censorship resistant oracle</Github>
-
-Keydonix has developed a general purpose price feed oracle built on Materia v2 that supports arbitrary time windows (up to 256 blocks) and doesn't require any active maintenance.
