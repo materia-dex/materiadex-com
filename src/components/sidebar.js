@@ -351,6 +351,9 @@ const SideBar = props => {
           <StyledList style={{ marginTop: '1rem' }}>
             <SectionHeader>Reference</SectionHeader>
             <StyledListItem>
+              <StyledLink to={'/docs/materia/API/overview'}>API</StyledLink>
+            </StyledListItem>
+            <StyledListItem>
               <StyledLink to={'/docs/materia/SDK/getting-started'}>SDK</StyledLink>
             </StyledListItem>
             <StyledListItem>
