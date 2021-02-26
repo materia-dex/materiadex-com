@@ -9,7 +9,7 @@ This section explains the Materia Subgraph and how to interact with it. The subg
 
 [Subgraph Explorer](https://thegraph.com/explorer/subgraph/materia-dex/materia) - sandbox for querying data and endpoints for developers.
 
-[Materia V2 Subgraph](https://github.com/materia-dex/materia-subgraph) - source code for deployed subgraph.
+[Materia Subgraph](https://github.com/materia-dex/materia-subgraph) - source code for deployed subgraph.
 
 ## Usage
 
