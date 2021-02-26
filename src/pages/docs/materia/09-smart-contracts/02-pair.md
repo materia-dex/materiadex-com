@@ -21,7 +21,7 @@ See <Link to='/docs/materia/smart-contract-integration/getting-pair-addresses/'>
 event Mint(address indexed sender, uint amount0, uint amount1);
 ```
 
-Emitted each time liquidity tokens are created via [mint](#mint-1).
+Emitted each time liquidity tokens (MPs) are created via [mint](#mint-1).
 
 ## Burn
 
@@ -29,7 +29,7 @@ Emitted each time liquidity tokens are created via [mint](#mint-1).
 event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);
 ```
 
-Emitted each time liquidity tokens are destroyed via [burn](#burn-1).
+Emitted each time liquidity tokens (MPs) are destroyed via [burn](#burn-1).
 
 ## Swap
 
@@ -71,6 +71,14 @@ function factory() external view returns (address);
 ```
 
 Returns the <Link to='/docs/materia/smart-contracts/factory/#address'>factory address</Link>.
+
+## owner
+
+```solidity
+function owner() external view returns (address);
+```
+
+Returns the <Link to='/docs/materia/smart-contracts/factory/#address'>owner address</Link>, that is the factory.
 
 ## token0
 
@@ -170,62 +178,140 @@ See the <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whit
 
 - Emits [Sync](#sync).
 
-# Interface
+## setMateriaFee
 
 ```solidity
-import '@materia/materia-contracts-core/contracts/interfaces/IMateriaPair.sol';
+function setMateriFee(uint materiaFee) external;
 ```
+
+Set the Materia fee, must be called by the owner, that is the factory.
+
+## setSwapFee
+
+```solidity
+function sync() external;
+```
+
+Set the swap fee, must be called by the owner, that is the factory.
+
+
+# Interface
 
 ```solidity
 pragma solidity >=0.5.0;
 
 interface IMateriaPair {
-  event Approval(address indexed owner, address indexed spender, uint value);
-  event Transfer(address indexed from, address indexed to, uint value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event Transfer(address indexed from, address indexed to, uint256 value);
 
-  function name() external pure returns (string memory);
-  function symbol() external pure returns (string memory);
-  function decimals() external pure returns (uint8);
-  function totalSupply() external view returns (uint);
-  function balanceOf(address owner) external view returns (uint);
-  function allowance(address owner, address spender) external view returns (uint);
+    function name() external pure returns (string memory);
 
-  function approve(address spender, uint value) external returns (bool);
-  function transfer(address to, uint value) external returns (bool);
-  function transferFrom(address from, address to, uint value) external returns (bool);
+    function symbol() external pure returns (string memory);
 
-  function DOMAIN_SEPARATOR() external view returns (bytes32);
-  function PERMIT_TYPEHASH() external pure returns (bytes32);
-  function nonces(address owner) external view returns (uint);
+    function decimals() external pure returns (uint8);
 
-  function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external;
+    function totalSupply() external view returns (uint256);
 
-  event Mint(address indexed sender, uint amount0, uint amount1);
-  event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);
-  event Swap(
-      address indexed sender,
-      uint amount0In,
-      uint amount1In,
-      uint amount0Out,
-      uint amount1Out,
-      address indexed to
-  );
-  event Sync(uint112 reserve0, uint112 reserve1);
+    function balanceOf(address owner) external view returns (uint256);
 
-  function MINIMUM_LIQUIDITY() external pure returns (uint);
-  function factory() external view returns (address);
-  function token0() external view returns (address);
-  function token1() external view returns (address);
-  function getReserves() external view returns (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast);
-  function price0CumulativeLast() external view returns (uint);
-  function price1CumulativeLast() external view returns (uint);
-  function kLast() external view returns (uint);
+    function allowance(address owner, address spender) external view returns (uint256);
 
-  function mint(address to) external returns (uint liquidity);
-  function burn(address to) external returns (uint amount0, uint amount1);
-  function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data) external;
-  function skim(address to) external;
-  function sync() external;
+    function approve(address spender, uint256 value) external returns (bool);
+
+    function transfer(address to, uint256 value) external returns (bool);
+
+    function transferFrom(
+        address from,
+        address to,
+        uint256 value
+    ) external returns (bool);
+
+    function DOMAIN_SEPARATOR() external view returns (bytes32);
+
+    function PERMIT_TYPEHASH() external pure returns (bytes32);
+
+    function nonces(address owner) external view returns (uint256);
+
+    function permit(
+        address owner,
+        address spender,
+        uint256 value,
+        uint256 deadline,
+        uint8 v,
+        bytes32 r,
+        bytes32 s
+    ) external;
+
+    event Mint(address indexed sender, uint256 amount0, uint256 amount1);
+    event Burn(address indexed sender, uint256 amount0, uint256 amount1, address indexed to);
+    event Swap(
+        address indexed sender,
+        uint256 amount0In,
+        uint256 amount1In,
+        uint256 amount0Out,
+        uint256 amount1Out,
+        address indexed to
+    );
+    event Sync(uint112 reserve0, uint112 reserve1);
+
+    function MINIMUM_LIQUIDITY() external pure returns (uint256);
+
+    function factory() external view returns (address);
+
+    function token0() external view returns (address);
+
+    function token1() external view returns (address);
+
+    function getReserves()
+        external
+        view
+        returns (
+            uint112 reserve0,
+            uint112 reserve1,
+            uint32 blockTimestampLast
+        );
+
+    function price0CumulativeLast() external view returns (uint256);
+
+    function price1CumulativeLast() external view returns (uint256);
+
+    function kLast() external view returns (uint256);
+
+    function mint(address to) external returns (uint256 liquidity);
+
+    function burn(address to) external returns (uint256 amount0, uint256 amount1);
+
+    function swap(
+        uint256 amount0Out,
+        uint256 amount1Out,
+        address to,
+        bytes calldata data
+    ) external;
+
+    function skim(address to) external;
+
+    function sync() external;
+
+    function initialize(
+        address,
+        address,
+        uint256,
+        uint256
+    ) external;
+
+    function setMateriaFee(uint256 _materiaFee) external;
+
+    function setSwapFee(uint256 _swapFee) external;
+
+    function materiaFee() external view returns (uint256);
+
+    function swapFee() external view returns (uint256);
+
+    function owner() external view returns (address);
+
+    function renounceOwnership() external;
+
+    function transferOwnership(address newOwner) external;
 }
 ```
 
