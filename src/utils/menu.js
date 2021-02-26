@@ -7,7 +7,15 @@ const menu = [
       { name: 'Liquidity Mining', link: '/lm', enabled: true },
       { name: 'Airdrop', link: '/airdrop', enabled: false },
       { name: 'Exping', link: '/soon', enabled: true },
-      { name: 'Analytics', link: '/soon', enabled: true }
+      {
+        name: 'Analytics',
+        link: 'https://info.materiadex.com/home',
+        isExternal: true,
+        sublinks: [
+          //{ name: 'About', link: 'https://www.dfohub.com/' },
+        ],
+        enabled: true
+      }
     ],
     enabled: true
   },
@@ -26,7 +34,16 @@ const menu = [
     sublinks: [
       { name: 'Strategy & Manifesto', link: '/strategy', enabled: true },
       { name: 'Incentives Strategy', link: '/incentives', enabled: false },
-      // { name: 'Roadmap', link: '/map', enabled: true },
+      { name: 'Roadmap', link: '/map', enabled: false },
+      {
+        name: 'Medium articles',
+        link: 'https://materiadex.medium.com/',
+        isExternal: true,
+        sublinks: [
+          //{ name: 'About', link: 'https://www.dfohub.com/' },
+        ],
+        enabled: true
+      },
       { name: 'About', link: '/about', enabled: true },
     ],
     enabled: true
