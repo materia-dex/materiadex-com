@@ -24,7 +24,7 @@ We base our protocol on the following pillars:
 The Materia codebase is embody an ecosystem of open source components.
 
 - [`Official Website of Materia`](https://github.com/materia-dex/materiadex-com)
-- [`Materia interface`](https://github.com/materia-dex/materia-interface)
+- [`Materia Interface`](https://github.com/materia-dex/materia-interface)
 - [`Materia Contracts`](https://github.com/materia-dex/materia-contracts)
 - [`Materia SDK`](https://github.com/materia-dex/materia-sdk)
 - [`Materia Token List`](https://github.com/materia-dex/materia-token-list)
