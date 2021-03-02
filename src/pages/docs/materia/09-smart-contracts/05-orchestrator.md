@@ -9,12 +9,12 @@ tags: smart-contracts, documentation
 
 # Address
 
-`MateriaFactory` is deployed at `0xB0F720Baa5BD1715897d4790A59f5c7aa1377D79` on the Ethereum [mainnet](https://etherscan.io/address/0xB0F720Baa5BD1715897d4790A59f5c7aa1377D79) and the [Ropsten](https://ropsten.etherscan.io/address/0xB0F720Baa5BD1715897d4790A59f5c7aa1377D79) testnet. 
+`MateriaOrchestrator` is deployed at `0xB0F720Baa5BD1715897d4790A59f5c7aa1377D79` on the Ethereum [mainnet](https://etherscan.io/address/0xB0F720Baa5BD1715897d4790A59f5c7aa1377D79) and the [Ropsten](https://ropsten.etherscan.io/address/0xB0F720Baa5BD1715897d4790A59f5c7aa1377D79) testnet. 
 It was built from commit tagged as `depoloy`.
 Indeed, this contract is mainly a proxy, the real instructions to perform the various operations are inside these three operators:
 
 - `MateriaLiquidityAdder` is deployed at `0xA85844DD423cdB2b6beA603e1768f9587d662aB8` on the Ethereum [mainnet](https://etherscan.io/address/0xA85844DD423cdB2b6beA603e1768f9587d662aB8) and the [Ropsten](https://ropsten.etherscan.io/address/0xA85844DD423cdB2b6beA603e1768f9587d662aB8) testnet. 
-- `MateriaLiquidityRemover` is deployed at `0xC97587c6edaC9D298A4cA2fDFFE28f4F6b10d480` on the Ethereum [mainnet](https://etherscan.io/address/0xC97587c6edaC9D298A4cA2fDFFE28f4F6b10d480) and the [Ropsten](https://ropsten.etherscan.io/address/0xC97587c6edaC9D298A4cA2fDFFE28f4F6b10d480) testnet. 
+- `MateriaLiquidityRemover` is deployed at `0x331f3DBCC3b65B4A401a248aD7ae2A6098621a70` on the Ethereum [mainnet](https://etherscan.io/address/0x331f3DBCC3b65B4A401a248aD7ae2A6098621a70) and the [Ropsten](https://ropsten.etherscan.io/address/0x331f3DBCC3b65B4A401a248aD7ae2A6098621a70) testnet. 
 - `MateriaSwapper` is deployed at `0xF644DD45c854BeD5924E95Eb0aB68E38d5BE66da` on the Ethereum [mainnet](https://etherscan.io/address/0xF644DD45c854BeD5924E95Eb0aB68E38d5BE66da) and the [Ropsten](https://ropsten.etherscan.io/address/0xF644DD45c854BeD5924E95Eb0aB68E38d5BE66da) testnet. 
 
 This way it's possible to update a component without redeploy all the contracts, obviously these operations must be performed by DFO with a proposal.
