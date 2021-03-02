@@ -22,7 +22,8 @@ function useApplicationContext() {
 function reducer(state, { type, payload }) {
   switch (type) {
     case UPDATE_DARKMODE: {
-      const { mode } = payload
+      // const { mode } = payload
+      const mode = DARK_MODE_OPTION.LIGHT
       return {
         ...state,
         [DARKMODE_KEY]: mode

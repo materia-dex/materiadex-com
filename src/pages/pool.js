@@ -234,9 +234,9 @@ const About = props => {
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
               <ParagraphContent>
                 Each Materia core smart contracts — factory, pair— manages a liquidity pool made up of reserves of two ITEMs. <br />
-                But more specifically, all liquidity pools are between wUSD and a single ITEMs. <br /> <br />
-                Users can interchange any ITEM by routing through wUSD. Since wUSD is currently the most resilient and secure stablecoin in the industry, we deemed it the best choice for Materia. 
-                <br /> wUSD liberates holders from censorship or centralized manipulation by states and stablecoin issuers and resolves all risks that come with trusting the big stablecoin organizations, like MakerDAO, Coinbase, etc. <br /><br />
+                But more specifically, all liquidity pools are between WUSD and a single ITEMs. <br /> <br />
+                Users can interchange any ITEM by routing through WUSD. Since WUSD is currently the most resilient and secure stablecoin in the industry, we deemed it the best choice for Materia. 
+                <br /> WUSD liberates holders from censorship or centralized manipulation by states and stablecoin issuers and resolves all risks that come with trusting the big stablecoin organizations, like MakerDAO, Coinbase, etc. <br /><br />
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>

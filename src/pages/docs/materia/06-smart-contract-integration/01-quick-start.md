@@ -41,12 +41,12 @@ npm init
 ## Adding dependencies
 
 Now that we have an npm package, we can add our dependencies. Let's add both the 
-[`@Materia/materia-contracts-core`](https://www.npmjs.com/package/@Materia/materia-contracts-core) and 
-[`@Materia/materia-contracts-proxy`](https://www.npmjs.com/package/@Materia/materia-contracts-proxy) packages.
+[`@materia-dex/materia-contracts-core`](https://www.npmjs.com/package/@materia-dex/materia-contracts-core) and 
+[`@materia-dex/materia-contracts-proxy`](https://www.npmjs.com/package/@materia-dex/materia-contracts-proxy) packages.
 
 ```shell script
-npm i --save @Materia/materia-contracts-core
-npm i --save @Materia/materia-contracts-proxy
+npm i --save @materia-dex/materia-contracts-core
+npm i --save @materia-dex/materia-contracts-proxy
 ```
 
 These packages include both the smart contract source code and the build artifacts.

@@ -11,7 +11,7 @@ There are two settable fees in the Materia protocol:
 
 ## Code example
 
-This example changes the `swap fee` and the `Materia fee` for the pair WuSD-DAI.
+This example changes the `swap fee` and the `Materia fee` for the pair WUSD-DAI.
 
 ```solidity
 function callOneTime(address) public {
