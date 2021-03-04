@@ -121,6 +121,9 @@ const StyledButton = styled.button`
   a.discordIcon { padding-top: 4px; } 
   :hover { cursor: pointer; transform: scale(1); }
   a:hover > svg { transform: scale(1.2); }
+
+  &.defipulse { position: relative; } 
+  &.defipulse > a { position: absolute; top: -17px; }
 `
 
 
@@ -171,7 +174,7 @@ const Footer = () => {
               <Github width={20} />
             </a>
           </StyledButton>
-          <StyledButton fill>
+          <StyledButton fill className="defipulse">
             <a href="https://defipulse.com/" target="_blank" title="DeFi Pulse">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
               width="20px" height="20px" viewBox="0 0 240 240" enable-background="new 0 0 240 240">
