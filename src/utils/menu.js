@@ -11,9 +11,7 @@ const menu = [
         name: 'Analytics',
         link: 'https://info.materiadex.com/home',
         isExternal: true,
-        sublinks: [
-          //{ name: 'About', link: 'https://www.dfohub.com/' },
-        ],
+        sublinks: [],
         enabled: true
       }
     ],
@@ -39,9 +37,7 @@ const menu = [
         name: 'Medium articles',
         link: 'https://materiadex.medium.com/',
         isExternal: true,
-        sublinks: [
-          //{ name: 'About', link: 'https://www.dfohub.com/' },
-        ],
+        sublinks: [],
         enabled: true
       },
       { name: 'About', link: '/about', enabled: true },
@@ -56,21 +52,17 @@ const menu = [
     enabled: true
   },
   {
-    name: 'DFO Hub',
-    link: 'https://www.dfohub.com/',
+    name: 'WUSD',
+    link: 'https://covenants.eth.link/#/wusd/dapp/',
     isExternal: true,
-    sublinks: [
-      //{ name: 'About', link: 'https://www.dfohub.com/' },
-    ],
+    sublinks: [],
     enabled: true
   },
   {
     name: 'EthItem',
     link: 'https://ethitem.com/',
     isExternal: true,
-    sublinks: [
-      //{ name: 'About', link: 'https://www.dfohub.com/' },
-    ],
+    sublinks: [],
     enabled: true
   }
 ]
