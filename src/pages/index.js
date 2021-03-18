@@ -266,11 +266,11 @@ const IndexPage = props => {
       <SEO
         title="Home"
         path={props.location.pathname}
-        description={'User-Centric Trading Protocol governed by on-chain Decentralized Organization'}
+        description={'Multi-standard Decentralized Exchange'}
       />
       <StyledBody>
         <StyledTitle>
-          <StyledBodyTitle>Decentralized Multi-standard Trading Protocol</StyledBodyTitle>
+          <StyledBodyTitle>Multi-standard Decentralized Exchange</StyledBodyTitle>
 
           <StyledItemRow>
             <Button outlined href="https://materia.exchange/">Launch Dapp</Button>
@@ -404,7 +404,6 @@ const SummarySection = props => {
 const InfoSection = props => {
   return (
     <>
-
       <StyledSectionTitle>The Materia protocol</StyledSectionTitle>
       <StyledBodySubText>
         Materia is a DEX based on a multi protocol called ETHItem. Its most important feature is the tokens "harmonizing" with ERC20, ERC721 and ERC1155 standards enabling their total interoperability.<br />
@@ -417,7 +416,7 @@ const InfoSection = props => {
         </StyledExternalLink>
       </StyledItemRow>
 
-      <StyledSectionTitle>US Dollar based decentralized exchange</StyledSectionTitle>
+      <StyledSectionTitle>US Dollar based DEX</StyledSectionTitle>
       <StyledBodySubText>
       Materia uses WUSD as collateral. By decentralizing the distribution of its collateral and being able to balance its stability, WUSD will not suffer any single point of failure; it will only fail if the entire stablecoin industry collapses.      </StyledBodySubText>
       <StyledItemRow>
