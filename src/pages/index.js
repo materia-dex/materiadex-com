@@ -43,6 +43,11 @@ const StyledBody = styled.div`
   @media (max-width: 375px) {
     margin-bottom: 2rem;
   }
+  @media (max-width: 960px) {
+    margin-bottom: 0;
+    padding: 2rem;
+    padding-bottom: 8rem;
+  }
 `
 
 const StyledTitle = styled.div`
@@ -56,29 +61,25 @@ const StyledTitle = styled.div`
   color: #95e1ff;
 `
 
-const StyledHeading = styled.h2`
-  font-size: 2em;
+const StyledProductImage = styled(Img)`
   width: 100%;
-  max-width: 1100px;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 1;
-  display: block;
-  position: relative;
-  color: #fff;
-  text-transform: uppercase;
-  padding: 10px 20px 5px;
-  text-shadow: -1px -1px 4px #ff004f, -2px -2px 4px #000;
-  overflow: hidden;
-  z-index: 0;
-  font-weight: 300;
-  background: linear-gradient(90deg,rgba(8,19,32,0) 0,#081320 25%,#081320 75%,rgba(8,19,32,0));
+  height: 100%;
+  min-width: 220px;
+  max-width: 220px;
+  background-color: none;
+  border-radius: 12px;
+  box-shadow: ${({ theme }) => theme.shadows.huge};
+  /* @media (max-width: 960px) {
+    min-width: 120px;
+    max-width: 120px;
+  } */
 `
 
 const StyledBodyTitle = styled.h1`
   /*color: ${({ theme }) => theme.colors.link};*/
   color: #95e1ff;
-  font-size: 54px;
+  font-size: 60px;
+  font-weight: 400;
   margin: 2rem 0 2rem 0;
   pointer-events: none;
   white-space: wrap;
@@ -104,31 +105,30 @@ const StyledBodyTitle = styled.h1`
   }
 `
 
-const StyledImage = styled(Img)`
+export const StyledExternalLink = styled.a`
+  font-family: 'GT Haptik Regular';
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: block;
+  margin: 0.25rem 0;
+  font-size: 24px;
   width: 100%;
-  height: 100%;
-  min-width: 450px;
-  background-color: none;
-  margin-top: 0rem;
-  border-radius: 0px;
-  box-shadow: ${({ theme }) => theme.shadows.huge};
-  @media (max-width: 960px) {
-    min-width: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  color: ${({ theme }) => theme.textColor};
+  background-color: ${({ theme }) => theme.cardBG};
+  border-radius: 12px;
+  transition: transform 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+  :hover {
+    transform: translate3d(2px, 2px, 10px);
   }
-`
-
-const StyledCardImage = styled(Img)`
-  max-width: 250px;
-  min-width: 100px;
-  background-color: none;
-  margin-top: 0rem;
-  border-radius: 0px;  
-`
-
-const StyledNormalImage = styled(Img)`
-  max-width: 60px;
-  min-width: 60px;
-  border-radius: 0px;
+  @media (max-width: 960px) {
+    font-size: 20px;
+  }
 `
 
 const StyledNormalImage2 = styled(Img)`
@@ -136,29 +136,6 @@ const StyledNormalImage2 = styled(Img)`
   min-width: 250px;
   border-radius: 0px;
   margin: auto;   
-`
-
-const StyledCornerImage = styled(Img)`
-  position:absolute;
-  display:block;
-  height:39px;
-  width:39px
-  @media (max-width: 960px) {
-    display: none;
-  }
-  @media (max-width: 375px) {
-    display: none;
-  }
-`
-
-const StyledBox = styled.div`
-  padding: 0;
-  margin: 0 auto;
-  position: relative;
-  display: inline-block;
-  z-index: 0;
-  cursor: pointer;
-  border: 2px solid #1e9de3;
 `
 
 const StyledTitleAfter = styled.div`
@@ -203,14 +180,8 @@ const StyledTitleAfter = styled.div`
 
 const StyledBoxFade = styled.div`
 font-size: 1em;
-/*background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8));
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);*/
-background: linear-gradient(-60deg ,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%);
 padding: 20px;
-border: 1px solid #1e9de3;
-/*border-radius: 20px;*/
 border-radius: 5px;
-box-shadow: 0px 0px 10px 0px #b0deff;
 transition: transform .33s ease-in-out .66s,opacity .33s ease-in-out .66s,-webkit-transform .33s ease-in-out .66s;
 position: relative;
 max-width: 700px;
@@ -219,82 +190,19 @@ max-width: 700px;
 }
 `
 
-const StyledSpanTopRight = styled.span`
-filter: blur(0);
-    top: -22.5px;
-    right: -21.5px;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    position: absolute;
-    display: block!important;
-    height: 39px;
-    width: 39px;
-`
-
-const StyledSpanTopLeft = styled.span`
-filter: blur(0);
-top: -21.5px;
-left: -23.5px;
--webkit-transform: rotate(0deg);
-transform: rotate(0deg);
-    position: absolute;
-    display: block!important;
-    height: 39px;
-    width: 39px;
-`
-
-const StyledSpanBottomLeft = styled.span`
-bottom: -20.5px;
-left: -23.5px;
--webkit-transform: rotate(270deg);
-transform: rotate(270deg);
-    position: absolute;
-    display: block!important;
-    height: 39px;
-    width: 39px;
-`
-
-const StyledSpanBottomRight = styled.span`
-bottom: -20.5px;
-    right: -23.5px;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-    position: absolute;
-    display: block!important;
-    height: 39px;
-    width: 39px;
-`
-
-const StyledSectionFlex = styled.div`
-  padding: 4rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  @media (max-width: 1024px) {
-    padding: 1rem;
-    margin-top: 0rem;
-    flex-direction: ${({ wrapSmall }) => (!wrapSmall ? 'row' : 'column')};
-  }
-  @media (max-width: 960px) {
-    padding: 1rem;
-    margin-top: 0rem;
-    width: 100%;
+const StyledGoal = styled.div`
+  color: ${({ theme }) => theme.colors.link};
+  border-radius: 0.5rem;
+  p {
+    line-height: 155%;
+    margin-bottom: 2rem;
     max-width: 450px;
   }
-  @media (max-width: 375px) {
-    padding: 1rem;
-    margin: 1rem;
-    width: 100%;
-    max-width: 350px;
-  }
-
-  h2 {
-    margin-bottom: 0.5rem;
-  }
-  p {
-    margin-bottom: 0.5rem;
+  @media (max-width: 960px) {
+    margin-top: 2rem;
+    p {
+      max-width: 450px;
+    }
   }
 `
 
@@ -358,14 +266,21 @@ const IndexPage = props => {
       <SEO
         title="Home"
         path={props.location.pathname}
-        description={'World first, User-Centric DEX governed by On-Chain, Enterprise-Free Organization'}
+        description={'User-Centric Trading Protocol governed by on-chain Decentralized Organization'}
       />
       <StyledBody>
         <StyledTitle>
-          <StyledBodyTitle>World first, User-Centric DEX governed by On-Chain, Enterprise-Free Organization</StyledBodyTitle>
-          <span>
-            <Button href="https://materia.exchange/">Launch Dapp</Button>
-          </span>
+          <StyledBodyTitle>Decentralized Multi-standard Trading Protocol</StyledBodyTitle>
+
+          <StyledItemRow>
+            <Button outlined href="https://materia.exchange/">Launch Dapp</Button>
+            <Button
+              to="/docs/materia"
+              as={Link}
+            >
+              Learn More
+            </Button>
+          </StyledItemRow>
         </StyledTitle>
         <SummarySection data={data} />
         <InfoSection data={data} />
@@ -377,155 +292,143 @@ const IndexPage = props => {
 
 export default IndexPage
 
-const StyledImgSection = styled.div`
-  color: ${({ theme }) => theme.colors.link};
-  position: relative;
-  margin: 1rem 3rem;
+
+const StyledSectionTitle = styled.h1`
+  font-size: 48px;
+  white-space: wrap;
+  overflow-wrap: normal;
+  max-width: 900px;
+  text-align: center;
+  margin-top: 10rem;
   @media (max-width: 960px) {
     width: 100%;
-    margin: 0;
-    p {
-      max-width: 450px;
-    }
-    h1 {
-      max-width: 450px;
-    }
+    font-size: 2rem;
+    line-height: 2.5rem;
+    max-width: 600px;
+    margin-top: 4rem;
   }
-  p {
-    line-height: 155%;
-    margin-bottom: 2rem;
-    max-width: 450px;
+  @media (max-width: 640px) {
+    width: 100%;
+    font-weight: 400;
+    margin-top: 4rem;
+    text-align: left;
   }
-  h1 {
+`
+
+const StyledSectionFlex = styled.div`
+  padding: 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  @media (max-width: 1024px) {
+    padding: 1rem;
+    margin-top: 0rem;
+    flex-direction: ${({ wrapSmall }) => (!wrapSmall ? 'row' : 'column')};
+  }
+  @media (max-width: 960px) {
+    padding: 1rem;
+    margin-top: 0rem;
+    width: 100%;
     max-width: 450px;
-    line-height: 1.3;
   }
   h2 {
-    max-width: 450px;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-bottom: 0.5rem;
   }
 `
-const MiniNewInfo = styled(Link)`
-  transform: rotate(-4deg) scale(0.98);
-  color: ${({ theme }) => theme.textColor};
-  display: inline-block;
-  height: 500px;
 
-  transition: transform 0.3s ease;
-  will-change: transform;
-  :hover {
-    transform: rotate(-2deg);
-  }
-  a {
-    color: ${({ theme }) => theme.textColor};
-  }
-
-  @media (max-width: 960px) {
-    position: relative;
-    max-width: 450px;
-    width: 100%;
-    height: 100%;
-    margin: 4rem 0;
+const StyledBodySubText = styled.h3`
+  max-width: 960px;
+  text-align: center;
+  line-height: 160%;
+  @media (max-width: 640px) {
+    text-align: left;
   }
 `
+
+const StyledItemRow = styled.nav`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0rem;
+  width: 100%;
+  & > *:not(:first-of-type) {
+    margin-top: 12px;
+  }
+  @media (min-width: 640px) {
+    flex-direction: row;
+    justify-content: center;
+    & > * {
+      margin-bottom: 12px;
+    }
+    & > *:not(:first-of-type) {
+      margin-top: 0;
+      margin-left: 12px;
+    }
+  }
+  @media (min-width: 960px) {
+    box-sizing: border-box;
+    transition: right 0.25s ease;
+  }
+`
+
 const SummarySection = props => {
   return (
-    <StyledSectionFlex>
-      <StyledBoxFade>
-        <h1>
-          <b>Materia</b> is the world-first, User-centric Decentralized EXchange controlled by On-Chain, Enterprise-Free Organization based on <b>DFOHub</b> protocol.
+    <StyledBodySubText>
+      <h1>
+      By implementing the new EthItem protocol, <b>Materia</b> can reduce some of the problems that plague DEXs by break into the world of gamification and NFT exchange.
           </h1>
+      <p>
+        Materia’s token <b>GIL</b> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any external control.
+          </p>
+      <p>
+        Through GIL, the entire community can actively participate in its evolution, propose new features and vote for their implementation.
+          </p>
+      <div class="divider"></div>
+      <div class="homeSloganContainer">
+        <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
         <p>
-          Materia’s token <b>GIL</b> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
-          </p>
-        <p>
-          Through GIL, the entire community can actively participate in its evolution, propose new features and vote for their implementation.
-          </p>
-        <div class="divider"></div>
-        <div class="homeSloganContainer">
-          {/* <StyledNormalImage fadeIn={false} fluid={props.data.dfoHUbImage.childImageSharp.fluid} /> */}
-          <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
-          <p>
-            <span>Materia + DFO Protocol</span>
-            <span>REAL DECENTRALIZED EXCHANGE</span>
-          </p>
-        </div>
-      </StyledBoxFade>
-    </StyledSectionFlex>
-  )
-}
-
-const CornerBox = props => {
-  return (
-    <>
-      <StyledSpanTopRight>
-        <StyledCornerImage fadeIn={false} fluid={props.data.cornerImage.childImageSharp.fluid} />
-      </StyledSpanTopRight>
-      <StyledSpanTopLeft>
-        <StyledCornerImage fadeIn={false} fluid={props.data.cornerImage.childImageSharp.fluid} />
-      </StyledSpanTopLeft>
-      <StyledSpanBottomLeft>
-        <StyledCornerImage fadeIn={false} fluid={props.data.cornerImage.childImageSharp.fluid} />
-      </StyledSpanBottomLeft>
-      <StyledSpanBottomRight>
-        <StyledCornerImage fadeIn={false} fluid={props.data.cornerImage.childImageSharp.fluid} />
-      </StyledSpanBottomRight>
-    </>
+          <span>Materia</span>
+          <span>REAL DECENTRALIZED EXCHANGE</span>
+        </p>
+      </div>
+    </StyledBodySubText>
   )
 }
 
 const InfoSection = props => {
   return (
     <>
-      <StyledSectionFlex>
-        <StyledImgSection>
-          <div class="homeImagesCardContainer">
-            <div class="homeImageContainer">
-              <StyledCardImage fadeIn={false} fluid={props.data.naufImage.childImageSharp.fluid} />
-            </div>
-            <p class="homeImageCaption">
-              <strong>NAUF</strong><br />
-                Materia is NOT Another Uniswap Fork
-              </p>
-          </div>
-          <div class="homeImagesCardContainer">
-            <div class="homeImageContainer">
-              <StyledCardImage fadeIn={false} fluid={props.data.usdImage.childImageSharp.fluid} />
-            </div>
-            <p class="homeImageCaption">
-              <strong>Wrapped USD</strong><br />
-              WUSD is a Stable Coin based on Uniswap Liquidity Pools
-            </p>
-          </div>
-          <div class="homeImagesCardContainer">
-            <div class="homeImageContainer">
-              <StyledCardImage fadeIn={false} fluid={props.data.ethItemImage.childImageSharp.fluid} />
-            </div>
-            <p class="homeImageCaption">
-              <strong>EthItem</strong><br />
-              ethItem is a synthesis of the ERC1155 &amp; ERC20 standards, enabling their total interoperability.<br />
-              Each unique NFT ID can now become a source of an ERC20
-            </p>
-          </div>
-        </StyledImgSection>
-        <StyledImgSection>
-          <StyledBoxFade>
-            <StyledTitleAfter>NAUF (Not another Uniswap Fork)</StyledTitleAfter>
-            <p>
-            By forcing trades to route through privileged liquidity pool pairs, the centralized front-end design of UniSwap is allowing vampiric arbitrage bots to drain the prices of certain tokens.</p><p>
-            We started to work on this issue, challenging ourselves with a R&amp;D mission to overcome these limits and to simplify the swap process of the AMM.</p><p>
-            We believe that a safe restart should begin from the single ERC20 routing of UniSwap v1 in order to ensure stability and optimized gas consumption.</p><p>
-            We will take advantage of DFOHub microservices architecture and its next evolution to v0.5 to allow the community to self-determine the future and success of their investments in Materia.</p>
-            <StyledTitleAfter>WUSD Routing</StyledTitleAfter>
-            <p>
-            WUSD will be the default choice for routing. We believe that betting on a super-stable coin will allow liquidity providers to experience a reduced slippage and impermanent loss compared to ETH.</p>
-            <StyledTitleAfter>Lego Swap via ETHItems</StyledTitleAfter>
-            <p>
-            Materia is designed to leverage the power of ETHItem standard, taking advantage of its underlying support for both ERC20 and ERC1155 standards. This choice will allow native support even for NFT tokens and the possibility to take advantage of **batch transfer** function, efficiently creating complex LEGO Swaps, saving gas costs.</p>
-          </StyledBoxFade>
-        </StyledImgSection>
-      </StyledSectionFlex>
+
+      <StyledSectionTitle>The Materia protocol</StyledSectionTitle>
+      <StyledBodySubText>
+        Materia is a DEX based on a multi protocol called ETHItem. Its most important feature is the tokens "harmonizing" with ERC20, ERC721 and ERC1155 standards enabling their total interoperability.<br />
+              Each unique NFT ID can now become a source of an ERC20.
+        Check out the <b><Link to="/docs/materia">documentation</Link></b>.
+      </StyledBodySubText>
+      <StyledItemRow>
+        <StyledExternalLink href={'https://ethitem.com/'} target="_blank">
+          <StyledProductImage fadeIn={false} fluid={props.data.ethItemImage.childImageSharp.fluid} />
+        </StyledExternalLink>
+      </StyledItemRow>
+
+      <StyledSectionTitle>US Dollar based decentralized exchange</StyledSectionTitle>
+      <StyledBodySubText>
+      Materia uses WUSD as collateral. By decentralizing the distribution of its collateral and being able to balance its stability, WUSD will not suffer any single point of failure; it will only fail if the entire stablecoin industry collapses.      </StyledBodySubText>
+      <StyledItemRow>
+        <StyledExternalLink href={'https://covenants.eth.link/#/wusd'} target="_blank">
+          <StyledProductImage fadeIn={false} fluid={props.data.usdImage.childImageSharp.fluid} />
+        </StyledExternalLink>
+      </StyledItemRow>
+
+      <StyledSectionTitle>Growing community</StyledSectionTitle>
+      <StyledBodySubText>
+      Materia itself sets ambitious challenges to make user needs at the center of the R&D process, simplify their experience, and make them the protagonist of governance.      </StyledBodySubText>
     </>
   )
 }
@@ -533,12 +436,7 @@ const InfoSection = props => {
 const ProductsSection = props => {
   return (
     <>
-      <StyledSectionFlex style={{ paddingBottom: '0px' }}>
-        <StyledGoal style={{ width: '100%', maxWidth: '450px' }}>
-          <StyledTitleAfter>Protocol Overview</StyledTitleAfter>
-          <p>There are 5 main functions in the protocol.</p>
-        </StyledGoal>
-      </StyledSectionFlex>
+      <StyledSectionTitle>Services</StyledSectionTitle>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
           href="#"
@@ -580,18 +478,3 @@ const ProductsSection = props => {
   )
 }
 
-const StyledGoal = styled.div`
-  color: ${({ theme }) => theme.colors.link};
-  border-radius: 0.5rem;
-  p {
-    line-height: 155%;
-    margin-bottom: 2rem;
-    max-width: 450px;
-  }
-  @media (max-width: 960px) {
-    margin-top: 2rem;
-    p {
-      max-width: 450px;
-    }
-  }
-`

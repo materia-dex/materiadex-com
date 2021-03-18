@@ -52,7 +52,7 @@ const Layout = ({ path, children, nofooter, isDocs }) => {
       <div className='sky'>
         <div className='stars'>
           <video autoPlay="true" muted loop id='myVideo'>
-            <source src={backgroundVideo} type='video/webm'/>
+            <source src={backgroundVideo} type='video/mp4'/>
           </video>
           <div className='videoOverlay'></div>
         </div>
