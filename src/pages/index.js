@@ -381,7 +381,7 @@ const SummarySection = props => {
   return (
     <StyledBodySubText>
       <h1>
-      By implementing the new EthItem protocol, <b>Materia</b> can reduce some of the problems that plague DEXs by break into the world of gamification and NFT exchange.
+      By implementing the new EthItem protocol, <b>Materia</b> can reduce some of the problems that plague DEXs by breaking into the world of gamification and NFT exchange.
           </h1>
       <p>
         Materia’s token <b>GIL</b> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any external control.
