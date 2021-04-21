@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eeb5ea35-7032-411a-b2f5-d127da3f4a9d/deploy-status)](https://app.netlify.com/sites/tender-archimedes-310cf3/deploys)
 
-World First completely decentralized exchange governed by On-Chain, Enterprise-Free Organization
+World First Multi-standard Decentralized Exchange governed by decentralized flexible organization.
 
 ## Getting Started
 
