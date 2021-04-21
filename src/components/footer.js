@@ -42,6 +42,9 @@ const StyledFooter = styled.footer`
     flex-direction: column;
     padding: 0rem 1rem;
   }
+
+  & p > a { color: #b0deff; }
+  & p > a:hover { text-decoration: underline; }
 `
 
 const StyledSection = styled.section`
@@ -222,7 +225,7 @@ const Footer = () => {
           )
         })} */}
       <div>
-        <p>Materia is an open source R&amp;D project for the Ethereum Community</p>
+        <p>Materia is an open source R&amp;D project for the Ethereum Community | <a href="mailto:info@materiadex.com" target="_blank">info@materiadex.com</a></p>
       </div>
     </StyledFooter>
   )
