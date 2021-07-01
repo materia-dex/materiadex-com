@@ -233,13 +233,15 @@ const About = props => {
             <Title>Swap</Title>
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
               <ParagraphContent>
-Token swaps in Materia are a way to trade one token for another, you will be able to exchange EthItem ERC20 interoperable. <br /> <br />
+Token swaps allows users to trade one token for another. <br /> <br />
 
 For end-users, swapping is intuitive: a user picks an input token and an output token. They specify an input amount, and the protocol calculates how much of the output token they’ll receive. They then execute the swap with one click, receiving the output token in their wallet immediately. <br />
 <br />
-While swapping you will be able to see the tipology of the your tokens (ERC20 or ITEMs) and behave accordingy. <br />
-ERC20 Tokens will have a higher swap fee price due to the need of wrapping them into ITEMs. As stated in the Protocol Overview, every pair in Materia is actually composed of an ITEM ERC20 Interoperable and WUSD.<br /><br />
-
+While most Decentralized Exchanges allow one swap per transaction, Materia takes things futher.  On Materia Dex users can "Batch Swap'.  Users will be able to swap from one token into numerous or visa versa; swap numerous tokens into one single token, in one transaction. <br />
+For example, if User A wanted to swap Dai to USDC and Tether to USDC, they previously would need to go to Uniswap and do two seperate swaps.  This costs User A time and money.<br /><br />
+With Materia Dex, User A can swap both Dai and Tether to USDC in one single transaction.  Not only is this quicker, but it is more efficient as well.  Gas costs come down.
+With Batch Swapping users will be able to choose where they route their trade.  The current options are Uniswap, Sushiswap, and of course Materia Dex.  <br /><br />
+Finally, Materia Dex also utilizes the EthItem Standard.  This allows seemless interoperability between various token standards.  If users wish, they can swap ERC-20 tokens with ERC-721 or ERC-1155 tokens.<br /><br />
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
