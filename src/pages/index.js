@@ -438,7 +438,7 @@ const ProductsSection = props => {
       <StyledSectionTitle>Services</StyledSectionTitle>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
-          href="{'https://ethitem.com/'}"
+          href={'https://ethitem.com/'}
           title={'Swap'}
           desc={'Swap between any two supported token through an automatic wrap into the ethitem standard'}
           backgroundColor={'#377e9a'}
