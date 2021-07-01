@@ -438,35 +438,35 @@ const ProductsSection = props => {
       <StyledSectionTitle>Services</StyledSectionTitle>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
-          href={'https://ethitem.com/'}
+          href={'https://materia.exchange/'}
           title={'Swap'}
           desc={'Swap between any two supported token through an automatic wrap into the ethitem standard'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />
         <MiniCard
-          href="#"
+          href={'https://materia.exchange/'}
           title={'Pool'}
           desc={'All the liquidity is available through a bridge token (WUSD) and an Item. Materia is the very first dollar based DEX'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />
         <MiniCard
-          href="#"
+          href={'https://materia.exchange/'}
           title={'Liquidity Mining'}
           desc={'The incentive to liquidity providers to earn fees and governance tokens by providing liquidity'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />
         <MiniCard
-          href="#"
+          href={'https://materia.exchange/'}
           title={'Exping (coming soon)'}
           desc={'Why farm when you can exp? News will be available very soon…'}
           backgroundColor={'#377e9a'}
           color={'white'}
         />
         <MiniCard
-          href="#"
+          href={'https://materia.exchange/'}
           title={'Microservices'}
           desc={'Take advantage of DFOHub microservices architecture'}
           backgroundColor={'#377e9a'}
