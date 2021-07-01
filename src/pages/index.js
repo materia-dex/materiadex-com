@@ -381,10 +381,10 @@ const SummarySection = props => {
   return (
     <StyledBodySubText>
       <h1>
-      By implementing the new EthItem protocol, <b>Materia</b> can reduce some of the problems that plague DEXs by breaking into the world of gamification and NFT exchange.
+      By implementing new technology, <b>Materia</b> enables new possibilites such as <b>Batchswapping</b> transactions and seemless interaction between various Erc token standards.
           </h1>
       <p>
-        Materia’s token <b>GIL</b> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any external control.
+       Materia’s token <b>GIL</b> is the backbone of the initiative. Token holders have full access to batchswapping as well as control over governance.
           </p>
       <p>
         Through GIL, the entire community can actively participate in its evolution, propose new features and vote for their implementation.
@@ -406,8 +406,8 @@ const InfoSection = props => {
     <>
       <StyledSectionTitle>The Materia protocol</StyledSectionTitle>
       <StyledBodySubText>
-        Materia is a DEX based on a multi protocol called ETHItem. Its most important feature is the tokens "harmonizing" with ERC20, ERC721 and ERC1155 standards enabling their total interoperability.<br />
-              Each unique NFT ID can now become a source of an ERC20.
+        Materia is a DEX with novel capabilities. Batchswapping allows users to swap multiple tokens in one single transaction saving the user gas and time.
+    It also allows "harmonizing" with ERC20, ERC721 and ERC1155 standards enabling their total interoperability through the EthItem Standard.<br />
         Check out the <b><Link to="/docs/materia">documentation</Link></b>.
       </StyledBodySubText>
       <StyledItemRow>
@@ -418,7 +418,7 @@ const InfoSection = props => {
 
       <StyledSectionTitle>US Dollar based DEX</StyledSectionTitle>
       <StyledBodySubText>
-      Materia uses WUSD as collateral. By decentralizing the distribution of its collateral and being able to balance its stability, WUSD will not suffer any single point of failure; it will only fail if the entire stablecoin industry collapses.      </StyledBodySubText>
+      Materia uses WUSD as collateral. WUSD is a decentralized stablecoin that offers extreme stability with no single point of failure.      </StyledBodySubText>
       <StyledItemRow>
         <StyledExternalLink href={'https://covenants.eth.link/#/wusd'} target="_blank">
           <StyledProductImage fadeIn={false} fluid={props.data.usdImage.childImageSharp.fluid} />
@@ -427,7 +427,7 @@ const InfoSection = props => {
 
       <StyledSectionTitle>Growing community</StyledSectionTitle>
       <StyledBodySubText>
-      Materia itself sets ambitious challenges to make user needs at the center of the R&D process, simplify their experience, and make them the protagonist of governance.      </StyledBodySubText>
+      Community is at the center of Materia.  We base our R&D initiatives around simplifying their experience.  The community will be in full control of the project via governance.      </StyledBodySubText>
     </>
   )
 }
@@ -438,7 +438,7 @@ const ProductsSection = props => {
       <StyledSectionTitle>Services</StyledSectionTitle>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
-          href="#"
+          href="{'https://ethitem.com/'}"
           title={'Swap'}
           desc={'Swap between any two supported token through an automatic wrap into the ethitem standard'}
           backgroundColor={'#377e9a'}
