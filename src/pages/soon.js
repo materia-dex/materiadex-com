@@ -233,9 +233,9 @@ const About = props => {
             <Title>Coming Soon</Title>
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
               <ParagraphContent>
-                This feature is still under development from our best engineering team.<br />
-                We are committed to open source software and building on the decentralized web giving the community the true power to chose.<br />
-                You can contribute to Materia too! Check out our social profiles to get started!<br />
+               This feature is still under development from our world-class engineering team.<br />
+               Exping will feature a gamification of an incentive program.  We will release further details in the near future but are excited to share our progress with the community. <br />
+               You can contribute to Materia too! Check out our social profiles to get started!<br />
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
