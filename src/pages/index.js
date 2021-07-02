@@ -381,20 +381,19 @@ const SummarySection = props => {
   return (
     <StyledBodySubText>
       <h1>
-      By implementing new technology, <b>Materia</b> enables new possibilites such as <b>Batchswapping</b> transactions and seemless interaction between various Erc token standards.
+      By implementing new technology, <b>Materia</b> enables possibilites such as <b>Batchswapping</b> transactions and seemless interaction between various ERC token standards.
           </h1>
       <p>
        Materia’s token <b>GIL</b> is the backbone of the initiative. Token holders have full access to batchswapping as well as control over governance.
           </p>
       <p>
-        Through GIL, the entire community can actively participate in its evolution, propose new features and vote for their implementation.
+        Through GIL, the entire community can actively participate in its evolution, propose new features, and vote for their implementation.
           </p>
       <div class="divider"></div>
       <div class="homeSloganContainer">
         <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
         <p>
           <span>Materia</span>
-          <span>REAL DECENTRALIZED EXCHANGE</span>
         </p>
       </div>
     </StyledBodySubText>
@@ -406,8 +405,9 @@ const InfoSection = props => {
     <>
       <StyledSectionTitle>The Materia protocol</StyledSectionTitle>
       <StyledBodySubText>
-        Materia is a DEX with novel capabilities. Batchswapping allows users to swap multiple tokens in one single transaction saving the user gas and time.
-    It also allows "harmonizing" with ERC20, ERC721 and ERC1155 standards enabling their total interoperability through the EthItem Standard.<br />
+        Materia DEX has novel capabilities other exchanges do not offer. Batchswapping allows users to swap multiple tokens in one single transaction saving the user gas and time.
+    It also allows seemless compatability with ERC20, ERC721 and ERC1155 standards enabling their total interoperability. <br />
+    Swap between ERC-20, ERC-721, and ERC-1155 quickly and efficiently within the Materia Dex<br />
         Check out the <b><Link to="/docs/materia">documentation</Link></b>.
       </StyledBodySubText>
       <StyledItemRow>
@@ -427,7 +427,8 @@ const InfoSection = props => {
 
       <StyledSectionTitle>Growing community</StyledSectionTitle>
       <StyledBodySubText>
-      Community is at the center of Materia.  We base our R&D initiatives around simplifying their experience.  The community will be in full control of the project via governance.      </StyledBodySubText>
+      Community is at the center of Materia.  We base our R&D initiatives around simplifying their experience.  The community will be in full control of the project via governance. The team is always
+        available on Discord and Telegram.  We encourage you to join and meet the community.</StyledBodySubText>
     </>
   )
 }
