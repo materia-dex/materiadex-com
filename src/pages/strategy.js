@@ -516,17 +516,21 @@ const About = props => {
             <Title style={{ width: '100%' }}>Strategy</Title>
             <StyleSectionFull>
               <ParagraphContent>
-                The decentralized finance industry requires decentralized liquidity. We expect the DeFi space to keep growing by leaps and bounds in the future. Fueling that growth will require more efficient, scalable, and innovative incentives. Moreover, protocols, dApps, and user-interactions must evolve to become more intuitive and user friendly.              </ParagraphContent>
+                As DeFi grows from a niche cryptocurrency market into a mature financial ecosystem, we expect a need for higher efficiency while also scaling up to support billions of new users.               </ParagraphContent>
               <ParagraphContent>
-                Our aim is to explore complex liquidity provision interactions (like incentivized liquidity, liquidity as collateral, and other experimental strategies like multi-blockchain support), always keeping in mind that we need to aim for inclusion in order to be resilient and to keep evolving.              </ParagraphContent>
+                The world is changing quickly as new populations have access to a financial system for the first time.  Materia Dex is positioning itself to cater to the needs for all DeFi users.
+             </ParagraphContent>
+
               <ParagraphContent>
-                Materia will provide tools and technologies to allow both Distributed Flexible Organization (DFO) and Decentralized Autonomous Organization (DAO) to get started and to implement their strategies, leveraging services for Initial Liquidity Offering, staking, pooling and time-locked funds release.              </ParagraphContent>
+                Batch Swap is our most recent initiative.  By allowing users to group multiple swaps in one single transaction we are saving users money and time.  The increased efficiency offered by Batch Swap lowers gas fees substantially for the users.  This allows Ethereum to be more inclusive to users of all sizes.            </ParagraphContent>
               <ParagraphContent>
-                The R&amp;D activities will focus on gamification strategies for better engaging people and gathering liquidity, and on the evolution of current protocols, to include every kind of tokenized digital asset into the game.              </ParagraphContent>
+                Many users around the world simply cannot afford to use the Ethereum Mainnet when each transaction costs a few dollars.  In combination with other scaling solutions, Batch Swap will once again allow users of all sizes to utilize the Ethereum Mainnet in a cost efficient manner.
+                  </ParagraphContent>
               <ParagraphContent>
-                To attract the required liquidity, for the first 45 days and on a daily base, shares of GIL will be assigned to liquidity providers of Materia. The distribution of GIL is a method of both fairly issuing governance tokens and incentivizing liquidity. In the early stages, Materia will keep following a constant product formula, forked by UniSwap, where the product of the quantities of two tokens remain the same before and after a swap is performed. The price slippage depends on the ratio and quantity of tokens in the pool.              </ParagraphContent>
+               Materia Dex is a fully permissionless and open-source exchange that allows for anyone to list any token they like.  Furthermore, we are exploring complex liquidity interactions such as liquidity as collateral, incentivized liquidity, and multi-blockchain support.     </ParagraphContent>
               <ParagraphContent>
-                We chose WUSD as a bridge token of our protocol. It is a super-stable coin that achieves its stability by collateralizing other stablecoins. Having 50% of the entire DEX liquidity collateralized with WUSD, allows us to achieve a superior level of price stability. We will be focusing our R&amp;D on the evolution of our protocol toward impermanent loss reduction and the enhancement of swaps among different standards and protocols.              </ParagraphContent>
+               By utilizing WUSD as a bridge token, Materia Dex achieves a superior level of price stability while also lower slippage and increasing the efficiency of swaps.
+          </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
 
@@ -534,11 +538,12 @@ const About = props => {
             <Title style={{ width: '100%' }}>Manifesto</Title>
             <StyleSectionLeft>
               <ParagraphContent>
-                Our aim is to lead this project as an R&amp;D initiative, we plan to gradually loose control of it over time.              </ParagraphContent>
+                Materia is a research and development project being built for the Ethereum community as a whole.  Over time the project will be handed off to the Materia community until we reach a 100% decentralized state.
+                    </ParagraphContent>
               <ParagraphContent>
-                By starting from several state of the art protocols, we want to contribute to the DEX evolution from both a technological and UX perspective, by exploring the frontiers of liquidity provisioning, implementing strategies, and protocols.              </ParagraphContent>
-              <ParagraphContent>
-                We believe in openness. Our work will be committed on Github and we encourage people to join the project and contribute to its evolution and success.              </ParagraphContent>
+              Our goal is to provide users with the best dex experience possible.  We believe users should have the choice between singular swaps and Batch Swaps, giving the user optionality in regards to how they manage their positions.  We want users to not only have the cheapest and most efficient dex experience possible, we also want users to have fun doing it.  User Interface is one of the areas Materia will pioneer.  DeFi will have billions of new users over the next few years.  The UI for a dex should be logical and intuitive as well as aesthetically pleasing.
+                   <ParagraphContent>
+             We believe in openness. Our work will be committed on Github and we encourage people to join the project and contribute to its evolution and success.           </ParagraphContent>
             </StyleSectionLeft>
             <StyledImgSectionRight>
               <StyledImage fadeIn={false} fluid={data.manifestoImage.childImageSharp.fluid} />
@@ -571,7 +576,12 @@ const About = props => {
             </StyledImgSectionLeft>
             <StyleSectionRight>
               <ParagraphContent>
-                Materia smart contracts and DeFi operating models are audited by our security team. We have also implemented several more features, leveraging DFO capabilties in order to use microservices on Ethereum. With a DFO as a base layer, we can develop every function step by step, then test and fix, without compromising the entire dApp. We invite the entire community and professionals to audit our contracts. We will a reward to community members that will help us to improve and keep secure our contracts which are available at https://github.com/materia-dex/ and are ready for any audit.</ParagraphContent>
+                 Materia smart contracts and DeFi operating models are audited by our security team.  We also utilize DFO capabilities which allow us to use microservices on Ethereum.  This means Materia has the ability to develop each function in a logical manner, test each function, fix it if need be, and deploy the contracts in a step-by-step manner so as not to jeopardize the rest of the dapp.
+</ParagraphContent>
+ <ParagraphContent>
+           We invite the entire community and professionals to audit our contracts. We will reward any white hat hackers who audit our contracts and find a bug.  Contracts found here:
+            https://github.com/materia-dex/ and are ready for any audit.
+  <ParagraphContent>
             </StyleSectionRight>
           </StyledSectionFlex>
 
