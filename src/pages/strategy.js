@@ -523,12 +523,12 @@ const About = props => {
 
               <ParagraphContent>
                 Batch Swap is our most recent initiative.  By allowing users to group multiple swaps in one single transaction we are saving users money and time.  The increased efficiency lowers gas fees substantially for the users.  This allows Ethereum to be more inclusive to users of all sizes.            </ParagraphContent>
-        
-                This is the first step in our growing list of features.  All of which will be aimed at giving users an efficient, logical, and intuitive DeFi experience.
-       
+
+              This is the first step in our growing list of features.  All of which will be aimed at giving users an efficient, logical, and intuitive DeFi experience.
+
               <ParagraphContent>
-                Materia Dex is a fully permissionless and open-source exchange that allows for anyone to list any token they like.  Furthermore, we are exploring complex liquidity interactions such as liquidity as collateral, incentivized liquidity, and multi-blockchain support.    
-            
+                Materia Dex is a fully permissionless and open-source exchange that allows for anyone to list any token they like.  Furthermore, we are exploring complex liquidity interactions such as liquidity as collateral, incentivized liquidity, and multi-blockchain support.
+
                 By utilizing WUSD as a bridge token, Materia Dex achieves a superior level of price stability while also lower slippage and increasing the efficiency of swaps.
               </ParagraphContent>
             </StyleSectionFull>
@@ -541,81 +541,62 @@ const About = props => {
                 Materia is a research and development project being built for the Ethereum community as a whole.  Over time the project will be handed off to the Materia community until we reach a 100% decentralized state.
               </ParagraphContent>
               <ParagraphContent>
-                  Our goal is to give users the best DeFi experience possible.  Swap one or multiple tokens.  Route trades through Materia or any other Dex.  Choose Eth, BSC, or any other chain of your liking.  Swap an ERC-20 token for an NFT in a permissionless manner.
-                 Materia is in the process of building out these features.  When completed, Materia will be a platform where users can manage their token investments and NFT portfolio, across multiple chains, in one singular location.
-                  </ParagraphContent>
-                <ParagraphContent>
-                  We believe in openness. Our work will be committed on Github and we encourage people to join the project and contribute to its evolution and success.           </ParagraphContent>
+                Our goal is to give users the best DeFi experience possible.  Swap one or multiple tokens.  Route trades through Materia or any other Dex.  Choose Eth, BSC, or any other chain of your liking.  Swap an ERC-20 token for an NFT in a permissionless manner.
+                Materia is in the process of building out these features.  When completed, Materia will be a platform where users can manage their token investments and NFT portfolio, across multiple chains, in one singular location.
+              </ParagraphContent>
+              <ParagraphContent>
+                We believe in openness. Our work will be committed on Github and we encourage people to join the project and contribute to its evolution and success.
               </ParagraphContent>
             </StyleSectionLeft>
           </StyledSectionFlex>
 
-          {/* <StyledSectionFlex id="Distribution">
-            <Title style={{ width: '100%' }}>GIL Distribution</Title>
-            <StyleSectionLeft>
-              <p>
-                According with our strategy, we will generate 100.000.000 $gil. All the supply will be distributed as follow:
-              </p>
-              <StyledTableContainer>
-                <div class="dataTableContainer">
-                  <MUIDataTable data={tableData} columns={tableColumns} options={tableOptions}/>
-                </div>
-              </StyledTableContainer>
-            </StyleSectionLeft>
-            <StyledImgSectionRight style={{ "display": "flex", "margin": "0 auto", "justifyContent": "center" }}>
-              <StyledChartContainer>
-                <Pie data={chartData} options={{ maintainAspectRatio: false, height: 10 }} />
-              </StyledChartContainer>
-            </StyledImgSectionRight>
-          </StyledSectionFlex> */}
+        <StyledSectionFlex id="Security" style={{ "marginBottom": '2.5rem' }}>
+          <Title style={{ width: '100%' }}>Security</Title>
 
-          <StyledSectionFlex id="Security" style={{ "marginBottom": '2.5rem' }}>
-            <Title style={{ width: '100%' }}>Security</Title>
-           
-            <StyleSectionRight>
-              <ParagraphContent>
-                Materia smart contracts and DeFi operating models are audited by our security team.  We also utilize DFO capabilities which allow us to use microservices on Ethereum.  This means Materia has the ability to develop each function, test each function, fix it if need be, and deploy the contracts in a step-by-step manner so as not to jeopardize the rest of the dapp.
-              </ParagraphContent>
-              <ParagraphContent>
-                We invite the entire community and professionals to audit our contracts. We will reward any white hat hackers who audit our contracts and find a bug.  Contracts found here:
-                https://github.com/materia-dex/ .
-              </ParagraphContent>
-            </StyleSectionRight>
-          </StyledSectionFlex>
+          <StyleSectionRight>
+            <ParagraphContent>
+              Materia smart contracts and DeFi operating models are audited by our security team.  We also utilize DFO capabilities which allow us to use microservices on Ethereum.  This means Materia has the ability to develop each function, test each function, fix it if need be, and deploy the contracts in a step-by-step manner so as not to jeopardize the rest of the dapp.
+            </ParagraphContent>
+            <ParagraphContent>
+              We invite the entire community and professionals to audit our contracts. We will reward any white hat hackers who audit our contracts and find a bug.  Contracts found here:
+              https://github.com/materia-dex/ .
+            </ParagraphContent>
+          </StyleSectionRight>
+        </StyledSectionFlex>
 
-          <StyledSectionFlex id="Voting">
-            <Title style={{ width: '100%' }}>Voting</Title>
-            <StyleSectionRight style={{ "margin": "1rem 0rem 1rem 0rem" }}>
-              <ParagraphContent>
-                We strongly believe that for supporting and evolving any protocol in this challenging and fast-changing DeFi world, it is required to build a fluid, dynamic organization, free to evolve according to user needs and leveraging everyone's contribution.              </ParagraphContent>
-              <StyledQuote style={{ "maxWidth": "450px" }}>
-                <i>"The market is becoming more mature, and both voting, and its discussion are an important step towards the decentralization that is constantly brought up"</i><br />
-                <b>Alexander Kerya, Chief Product Owner of Everstake Alexandr Kerya</b>
-              </StyledQuote>
-            </StyleSectionRight>
-            <StyleSectionLeft>
-              <ParagraphContent>
-                We want to build and develop a solid community involved in democratic decisions, that guarantee the highest degree of legitimacy in the outcome of that decision.                <br /><br />
-              </ParagraphContent>
-              <StyledQuote style={{ "maxWidth": "450px", height: "176px" }}>
-                <i>"The fundamental problem of blockchain voting today or blockchain governance today is that 100 percent of it is plutocratic."</i><br />
-                <b>Santi Siri founder of Democracy Earth ($sovereign)</b>
-              </StyledQuote>
-            </StyleSectionLeft>
-            <StyleSectionFull>
-              <ParagraphContent style={{ "paddingTop": "0px" }}>
-                By deciding the outcome of the election, whoever has the largest amount of tokens or the largest economic weight can make the influence of others irrelevant. Any malicious network attacker could buy up large amount of tokens, vote in the worst interests of the application and subsequently sell all their holdings immediately thereafter without penalty.              </ParagraphContent>
-              <ParagraphContent>
-                For this reason we are keeping a large amount of GIL for the first stages and planning to progressively lose control over time, after securing the release of the project.              </ParagraphContent>
-              <ParagraphContent>
-                We are also studying several mechanisms to guarantee greater voting power to those token holders who have staked their assets on the network for a long period of time. The aim is to incentivize people to think and participate long-term.              </ParagraphContent>
-            </StyleSectionFull>
-          </StyledSectionFlex>
+        <StyledSectionFlex id="Voting">
+          <Title style={{ width: '100%' }}>Voting</Title>
+          <StyleSectionRight style={{ "margin": "1rem 0rem 1rem 0rem" }}>
+            <ParagraphContent>
+              We strongly believe that for supporting and evolving any protocol in this challenging and fast-changing DeFi world, it is required to build a fluid, dynamic organization, free to evolve according to user needs and leveraging everyone's contribution.              </ParagraphContent>
+            <StyledQuote style={{ "maxWidth": "450px" }}>
+              <i>"The market is becoming more mature, and both voting, and its discussion are an important step towards the decentralization that is constantly brought up"</i><br />
+              <b>Alexander Kerya, Chief Product Owner of Everstake Alexandr Kerya</b>
+            </StyledQuote>
+          </StyleSectionRight>
+          <StyleSectionLeft>
+            <ParagraphContent>
+              We want to build and develop a solid community involved in democratic decisions, that guarantee the highest degree of legitimacy in the outcome of that decision.                <br /><br />
+            </ParagraphContent>
+            <StyledQuote style={{ "maxWidth": "450px", height: "176px" }}>
+              <i>"The fundamental problem of blockchain voting today or blockchain governance today is that 100 percent of it is plutocratic."</i><br />
+              <b>Santi Siri founder of Democracy Earth ($sovereign)</b>
+            </StyledQuote>
+          </StyleSectionLeft>
+          <StyleSectionFull>
+            <ParagraphContent style={{ "paddingTop": "0px" }}>
+              By deciding the outcome of the election, whoever has the largest amount of tokens or the largest economic weight can make the influence of others irrelevant. Any malicious network attacker could buy up large amount of tokens, vote in the worst interests of the application and subsequently sell all their holdings immediately thereafter without penalty.              </ParagraphContent>
+            <ParagraphContent>
+              For this reason we are keeping a large amount of GIL for the first stages and planning to progressively lose control over time, after securing the release of the project.              </ParagraphContent>
+            <ParagraphContent>
+              We are also studying several mechanisms to guarantee greater voting power to those token holders who have staked their assets on the network for a long period of time. The aim is to incentivize people to think and participate long-term.              </ParagraphContent>
+          </StyleSectionFull>
+        </StyledSectionFlex>
 
 
         </span>
       </StyledAbout>
-    </Layout>
+    </Layout >
   )
 }
 
