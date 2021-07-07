@@ -519,18 +519,18 @@ const About = props => {
                 As DeFi grows from a niche cryptocurrency market into a mature financial ecosystem, we expect a need for higher efficiency while also scaling up to support billions of new users.               </ParagraphContent>
               <ParagraphContent>
                 The world is changing quickly as new populations have access to a financial system for the first time.  Materia Dex is positioning itself to cater to the needs for all DeFi users.
-             </ParagraphContent>
+              </ParagraphContent>
 
               <ParagraphContent>
                 Batch Swap is our most recent initiative.  By allowing users to group multiple swaps in one single transaction we are saving users money and time.  The increased efficiency offered by Batch Swap lowers gas fees substantially for the users.  This allows Ethereum to be more inclusive to users of all sizes.            </ParagraphContent>
               <ParagraphContent>
                 Many users around the world simply cannot afford to use the Ethereum Mainnet when each transaction costs a few dollars.  In combination with other scaling solutions, Batch Swap will once again allow users of all sizes to utilize the Ethereum Mainnet in a cost efficient manner.
-                  </ParagraphContent>
+              </ParagraphContent>
               <ParagraphContent>
-               Materia Dex is a fully permissionless and open-source exchange that allows for anyone to list any token they like.  Furthermore, we are exploring complex liquidity interactions such as liquidity as collateral, incentivized liquidity, and multi-blockchain support.     </ParagraphContent>
+                Materia Dex is a fully permissionless and open-source exchange that allows for anyone to list any token they like.  Furthermore, we are exploring complex liquidity interactions such as liquidity as collateral, incentivized liquidity, and multi-blockchain support.     </ParagraphContent>
               <ParagraphContent>
-               By utilizing WUSD as a bridge token, Materia Dex achieves a superior level of price stability while also lower slippage and increasing the efficiency of swaps.
-          </ParagraphContent>
+                By utilizing WUSD as a bridge token, Materia Dex achieves a superior level of price stability while also lower slippage and increasing the efficiency of swaps.
+              </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
 
@@ -539,11 +539,12 @@ const About = props => {
             <StyleSectionLeft>
               <ParagraphContent>
                 Materia is a research and development project being built for the Ethereum community as a whole.  Over time the project will be handed off to the Materia community until we reach a 100% decentralized state.
-                    </ParagraphContent>
+              </ParagraphContent>
               <ParagraphContent>
-              Our goal is to provide users with the best dex experience possible.  We believe users should have the choice between singular swaps and Batch Swaps, giving the user optionality in regards to how they manage their positions.  We want users to not only have the cheapest and most efficient dex experience possible, we also want users to have fun doing it.  User Interface is one of the areas Materia will pioneer.  DeFi will have billions of new users over the next few years.  The UI for a dex should be logical and intuitive as well as aesthetically pleasing.
-                   <ParagraphContent>
-             We believe in openness. Our work will be committed on Github and we encourage people to join the project and contribute to its evolution and success.           </ParagraphContent>
+                Our goal is to provide users with the best dex experience possible.  We believe users should have the choice between singular swaps and Batch Swaps, giving the user optionality in regards to how they manage their positions.  We want users to not only have the cheapest and most efficient dex experience possible, we also want users to have fun doing it.  User Interface is one of the areas Materia will pioneer.  DeFi will have billions of new users over the next few years.  The UI for a dex should be logical and intuitive as well as aesthetically pleasing.
+                <ParagraphContent>
+                  We believe in openness. Our work will be committed on Github and we encourage people to join the project and contribute to its evolution and success.           </ParagraphContent>
+              </ParagraphContent>
             </StyleSectionLeft>
             <StyledImgSectionRight>
               <StyledImage fadeIn={false} fluid={data.manifestoImage.childImageSharp.fluid} />
@@ -576,12 +577,12 @@ const About = props => {
             </StyledImgSectionLeft>
             <StyleSectionRight>
               <ParagraphContent>
-                 Materia smart contracts and DeFi operating models are audited by our security team.  We also utilize DFO capabilities which allow us to use microservices on Ethereum.  This means Materia has the ability to develop each function in a logical manner, test each function, fix it if need be, and deploy the contracts in a step-by-step manner so as not to jeopardize the rest of the dapp.
-</ParagraphContent>
- <ParagraphContent>
-           We invite the entire community and professionals to audit our contracts. We will reward any white hat hackers who audit our contracts and find a bug.  Contracts found here:
-            https://github.com/materia-dex/ and are ready for any audit.
-  <ParagraphContent>
+                Materia smart contracts and DeFi operating models are audited by our security team.  We also utilize DFO capabilities which allow us to use microservices on Ethereum.  This means Materia has the ability to develop each function in a logical manner, test each function, fix it if need be, and deploy the contracts in a step-by-step manner so as not to jeopardize the rest of the dapp.
+              </ParagraphContent>
+              <ParagraphContent>
+                We invite the entire community and professionals to audit our contracts. We will reward any white hat hackers who audit our contracts and find a bug.  Contracts found here:
+                https://github.com/materia-dex/ and are ready for any audit.
+              </ParagraphContent>
             </StyleSectionRight>
           </StyledSectionFlex>
 
