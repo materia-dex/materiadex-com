@@ -253,8 +253,11 @@ const About = props => {
                 By building on top of the DFOhub protocol, we not only have immediate decentralized governance from the start, we also have the EthItem standard which we make use of.  By combining the EthItem standard with a Marketplace, new and novel
                 avenues of compatability are open to us with ERC-20, ERC-721, and the ERC-1155 token standards all seemlessly working together.
                   </ParagraphContent>
+                   <ParagraphContent>
+                  
                 Materia Dex is only just beginning but our vision is long term.  A global team of developers, managers, and community members have come together to build something truly unique for the entire Ethereum community.
-                <ParagraphContent>
+                </ParagraphContent>
+                  <ParagraphContent>
                   <ParagraphContentEvidence>Materia's token $gil</ParagraphContentEvidence> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
                 </ParagraphContent>
                 <ParagraphContent>
