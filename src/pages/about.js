@@ -240,11 +240,19 @@ const About = props => {
                 <ParagraphContentEvidence>Materia</ParagraphContentEvidence> is a decentralized exchange focused on providing users with novel capabilities.  We proudly released the Materia Dex after the idea came to us in mid 2020.
                 Our next initiative was called Batch Swap.  Released in July 2021 batchswap gave users the ability to swap from one token into many or visa versa, in one single transaction.
                 This was a first for the Ethereum mainnet.  Never before have users had the ability to click one button and swap into or out of numerous positions at once.  Not only is it faster, but it saves gas as well.
-                Users will actually save money by batch swapping.  Next, our team of developers set their eyes on Exping, a gameified version on incentivizing liquidity and use of Materia. Being a small, unknown project amongst the thousands
+                Users will actually save money by batch swapping. 
+                </ParagraphContent>
+
+               <ParagraphContent>
+                Next, our team of developers set their eyes on Exping, a gameified version on incentivizing liquidity and use of Materia. Being a small, unknown project amongst the thousands
                 of other projects out there, we needed to bootstrap the platform and show users Materia Dex.  As we look towards the future we have our eyes set on an NFT Marketplace that will bring together everything we have done so far.
+                
+                  </ParagraphContent>
+
+                  <ParagraphContent>
                 By building on top of the DFOhub protocol, we not only have immediate decentralized governance from the start, we also have the EthItem standard which we make use of.  By combining the EthItem standard with a Marketplace, new and novel
                 avenues of compatability are open to us with ERC-20, ERC-721, and the ERC-1155 token standards all seemlessly working together.
-
+                  </ParagraphContent>
                 Materia Dex is only just beginning but our vision is long term.  A global team of developers, managers, and community members have come together to build something truly unique for the entire Ethereum community.
                 <ParagraphContent>
                   <ParagraphContentEvidence>Materia's token $gil</ParagraphContentEvidence> is the backbone of the entire initiative. Token holders have full ownership of the project and its future, without any kind of external control.
