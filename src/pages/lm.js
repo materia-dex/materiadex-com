@@ -233,9 +233,11 @@ const About = props => {
             <Title>Liquidity Mining</Title>
             <StyleSectionFull style={{margin: '1rem 0rem 0rem 0rem' }}>
               <ParagraphContent>
-              Anyone can become a liquidity provider by adding liquidity to our protocol. <br />
-              An initial liquidity mining program will go live immediately after the mainnet release.   <br /> The initial program will run for 45 days and target the first five pairs on Materia.  <br />
-              To better understand the liquidity mining mechaninsm feel free to read our Medium Article about it.
+              Our liquidity mining program has come to an end. <br />
+              After two seaons of incentivized liquidity we have succesfully seeded Materia Dex with critical liquidity.<br />
+              As a result of LM Season 1 + 2 we now have nearly 4 million Gil/iGil in liquidity with an additional 250,000$ WUSD <br />
+              This will provide Materia with a solid footing as we go into the Batch Swap era.  We expect users to route many Batch Swaps through Uniswap and Sushiswap to start.  Over time, as users come to Maeria to utilize Batch Swap, we expect liquidity to grow organically on Materia.<br />
+              Anyone can provide liquidity on Materia and we encourage you to do so!  Please check out our Exping page for more information on future liquidity incentivization.  
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
