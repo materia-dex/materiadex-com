@@ -245,7 +245,7 @@ const About = props => {
 
                <ParagraphContent>
                 Next, our team of developers set their eyes on Exping, a gameified version on incentivizing liquidity and use of Materia. Being a small, unknown project amongst the thousands
-                of other projects out there, we needed to bootstrap the platform and show users Materia Dex.  As we look towards the future we have our eyes set on an NFT Marketplace that will bring together everything we have done so far. <br />
+                of other projects out there, we needed to bootstrap the platform and show users Materia Dex.  <br />
                 
                   </ParagraphContent>
 
