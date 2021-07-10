@@ -240,12 +240,12 @@ const About = props => {
                 <ParagraphContentEvidence>Materia</ParagraphContentEvidence> is a decentralized exchange focused on providing users with novel capabilities.  We proudly released the Materia Dex after the idea came to us in mid 2020.
                 Our next initiative was called Batch Swap.  Released in July 2021 batchswap gave users the ability to swap from one token into many or visa versa, in one single transaction.
                 This was a first for the Ethereum mainnet.  Never before have users had the ability to click one button and swap into or out of numerous positions at once.  Not only is it faster, but it saves gas as well.
-                Users will actually save money by batch swapping. 
+                Users will actually save money by batch swapping. <br />
                 </ParagraphContent>
 
                <ParagraphContent>
                 Next, our team of developers set their eyes on Exping, a gameified version on incentivizing liquidity and use of Materia. Being a small, unknown project amongst the thousands
-                of other projects out there, we needed to bootstrap the platform and show users Materia Dex.  As we look towards the future we have our eyes set on an NFT Marketplace that will bring together everything we have done so far.
+                of other projects out there, we needed to bootstrap the platform and show users Materia Dex.  As we look towards the future we have our eyes set on an NFT Marketplace that will bring together everything we have done so far. <br />
                 
                   </ParagraphContent>
 
