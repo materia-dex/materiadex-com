@@ -262,7 +262,7 @@ const About = props => {
                 </ParagraphContent>
                 <ParagraphContent>
                   Through $gil, the entire community can actively participate in its evolution by proposing new features and voting for their implementation.
-                </ParagraphContent>
+            
               </ParagraphContent>
             </StyleSectionFull>
           </StyledSectionFlex>
