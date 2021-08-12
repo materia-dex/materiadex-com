@@ -381,7 +381,7 @@ const SummarySection = props => {
   return (
     <StyledBodySubText>
       <h1>
-      By implementing new technology, <b>Materia</b> enables possibilites such as <b>Batchswapping</b> transactions and seemless interaction between various ERC token standards.
+      By implementing new technology, <b>Materia</b> enables possibilities such as <b>Batchswapping</b> transactions and seamless interaction between various ERC token standards.
           </h1>
       <p>
        Materia’s token <b>GIL</b> is the backbone of the initiative. Token holders have full access to batchswapping as well as control over governance.
