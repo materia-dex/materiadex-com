@@ -32,7 +32,6 @@ const menu = [
     sublinks: [
       { name: 'Strategy & Manifesto', link: '/strategy', enabled: true },
       { name: 'Incentives Strategy', link: '/incentives', enabled: false },
-      { name: 'Roadmap', link: '/map', enabled: false },
       {
         name: 'Medium articles',
         link: 'https://materiadex.medium.com/',

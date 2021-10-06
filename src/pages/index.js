@@ -398,7 +398,7 @@ const InfoSection = props => {
         A package deal is an order or transaction that contains a number of smaller exchange or transaction items that must be completed simultaneously, or not at all. Package deals allow traders to ensure specific prices or times to maturity for multiple assets.
       </StyledBodySubTextGrey>
       <StyledItemRow>
-        <StyledExternalLink href={'https://covenants.eth.link/#/wusd'} target="_blank">
+        <StyledExternalLink href={'https://materia.exchange'} target="_blank">
         {darkMode ? <StyledProductImage fadeIn={false} fluid={props.data.packageDeal.childImageSharp.fluid} /> : <StyledProductImage fadeIn={false} fluid={props.data.packageDealLight.childImageSharp.fluid} />}
         </StyledExternalLink>
       </StyledItemRow>
