@@ -42,10 +42,10 @@ const StyledProductImage = styled(Img)`
   background-color: none;
   border-radius: 16px;
   box-shadow: ${({ theme }) => theme.shadows.huge};
-  /* @media (max-width: 960px) {
-    min-width: 120px;
-    max-width: 120px;
-  } */
+  @media (max-width: 960px) {
+    min-width: 300px;
+    max-width: 300px;
+  } 
 `
 
 const StyledBodyTitle = styled.h1`
