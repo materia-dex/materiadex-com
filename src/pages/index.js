@@ -315,6 +315,16 @@ const StyledBodySubText = styled.h3`
   }
 `
 
+const StyledBodySubTextGrey = styled.h3`
+  color:#8f8f8f;
+  max-width: 960px;
+  text-align: center;
+  line-height: 160%;
+  @media (max-width: 640px) {
+    text-align: left;
+  }
+`
+
 const StyledItemRow = styled.nav`
   align-items: center;
   display: flex;
@@ -348,12 +358,12 @@ const SummarySection = props => {
       <h1>
         Power up Defi possibilities with batch swap technology!
       </h1>
-      <p>
+      <StyledBodySubTextGrey>
         Materia’s token <b>GIL</b> is the backbone of the initiative. Token holders have full access to batchswapping as well as control over governance.
-      </p>
-      <p>
+      </StyledBodySubTextGrey>
+      <StyledBodySubTextGrey>
         Through GIL, the entire community can actively participate in its evolution, propose new features, and vote for their implementation.
-      </p>
+        </StyledBodySubTextGrey>
       <div class="divider"></div>
       <div class="homeSloganContainer">
         <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
@@ -368,12 +378,12 @@ const InfoSection = props => {
   return (
     <>
       <StyledSectionTitle>The Materia protocol</StyledSectionTitle>
-      <StyledBodySubText>
+      <StyledBodySubTextGrey>
         Batchswapping allows users to swap multiple tokens in one single transaction saving the user gas and time.
         It also allows seemless compatability with ERC20, ERC721 and ERC1155 standards enabling their total interoperability. <br />
         Swap between ERC-20, ERC-721, and ERC-1155 quickly and efficiently within the Materia Dex<br />
         Check out the <b><Link to="/docs/materia">documentation</Link></b>.
-      </StyledBodySubText>
+      </StyledBodySubTextGrey>
       <StyledItemRow>
         <StyledExternalLink href={'https://materia.exchange/#/uni-batch-swap'} target="_blank">
           {darkMode ? <StyledProductImage fadeIn={false} fluid={props.data.batchswapImage.childImageSharp.fluid} /> : <StyledProductImage fadeIn={false} fluid={props.data.batchswapImageLight.childImageSharp.fluid} />}
@@ -384,9 +394,9 @@ const InfoSection = props => {
       </StyledBodySubText>
 
       <StyledSectionTitle>What Is a Package Deal?</StyledSectionTitle>
-      <StyledBodySubText>
+      <StyledBodySubTextGrey>
         A package deal is an order or transaction that contains a number of smaller exchange or transaction items that must be completed simultaneously, or not at all. Package deals allow traders to ensure specific prices or times to maturity for multiple assets.
-      </StyledBodySubText>
+      </StyledBodySubTextGrey>
       <StyledItemRow>
         <StyledExternalLink href={'https://covenants.eth.link/#/wusd'} target="_blank">
         {darkMode ? <StyledProductImage fadeIn={false} fluid={props.data.packageDeal.childImageSharp.fluid} /> : <StyledProductImage fadeIn={false} fluid={props.data.packageDealLight.childImageSharp.fluid} />}
@@ -394,9 +404,9 @@ const InfoSection = props => {
       </StyledItemRow>
 
       <StyledSectionTitle>Growing community</StyledSectionTitle>
-      <StyledBodySubText>
+      <StyledBodySubTextGrey>
         Community is at the center of Materia.  We base our R&D initiatives around simplifying their experience.  The community will be in full control of the project via governance. The team is always
-        available on Discord and Telegram.  We encourage you to join and meet the community.</StyledBodySubText>
+        available on Discord and Telegram.  We encourage you to join and meet the community.</StyledBodySubTextGrey>
     </>
   )
 }
