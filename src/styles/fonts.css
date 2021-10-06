@@ -1,3 +1,22 @@
+
+@font-face {
+	font-weight: 100;
+	font-family: "Circular Std";
+	src: 
+		local('Circular Std Medium'), 
+		url('fonts/CircularStd/4af43345ede3fd952823.woff') format("woff"), 
+		url('fonts/CircularStd/0dd92fa15d777f537028.woff2') format("woff2");
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: "Circular Std Black";
+	src: 
+		local('Circular Std Black'), 
+		url('fonts/CircularStd/fb3a34fc1c30b5120300.woff') format("woff"), 
+		url('fonts/CircularStd/9eac4707a63fe42da7d6.woff2') format("woff2");
+}
+
 @font-face {
     font-family: 'Cera Pro';
     src: url('fonts/cera/CeraPro-Italic.eot');

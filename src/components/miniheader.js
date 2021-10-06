@@ -29,8 +29,6 @@ const StyledHeader = styled.header`
   width: 100%;
   z-index: 3;
   height: 65px;
-  max-width: 100vw;
-  min-width: 100vw;
   @media (max-width: 960px) {
     flex-direction: column;
     padding: 1.5rem 2rem;
@@ -88,7 +86,7 @@ const StyledNavTitleWrapper = styled.nav`
 `
 
 const StyledNavTitle = styled(Link)`
-  font-family: 'Cera Pro', sans-serif;
+  font-family: 'Circular Std', sans-serif;
   color: ${({ theme }) => theme.colors.link};
   margin-left: 0.35rem;
   z-index: 999;

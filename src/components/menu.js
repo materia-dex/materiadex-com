@@ -58,19 +58,16 @@ const MenuFlyout = styled.span`
   left: -1rem;
   min-width: 220px;
   padding: 0.5rem 1rem;
-  /*border-radius: 20px;*/
-  border-radius: 5px;
+  border-radius: 16px;
   border-top: none;
-  /*background: linear-gradient(90deg, rgba(23,23,23, 0.9), rgba(40,43,48, 0.9)); 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1); */
-  background-color:#001835;
+  background: ${({ theme }) => theme.flyout};
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1); 
   transform: scale(0.98);
   transition: transform 0.25s ease;
   z-index: 4;
   p { padding: 0px; }
   :hover {
     transform: scale(1);
-    color:#b0deff;
   }
   @media (max-width: 960px) {
     font-size: 1rem;
@@ -88,16 +85,14 @@ const MenuFlyout = styled.span`
 const StyledMenuTitle = styled.span`
   text-decoration: none;
   margin: 0px;
-  font-weight: 400;
+  font-weight: 900;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.link};  
   padding: 0.25rem 1.5rem;
-  text-shadow: 0px 0px 6px 0px #b0deff;
   background-color: transparent;
   display:inline-block;
   transform: scale(0.98);
   transition: transform 0.25s ease;
-  font-weight: 400;  
   @media (max-width: 960px) { margin-bottom: 1rem; user-select: none; }
   :hover { transform: scale(1); text-shadow: 0px 0px 10px 0px #b0deff; color: #b0deff; }
   :hover a { color: #b0deff; }
@@ -134,7 +129,7 @@ const StyledExternalLink = styled.a`
 
 const StyledTitle = styled.p`
   display: block;
-  font-weight: ${({ active }) => active && 500};
+  font-weight: ${({ active }) => active && 900};
   border-radius: 8px;
   text-decoration: none;
   margin: 0;
@@ -147,7 +142,7 @@ const StyledTitle = styled.p`
 `
 const StyledMenuItemTitle = styled.span`
   display: block;
-  font-weight: ${({ active }) => active && 500};
+  font-weight: ${({ active }) => active && 900};
   border-radius: 8px;
   text-decoration: none;
   margin: 0;
@@ -257,3 +252,4 @@ export default function Menu(props) {
     </StyledMenu>
   )
 }
+

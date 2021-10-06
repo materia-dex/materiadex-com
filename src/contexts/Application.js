@@ -22,8 +22,7 @@ function useApplicationContext() {
 function reducer(state, { type, payload }) {
   switch (type) {
     case UPDATE_DARKMODE: {
-      // const { mode } = payload
-      const mode = DARK_MODE_OPTION.LIGHT
+      const { mode } = payload
       return {
         ...state,
         [DARKMODE_KEY]: mode
@@ -76,8 +75,8 @@ export function useDarkMode() {
 
   function toggleDarkMode() {
     if (darkModeOn) {
-      updateDarkMode(DARK_MODE_OPTION.DARK)
-      localStorage.setItem('color-mode', 'dark')
+      updateDarkMode(DARK_MODE_OPTION.LIGHT)
+      localStorage.setItem('color-mode', 'light')
     } else {
       updateDarkMode(DARK_MODE_OPTION.DARK)
       localStorage.setItem('color-mode', 'dark')

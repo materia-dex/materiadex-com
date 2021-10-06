@@ -21,7 +21,6 @@ import '../styles/layout.css'
 import '../styles/prism-github.css'
 import '../styles/fonts.css'
 
-import backgroundVideo from '../images/space.mp4';
 
 const initReactGA = () => {
   ReactGA.initialize('UA-178238225-1');
@@ -49,14 +48,6 @@ const Layout = ({ path, children, nofooter, isDocs }) => {
 
   return (
     <StyledThemeProvider>
-      <div className='sky'>
-        <div className='stars'>
-          <video autoPlay="true" muted loop id='myVideo'>
-            <source src={backgroundVideo} type='video/mp4'/>
-          </video>
-          <div className='videoOverlay'></div>
-        </div>
-      </div>
       <Header path={path} siteTitle={data.site.siteMetadata.title} />
       <Mdx>{children}</Mdx>
       {nofooter ? null : <Footer />}

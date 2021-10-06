@@ -102,7 +102,7 @@ const StyledCardTitle = styled.p`
   color: ${({ theme }) => theme.textColor};
   font-size: 2rem;
   line-height: 2.5rem;
-  font-weight: 800;
+  font-weight: 900;
 
   @media (max-width: 1024px) {
     font-size: 1.75rem;

@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../layouts'
 import SEO from '../components/seo'
 import BG from '../components/bg'
-import MiniCard from '../components/minicard'
+import { useDarkMode } from '../contexts/Application'
 import { Button } from '../components/button'
 
 const StyledBody = styled.div`
@@ -15,31 +15,6 @@ const StyledBody = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
-  &:after {
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: absolute;
-    height: 40px;
-    bottom: 24px;
-    z-index: -1;
-    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
-    @media (max-width: 375px) {
-      height: 50px;
-    }
-  }  
-  &:before {    
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: absolute;
-    height: 2px;
-    bottom: -50px;
-    background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
-    margin-bottom: 4rem;
-  }
   @media (max-width: 375px) {
     margin-bottom: 2rem;
   }
@@ -57,17 +32,15 @@ const StyledTitle = styled.div`
   justify-content: center;
   will-change: transform;
   margin: 1rem;
-  /*color: white*/
-  color: #95e1ff;
 `
 
 const StyledProductImage = styled(Img)`
   width: 100%;
   height: 100%;
-  min-width: 220px;
-  max-width: 220px;
+  min-width: 600px;
+  max-width: 800px;
   background-color: none;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: ${({ theme }) => theme.shadows.huge};
   /* @media (max-width: 960px) {
     min-width: 120px;
@@ -76,17 +49,15 @@ const StyledProductImage = styled(Img)`
 `
 
 const StyledBodyTitle = styled.h1`
-  /*color: ${({ theme }) => theme.colors.link};*/
-  color: #95e1ff;
+  color: ${({ theme }) => theme.colors.link};
   font-size: 60px;
-  font-weight: 400;
+  font-weight: 900;
   margin: 2rem 0 2rem 0;
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
   max-width: 900px;
   text-align: center;
-  font-family: 'Cera Pro', sans-serif;
   @media (max-width: 1024px) {
     margin: 0 0 0 0;
   }
@@ -106,7 +77,7 @@ const StyledBodyTitle = styled.h1`
 `
 
 export const StyledExternalLink = styled.a`
-  font-family: 'GT Haptik Regular';
+  font-family: 'Circular Std';
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -147,32 +118,6 @@ const StyledTitleAfter = styled.div`
     overflow: hidden;
     z-index: 0;
     font-weight: 300;
-    text-shadow: 2px 2px 4px #000;
-    color:#95e1ff;
-  &:after {
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: relative;
-    height: 40px;
-    bottom: 24px;
-    z-index: -1;
-    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
-    @media (max-width: 375px) {
-      height: 50px;
-    }
-  }
-  &:before {    
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: relative;
-    height: 2px;
-    bottom: -50px;
-    background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
-}
 @media (max-width: 375px) {
   font-size: 1.5em;
 }
@@ -242,9 +187,30 @@ const IndexPage = props => {
           }
         }
       }
-      ethItemImage: file(relativePath: { eq: "ethitem-logo.png" }) {
+      batchswapImage: file(relativePath: { eq: "batchswap-black.png" }) {
         childImageSharp {
-          fluid(maxWidth: 240) {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      batchswapImageLight: file(relativePath: { eq: "batchswap-white.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      packageDeal: file(relativePath: { eq: "packageDeal-black.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      packageDealLight: file(relativePath: { eq: "packageDeal-white.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -284,7 +250,6 @@ const IndexPage = props => {
         </StyledTitle>
         <SummarySection data={data} />
         <InfoSection data={data} />
-        <ProductsSection data={data} />
       </StyledBody>
     </Layout>
   )
@@ -381,100 +346,59 @@ const SummarySection = props => {
   return (
     <StyledBodySubText>
       <h1>
-      By implementing new technology, <b>Materia</b> enables possibilities such as <b>Batchswapping</b> transactions and seamless interaction between various ERC token standards.
-          </h1>
+        Power up Defi possibilities with batch swap technology!
+      </h1>
       <p>
-       Materia’s token <b>GIL</b> is the backbone of the initiative. Token holders have full access to batchswapping as well as control over governance.
-          </p>
+        Materia’s token <b>GIL</b> is the backbone of the initiative. Token holders have full access to batchswapping as well as control over governance.
+      </p>
       <p>
         Through GIL, the entire community can actively participate in its evolution, propose new features, and vote for their implementation.
-          </p>
+      </p>
       <div class="divider"></div>
       <div class="homeSloganContainer">
         <StyledNormalImage2 fadeIn={false} fluid={props.data.materiaIconsImage.childImageSharp.fluid} />
-        <p>
-          <span>Materia</span>
-        </p>
       </div>
     </StyledBodySubText>
   )
 }
 
 const InfoSection = props => {
+  const [darkMode] = useDarkMode()
+
   return (
     <>
       <StyledSectionTitle>The Materia protocol</StyledSectionTitle>
       <StyledBodySubText>
-        Materia DEX has novel capabilities other exchanges do not offer. Batchswapping allows users to swap multiple tokens in one single transaction saving the user gas and time.
-    It also allows seemless compatability with ERC20, ERC721 and ERC1155 standards enabling their total interoperability. <br />
-    Swap between ERC-20, ERC-721, and ERC-1155 quickly and efficiently within the Materia Dex<br />
+        Batchswapping allows users to swap multiple tokens in one single transaction saving the user gas and time.
+        It also allows seemless compatability with ERC20, ERC721 and ERC1155 standards enabling their total interoperability. <br />
+        Swap between ERC-20, ERC-721, and ERC-1155 quickly and efficiently within the Materia Dex<br />
         Check out the <b><Link to="/docs/materia">documentation</Link></b>.
       </StyledBodySubText>
       <StyledItemRow>
-        <StyledExternalLink href={'https://ethitem.com/'} target="_blank">
-          <StyledProductImage fadeIn={false} fluid={props.data.ethItemImage.childImageSharp.fluid} />
+        <StyledExternalLink href={'https://materia.exchange/#/uni-batch-swap'} target="_blank">
+          {darkMode ? <StyledProductImage fadeIn={false} fluid={props.data.batchswapImage.childImageSharp.fluid} /> : <StyledProductImage fadeIn={false} fluid={props.data.batchswapImageLight.childImageSharp.fluid} />}
         </StyledExternalLink>
       </StyledItemRow>
-
-      <StyledSectionTitle>US Dollar based DEX</StyledSectionTitle>
       <StyledBodySubText>
-      Materia uses WUSD as collateral. WUSD is a decentralized stablecoin that offers extreme stability with no single point of failure.      </StyledBodySubText>
+        Materia will soon implement the first decentralized service based on batch swap. Stay tuned for the "Package Deal" release...
+      </StyledBodySubText>
+
+      <StyledSectionTitle>What Is a Package Deal?</StyledSectionTitle>
+      <StyledBodySubText>
+        A package deal is an order or transaction that contains a number of smaller exchange or transaction items that must be completed simultaneously, or not at all. Package deals allow traders to ensure specific prices or times to maturity for multiple assets.
+      </StyledBodySubText>
       <StyledItemRow>
         <StyledExternalLink href={'https://covenants.eth.link/#/wusd'} target="_blank">
-          <StyledProductImage fadeIn={false} fluid={props.data.usdImage.childImageSharp.fluid} />
+        {darkMode ? <StyledProductImage fadeIn={false} fluid={props.data.packageDeal.childImageSharp.fluid} /> : <StyledProductImage fadeIn={false} fluid={props.data.packageDealLight.childImageSharp.fluid} />}
         </StyledExternalLink>
       </StyledItemRow>
 
       <StyledSectionTitle>Growing community</StyledSectionTitle>
       <StyledBodySubText>
-      Community is at the center of Materia.  We base our R&D initiatives around simplifying their experience.  The community will be in full control of the project via governance. The team is always
+        Community is at the center of Materia.  We base our R&D initiatives around simplifying their experience.  The community will be in full control of the project via governance. The team is always
         available on Discord and Telegram.  We encourage you to join and meet the community.</StyledBodySubText>
     </>
   )
 }
 
-const ProductsSection = props => {
-  return (
-    <>
-      <StyledSectionTitle>Services</StyledSectionTitle>
-      <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
-        <MiniCard
-          href={'https://materia.exchange/'}
-          title={'Swap'}
-          desc={'Swap between any two supported token through an automatic wrap into the ethitem standard'}
-          backgroundColor={'#377e9a'}
-          color={'white'}
-        />
-        <MiniCard
-          href={'https://materia.exchange/'}
-          title={'Pool'}
-          desc={'All the liquidity is available through a bridge token (WUSD) and an Item. Materia is the very first dollar based DEX'}
-          backgroundColor={'#377e9a'}
-          color={'white'}
-        />
-        <MiniCard
-          href={'https://materia.exchange/'}
-          title={'Liquidity Mining'}
-          desc={'The incentive to liquidity providers to earn fees and governance tokens by providing liquidity'}
-          backgroundColor={'#377e9a'}
-          color={'white'}
-        />
-        <MiniCard
-          href={'https://materia.exchange/'}
-          title={'Exping (coming soon)'}
-          desc={'Why farm when you can exp? News will be available very soon…'}
-          backgroundColor={'#377e9a'}
-          color={'white'}
-        />
-        <MiniCard
-          href={'https://materia.exchange/'}
-          title={'Microservices'}
-          desc={'Take advantage of DFOHub microservices architecture'}
-          backgroundColor={'#377e9a'}
-          color={'white'}
-        />
-      </StyledSectionFlex>
-    </>
-  )
-}
 

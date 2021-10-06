@@ -1,18 +1,16 @@
 import styled, { css } from 'styled-components'
 
 const ButtonStyles = css`
-  padding: 0.25rem 1.5rem;
+  padding: 0.6rem 1rem;
   text-decoration: none;
-  /*border-radius: 20px;*/
-  border-radius: 5px;
+  border-radius: 16px;
   margin-right: 0.75rem;
   display: inline-block;
   box-sizing: border-box;
-  font-weight: 400;
-  font-size: 1.125rem;
+  font-weight: 900;
+  font-size: inherit;
   cursor: pointer;
-  background-color: transparent;
-  box-shadow: 0px 0px 6px 0px #b0deff;
+  background-color: #0066ff;
   transform: scale(0.98);
   transition: transform 0.25s ease;
   @media (max-width: 960px) {
@@ -24,12 +22,8 @@ const ButtonStyles = css`
   :hover {
     transform: scale(1);
     box-shadow: 0px 0px 10px 0px #b0deff;
-    color:#b0deff;
   }
-  /*background-color: ${({ outlined, theme }) => (outlined ? 'none' : theme.colors.link)};
-  background-color: #377e9a;*/
-  color: ${({ outlined, theme }) => (outlined ? theme.colors.link : theme.invertedTextColor)};
-  border: ${({ outlined, theme }) => (outlined ? `1px solid ${theme.colors.link}` : 'initial')};
+  color: white;
 `
 
 export const Button = styled.a`

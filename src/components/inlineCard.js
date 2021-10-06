@@ -8,7 +8,7 @@ const StyledMiniCards = styled(Link)`
   padding: 1.25rem;
   color: ${({ theme, outlined }) => (outlined ? theme.colors.link : theme.textColor)};
   /*background-color: ${({ theme }) => theme.cardBG};*/
-  background: linear-gradient(-60deg ,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%);
+  background: ${({ theme }) => theme.flyout};
   height: 120px;
   max-width: 100%;
   min-width: 45%;
@@ -16,8 +16,7 @@ const StyledMiniCards = styled(Link)`
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colors.grey2};
-  box-shadow: ${({ theme }) => theme.shadows.huge};
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -60,7 +59,7 @@ const StyledMiniCardHeader = styled.p`
   margin-top: 0px;
   font-weight: 600;
   font-size: 1rem;
-  font-family: 'Cera Pro', sans-serif;
+  font-family: 'Circular Std', sans-serif;
 `
 
 const StyledMiniCardDesc = styled.p`

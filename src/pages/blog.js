@@ -66,7 +66,6 @@ const PostLinkWrapper = styled(Link)`
 const PostTitleWrapper = styled.div`
   min-width: 150px;
   h1 {
-    /* font-family: 'Times Ten LT Std', 'Times New Roman', serif; */
   }
 `
 

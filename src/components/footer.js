@@ -21,8 +21,8 @@ function Dropdown(props) {
         ) : node.link.split('/')[0] === '' ? (
           <Link to={node.link}>{title}</Link>
         ) : (
-              <a href={node.link}>{title}</a>
-            )}
+          <a href={node.link}>{title}</a>
+        )}
       </StyledFooterLink>
     )
   })
@@ -30,20 +30,23 @@ function Dropdown(props) {
 }
 
 const StyledFooter = styled.footer`
-  margin-bottom: 7rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background:rgba(4, 4, 5, 0.05);
+
   display: flex;
   justify-content: space-between;
-  color: ${({ theme }) => theme.colors.link};
+  color: rgb(128, 128, 128);
   position: relative;
-  padding: 0 2rem;
 
   @media (max-width: 960px) {
     margin-bottom: 2rem;
     flex-direction: column;
-    padding: 0rem 1rem;
+    padding: 1rem;
   }
 
-  & p > a { color: #b0deff; }
+  & p > a { color: rgb(128, 128, 128); }
   & p > a:hover { text-decoration: underline; }
 `
 
@@ -119,7 +122,7 @@ const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   a { height: 24px; }
-  svg > path, svg path.cls-1, svg circle { fill: #b0deff; }
+  svg > path, svg path.cls-1, svg circle { fill: rgb(128, 128, 128); }
   a > svg { transform: scale(0.98); transition: transform 0.25s ease; }
   a.discordIcon { padding-top: 4px; } 
   :hover { cursor: pointer; transform: scale(1); }
@@ -154,34 +157,34 @@ const Footer = () => {
 
   // const themeContext = useContext(ThemeManagerContext)
 
-  return (    
+  return (
     <StyledFooter>
       <div>
-          <StyledButton fill>
-            <a class="discordIcon" href="https://discord.gg/jdYMZrv" target="_blank" title="Join us on Discord">
-              <Discord width={20}/>
-            </a>
-          </StyledButton>
-          <StyledButton fill>
-            <a href="https://www.reddit.com/r/materiadex" target="_blank" title="Follow us on Reddit">
-              <Reddit width={20} height={20}/>
-            </a>
-          </StyledButton>
-          <StyledButton fill>
+        <StyledButton fill>
+          <a class="discordIcon" href="https://discord.gg/jdYMZrv" target="_blank" title="Join us on Discord">
+            <Discord width={20} />
+          </a>
+        </StyledButton>
+        <StyledButton fill>
+          <a href="https://www.reddit.com/r/materiadex" target="_blank" title="Follow us on Reddit">
+            <Reddit width={20} height={20} />
+          </a>
+        </StyledButton>
+        {/* <StyledButton fill>
             <a href="https://twitter.com/dexmateria" target="_blank" title="Follow us on Twitter">
               <Twitter width={20} />
             </a>
-          </StyledButton>
-          <StyledButton fill>
-            <a href="https://github.com/materia-dex" target="_blank" title="Join us on Github">
-              <Github width={20} />
-            </a>
-          </StyledButton>
-          <StyledButton fill className="defipulse">
-            <a href="https://defipulse.com/" target="_blank" title="DeFi Pulse">
+          </StyledButton> */}
+        <StyledButton fill>
+          <a href="https://github.com/materia-dex" target="_blank" title="Join us on Github">
+            <Github width={20} />
+          </a>
+        </StyledButton>
+        <StyledButton fill className="defipulse">
+          <a href="https://defipulse.com/" target="_blank" title="DeFi Pulse">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
               width="20px" height="20px" viewBox="0 0 240 240" enable-background="new 0 0 240 240">
-            <path id="svg_26" fill="#2E1A4E" d="M191.494,63.037c20.539,20.539,29.988,43.542,29.988,73.119
+              <path id="svg_26" fill="#2E1A4E" d="M191.494,63.037c20.539,20.539,29.988,43.542,29.988,73.119
               c0,57.509-41.764,97.492-101.601,97.492H61.277l-34.095-34.095V5.116h59.701c32.041,0,59.016,11.502,77.363,30.809L191.494,63.037
               L191.494,63.037z M59.497,35.788h-0.411v6.846l29.166,28.892v-6.983L59.497,35.788z M93.181,63.584L65.385,35.788h-3.971
               L89.21,63.584H93.181z M102.903,63.584L75.107,35.788h-7.805l27.796,27.796H102.903z M87.293,35.788H77.024l27.796,27.796h10.27
@@ -213,20 +216,20 @@ const Footer = () => {
               M53.062,200.648l29.166,29.165h4.792l-29.166-29.165H53.062z M59.771,200.648l29.166,29.165h5.751l-29.166-29.165H59.771z
               M67.576,200.648l29.166,29.165h6.983l-29.165-29.165H67.576z M76.476,200.648l29.166,29.165h8.353l-29.303-29.165H76.476z"/>
             </svg>
-            </a>
-          </StyledButton>
+          </a>
+        </StyledButton>
       </div>
-        {/* {data.site.siteMetadata.menulinks.map(item => {
-          return (
-            <StyledFooterSectionNav key={item.name}>
-              <h4 style={{ fontWeight: 700, marginBottom: '1rem' }}>{item.name}</h4>
-              <Dropdown links={item.sublinks} />
-            </StyledFooterSectionNav>
-          )
-        })} */}
-      <div>
+      {data.site.siteMetadata.menulinks.map(item => {
+        return (
+          <StyledFooterSectionNav key={item.name}>
+            <h4 style={{ fontWeight: 700, marginBottom: '1rem' }}>{item.name}</h4>
+            <Dropdown links={item.sublinks} />
+          </StyledFooterSectionNav>
+        )
+      })}
+      <StyledFooterSectionNav>
         <p>Materia is an open source R&amp;D project for the Ethereum Community | <a href="mailto:info@materiadex.com" target="_blank">info@materiadex.com</a></p>
-      </div>
+      </StyledFooterSectionNav>
     </StyledFooter>
   )
 }

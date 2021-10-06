@@ -19,30 +19,7 @@ const StyledAbout = styled.div`
   margin-bottom: 4rem;
   padding-top: 2rem;
   position:relative;
-  &:after {
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: absolute;
-    height: 8px;
-    bottom: 0px;
-    z-index: -1;
-    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
-    @media (max-width: 375px) {
-      height: 50px;
-    }
-  }
-  &:before {    
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: absolute;
-    height: 2px;
-    bottom: 0px;
-    background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
-}
+
   @media (max-width: 960px) {
     flex-direction: column;
     grid-template-columns: 1fr;
@@ -99,36 +76,12 @@ const Title = styled.h1`
   overflow: hidden;
   z-index: 0;
   font-weight: 300;
-  text-shadow: 2px 2px 4px #000;
   position:relative;
   padding-bottom: 1rem;
-  &:after {
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: absolute;
-    height: 4px;
-    bottom: 0px;
-    z-index: -1;
-    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
-    @media (max-width: 375px) { height: 50px; }
-  }
-  &:before {    
-      content: "";
-      width: 100%;
-      display: block;
-      left: 0;
-      position: absolute;
-      height: 2px;
-      bottom: 0px;
-      background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
-  }
   
   margin-bottom: 1rem;
   font-size: 3.5rem;
-  /*color: ${({ theme }) => theme.colors.link};*/
-  color:#95e1ff;
+  color: ${({ theme }) => theme.colors.link};
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
@@ -144,7 +97,6 @@ const StyledHeadingLink = styled.a`
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   transition: padding-left .3s linear;  
   position: relative;
-  text-shadow: 2px 2px 4px #000;
   :hover { cursor: pointer; color: #b0deff; padding-left: 1rem; }
 `
 const StyleSectionFull = styled.div`
@@ -175,10 +127,8 @@ const StyledQuote = styled.p`
   color: ${({ theme }) => theme.invertedTextColor};
   border-color: ${({ theme }) => theme.colors.link};
   background-color: ${({ theme }) => theme.colors.link};*/
-  background: linear-gradient(90deg, rgba(23,23,23, 0.5), rgba(40,43,48, 0.8)); 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#282b30",GradientType=1);
-  background: linear-gradient(-60deg,rgba(2,43,99,0.24) 60%,rgba(45,114,233,0.59) 100%);
-  box-shadow: 0px 0px 6px 0px #b0deff;
+  background: ${({ theme }) => theme.flyout};
   color:#eaeaea;
 `
 const StyledChartContainer = styled.div`
@@ -324,8 +274,8 @@ const StyledImage = styled(Img)`
   @media (max-width: 960px) { min-width: unset; }
 `
 const ParagraphContent = styled.p`
-  font-size: 1.2rem;
-  font-family: 'Cera Pro';
+  font-size: 1rem;
+  font-family: 'Circular Std';
   > a { color: #81cdf3; }
   > a:hover { text-decordation: underline !important; }
 `

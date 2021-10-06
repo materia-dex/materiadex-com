@@ -52,13 +52,6 @@ const menu = [
     enabled: true
   },
   {
-    name: 'WUSD',
-    link: 'https://covenants.eth.link/#/wusd/dapp/',
-    isExternal: true,
-    sublinks: [],
-    enabled: true
-  },
-  {
     name: 'EthItem',
     link: 'https://ethitem.com/',
     isExternal: true,

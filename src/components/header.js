@@ -13,7 +13,7 @@ import LogoLight from '../images/materia-logo-light.png'
 import LogoDark from '../images/materia-logo-dark.png'
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
-
+import { Button } from '../components/button'
 import { Sun, Moon } from 'react-feather'
 import { useDarkMode } from '../contexts/Application'
 
@@ -62,7 +62,7 @@ const StyledNavTitleWrapper = styled.nav`
 `
 
 const StyledNavTitle = styled(Link)`
-  font-family: 'Cera Pro', sans-serif;
+  font-family: 'Circular Std', sans-serif;
   color: ${({ theme }) => theme.colors.link};
   margin-left: 0.35rem;
   margin-top: 12px;
@@ -89,7 +89,7 @@ const StyledTradeLink = styled.a`
   display: inline-block;
   transform: scale(0.98);
   transition: transform 0.25s ease;
-  font-weight: 400;
+  font-weight: 900;
   :hover {
     transform: scale(1);
     box-shadow: 0px 0px 10px 0px #b0deff;
@@ -107,7 +107,6 @@ const StyledButton = styled.button`
   :focus {
     outline: none;
   }
-  display: none;
   align-items: center;
   justify-content: center;
   :hover {
@@ -170,7 +169,7 @@ const StyledWordmark = styled(Wordmark)`
 
 const StyledGil = styled.img`
   margin: 0;
-  height: 40px !important;
+  width: 100px !important;
   margin-right: 0.35rem;
   transform: rotate(0deg);
   transition: transform 0.2s linear;
@@ -181,7 +180,7 @@ const StyledMateria = styled.p`
   font-size: 30px;
   margin: 0;
   width: 110px;
-  font-family: 'Cera Pro', sans-serif;
+  font-family: 'Circular Std', sans-serif;
 `
 
 const StyledCloseIcon = styled(CloseIcon)`
@@ -255,10 +254,7 @@ const Header = props => {
     <StyledHeader open={isMenuOpen}>
       <StyledNavTitleWrapper>
         <StyledHomeLink to="/" style={{ textDecoration: `none` }} >
-          {/* <StyledUni /> */}
-          {/* <StyledWordmark /> */}
           {darkMode ? <StyledGil src={LogoDark} /> : <StyledGil src={LogoLight} />}
-          {/* <StyledMateria>Materia</StyledMateria> */}
         </StyledHomeLink>        
       </StyledNavTitleWrapper>
       <MenuToggle ref={button} open={isMenuOpen} onClick={() => updateIsMenuOpen(!isMenuOpen)}>
@@ -274,7 +270,7 @@ const Header = props => {
         <StyledButton type="button" onClick={toggleDarkMode}>
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </StyledButton>
-        {props.path !== undefined && <StyledTradeLink href="https://materia.exchange/">Launch Dapp</StyledTradeLink>}
+        <Button outlined href="https://materia.exchange/">Launch Dapp</Button>
       </StyledNav>
     </StyledHeader>
   )

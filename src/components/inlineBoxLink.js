@@ -47,7 +47,7 @@ const StyledMiniCardHeader = styled.p`
   margin-top: 0px;
   font-weight: 500;
   font-size: 1.25rem;
-  font-family: 'Cera Pro', sans-serif;
+  font-family: 'Circular Std', sans-serif;
   margin: 0;
 `
 

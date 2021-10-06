@@ -21,30 +21,7 @@ const StyledAbout = styled.div`
   margin-bottom: 4rem;
   padding-top: 2rem;
   position:relative;
-  &:after {
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: absolute;
-    height: 8px;
-    bottom: 0px;
-    z-index: -1;
-    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
-    @media (max-width: 375px) {
-      height: 50px;
-    }
-  }
-  &:before {    
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: absolute;
-    height: 2px;
-    bottom: 0px;
-    background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
-}
+
   @media (max-width: 960px) {
     flex-direction: column;
     grid-template-columns: 1fr;
@@ -101,36 +78,13 @@ const Title = styled.h1`
   overflow: hidden;
   z-index: 0;
   font-weight: 300;
-  text-shadow: 2px 2px 4px #000;
   position:relative;
   padding-bottom: 1rem;
-  &:after {
-    content: "";
-    width: 100%;
-    display: block;
-    left: 0;
-    position: absolute;
-    height: 4px;
-    bottom: 0px;
-    z-index: -1;
-    background: radial-gradient(ellipse at bottom,#0d95ff 0,rgba(13,149,255,0) 60%);
-    @media (max-width: 375px) { height: 50px; }
-  }
-  &:before {    
-      content: "";
-      width: 100%;
-      display: block;
-      left: 0;
-      position: absolute;
-      height: 2px;
-      bottom: 0px;
-      background: linear-gradient(90deg,rgba(129,205,243,0) 0,#81cdf3 25%,#81cdf3 75%,rgba(129,205,243,0));
-  }
+  
   
   margin-bottom: 1rem;
   font-size: 3.5rem;
-  /*color: ${({ theme }) => theme.colors.link};*/
-  color:#95e1ff;
+  color: ${({ theme }) => theme.colors.link};
   pointer-events: none;
   white-space: wrap;
   overflow-wrap: normal;
@@ -146,7 +100,6 @@ const StyledHeadingLink = styled.a`
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   transition: padding-left .3s linear;  
   position: relative;
-  text-shadow: 2px 2px 4px #000;
   :hover { cursor: pointer; color: #b0deff; padding-left: 1rem; }
 `
 const StyledP = styled.p`

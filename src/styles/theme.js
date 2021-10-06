@@ -21,17 +21,18 @@ const black = '#000000'
 export const theme = darkMode => ({
   white,
   black,
-  textColor: darkMode ? white : white,
-  invertedTextColor: darkMode ? '#1a1c1f' : white,
+  textColor: darkMode ? white : black,
+  invertedTextColor: darkMode ? '#f5f5f5' : white,
   greyText: darkMode ? white : '#6C7284',
 
   // for setting css on <html>
-  backgroundColor: darkMode ? '#02192c' : '#02192c',
+  backgroundColor: darkMode ? 'rgb(18, 18, 18)' : '#FFF',
 
   modalBackground: darkMode ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0.5)',
   cardBG: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.02)',
   menuBG: darkMode ? 'rgba(10,10,10, 0.8)' : 'rgba(255, 255, 255, 0.95)',
   marqueeBG: darkMode ? '#010101' : '#010101',
+  flyout: darkMode ? 'rgba(23,23,23, 0.9)' : 'rgba(255,255,255, 0.9)',
 
   inputBackground: darkMode ? '#202124' : white,
   placeholderGray: darkMode ? '#5F5F5F' : '#E1E1E1',
@@ -53,9 +54,9 @@ export const theme = darkMode => ({
     blue6: darkMode ? '#C4D9F8' : '#1A5BB6',
     blue7: darkMode ? '#C4D9F8' : '#144489',
     blue8: darkMode ? '#C4D9F8' : '#0E2F5E',
-    blue9: darkMode ? '#C4D9F8' : '#191B1F',
+    blue9: darkMode ? '#C4D9F8' : 'rgb(18, 18, 18)',
 
-    grey1: darkMode ? '#191B1F' : '#F7F8FA',
+    grey1: darkMode ? 'rgb(18, 18, 18)' : '#F7F8FA',
     grey2: darkMode ? '#2C2F36' : '#EDEEF2',
     grey3: darkMode ? '#40444F' : '#CED0D9',
     grey4: darkMode ? '#565A69' : '#888D9B',
@@ -63,9 +64,7 @@ export const theme = darkMode => ({
     grey6: darkMode ? '#888D9B' : '#565A69',
     grey7: darkMode ? '#CED0D9' : '#40444F',
     grey8: darkMode ? '#EDEEF2' : '#2C2F36',
-    grey9: darkMode ? '#F7F8FA' : '#F7F8FA',
-    // grey9: darkMode ? '#F7F8FA' : '#191B1F',
-    grey10: darkMode ? '#2C2F36' : '#2C2F36',
+    grey9: darkMode ? '#F7F8FA' : 'rgb(18, 18, 18)',
 
     white: '#FFFFFF',
     black: '#000000',
@@ -73,7 +72,7 @@ export const theme = darkMode => ({
     green1: '#E6F3EC',
     green2: '#27AE60',
 
-    pink1: darkMode ? '#eaeaea' : '#eaeaea',
+    pink1: darkMode ? white : black,
     pink2: '#425A80',
     pink3: '#7283A0',
 
@@ -82,8 +81,8 @@ export const theme = darkMode => ({
 
     red1: '#FF6871',
 
-    link: darkMode ? '#eaeaea' : '#eaeaea',
-    invertedLink: darkMode ? '#eaeaea' : '#eaeaea'
+    link: darkMode ? white : black,
+    invertedLink: darkMode ? white : black
   },
 
   shadows: {
@@ -91,10 +90,6 @@ export const theme = darkMode => ({
     large: '0px 6px 10px rgba(0, 0, 0, 0.15)',
     huge:
       ' 0px 0px 1px rgba(0, 0, 0, 0.02), 0px 4px 8px rgba(0, 0, 0, 0.02), 0px 16px 24px rgba(0, 0, 0, 0.02), 0px 24px 32px rgba(0, 0, 0, 0.02)'
-  },
-
-  table: {
-    mode: darkMode ? 'dark' : 'light'
   },
 
   // media queries
@@ -127,7 +122,6 @@ export const GlobalStyle = createGlobalStyle`
     background-size: contain;
     background-repeat: no-repeat;
     overflow-y: scroll;
-    width: 100vw;
     box-sizing: border-box;
   }
 
@@ -137,10 +131,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: "Cera Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Circular Std", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.55;
-    max-width: 1440px;
-    width: 100vw;
     margin: 0px auto;
     font-weight: 400 !important;
     color: ${({ theme }) => theme.textColor};
@@ -162,7 +154,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-family: "Cera Pro", sans-serif;
+    font-family: "Circular Std", sans-serif;
     margin-top: 1rem ;
     font-size: 1.875rem;
     font-weight: 500;
@@ -171,12 +163,12 @@ export const GlobalStyle = createGlobalStyle`
   h2 {
     font-size: 1.5rem;
     font-weight: 400;
-    font-family: "Cera Pro", sans-serif;
+    font-family: "Circular Std", sans-serif;
   }
 
   h3 {
     font-weight: 400;
-    font-family: "Cera Pro", sans-serif;
+    font-family: "Circular Std", sans-serif;
   }
 
 
@@ -215,7 +207,4 @@ export const GlobalStyle = createGlobalStyle`
       min-width: 300px !important;
     }
   }
-
-
-
 `
