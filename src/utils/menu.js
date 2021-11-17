@@ -20,12 +20,13 @@ const menu = [
   {
     name: 'Community',
     sublinks: [
+      { name: 'Telegram', link: 'https://t.me/MateriaExchange', enabled: true },
       { name: 'Twitter', link: 'https://twitter.com/dexmateria', enabled: true },
       { name: 'Discord', link: 'https://discord.gg/jdYMZrv', enabled: true },
       { name: 'Reddit', link: 'https://www.reddit.com/r/materiadex', enabled: true },
-      { name: 'Github', link: 'https://github.com/materia-dex', enabled: true },
+      { name: 'Github', link: 'https://github.com/materia-dex', enabled: true }
     ],
-    enabled: false
+    enabled: true
   },
   {
     name: 'Info',
@@ -48,13 +49,6 @@ const menu = [
     link: '/docs/materia',
     sublinks: [
     ],
-    enabled: true
-  },
-  {
-    name: 'EthItem',
-    link: 'https://ethitem.com/',
-    isExternal: true,
-    sublinks: [],
     enabled: true
   }
 ]
