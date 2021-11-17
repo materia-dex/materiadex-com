@@ -50,6 +50,13 @@ const menu = [
     sublinks: [
     ],
     enabled: true
+  },
+  {
+    name: 'EthItem',
+    link: 'https://ethitem.com/',
+    isExternal: true,
+    sublinks: [],
+    enabled: false
   }
 ]
 
